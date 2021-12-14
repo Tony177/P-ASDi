@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../riconoscitore.srcs/sources_1/new/gestore_output.vhd" \
+"../../../../riconoscitore.srcs/sources_1/new/gestore_ric.vhd" \
+"../../../../riconoscitore.srcs/sources_1/new/riconoscitore1.vhd" \
+"../../../../riconoscitore.srcs/sources_1/new/riconoscitore2.vhd" \
+"../../../../riconoscitore.srcs/sources_1/new/sistema.vhd" \
+"../../../../riconoscitore.srcs/sim_1/new/sim_sistema.vhd" \
+
+# Do not sort compile order
+nosort

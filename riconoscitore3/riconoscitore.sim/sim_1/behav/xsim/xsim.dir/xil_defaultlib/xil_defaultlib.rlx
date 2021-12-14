@@ -1,0 +1,15 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sim_1/new/sim_complessivo.vhd,1639409480,vhdl,,,,sim_complessivo,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sim_1/new/sim_sistema.vhd,1638943308,vhdl,,,,sim_sistema,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/debouncer.vhd,1639408760,vhdl,,,,debouncer,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/gestore_dato.vhd,1639408194,vhdl,,,,gestore_dato,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/gestore_modo.vhd,1639408661,vhdl,,,,gestore_modo,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/gestore_output.vhd,1638946062,vhdl,,,,gestore_output,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/gestore_ric.vhd,1638941896,vhdl,,,,gestore_ric,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/riconoscitore1.vhd,1638944002,vhdl,,,,riconoscitore1,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/riconoscitore2.vhd,1638959860,vhdl,,,,riconoscitore2,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/sistema.vhd,1638945662,vhdl,C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sim_1/new/sim_sistema.vhd,,,sistema,,,,,,,,
+C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sources_1/new/sistema_completo.vhd,1639409364,vhdl,C:/Users/Christian/Desktop/magistrale/progettiarchitetture/riconoscitore3/riconoscitore.srcs/sim_1/new/sim_complessivo.vhd,,,sistema_completo,,,,,,,,
