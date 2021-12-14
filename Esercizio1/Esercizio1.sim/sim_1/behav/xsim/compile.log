@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/anto/vivado-workspace/mux_16_1/mux_16_1.srcs/sources_1/new/rete_16_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rete_16_4'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/anto/vivado-workspace/mux_16_1/mux_16_1.srcs/sources_1/new/rete_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rete_tb'
