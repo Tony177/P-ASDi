@@ -40,7 +40,7 @@ entity sistema is
 end sistema;
 
 architecture Behavioral of sistema is
-type STATUS is (RST, S0, S1, S2, S3, S4, S5, S6, S7);
+type STATUS is (S0, S1, S2, S3, S4, S5, S6, S7);
 SIGNAL U : STD_LOGIC;
 SIGNAL MODE : STD_LOGIC := '1';
 SIGNAL PS,NS : STATUS;
@@ -78,10 +78,8 @@ if (MODE = '1') then
             else
                 NS <= S4;
             end if;
-         when RST =>
-            NS <= S0;
          when others =>
-            NS <= RST; -- Error
+            NS <= S0; -- Error
             
     end case;
   else 
@@ -114,10 +112,10 @@ if (MODE = '1') then
                 NS <= S6;
           when S6 =>
                 NS <= S7;
-         when RST | S7=>
+         when S7=>
                 NS <= S0;
          when others =>
-                NS <= RST; -- Error         
+                NS <= S0; -- Error         
     end case;
   end if;
 end if;
@@ -135,7 +133,7 @@ begin
             MODE <= '1';
         else MODE <= '0';
         end if;
-        PS <= RST;
+        PS <= S0;
         Y <= '0';
        else
         PS <= NS;

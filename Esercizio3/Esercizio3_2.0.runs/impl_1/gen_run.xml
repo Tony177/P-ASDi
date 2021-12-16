@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1639653902">
+<GenRun Id="impl_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1639662182">
   <File Type="BITSTR-BMM" Name="riconoscitore_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="riconoscitore_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="riconoscitore_timing_summary_init.rpt"/>

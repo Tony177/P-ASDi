@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1639653902">
+<GenRun Id="synth_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1639662182">
   <File Type="PA-TCL" Name="riconoscitore.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="riconoscitore_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="riconoscitore_reports.tcl"/>
