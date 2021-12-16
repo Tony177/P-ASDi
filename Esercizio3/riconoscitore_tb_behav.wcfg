@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="riconoscitore_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="riconoscitore_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="30000fs"></ZoomStartTime>
+      <ZoomEndTime time="110294fs"></ZoomEndTime>
+      <Cursor1Time time="140000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="533"></NameColumnWidth>
+      <ValueColumnWidth column_width="235"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/riconoscitore_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/b1" type="logic">
+      <obj_property name="ElementShortName">b1</obj_property>
+      <obj_property name="ObjectShortName">b1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/b2" type="logic">
+      <obj_property name="ElementShortName">b2</obj_property>
+      <obj_property name="ObjectShortName">b2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/s1" type="logic">
+      <obj_property name="ElementShortName">s1</obj_property>
+      <obj_property name="ObjectShortName">s1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/s2" type="logic">
+      <obj_property name="ElementShortName">s2</obj_property>
+      <obj_property name="ObjectShortName">s2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/u" type="logic">
+      <obj_property name="ElementShortName">u</obj_property>
+      <obj_property name="ObjectShortName">u</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/ric1/sistem1/PS" type="other">
+      <obj_property name="ElementShortName">PS</obj_property>
+      <obj_property name="ObjectShortName">PS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/ric1/sistem1/NS" type="other">
+      <obj_property name="ElementShortName">NS</obj_property>
+      <obj_property name="ObjectShortName">NS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/ric1/sistem1/MODE" type="logic">
+      <obj_property name="ElementShortName">MODE</obj_property>
+      <obj_property name="ObjectShortName">MODE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/riconoscitore_tb/ric1/deb1/cleared_button" type="logic">
+      <obj_property name="ElementShortName">cleared_button</obj_property>
+      <obj_property name="ObjectShortName">cleared_button</obj_property>
+   </wvobject>
+</wave_config>
