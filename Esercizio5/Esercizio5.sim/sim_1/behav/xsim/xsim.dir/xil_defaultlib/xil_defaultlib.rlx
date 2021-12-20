@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sim_1/new/contatore_tb.vhd,1640007833,vhdl,,,,contatore_tb,,,,,,,,
+/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sim_1/new/sistema_contatore_tb.vhd,1640015142,vhdl,,,,sistema_contatore_tb,,,,,,,,
+/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/and_block.vhd,1640009389,vhdl,/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/sistema_contatori.vhd,,,and_block,,,,,,,,
+/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/contatore.vhd,1640011636,vhdl,/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/sistema_contatori.vhd,,,contatore,,,,,,,,
+/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/sistema_contatori.vhd,1640015405,vhdl,/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sim_1/new/sistema_contatore_tb.vhd,,,sistema_contatori,,,,,,,,
+/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/wait_block.vhd,1640013433,vhdl,/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/sistema_contatori.vhd,,,wait_block,,,,,,,,
