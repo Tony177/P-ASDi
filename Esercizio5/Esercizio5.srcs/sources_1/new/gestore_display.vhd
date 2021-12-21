@@ -32,12 +32,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity gestore_display is
---  Port ( );
+    Port (
+        clock: in std_logic;
+        value: in std_logic_vector(1 to 17);
+        anodi: out std_logic_vector(7 downto 0);
+        catodi: out std_logic_vector(7 downto 0)
+    );
+    
 end gestore_display;
 
 architecture Behavioral of gestore_display is
-
 begin
+
 
 
 end Behavioral;
