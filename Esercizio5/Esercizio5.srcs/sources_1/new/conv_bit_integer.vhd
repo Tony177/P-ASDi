@@ -32,11 +32,11 @@ use IEEE.NUMERIC_STD.ALL; -- per to_integer()
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity conv_bit_integer is
+entity conv_per_display is
     Port ( input : in STD_LOGIC_VECTOR (1 to 17); -- secondi - minuti - ore
            output : out STD_LOGIC_VECTOR (1 to 32)); -- secondi - minuti - ore
-end conv_bit_integer;
-architecture Dataflow of conv_bit_integer is
+end conv_per_display;
+architecture Dataflow of conv_per_display is
     signal ore,minuti,secondi : integer; 
 
 begin
@@ -45,11 +45,11 @@ begin
     secondi <= to_integer(unsigned(input(1 to 6)));
 
     output(25 to 32) <= (others => '0');
-    output(21 to 24) <= std_logic_vector(to_unsigned(natural(floor(real(ore/10))),4)); -- decina ore
-    output(17 to 20) <= std_logic_vector(to_unsigned(natural(ore mod 10),4)); -- unita ore
-    output(13 to 16) <= std_logic_vector(to_unsigned(natural(floor(real(minuti/10))),4)); -- decina minuti
-    output(9 to 12) <= std_logic_vector(to_unsigned(natural(minuti mod 10),4)); -- unita minuti
-    output(5 to 8) <= std_logic_vector(to_unsigned(natural(floor(real(secondi/10))),4)); -- decina secondi
-    output(1 to 4) <= std_logic_vector(to_unsigned(natural(secondi mod 10),4)); -- unita secondi
+    output(17 to 20) <= std_logic_vector(to_unsigned(natural(floor(real(secondi/10))),4)); -- decina secondi
+    output(21 to 24) <= std_logic_vector(to_unsigned(natural(secondi mod 10),4)); -- unita secondi
+    output(9 to 12) <= std_logic_vector(to_unsigned(natural(floor(real(minuti/10))),4)); -- decina minuti
+    output(13 to 16) <= std_logic_vector(to_unsigned(natural(minuti mod 10),4)); -- unita minuti
+    output(1 to 4) <= std_logic_vector(to_unsigned(natural(floor(real(ore/10))),4)); -- decina ore
+    output(5 to 8) <= std_logic_vector(to_unsigned(natural(ore mod 10),4)); -- unita ore
     
 end Dataflow;

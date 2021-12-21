@@ -39,7 +39,7 @@ architecture Behavioral of conv_tb is
 component conv_tb port ( input : in STD_LOGIC_VECTOR (1 to 17); -- ore - minuti - secondi
            output : out STD_LOGIC_VECTOR (1 to 32)); -- secondi - minuti - ore
 end component;
-FOR ALL: conv_tb use entity work.conv_bit_integer ( Dataflow);
+FOR ALL: conv_tb use entity work.conv_per_display(Dataflow);
 signal input: std_logic_vector(1 to 17);
 signal output:  std_logic_vector(1 to 32);
 
@@ -49,7 +49,7 @@ conv: conv_tb port map(input => input, output => output);
 conv_1: process
 begin
     wait for 10ns;
-    input <= "01100" & "100001" & "010001";
+    input <= "001100" & "010001" & "00110";
     --input <= "10010010001000110";
     wait for 10ns;
     wait;
