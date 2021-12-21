@@ -1,7 +1,0 @@
-Running: xsim.dir/shitf_beh_tb_behav/xsimk -simmode gui -wdb shitf_beh_tb_behav.wdb -simrunnum 0 -socket 42913
-Design successfully loaded
-Design Loading Memory Usage: 33380 KB (Peak: 33380 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 115116 KB (Peak: 172648 KB)
-Simulation CPU Usage: 60 ms
