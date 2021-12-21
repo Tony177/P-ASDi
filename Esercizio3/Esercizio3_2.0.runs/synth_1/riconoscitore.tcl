@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.runs/synth_1/riconoscitore.tcl"
+  variable script "/home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.runs/synth_1/riconoscitore.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,21 +76,21 @@ create_project -in_memory -part xc7a50ticsg324-1L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.cache/wt [current_project]
-set_property parent.project_path C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.xpr [current_project]
+set_property webtalk.parent_dir /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.cache/wt [current_project]
+set_property parent.project_path /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.cache/ip [current_project]
+set_property ip_output_repo /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/sources_1/new/debouncer.vhd
-  C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/sources_1/new/filtro_modo.vhd
-  C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/sources_1/new/gestore_modo.vhd
-  C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/sources_1/new/sistema.vhd
-  C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/sources_1/new/riconoscitore.vhd
+  /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/sources_1/new/debouncer.vhd
+  /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/sources_1/new/filtro_modo.vhd
+  /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/sources_1/new/gestore_modo.vhd
+  /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/sources_1/new/sistema.vhd
+  /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/sources_1/new/riconoscitore.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -101,8 +101,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+read_xdc /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
+set_property used_in_implementation false [get_files /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
@@ -110,6 +110,9 @@ close [open __synthesis_is_running__ w]
 OPTRACE "synth_design" START { }
 synth_design -top riconoscitore -part xc7a50ticsg324-1L
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }

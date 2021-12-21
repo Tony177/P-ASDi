@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Dec 16 14:43:08 2021
-# Process ID: 3620
-# Current directory: C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.runs/synth_1
-# Command line: vivado.exe -log riconoscitore.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source riconoscitore.tcl
-# Log file: C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.runs/synth_1/riconoscitore.vds
-# Journal file: C:/Users/davide_420/Esercizio3_2.0/Esercizio3_2.0.runs/synth_1\vivado.jou
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Dec 21 14:01:35 2021
+# Process ID: 4406
+# Current directory: /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.runs/synth_1
+# Command line: vivado -log riconoscitore.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source riconoscitore.tcl
+# Log file: /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.runs/synth_1/riconoscitore.vds
+# Journal file: /home/anto/vivado-workspace/Esercizio3/Esercizio3_2.0.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source riconoscitore.tcl -notrace

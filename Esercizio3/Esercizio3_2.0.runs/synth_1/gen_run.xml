@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1639662182">
-  <File Type="PA-TCL" Name="riconoscitore.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="riconoscitore_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="riconoscitore_reports.tcl"/>
-  <File Type="RDS-RDS" Name="riconoscitore.vds"/>
-  <File Type="RDS-UTIL" Name="riconoscitore_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="riconoscitore_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="riconoscitore.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="riconoscitore_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1640091693">
   <File Type="VDS-TIMING-PB" Name="riconoscitore_timing_summary_synth.pb"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+  <File Type="VDS-TIMINGSUMMARY" Name="riconoscitore_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="riconoscitore.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="riconoscitore_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="riconoscitore_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="riconoscitore_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="riconoscitore.vds"/>
+  <File Type="REPORTS-TCL" Name="riconoscitore_reports.tcl"/>
+  <File Type="PA-TCL" Name="riconoscitore.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/debouncer.vhd">
       <FileInfo>
@@ -52,14 +52,6 @@
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

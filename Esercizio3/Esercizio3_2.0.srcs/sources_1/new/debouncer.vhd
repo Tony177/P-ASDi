@@ -54,11 +54,6 @@ variable count: integer := 0;
 
 begin
    if(CLK'event and CLK = '1') then
-	   
---	   if( RST = '1') then
---	       button_state <= NOT_PRESSED;
---	       cleared_button <= '0';
-	   --else
 	   	  case button_state is
 			when NOT_PRESSED =>
 			    cleared_button<= '0';
