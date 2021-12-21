@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 83588a30e16a469cb7692195fdba91a7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot sistema_contatore_tb_behav xil_defaultlib.sistema_contatore_tb -log elaborate.log 
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 83588a30e16a469cb7692195fdba91a7 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot conv_tb_behav xil_defaultlib.conv_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -12,13 +12,6 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.math_real
 Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.wait_block [wait_block_default]
-Compiling architecture dataflow of entity xil_defaultlib.and_block [and_block_default]
-Compiling architecture behavioral of entity xil_defaultlib.contatore [\contatore(n=100)\]
-Compiling architecture behavioral of entity xil_defaultlib.contatore [\contatore(n=60)\]
-Compiling architecture behavioral of entity xil_defaultlib.contatore [\contatore(n=24)\]
-Compiling architecture structural of entity xil_defaultlib.sistema_contatori [sistema_contatori_default]
-Compiling architecture behavioral of entity xil_defaultlib.sistema_contatore_tb
-Built simulation snapshot sistema_contatore_tb_behav
+Compiling architecture dataflow of entity xil_defaultlib.conv_bit_integer [conv_bit_integer_default]
+Compiling architecture behavioral of entity xil_defaultlib.conv_tb
+Built simulation snapshot conv_tb_behav

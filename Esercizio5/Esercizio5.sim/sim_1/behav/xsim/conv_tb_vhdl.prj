@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio5.srcs/sources_1/new/conv_bit_integer.vhd" \
+"../../../../Esercizio5.srcs/sim_1/new/conv_tb.vhd" \
+
+# Do not sort compile order
+nosort

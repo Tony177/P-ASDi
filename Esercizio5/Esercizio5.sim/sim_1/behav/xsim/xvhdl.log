@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sources_1/new/sistema_contatori.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'sistema_contatori'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sim_1/new/sistema_contatore_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'sistema_contatore_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/anto/vivado-workspace/Esercizio5/Esercizio5.srcs/sim_1/new/conv_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'conv_tb'
