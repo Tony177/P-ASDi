@@ -36,8 +36,8 @@ entity conv_tb is
 end conv_tb;
 
 architecture Behavioral of conv_tb is
-component conv_tb port ( input : in STD_LOGIC_VECTOR (1 to 17); -- ore - minuti - secondi
-           output : out STD_LOGIC_VECTOR (1 to 32)); -- secondi - minuti - ore
+component conv_tb port ( input : in STD_LOGIC_VECTOR (1 to 17); -- s - m - h
+           output : out STD_LOGIC_VECTOR (1 to 32)); -- h - m - s
 end component;
 FOR ALL: conv_tb use entity work.conv_per_display(Dataflow);
 signal input: std_logic_vector(1 to 17);
@@ -49,8 +49,7 @@ conv: conv_tb port map(input => input, output => output);
 conv_1: process
 begin
     wait for 10ns;
-    input <= "001100" & "010001" & "00110";
-    --input <= "10010010001000110";
+    input <= "001100" & "010001" & "00110";  --s m h 
     wait for 10ns;
     wait;
 end process;        

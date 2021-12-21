@@ -36,6 +36,7 @@ entity gestore_set is
            clr_button : in STD_LOGIC;
            dato : in STD_LOGIC_VECTOR (1 to 6);
            output : out STD_LOGIC_VECTOR (1 to 17):= (others=>'0');
+           reset : in STD_LOGIC:= '0';
            set : out STD_LOGIC := '0');
 end gestore_set;
 
@@ -43,21 +44,29 @@ architecture Behavioral of gestore_set is
 
 begin
     process ( clock)
-    variable count: integer range 0 to 3:= 0; -- 0 imposta i secondi, 1 imposta i minuti, 2 imposta le ore, 3 per evitare bug modulo
+    variable count: integer range 0 to 3:= 1; -- 0 non set, 1 imposta i secondi, 2 imposta i minuti, 3 imposta le ore
     begin
         if(clock = '1' and clock'event) then
-            if(clr_button ='1') then
+            if(reset = '1') then
+                set <= '0';
+                output(1 to 17) <= (others => '0');
+                count := 0;
+            elsif(clr_button ='1') then
                 set <= '1';
                 if(count = 0) then
-                    output(1 to 6) <= dato(1 to 6);
-                    count := count+1;
-                elsif (count = 1) then
-                    output(7 to 12) <= dato(1 to 6);
+                    set <= '0';
+                    count:= count +1;
+                elsif(count = 1) then
+                    output(1 to 6) <= dato(1 to 6) ;
+                    output(7 to 17) <= (others => '0');
                     count := count+1;
                 elsif (count = 2) then
+                    output(7 to 12) <= dato(1 to 6);
+                    output(13 to 17) <= (others => '0');
+                    count := count+1;
+                elsif (count = 3) then
                     output(13 to 17) <= dato(2 to 6);
                     count := 0;
-                    set <= '0';
                 end if;
             end if;
         end if;

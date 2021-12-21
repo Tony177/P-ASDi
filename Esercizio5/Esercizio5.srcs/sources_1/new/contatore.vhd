@@ -57,7 +57,7 @@ process (clock)
             elsif ( set = '1') then
                 tmp <= input;
             elsif ( ab = '1') then
-                if ( tmp = N-1) then
+                if ( tmp >= N-1) then
                     tmp <= (others => '0');
                     div <= '1';
                 else

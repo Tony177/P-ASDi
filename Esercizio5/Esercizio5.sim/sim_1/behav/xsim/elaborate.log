@@ -10,8 +10,7 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling package ieee.math_real
 Compiling package ieee.numeric_std
-Compiling architecture dataflow of entity xil_defaultlib.conv_bit_integer [conv_bit_integer_default]
+Compiling architecture dataflow of entity xil_defaultlib.conv_per_display [conv_per_display_default]
 Compiling architecture behavioral of entity xil_defaultlib.conv_tb
 Built simulation snapshot conv_tb_behav

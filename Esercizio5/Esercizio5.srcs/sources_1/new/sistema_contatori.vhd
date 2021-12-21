@@ -70,7 +70,7 @@ begin
 
 wait_b: wait_block port map(clock=>clock,x=>div_secondi,y=>div_secondi_delayed);
 and_b: and_block port map(a=>div_secondi_delayed,b=>div_minuti,o=>and_ore);
-div_frequenza: cont generic map (N=>frequency) port map (clock => clock, reset => reset, set => '0', ab=>clock,input => (others => '0'), output => open,div => ab_frequency);
+div_frequenza: cont generic map (N=>frequency) port map (clock => clock, reset => reset, set => '0', ab=>'1',input => (others => '0'), output => open,div => ab_frequency);
 cont_secondi: cont generic map( N=>60 ) port map (clock => clock, reset => reset, set => set, ab=>ab_frequency, input(1 to 6)=> input(1 to 6), output(1 to 6) => output(1 to 6),div => div_secondi);
 cont_minuti: cont generic map( N=>60 ) port map (clock => clock, reset => reset, set => set, ab=>div_secondi, input(1 to 6) => input(7 to 12), output(1 to 6) => output(7 to 12),div => div_minuti);
 cont_ore: cont generic map( N=>24 ) port map (clock => clock, reset => reset, set => set, ab=> and_ore, input(1 to 5) => input(13 to 17), output(1 to 5) => output(13 to 17),div => open);
