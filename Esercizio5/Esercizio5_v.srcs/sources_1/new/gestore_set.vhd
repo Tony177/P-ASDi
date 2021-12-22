@@ -32,7 +32,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity gestore_set is
-    Port ( clock : in STD_LOGIC;
+    Port ( clock,abModo : in STD_LOGIC;
            clr_button : in STD_LOGIC;
            dato : in STD_LOGIC_VECTOR (1 to 6);
            output : out STD_LOGIC_VECTOR (1 to 17):= (others=>'0');
@@ -54,6 +54,7 @@ begin
     variable count: integer range 0 to 3:= 1; -- 0 non set, 1 imposta i secondi, 2 imposta i minuti, 3 imposta le ore
     begin
         if(clock = '1' and clock'event) then
+        if(abModo='0') then
             if(reset = '1') then
                 leds <= "000";
                 set <= '0';
@@ -94,6 +95,7 @@ begin
                     count := 0;
                 end if;
             end if;
+        end if;
         end if;
     end process;
 
