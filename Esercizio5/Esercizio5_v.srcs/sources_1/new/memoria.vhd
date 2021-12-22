@@ -36,29 +36,30 @@ entity memoria is
     Port ( input : in STD_LOGIC_VECTOR (1 to 32);
            output : out STD_LOGIC_VECTOR (1 to 32);
            reset : in STD_LOGIC;
+           abModo: in STD_LOGIC; -- se è in intertempo non deve poter salvare valori (1 intertempo, 0 cronometro)
            clk : in STD_LOGIC;
            read,write : in STD_LOGIC);
 end memoria;
 
 architecture Behavioral of memoria is
-type rom_type is array (N downto 1) of std_logic_vector(1 to 32);
-signal Rom: rom_type;
+type memoria_type is array (0 to N-1) of std_logic_vector(1 to 32);
+signal mem: memoria_type;
 begin
-mem: process(clk)
-variable countInput,countOutput: integer range 1 to N:=1;
+memo: process(clk)
+variable countInput,countOutput: integer range 0 to N-1:=0;
     begin   
         if(clk='1' and clk'event) then
             if(reset ='1') then 
-                countInput:=1;
-                countOutput:=1;
-                for i in 1 to N loop
-                    Rom(i)<=(others => '0');
+                countInput:=0;
+                countOutput:=0;
+                for i in 0 to N-1 loop
+                    mem(i)<=(others => '0');
                 end loop;
-            elsif( write='1') then
-                Rom(countInput)<= input;
+            elsif( write='1' and abModo = '0') then
+                mem(countInput)<= input;
                 countInput:= (countInput+1) mod N;
             elsif(read='1') then
-                output <= Rom(countOutput);
+                output <= mem(countOutput);
                 countOutput:= (countOutput +1) mod N;
             end if; 
          end if;               

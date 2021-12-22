@@ -53,9 +53,9 @@ component conv port (input : in STD_LOGIC_VECTOR (1 to 17); output : out STD_LOG
 end component;
 component display port ( CLK : in  STD_LOGIC; RST : in  STD_LOGIC; VALUE : in  STD_LOGIC_VECTOR (31 downto 0); ENABLE : in  STD_LOGIC_VECTOR (7 downto 0); DOTS : in  STD_LOGIC_VECTOR (7 downto 0); ANODES : out  STD_LOGIC_VECTOR (7 downto 0);CATHODES : out  STD_LOGIC_VECTOR (7 downto 0));
 end component;
-component memoria generic( N:integer); port ( input : in STD_LOGIC_VECTOR (1 to 32); output : out STD_LOGIC_VECTOR (1 to 32); clk : in STD_LOGIC; read,write,reset: in STD_LOGIC);
+component memoria generic( N:integer); port ( input : in STD_LOGIC_VECTOR (1 to 32); output : out STD_LOGIC_VECTOR (1 to 32); clk : in STD_LOGIC; read,write,reset,abModo: in STD_LOGIC);
 end component;
-component gestore_modo port(i_cronometro : in STD_LOGIC_VECTOR (1 to 32); i_intertempi : in STD_LOGIC_VECTOR (1 to 32); output : out STD_LOGIC_VECTOR (1 to 32); cleared_button : in STD_LOGIC; clk : in STD_LOGIC; abModo:out std_logic);
+component gestore_modo port(i_cronometro : in STD_LOGIC_VECTOR (1 to 32); i_intertempi : in STD_LOGIC_VECTOR (1 to 32); output : out STD_LOGIC_VECTOR (1 to 32); cleared_button : in STD_LOGIC; clk : in STD_LOGIC; abModo:out std_logic; reset:in std_logic);
 end component;
 
 
@@ -82,9 +82,9 @@ display_ss : display port map(CLK => clock, RST => reset_button, value(31 downto
 deb_modo:debouncer port map(clock => clock,button => modo ,cleared_button => mode_button);
 deb_read:debouncer port map(clock => clock,button => read ,cleared_button => read_button);
 deb_write:debouncer port map(clock => clock,button => write ,cleared_button => write_button);
-gmodo: gestore_modo port map(clk => clock, cleared_button => mode_button, i_cronometro => output_value, i_intertempi => output_mem, output => value_display, abModo => abModo);
-mem: memoria generic map(N => 4) port map(input => output_value, clk => clock, reset => reset_button, write => write_button, output => output_mem, read => read_button); 
---devi solo fare la memoria e collegarla bene. poi devi fare un altro gestore per i bottoni di set e reset che in modalità intertempo non devono essere letti come tali ma come bottoni per la memoria.
+gmodo: gestore_modo port map(clk => clock, cleared_button => mode_button, i_cronometro => output_value, i_intertempi => output_mem, output => value_display, abModo => abModo,reset => reset);
+mem: memoria generic map(N => 4) port map(input => output_value, clk => clock, reset => reset_button, write => write_button, output => output_mem, read => read_button, abModo => abModo); 
+--devi solo fare la memoria e collegarla bene. poi devi fare un altro gestore per i bottoni di set e reset che in modalitï¿½ intertempo non devono essere letti come tali ma come bottoni per la memoria.
 
 
 end Structural;

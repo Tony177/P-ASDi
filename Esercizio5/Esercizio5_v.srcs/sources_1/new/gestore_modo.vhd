@@ -37,7 +37,7 @@ entity gestore_modo is
            output : out STD_LOGIC_VECTOR (1 to 32);
            abModo:out std_logic;
            cleared_button : in STD_LOGIC;
-           clk: in STD_LOGIC);
+           clk,reset: in STD_LOGIC);
 end gestore_modo;
 
 architecture Behavioral of gestore_modo is
@@ -48,21 +48,25 @@ begin
 process(clk)
 variable modo: bit :='0';
 begin
-if(clk='1' and clk'event) then
-    if( modo ='1') then
-        tempModo<= '1';
-        temp <= i_intertempi;
-        if( cleared_button ='1') then
+    if(clk='1' and clk'event) then
+        if( reset = '1') then
+            temp<= (others => '0');
+            tempModo <='0';
             modo := '0';
-        end if;
-     else
-        tempModo<='0';
-        temp <= i_cronometro;
-        if( cleared_button ='1') then
-            modo := '1';
+        elsif( modo ='1') then
+                tempModo<= '1';
+                temp <= i_intertempi;
+                if( cleared_button ='1') then
+                    modo := '0';
+                end if;
+         else
+            tempModo<='0';
+            temp <= i_cronometro;
+            if( cleared_button ='1') then
+                modo := '1';
+            end if;
         end if;
     end if;
-end if;
 end process;
 output<= temp;
 abModo <= tempModo;

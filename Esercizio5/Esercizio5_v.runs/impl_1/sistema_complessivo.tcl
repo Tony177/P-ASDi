@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/davide_420/Esercizio5/Esercizio5_v.runs/impl_1/sistema_complessivo.tcl"
+  variable script "/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.runs/impl_1/sistema_complessivo.tcl"
   variable category "vivado_impl"
 }
 
@@ -112,18 +112,18 @@ proc step_failed { step } {
   set endFile ".$step.error.rst"
   set ch [open $endFile w]
   close $ch
+OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
-OPTRACE "Implementation" START { ROLLUP_1 }
+OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a50ticsg324-1L
   set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
@@ -131,15 +131,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/davide_420/Esercizio5/Esercizio5_v.cache/wt [current_project]
-  set_property parent.project_path C:/Users/davide_420/Esercizio5/Esercizio5_v.xpr [current_project]
-  set_property ip_output_repo C:/Users/davide_420/Esercizio5/Esercizio5_v.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.cache/wt [current_project]
+  set_property parent.project_path /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.xpr [current_project]
+  set_property ip_output_repo /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/davide_420/Esercizio5/Esercizio5_v.runs/synth_1/sistema_complessivo.dcp
+  add_files -quiet /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.runs/synth_1/sistema_complessivo.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
+  read_xdc /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -276,7 +276,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force sistema_complessivo.mmi }
+  catch { write_mem_info -force -no_partial_mmi sistema_complessivo.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
   write_bitstream -force sistema_complessivo.bit 
@@ -298,4 +298,4 @@ if {$rc} {
 
 OPTRACE "write_bitstream misc" END { }
 OPTRACE "Phase: Write Bitstream" END { }
-OPTRACE "Implementation" END { }
+OPTRACE "impl_1" END { }

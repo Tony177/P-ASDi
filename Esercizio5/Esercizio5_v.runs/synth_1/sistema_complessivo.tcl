@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/davide_420/Esercizio5/Esercizio5_v.runs/synth_1/sistema_complessivo.tcl"
+  variable script "/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.runs/synth_1/sistema_complessivo.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,40 +70,39 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a50ticsg324-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/davide_420/Esercizio5/Esercizio5_v.cache/wt [current_project]
-set_property parent.project_path C:/Users/davide_420/Esercizio5/Esercizio5_v.xpr [current_project]
+set_property webtalk.parent_dir /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.cache/wt [current_project]
+set_property parent.project_path /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/davide_420/Esercizio5/Esercizio5_v.cache/ip [current_project]
+set_property ip_output_repo /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/and_block.vhd
-  {C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/anodes_manager.vhd}
-  {C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/cathodes_manager.vhd}
-  {C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/clock_filter.vhd}
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/contatore.vhd
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/conv_bit_integer.vhd
-  {C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/counter_mod4.vhd}
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/debouncer.vhd
-  {C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/display_seven_segments.vhd}
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/gestore_modo.vhd
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/gestore_set.vhd
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/memoria.vhd
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/wait_block.vhd
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/sistema_contatori.vhd
-  C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/sources_1/new/sistema_complessivo.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/and_block.vhd
+  {/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/anodes_manager.vhd}
+  {/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/cathodes_manager.vhd}
+  {/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/clock_filter.vhd}
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/contatore.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/conv_bit_integer.vhd
+  {/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/counter_mod4.vhd}
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/debouncer.vhd
+  {/home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/imports/Display7Seg - Vivado/display_seven_segments.vhd}
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/gestore_modo.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/gestore_set.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/memoria.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/wait_block.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/sistema_contatori.vhd
+  /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/sources_1/new/sistema_complessivo.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -114,8 +113,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/davide_420/Esercizio5/Esercizio5_v.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+read_xdc /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
+set_property used_in_implementation false [get_files /home/anto/vivado-workspace/Esercizio5/Esercizio5_v.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
@@ -123,6 +122,9 @@ close [open __synthesis_is_running__ w]
 OPTRACE "synth_design" START { }
 synth_design -top sistema_complessivo -part xc7a50ticsg324-1L
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
