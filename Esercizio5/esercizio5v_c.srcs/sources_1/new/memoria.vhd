@@ -64,6 +64,8 @@ variable countInput,countOutput: integer range 0 to N-1:=0;
                 if(read='1') then           --solo se sono in modalita intertempo devo scorrere i valori in memoria
                     countOutput:= (countOutput +1) mod N;
                 end if;
+            else  
+                countOutput:=0;
             end if; 
          end if;               
     end process;

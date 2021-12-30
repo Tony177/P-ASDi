@@ -42,28 +42,29 @@ architecture Behavioral of gestore_read is
 type status is(READ, NOTREAD);
 begin
 gest_read: process(clk)
-variable stato: status :=NOTREAD;
-variable count: integer:=0;
-begin
-if(clk='0' and clk'event) then
-    if count=N then 
-        stato := NOTREAD;
-        count:=0;
+    variable stato: status :=NOTREAD;
+    variable count: integer:=0;
+    begin
+    if(clk='1' and clk'event) then
+            if count=N then 
+                stato := NOTREAD;
+                count:=0;
+            end if;
+            if(stato = NOTREAD) then
+                out_read <= '0';
+            else 
+                count:= count+1;
+                out_read <= '1';
+            end if;
+            if(cleared_read = '1') then
+                if(stato = NOTREAD) then
+                    stato := READ;
+                else 
+                    stato := NOTREAD;
+                end if;
+                
+            end if;
     end if;
-    if(stato = NOTREAD) then
-        out_read <= '0';
-    else 
-        count:= count+1;
-        out_read <= '1';
-    end if;
-    if(cleared_read = '1') then
-        if(stato = NOTREAD) then
-            stato := READ;
-        else 
-            stato := NOTREAD;
-        end if;
-    end if;
-end if;
     
 end process;
 

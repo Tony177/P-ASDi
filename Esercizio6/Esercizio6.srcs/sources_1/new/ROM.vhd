@@ -40,7 +40,7 @@ end ROM;
 architecture Behavioral of ROM is
 type rom_type is array (0 to N-1) of std_logic_vector(0 to 3);
 signal ROM: rom_type:=("1100",
-                       "0100",
+                       "0111",
                        "0001",
                        "1110");
 signal temp: std_logic_vector(0 to 3);

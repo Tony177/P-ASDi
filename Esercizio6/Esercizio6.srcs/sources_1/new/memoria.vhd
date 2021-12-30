@@ -42,7 +42,7 @@ end memoria;
 architecture Behavioral of memoria is
 type mem_type is array (0 to N-1) of std_logic_vector(0 to 2);
 signal mem: mem_type;
-signal tempout, tempin: std_logic_vector (0 to 2);
+signal temp: std_logic_vector (0 to 2) ;
 begin
 memoria: process(clk)
 variable countInput,countOutput: integer range 0 to N-1:=0;
@@ -54,15 +54,16 @@ variable countInput,countOutput: integer range 0 to N-1:=0;
                 for i in 0 to N-1 loop
                     mem(i)<=(others => '0');
                 end loop;
-            elsif(read='1') then
+                temp <= (others => '0');
+            elsif(write='1') then
                 mem(countInput) <= input;
                 countInput:= (countInput+1) mod N;
-            elsif(write='1') then
-                output <= mem(countOutput);
+            elsif(read='1') then
+                temp <= mem(countOutput);
                 countOutput:= (countOutput +1) mod N;
             end if; 
+            
          end if;               
     end process;
---output <= tempout;
---tempin <= input;
+output <= temp;
 end Behavioral;

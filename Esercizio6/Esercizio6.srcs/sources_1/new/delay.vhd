@@ -40,12 +40,12 @@ end delay;
 architecture Behavioral of delay is
 
 begin
-process(clk)
-begin
-if(clk='0' and clk'event) then
-    delay_input <= input;
- end if;
-
-end process;
+    process(clk)
+    begin
+    if(clk='1' and clk'event) then
+        delay_input <= input;
+     end if;
+    
+    end process;
 
 end Behavioral;
