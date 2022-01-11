@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Jan  8 16:05:55 2022
+# Process ID: 8788
+# Current directory: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.sim/sim_1/behav/xsim/xsim.dir/system_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.sim/sim_1/behav/xsim/xsim.dir/system_tb_behav/webtalk/xsim_webtalk.tcl -notrace
