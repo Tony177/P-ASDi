@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jan 11 12:54:53 2022
+# Process ID: 13976
+# Current directory: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.sim/sim_1/behav/xsim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6060 C:\Users\super\Desktop\magistrale\architetture\progettiVHDL\Esercizio9_vs\Esercizio9_vs.sim\sim_1\behav\xsim\sim_sistema_behav.wdb
+# Log file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.sim/sim_1/behav/xsim/vivado.log
+# Journal file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.sim/sim_1/behav/xsim\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_wave_database {C:\Users\super\Desktop\magistrale\architetture\progettiVHDL\Esercizio9_vs\Esercizio9_vs.sim\sim_1\behav\xsim\sim_sistema_behav.wdb}
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+add_wave {{/sim_sistema}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+open_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 11 14:12:27 2022...

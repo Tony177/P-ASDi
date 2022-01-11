@@ -1,0 +1,12 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sim_1/new/AtoB_tb.vhd,1641895069,vhdl,,,,atob_tb,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sim_1/new/sim_sistema.vhd,1641847742,vhdl,,,,sim_sistema,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/imports/Esercizio9/RS232RefComp2.vhd,1641893736,vhdl,C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/new/sistemaA.vhd;C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/new/sistemaB.vhd,,,uartcomponent,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/imports/new/debouncer.vhd,1641833935,vhdl,,,,debouncer,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/new/div_freq.vhd,1641835934,vhdl,,,,div_freq,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/new/sistemaA.vhd,1641894986,vhdl,C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sim_1/new/AtoB_tb.vhd,,,sistemaa,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/new/sistemaB.vhd,1641894987,vhdl,C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sim_1/new/AtoB_tb.vhd,,,sistemab,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/Esercizio9_vs/Esercizio9_vs.srcs/sources_1/new/sistema_complessivo.vhd,1641835909,vhdl,,,,sistema_complessivo,,,,,,,,
