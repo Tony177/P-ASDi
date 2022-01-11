@@ -43,8 +43,8 @@ end sistemaA;
 architecture Structural of sistemaA is
 component UARTcomponent
 Generic (
-		BAUD_DIVIDE_G : integer := 54;
-		BAUD_RATE_G   : integer := 869 
+		BAUD_DIVIDE_G : integer := 54;	--BAUD_RATE/16
+		BAUD_RATE_G   : integer := 869 --100Mhz/115200
 	);
 port(CLK: in std_logic; 
      TXD: out std_logic  := '1'; 
