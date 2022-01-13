@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="sim_sistema_comp_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="sim_sistema_comp" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="44654fs"></ZoomEndTime>
+      <Cursor1Time time="201500fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="302"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/sim_sistema_comp/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/control_unit/reset" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="label">reset_cuA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/div_out" type="logic">
+      <obj_property name="ElementShortName">div_out</obj_property>
+      <obj_property name="ObjectShortName">div_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/data" type="logic">
+      <obj_property name="ElementShortName">data</obj_property>
+      <obj_property name="ObjectShortName">data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/r" type="logic">
+      <obj_property name="ElementShortName">r</obj_property>
+      <obj_property name="ObjectShortName">r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/ris" type="logic">
+      <obj_property name="ElementShortName">ris</obj_property>
+      <obj_property name="ObjectShortName">ris</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/delay_write" type="logic">
+      <obj_property name="ElementShortName">delay_write</obj_property>
+      <obj_property name="ObjectShortName">delay_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/control_unit/write" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+      <obj_property name="label">write_cuA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/value" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">value[7:0]</obj_property>
+      <obj_property name="ObjectShortName">value[7:0]</obj_property>
+      <obj_property name="label">value[7:0]_trasmA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/control_unit/current_state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="label">current_state_cuA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/uartA/TBE" type="logic">
+      <obj_property name="ElementShortName">TBE</obj_property>
+      <obj_property name="ObjectShortName">TBE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/mam/mem" type="array">
+      <obj_property name="ElementShortName">mem[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[0:2][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/control_unit/ab_counter" type="logic">
+      <obj_property name="ElementShortName">ab_counter</obj_property>
+      <obj_property name="ObjectShortName">ab_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisA/counterA/output" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">output[1:2]</obj_property>
+      <obj_property name="ObjectShortName">output[1:2]</obj_property>
+      <obj_property name="label">counterA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/control_unit/temp_write" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">temp_write</obj_property>
+      <obj_property name="ObjectShortName">temp_write</obj_property>
+      <obj_property name="label">temp_write_B</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/control_unit/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/uartB/RDA" type="logic">
+      <obj_property name="ElementShortName">RDA</obj_property>
+      <obj_property name="ObjectShortName">RDA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/output" type="array">
+      <obj_property name="ElementShortName">output[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/read" type="logic">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/error" type="logic">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/control_unit/PE" type="logic">
+      <obj_property name="ElementShortName">PE</obj_property>
+      <obj_property name="ObjectShortName">PE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/control_unit/FE" type="logic">
+      <obj_property name="ElementShortName">FE</obj_property>
+      <obj_property name="ObjectShortName">FE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sim_sistema_comp/utt/sisB/control_unit/current_state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+      <obj_property name="label">current_state_cuB</obj_property>
+   </wvobject>
+</wave_config>

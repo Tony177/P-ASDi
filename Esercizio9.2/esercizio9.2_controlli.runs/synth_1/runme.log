@@ -1,0 +1,530 @@
+
+*** Running vivado
+    with args -log sistema_complessivo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sistema_complessivo.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source sistema_complessivo.tcl -notrace
+Command: synth_design -top sistema_complessivo -part xc7a50ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1956 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 813.906 ; gain = 177.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sistema_complessivo' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistema_complessivo.vhd:44]
+INFO: [Synth 8-3491] module 'sistemaA' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:37' bound to instance 'sisA' of component 'sistemaA' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistema_complessivo.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'sistemaA' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:48]
+	Parameter N bound to: 2 - type: integer 
+	Parameter BAUD_DIVIDE_G bound to: 55 - type: integer 
+	Parameter BAUD_RATE_G bound to: 869 - type: integer 
+INFO: [Synth 8-3491] module 'UARTcomponent' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/imports/Esercizio9/RS232RefComp2.vhd:60' bound to instance 'uartA' of component 'UARTcomponent' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'UARTcomponent' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/imports/Esercizio9/RS232RefComp2.vhd:87]
+	Parameter BAUD_DIVIDE_G bound to: 55 - type: integer 
+	Parameter BAUD_RATE_G bound to: 869 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'UARTcomponent' (1#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/imports/Esercizio9/RS232RefComp2.vhd:87]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'contatore' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/contatore.vhd:37' bound to instance 'counterA' of component 'contatore' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'contatore' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/contatore.vhd:46]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'contatore' (2#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/contatore.vhd:46]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'ROM' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/ROM.vhd:37' bound to instance 'RomA' of component 'ROM' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/ROM.vhd:44]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ROM' (3#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/ROM.vhd:44]
+INFO: [Synth 8-3491] module 'control_unitA' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/control_unitA.vhd:34' bound to instance 'control_unit' of component 'control_unitA' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'control_unitA' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/control_unitA.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'control_unitA' (4#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/control_unitA.vhd:44]
+INFO: [Synth 8-3491] module 'delay_block' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/delay_block.vhd:34' bound to instance 'delay' of component 'delay_block' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'delay_block' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/delay_block.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'delay_block' (5#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/delay_block.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'sistemaA' (6#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaA.vhd:48]
+INFO: [Synth 8-3491] module 'sistemaB' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:38' bound to instance 'sisB' of component 'sistemaB' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistema_complessivo.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'sistemaB' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:48]
+	Parameter N bound to: 2 - type: integer 
+	Parameter BAUD_DIVIDE_G bound to: 55 - type: integer 
+	Parameter BAUD_RATE_G bound to: 869 - type: integer 
+INFO: [Synth 8-3491] module 'UARTcomponent' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/imports/Esercizio9/RS232RefComp2.vhd:60' bound to instance 'uartB' of component 'UARTcomponent' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:110]
+INFO: [Synth 8-3491] module 'control_unitB' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/control_unitB.vhd:34' bound to instance 'control_unit' of component 'control_unitB' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'control_unitB' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/control_unitB.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'control_unitB' (7#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/control_unitB.vhd:42]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MemoriaB' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/memoria.vhd:38' bound to instance 'mam' of component 'MemoriaB' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'MemoriaB' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/memoria.vhd:47]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MemoriaB' (8#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/memoria.vhd:47]
+	Parameter N bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'contatore' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/contatore.vhd:37' bound to instance 'counter' of component 'contatore' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:130]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/debouncer.vhd:34' bound to instance 'deb' of component 'debouncer' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/debouncer.vhd:46]
+	Parameter CLK_period bound to: 10 - type: integer 
+	Parameter button_noise_time bound to: 6500000 - type: integer 
+	Parameter N bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/debouncer.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (9#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/debouncer.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'sistemaB' (10#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistemaB.vhd:48]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/debouncer.vhd:34' bound to instance 'debouncer1' of component 'debouncer' [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistema_complessivo.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'sistema_complessivo' (11#1) [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/sources_1/new/sistema_complessivo.vhd:44]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 879.184 ; gain = 243.051
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 879.184 ; gain = 243.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 879.184 ; gain = 243.051
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+Finished Parsing XDC File [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sistema_complessivo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sistema_complessivo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 997.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 997.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a50ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'strCur_reg' in module 'UARTcomponent'
+INFO: [Synth 8-802] inferred FSM for state register 'sttCur_reg' in module 'UARTcomponent'
+INFO: [Synth 8-5544] ROM "ROM" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'control_unitA'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sttidle |                            00001 |                              000
+             stttransfer |                            00010 |                              001
+                sttdelay |                            00100 |                              011
+                sttshift |                            01000 |                              010
+            sttwaitwrite |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sttCur_reg' using encoding 'one-hot' in module 'UARTcomponent'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 stridle |                           000001 |                              000
+           streightdelay |                           000010 |                              001
+             strwaitfor0 |                           000100 |                              011
+            strcheckstop |                           001000 |                              101
+             strwaitfor1 |                           010000 |                              100
+              strgetdata |                           100000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'strCur_reg' using encoding 'one-hot' in module 'UARTcomponent'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 q_start |                          0000001 |                              000
+              q_trasmett |                          0000010 |                              001
+                      q0 |                          0000100 |                              010
+                      q1 |                          0001000 |                              011
+                      q2 |                          0010000 |                              100
+                      q3 |                          0100000 |                              101
+                      q4 |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'control_unitA'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      1 Bit       Adders := 2     
++---XORs : 
+	   8 Input      1 Bit         XORs := 2     
+	   9 Input      1 Bit         XORs := 2     
++---Registers : 
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 24    
++---RAMs : 
+	               16 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 6     
+	   6 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 10    
+	   5 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 8     
+	   6 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 19    
+	   7 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module UARTcomponent 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
++---XORs : 
+	   8 Input      1 Bit         XORs := 1     
+	   9 Input      1 Bit         XORs := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 5     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module contatore 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ROM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+Module control_unitA 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   7 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 4     
+Module delay_block 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module control_unitB 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+Module MemoriaB 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               16 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sisA/uartA/tfSReg_reg[10] )
+INFO: [Synth 8-3886] merging instance 'sisA/RomA/temp_reg[7]' (FDE) to 'sisA/RomA/temp_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sisA/RomA/temp_reg[6]' (FDE) to 'sisA/RomA/temp_reg[0]'
+INFO: [Synth 8-3886] merging instance 'sisA/RomA/temp_reg[4]' (FDE) to 'sisA/RomA/temp_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sisA/RomA/temp_reg[3]' (FDE) to 'sisA/RomA/temp_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sisA/RomA/temp_reg[2]' (FDE) to 'sisA/RomA/temp_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sisA/RomA/temp_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (sisA/uartA/FSM_onehot_strCur_reg[5]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisA/uartA/FSM_onehot_strCur_reg[4]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisA/uartA/FSM_onehot_strCur_reg[3]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisA/uartA/FSM_onehot_strCur_reg[2]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisA/uartA/FSM_onehot_strCur_reg[1]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisA/uartA/FSM_onehot_strCur_reg[0]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisB/uartB/FSM_onehot_sttCur_reg[4]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisB/uartB/FSM_onehot_sttCur_reg[3]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisB/uartB/FSM_onehot_sttCur_reg[2]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisB/uartB/FSM_onehot_sttCur_reg[1]) is unused and will be removed from module sistema_complessivo.
+WARNING: [Synth 8-3332] Sequential element (sisB/uartB/FSM_onehot_sttCur_reg[0]) is unused and will be removed from module sistema_complessivo.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++--------------------+------------------+-----------+----------------------+--------------+
+|Module Name         | RTL Object       | Inference | Size (Depth x Width) | Primitives   | 
++--------------------+------------------+-----------+----------------------+--------------+
+|sistema_complessivo | sisB/mam/mem_reg | Implied   | 2 x 8                | RAM32M x 2   | 
++--------------------+------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++--------------------+------------------+-----------+----------------------+--------------+
+|Module Name         | RTL Object       | Inference | Size (Depth x Width) | Primitives   | 
++--------------------+------------------+-----------+----------------------+--------------+
+|sistema_complessivo | sisB/mam/mem_reg | Implied   | 2 x 8                | RAM32M x 2   | 
++--------------------+------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 997.379 ; gain = 361.246
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    68|
+|3     |LUT1   |    10|
+|4     |LUT2   |    53|
+|5     |LUT3   |    28|
+|6     |LUT4   |    24|
+|7     |LUT5   |    14|
+|8     |LUT6   |    36|
+|9     |RAM32M |     2|
+|10    |FDCE   |     3|
+|11    |FDRE   |   266|
+|12    |FDSE   |     2|
+|13    |IBUF   |     3|
+|14    |OBUF   |     9|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+----------------+------+
+|      |Instance         |Module          |Cells |
++------+-----------------+----------------+------+
+|1     |top              |                |   519|
+|2     |  debouncer1     |debouncer       |   131|
+|3     |  sisA           |sistemaA        |    87|
+|4     |    RomA         |ROM             |     5|
+|5     |    control_unit |control_unitA   |    21|
+|6     |    counterA     |contatore_1     |     3|
+|7     |    delay        |delay_block     |     1|
+|8     |    uartA        |UARTcomponent_2 |    57|
+|9     |  sisB           |sistemaB        |   288|
+|10    |    control_unit |control_unitB   |    13|
+|11    |    counter      |contatore       |     1|
+|12    |    deb          |debouncer_0     |   132|
+|13    |    mam          |MemoriaB        |    60|
+|14    |    uartB        |UARTcomponent   |    82|
++------+-----------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1002.633 ; gain = 248.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1002.633 ; gain = 366.500
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.680 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1018.680 ; gain = 641.766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.680 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/super/Desktop/magistrale/architetture/esercizio9.2_controlli/esercizio9.2_controlli.runs/synth_1/sistema_complessivo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sistema_complessivo_utilization_synth.rpt -pb sistema_complessivo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 13 10:47:06 2022...
