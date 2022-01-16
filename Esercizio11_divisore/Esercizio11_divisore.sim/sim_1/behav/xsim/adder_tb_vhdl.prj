@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio11_divisore.srcs/sources_1/imports/Desktop/FA.vhd" \
+"../../../../Esercizio11_divisore.srcs/sources_1/imports/Desktop/ripple_curry_adder.vhd" \
+"../../../../Esercizio11_divisore.srcs/sources_1/imports/Desktop/adder_subtracter.vhd" \
+"../../../../Esercizio11_divisore.srcs/sim_1/imports/Desktop/adder_tb.vhd" \
+
+# Do not sort compile order
+nosort

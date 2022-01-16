@@ -1,0 +1,23 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sim_1/imports/Desktop/adder_tb.vhd,1642243113,vhdl,,,,adder_tb,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sim_1/new/sistema_tb.vhd,1642331689,vhdl,,,,sistema_tb,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Desktop/FA.vhd,1642237622,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Desktop/ripple_curry_adder.vhd,,,fa,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Desktop/adder_subtracter.vhd,1642242707,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sim_1/imports/Desktop/adder_tb.vhd,,,adder_subtracter,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Desktop/ripple_curry_adder.vhd,1642239540,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Desktop/adder_subtracter.vhd,,,ripple_curry_adder,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Display7Seg - Vivado/anodes_manager.vhd,1640573284,vhdl,,,,anodes_manager,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Display7Seg - Vivado/cathodes_manager.vhd,1640573284,vhdl,,,,cathodes_manager,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Display7Seg - Vivado/clock_filter.vhd,1640573284,vhdl,,,,clock_filter,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Display7Seg - Vivado/counter_mod4.vhd,1640573284,vhdl,,,,counter_mod8,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/Display7Seg - Vivado/display_seven_segments.vhd,1640573284,vhdl,,,,display_seven_segments,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/new/contatore.vhd,1642065012,vhdl,,,,contatore,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/imports/new/debouncer.vhd,1642081640,vhdl,,,,debouncer,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/adder.vhd,1642087850,vhdl,,,,adder,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/control_unit.vhd,1642329563,vhdl,,,,control_unit,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/divisore.vhd,1642331413,vhdl,,,,divisore,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/registro.vhd,1642331438,vhdl,,,,registroaq,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/registroV.vhd,1642331295,vhdl,,,,registrov,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/sistema_complessivo.vhd,1642082487,vhdl,,,,sistema_complessivo,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.srcs/sources_1/new/xor_inversione.vhd,1642087598,vhdl,,,,xor_inversione,,,,,,,,
