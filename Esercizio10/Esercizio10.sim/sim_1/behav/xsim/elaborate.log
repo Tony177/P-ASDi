@@ -1,0 +1,22 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 112dfc3a815c4770b8425e3f63b8a924 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.mux_4_1 [mux_4_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.demux_4_1 [demux_4_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.encoder [encoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.buffer_uscita [buffer_uscita_default]
+Compiling architecture structural of entity xil_defaultlib.control_unit [control_unit_default]
+Compiling architecture dataflow of entity xil_defaultlib.blocco_instr [blocco_instr_default]
+Compiling architecture structural of entity xil_defaultlib.operative_unit [operative_unit_default]
+Compiling architecture structural of entity xil_defaultlib.sistema_complessivo [sistema_complessivo_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench
+Built simulation snapshot testbench_behav

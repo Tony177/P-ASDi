@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio10.srcs/sources_1/new/blocco_instr.vhd" \
+"../../../../Esercizio10.srcs/sources_1/new/buffer.vhd" \
+"../../../../Esercizio10.srcs/sources_1/new/control_unit.vhd" \
+"../../../../Esercizio10.srcs/sources_1/imports/new/demux_4_1.vhd" \
+"../../../../Esercizio10.srcs/sources_1/new/encoder.vhd" \
+"../../../../Esercizio10.srcs/sources_1/imports/new/mux_4_1.vhd" \
+"../../../../Esercizio10.srcs/sources_1/new/operative_unit.vhd" \
+"../../../../Esercizio10.srcs/sources_1/new/sistema_complessivo.vhd" \
+"../../../../Esercizio10.srcs/sim_1/new/testbench.vhd" \
+
+# Do not sort compile order
+nosort
