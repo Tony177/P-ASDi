@@ -17,7 +17,7 @@ use IEEE.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -51,7 +51,7 @@ component memoria
         indice_riga: in std_logic_vector(0 to 9);
         indice_colonna: in std_logic_vector(0 to 9);
         read : in std_logic;
-        output : out std_logic_vector(0 to 11) 
+        output : out bit_vector(0 to 11) 
      );
     end component;
 for all: memoria use entity work.memoria(Behavioral);
@@ -135,23 +135,26 @@ constant V_POL : std_logic := '0';
 --constant V_POL : std_logic := '1';
 
 --Moving Box constants
---constant BOX_WIDTH : natural := 8;
---constant BOX_CLK_DIV : natural := 1000000; --MAX=(2^25 - 1)
+constant BOX_WIDTH : natural := 200;
+constant BOX_CLK_DIV : natural := 100000; --MAX=(2^25 - 1)
 
---constant BOX_X_MAX : natural := (512 - BOX_WIDTH);
---constant BOX_Y_MAX : natural := (FRAME_HEIGHT - BOX_WIDTH);
+constant BOX_X_MAX : natural := (FRAME_WIDTH - BOX_WIDTH);
+constant BOX_Y_MAX : natural := (FRAME_HEIGHT - BOX_WIDTH);
 
---constant BOX_X_MIN : natural := 0;
---constant BOX_Y_MIN : natural := 256;
+constant BOX_X_MIN : natural := 0;
+constant BOX_Y_MIN : natural := 0;
 
---constant BOX_X_INIT : std_logic_vector(11 downto 0) := x"000";
---constant BOX_Y_INIT : std_logic_vector(11 downto 0) := x"190"; --400
+constant BOX_X_INIT : std_logic_vector(0 to 9) := (others =>'0');
+constant BOX_Y_INIT : std_logic_vector(0 to 9):= (others =>'0'); --400
 
 signal pxl_clk : std_logic;
 signal active : std_logic;
 
 signal h_cntr_reg : std_logic_vector(0 to 9) := (others =>'0');
 signal v_cntr_reg : std_logic_vector(0 to 9) := (others =>'0');
+
+signal mem_h_cntr_reg : std_logic_vector(0 to 9) := (others =>'0');
+signal mem_v_cntr_reg : std_logic_vector(0 to 9) := (others =>'0');
 
 signal h_sync_reg : std_logic := not(H_POL);
 signal v_sync_reg : std_logic := not(V_POL);
@@ -167,15 +170,15 @@ signal vga_red : std_logic_vector(3 downto 0);
 signal vga_green : std_logic_vector(3 downto 0);
 signal vga_blue : std_logic_vector(3 downto 0);
 
-signal output_temp: std_logic_vector(0 to 11);
---signal box_x_reg : std_logic_vector(11 downto 0) := BOX_X_INIT;
---signal box_x_dir : std_logic := '1';
---signal box_y_reg : std_logic_vector(11 downto 0) := BOX_Y_INIT;
---signal box_y_dir : std_logic := '1';
---signal box_cntr_reg : std_logic_vector(24 downto 0) := (others =>'0');
+signal output_temp: bit_vector(0 to 11);
+signal box_x_reg : std_logic_vector(0 to 9) := BOX_X_INIT;
+signal box_x_dir : std_logic := '1';
+signal box_y_reg : std_logic_vector(0 to 9) := BOX_Y_INIT;
+signal box_y_dir : std_logic := '1';
+signal box_cntr_reg : std_logic_vector(24 downto 0) := (others =>'0');
 
---signal update_box : std_logic;
---signal pixel_in_box : std_logic;
+signal update_box : std_logic;
+signal pixel_in_box : std_logic;
 
 
 begin
@@ -192,8 +195,8 @@ mem_instance : memoria
   port map
    (
         clk => pxl_clk,-- la memoria potrebbe lavorare anche con il clock a freq più alta?
-        indice_riga => v_cntr_reg,
-        indice_colonna => h_cntr_reg,
+        indice_riga => mem_h_cntr_reg,
+        indice_colonna => mem_v_cntr_reg,
         read => active,
         output => output_temp
     );
@@ -202,68 +205,68 @@ mem_instance : memoria
   ----------------------------------------------------
   -------         TEST PATTERN LOGIC           -------
   ----------------------------------------------------
-  vga_red <= output_temp(0 to 3) when (active = '1') else
+  vga_red <= to_stdlogicvector(output_temp(0 to 3)) when (active = '1') and ((mem_h_cntr_reg) < 200) and ((mem_v_cntr_reg) < 200) and pixel_in_box = '1' else
               (others=>'0');
                 
-  vga_green <= output_temp(4 to 7) when (active = '1') else
+  vga_green <= to_stdlogicvector(output_temp(4 to 7)) when (active = '1') and ((mem_h_cntr_reg) < 200) and ((mem_v_cntr_reg) < 200) and pixel_in_box = '1' else
               (others=>'0'); 
               
-   vga_blue <= output_temp(8 to 11) when (active = '1') else
+   vga_blue <= to_stdlogicvector(output_temp(8 to 11)) when (active = '1') and ((mem_h_cntr_reg) < 200) and ((mem_v_cntr_reg) < 200) and pixel_in_box = '1' else
               (others=>'0');
               
- 
+
  ------------------------------------------------------
  -------         MOVING BOX LOGIC                ------
  ------------------------------------------------------
---  process (pxl_clk)
---  begin
---    if (rising_edge(pxl_clk)) then
---      if (update_box = '1') then
---        if (box_x_dir = '1') then
---          box_x_reg <= box_x_reg + 1;
---        else
---          box_x_reg <= box_x_reg - 1;
---        end if;
---        if (box_y_dir = '1') then
---          box_y_reg <= box_y_reg + 1;
---        else
---          box_y_reg <= box_y_reg - 1;
---        end if;
---      end if;
---    end if;
---  end process;
+  process (pxl_clk)
+  begin
+    if (rising_edge(pxl_clk)) then
+      if (update_box = '1') then
+        if (box_x_dir = '1') then
+          box_x_reg <= box_x_reg + 1;
+        else
+          box_x_reg <= box_x_reg - 1;
+        end if;
+        if (box_y_dir = '1') then
+          box_y_reg <= box_y_reg + 1;
+        else
+          box_y_reg <= box_y_reg - 1;
+        end if;
+      end if;
+    end if;
+  end process;
       
---  process (pxl_clk)
---  begin
---    if (rising_edge(pxl_clk)) then
---      if (update_box = '1') then
---        if ((box_x_dir = '1' and (box_x_reg = BOX_X_MAX - 1)) or (box_x_dir = '0' and (box_x_reg = BOX_X_MIN + 1))) then
---          box_x_dir <= not(box_x_dir);
---        end if;
---        if ((box_y_dir = '1' and (box_y_reg = BOX_Y_MAX - 1)) or (box_y_dir = '0' and (box_y_reg = BOX_Y_MIN + 1))) then
---          box_y_dir <= not(box_y_dir);
---        end if;
---      end if;
---    end if;
---  end process;
+  process (pxl_clk)
+  begin
+    if (rising_edge(pxl_clk)) then
+      if (update_box = '1') then
+        if ((box_x_dir = '1' and (box_x_reg = BOX_X_MAX - 1)) or (box_x_dir = '0' and (box_x_reg = BOX_X_MIN + 1))) then
+          box_x_dir <= not(box_x_dir);
+        end if;
+        if ((box_y_dir = '1' and (box_y_reg = BOX_Y_MAX - 1)) or (box_y_dir = '0' and (box_y_reg = BOX_Y_MIN + 1))) then
+          box_y_dir <= not(box_y_dir);
+        end if;
+      end if;
+    end if;
+  end process;
   
---  process (pxl_clk)
---  begin
---    if (rising_edge(pxl_clk)) then
---      if (box_cntr_reg = (BOX_CLK_DIV - 1)) then
---        box_cntr_reg <= (others=>'0');
---      else
---        box_cntr_reg <= box_cntr_reg + 1;     
---      end if;
---    end if;
---  end process;
+  process (pxl_clk)
+  begin
+    if (rising_edge(pxl_clk)) then
+      if (box_cntr_reg = (BOX_CLK_DIV - 1)) then
+        box_cntr_reg <= (others=>'0');
+      else
+        box_cntr_reg <= box_cntr_reg + 1;     
+      end if;
+    end if;
+  end process;
   
---  update_box <= '1' when box_cntr_reg = (BOX_CLK_DIV - 1) else
---                '0';
+  update_box <= '1' when box_cntr_reg = (BOX_CLK_DIV - 1) else
+                '0';
                 
---  pixel_in_box <= '1' when (((h_cntr_reg >= box_x_reg) and (h_cntr_reg < (box_x_reg + BOX_WIDTH))) and
---                            ((v_cntr_reg >= box_y_reg) and (v_cntr_reg < (box_y_reg + BOX_WIDTH)))) else
---                  '0';
+  pixel_in_box <= '1' when (((h_cntr_reg >= box_x_reg) and (h_cntr_reg < (box_x_reg + BOX_WIDTH))) and
+                            ((v_cntr_reg >= box_y_reg) and (v_cntr_reg < (box_y_reg + BOX_WIDTH)))) else
+                  '0';
                 
   
  ------------------------------------------------------
@@ -336,4 +339,26 @@ mem_instance : memoria
   VGA_G <= vga_green_reg;
   VGA_B <= vga_blue_reg;
 
+
+  process (pxl_clk)
+  begin
+    if (rising_edge(pxl_clk)) then
+      if ((h_cntr_reg >= box_x_reg) and (h_cntr_reg < (box_x_reg + BOX_WIDTH))) then
+        mem_h_cntr_reg <= h_cntr_reg-box_x_reg;
+      else
+        mem_h_cntr_reg <= (others =>'0');
+      end if;
+    end if;
+  end process;
+
+  process (pxl_clk)
+  begin
+    if (rising_edge(pxl_clk)) then
+      if ((v_cntr_reg >= box_y_reg) and (v_cntr_reg < (box_y_reg + BOX_WIDTH))) then
+        mem_v_cntr_reg <= v_cntr_reg-box_y_reg;
+      else
+        mem_v_cntr_reg <= (others =>'0');
+      end if;
+    end if;
+  end process;
 end Behavioral;

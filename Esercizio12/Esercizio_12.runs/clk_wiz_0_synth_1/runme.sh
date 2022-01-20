@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/anto/Scrivania/P-ASDi/Esercizio_12/Esercizio_12.runs/clk_wiz_0_synth_1'
+HD_PWD='/home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.runs/clk_wiz_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

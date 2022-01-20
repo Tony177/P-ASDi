@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../esercizio12_finale.srcs/sources_1/imports/Desktop/magistrale/architetture/Esercizio12_vs2019/Esercizio12_vs2019.srcs/sources_1/new/memoria.vhd" \
+"../../../../esercizio12_finale.srcs/sources_1/imports/Desktop/top.vhd" \
+"../../../../esercizio12_finale.srcs/sim_1/imports/new/test.vhd" \
+
+# Do not sort compile order
+nosort
