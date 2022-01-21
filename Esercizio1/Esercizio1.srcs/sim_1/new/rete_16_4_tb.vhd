@@ -49,7 +49,11 @@ signal s_demux: std_logic_vector(0 to 1);
 
 
 begin
-rete_16_4_1: rete_16_4 port map(ingresso (0 to 15) => i(0 to 15), uscita (0 to 3) => u (0 to 3), sel_mux(0 to 3) => s_mux(0 to 3), sel_demux(0 to 1) => s_demux(0 to 1));
+rete_16_4_1: rete_16_4 port map(
+    ingresso (0 to 15) => i(0 to 15),
+    uscita (0 to 3) => u (0 to 3),
+    sel_mux(0 to 3) => s_mux(0 to 3),
+    sel_demux(0 to 1) => s_demux(0 to 1));
 
 rete_16_4_2: i <= "0000001000000000",
 "0000000000000000" after 100ns,
