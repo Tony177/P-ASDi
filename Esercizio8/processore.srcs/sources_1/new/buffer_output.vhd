@@ -48,9 +48,9 @@ begin
             if(mem_instr_in = X"36") then
                 temp <= mem_data_out(7 downto 0);
              end if;
---             if(reset = '1') then
---                temp <= (others => '0');
---             end if;
+             if(reset = '1') then
+                temp <= (0 => '1',others => '0');
+             end if;
         end if;
     end process;
 data_out <= temp;

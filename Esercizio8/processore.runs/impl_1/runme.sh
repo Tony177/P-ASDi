@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.runs/impl_1'
+HD_PWD='C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

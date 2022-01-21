@@ -24,24 +24,32 @@ create_project -in_memory -part xc7a50ticsg324-1L
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.cache/wt [current_project]
-set_property parent.project_path C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.xpr [current_project]
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+set_property webtalk.parent_dir C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.cache/wt [current_project]
+set_property parent.project_path C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.xpr [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.cache/ip [current_project]
+set_property ip_output_repo c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/common_defs.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/alu.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/buffer_output.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_store.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_unit.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/datapath.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/dp_ar_ram.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/processor.vhd
-  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/system.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/common_defs.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/alu.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/buffer_output.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_store.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_unit.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/datapath.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/imports/new/debouncer.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/dp_ar_ram.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/processor.vhd
+  C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/system.vhd
 }
+read_ip -quiet c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -50,8 +58,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+read_xdc C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

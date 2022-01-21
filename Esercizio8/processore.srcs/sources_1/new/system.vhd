@@ -46,7 +46,12 @@ architecture structural of system is
            clock : in STD_LOGIC;
            cleared_button : out STD_LOGIC);
   end component;
-  
+  component clk_wiz_0 
+    port(
+        clk_in1 : in STD_LOGIC;
+        clk_out1 : out STD_LOGIC
+  ); 
+  end component;
   component  buffer_output
           Port ( mem_instr_in : in mbr_data_type;
             mem_data_out : in reg_data_type;
@@ -55,21 +60,22 @@ architecture structural of system is
            data_out : out std_logic_vector(7 downto 0));
   end component;
   
+  signal clk1: std_logic;
   signal mem_data_we    : std_logic;
   signal mem_data_in    : reg_data_type;
   signal mem_data_out   : reg_data_type;
   signal mem_data_addr  : reg_data_type;
   signal mem_instr_in   : mbr_data_type;
   signal mem_instr_addr : reg_data_type;
-  --signal reset_cleared: std_logic;  
+  signal reset_cleared: std_logic;  
   signal temp,temp2:std_logic_vector(7 downto 0);
 begin -- architecture structural
 
   -- Processor instantiation
   processor : entity work.processor
     port map (
-      clk            => clk,
-      reset          => reset,
+      clk            => clk1,
+      reset          => reset_cleared,
       mem_data_we    => mem_data_we,
       mem_data_in    => mem_data_in,
       mem_data_out   => mem_data_out,
@@ -80,7 +86,7 @@ begin -- architecture structural
   -- RAM instantiation
   dp_ar_ram : entity work.dp_ar_ram
     port map (
-      clk        => clk,
+      clk        => clk1,
       we_1       => mem_data_we,
       data_in_1  => mem_data_out,
       data_out_1 => mem_data_in,
@@ -90,19 +96,22 @@ begin -- architecture structural
       data_out_2 => mem_instr_in,
       address_2  => mem_instr_addr);
       
---    deb1: debouncer port map(
---        button => reset,
---        clock => clk,
---        cleared_button => reset_cleared    
---    );
+    deb1: debouncer port map(
+        button => reset,
+        clock => clk1,
+        cleared_button => reset_cleared    
+    );
     
     buffer_out: buffer_output port map(
         mem_instr_in => mem_instr_in,
         mem_data_out   => mem_data_out,
-        reset => reset,
-        clock => clk,
+        reset => reset_cleared,
+        clock => clk1,
         data_out => data_out    
     );
-  
+   clk_div:  clk_wiz_0 port map(
+        clk_in1 => clk,
+        clk_out1 => clk1
+  ); 
     
 end architecture structural;

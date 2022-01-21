@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity debouncer is
     generic (                       
         CLK_period:   integer := 10;  -- periodo del clock della board 10 nanosecondi
-        button_noise_time:   integer := 6500000 --intervallo di tempo in cui si ha l'oscillazione del bottone
+        button_noise_time:   integer := 20 --intervallo di tempo in cui si ha l'oscillazione del bottone
                                          --assumo che duri 6.5ms=6500microsec=6500000ns
     );
     Port ( button : in STD_LOGIC;

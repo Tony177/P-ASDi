@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_encoderBCD.srcs/sources_1/new/display_manager.vhd" \
+"../../../../project_encoderBCD.srcs/sim_1/new/sim_display.vhd" \
+
+# Do not sort compile order
+nosort

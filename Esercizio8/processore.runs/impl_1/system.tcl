@@ -71,12 +71,14 @@ set rc [catch {
   set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.cache/wt [current_project]
-  set_property parent.project_path C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.xpr [current_project]
-  set_property ip_output_repo C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.cache/wt [current_project]
+  set_property parent.project_path C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.xpr [current_project]
+  set_property ip_output_repo C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.runs/synth_1/system.dcp
-  read_xdc C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  add_files -quiet C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1/system.dcp
+  read_ip -quiet c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
   link_design -top system -part xc7a50ticsg324-1L
   close_msg_db -file init_design.pb
 } RESULT]
@@ -156,6 +158,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force system.mmi }
   write_bitstream -force system.bit 
   catch {write_debug_probes -quiet -force system}

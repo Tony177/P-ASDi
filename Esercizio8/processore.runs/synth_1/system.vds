@@ -2,12 +2,12 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sat Jan  8 18:14:04 2022
-# Process ID: 14244
-# Current directory: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.runs/synth_1
+# Start of session at: Thu Jan 20 17:18:28 2022
+# Process ID: 7900
+# Current directory: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1
 # Command line: vivado.exe -log system.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system.tcl
-# Log file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.runs/synth_1/system.vds
-# Journal file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.runs/synth_1\vivado.jou
+# Log file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1/system.vds
+# Journal file: C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source system.tcl -notrace
 Command: synth_design -top system -part xc7a50ticsg324-1L
@@ -16,30 +16,39 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50ti'
 INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9988 
+INFO: Helper process launched with PID 3592 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 813.598 ; gain = 177.230
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 826.508 ; gain = 176.398
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/system.vhd:43]
-INFO: [Synth 8-638] synthesizing module 'processor' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/processor.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'control_unit' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_unit.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'control_store' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_store.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'control_store' (1#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_store.vhd:42]
-WARNING: [Synth 8-6014] Unused sequential element n_ff_reg was removed.  [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_unit.vhd:90]
-WARNING: [Synth 8-6014] Unused sequential element z_ff_reg was removed.  [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_unit.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'control_unit' (2#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/control_unit.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'datapath' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/datapath.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/alu.vhd:77]
-INFO: [Synth 8-256] done synthesizing module 'alu' (3#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/alu.vhd:77]
-INFO: [Synth 8-256] done synthesizing module 'datapath' (4#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/datapath.vhd:73]
-INFO: [Synth 8-256] done synthesizing module 'processor' (5#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/processor.vhd:53]
-INFO: [Synth 8-638] synthesizing module 'dp_ar_ram' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/dp_ar_ram.vhd:56]
-INFO: [Synth 8-226] default block is never used [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/dp_ar_ram.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'dp_ar_ram' (6#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/dp_ar_ram.vhd:56]
-INFO: [Synth 8-3491] module 'buffer_output' declared at 'C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/buffer_output.vhd:34' bound to instance 'buffer_out' of component 'buffer_output' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/system.vhd:99]
-INFO: [Synth 8-638] synthesizing module 'buffer_output' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/buffer_output.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'buffer_output' (7#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/buffer_output.vhd:42]
-INFO: [Synth 8-256] done synthesizing module 'system' (8#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/sources_1/new/system.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'system' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/system.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'processor' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/processor.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'control_unit' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_unit.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'control_store' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_store.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'control_store' (1#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_store.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element n_ff_reg was removed.  [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_unit.vhd:90]
+WARNING: [Synth 8-6014] Unused sequential element z_ff_reg was removed.  [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_unit.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'control_unit' (2#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/control_unit.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'datapath' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/datapath.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/alu.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'alu' (3#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/alu.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (4#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/datapath.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'processor' (5#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/processor.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'dp_ar_ram' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/dp_ar_ram.vhd:56]
+INFO: [Synth 8-226] default block is never used [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/dp_ar_ram.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'dp_ar_ram' (6#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/dp_ar_ram.vhd:56]
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/imports/new/debouncer.vhd:34' bound to instance 'deb1' of component 'Debouncer' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/system.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/imports/new/debouncer.vhd:45]
+	Parameter CLK_period bound to: 10 - type: integer 
+	Parameter button_noise_time bound to: 6500000 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/imports/new/debouncer.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (7#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/imports/new/debouncer.vhd:45]
+INFO: [Synth 8-3491] module 'buffer_output' declared at 'C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/buffer_output.vhd:34' bound to instance 'buffer_out' of component 'buffer_output' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/system.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'buffer_output' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/buffer_output.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'buffer_output' (8#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/buffer_output.vhd:42]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1/.Xil/Vivado-7900-DESKTOP-HBUA1FM/realtime/clk_wiz_0_stub.v:5' bound to instance 'clk_div' of component 'clk_wiz_0' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/system.vhd:112]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1/.Xil/Vivado-7900-DESKTOP-HBUA1FM/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (9#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1/.Xil/Vivado-7900-DESKTOP-HBUA1FM/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'system' (10#1) [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/new/system.vhd:43]
 WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[31]
 WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[30]
 WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[29]
@@ -64,9 +73,8 @@ WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[1
 WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[10]
 WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[9]
 WARNING: [Synth 8-3331] design buffer_output has unconnected port mem_data_out[8]
-WARNING: [Synth 8-3331] design buffer_output has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 878.461 ; gain = 242.094
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 891.125 ; gain = 241.016
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,44 +87,49 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 878.461 ; gain = 242.094
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 891.125 ; gain = 241.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 878.461 ; gain = 242.094
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 891.125 ; gain = 241.016
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
-Finished Parsing XDC File [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_propImpl.xdc].
+Parsing XDC File [c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_div'
+Finished Parsing XDC File [c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_div'
+Parsing XDC File [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+Finished Parsing XDC File [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 998.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1017.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 998.832 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1017.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 998.832 ; gain = 362.465
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1017.430 ; gain = 367.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 998.832 ; gain = 362.465
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1017.430 ; gain = 367.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for clk_div. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 998.832 ; gain = 362.465
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1017.430 ; gain = 367.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 998.832 ; gain = 362.465
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1017.430 ; gain = 367.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -130,20 +143,21 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
 	               36 Bit    Registers := 1     
-	               32 Bit    Registers := 9     
+	               32 Bit    Registers := 10    
 	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	 512 Input     36 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 6     
 	   5 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -184,6 +198,16 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 3     
 	   4 Input      8 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
 Module buffer_output 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -228,7 +252,7 @@ INFO: [Synth 8-3886] merging instance 'processor/datapath/pc_reg_reg[10]' (FDRE)
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\processor/control_unit/mir_reg_reg[22] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\processor/datapath/cpp_reg_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1087.445 ; gain = 451.078
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1098.789 ; gain = 448.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -254,14 +278,16 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_div/clk_out1' to pin 'clk_div/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1087.445 ; gain = 451.078
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1098.789 ; gain = 448.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1188.789 ; gain = 552.422
+Finished Timing Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 1203.711 ; gain = 553.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -287,7 +313,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Technology Mapping : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1204.742 ; gain = 554.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,7 +337,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -324,7 +350,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -336,93 +362,95 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |     8|
-|3     |LUT1     |    21|
-|4     |LUT2     |    10|
-|5     |LUT3     |   105|
-|6     |LUT4     |    66|
-|7     |LUT5     |   159|
-|8     |LUT6     |   533|
-|9     |MUXF7    |    35|
-|10    |RAM64M   |   160|
-|11    |RAM64X1D |    32|
-|12    |FDRE     |   291|
-|13    |FDSE     |     6|
-|14    |IBUF     |     2|
-|15    |OBUF     |     8|
-+------+---------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |clk_wiz_0 |     1|
+|2     |CARRY4    |    16|
+|3     |LUT1      |    21|
+|4     |LUT2      |    11|
+|5     |LUT3      |   108|
+|6     |LUT4      |    72|
+|7     |LUT5      |   163|
+|8     |LUT6      |   533|
+|9     |MUXF7     |    35|
+|10    |RAM64M    |   160|
+|11    |RAM64X1D  |    32|
+|12    |FDRE      |   324|
+|13    |FDSE      |     7|
+|14    |IBUF      |     1|
+|15    |OBUF      |     8|
++------+----------+------+
 
 Report Instance Areas: 
 +------+-----------------+--------------+------+
 |      |Instance         |Module        |Cells |
 +------+-----------------+--------------+------+
-|1     |top              |              |  1437|
+|1     |top              |              |  1492|
 |2     |  buffer_out     |buffer_output |    10|
-|3     |  dp_ar_ram      |dp_ar_ram     |   363|
-|4     |  processor      |processor     |  1053|
-|5     |    control_unit |control_unit  |   741|
-|6     |    datapath     |datapath      |   312|
-|7     |      alu        |alu           |     8|
+|3     |  deb1           |debouncer     |    56|
+|4     |  dp_ar_ram      |dp_ar_ram     |   363|
+|5     |  processor      |processor     |  1053|
+|6     |    control_unit |control_unit  |   741|
+|7     |    datapath     |datapath      |   312|
+|8     |      alu        |alu           |     8|
 +------+-----------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 1206.582 ; gain = 556.473
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 1189.859 ; gain = 433.121
-Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 1189.859 ; gain = 553.492
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1206.582 ; gain = 430.168
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 1206.582 ; gain = 556.473
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 235 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 243 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1189.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1206.582 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 192 instances were transformed.
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 160 instances
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+60 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1189.859 ; gain = 812.281
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1189.859 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:32 . Memory (MB): peak = 1206.582 ; gain = 796.652
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1206.582 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/processore/processore.runs/synth_1/system.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio8/processore.runs/synth_1/system.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_utilization_synth.rpt -pb system_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan  8 18:15:37 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 20 17:20:07 2022...

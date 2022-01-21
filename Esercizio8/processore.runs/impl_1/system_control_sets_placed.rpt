@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Jan  8 18:16:42 2022
+| Date         : Thu Jan 20 17:20:53 2022
 | Host         : DESKTOP-HBUA1FM running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file system_control_sets_placed.rpt
 | Design       : system
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    19 |
-|    Minimum number of control sets                        |    19 |
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     7 |
+| Unused register locations in slices containing registers |    13 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    19 |
-| >= 0 to < 4        |     0 |
+| Total control sets |    21 |
+| >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     2 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
-| >= 16              |    16 |
+| >= 16              |    17 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,40 +58,42 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | No                     |               3 |            2 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              37 |           23 |
-| Yes          | No                    | No                     |               8 |            3 |
+| No           | Yes                   | No                     |              37 |           30 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             252 |          144 |
+| Yes          | Yes                   | No                     |             291 |          132 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------+------------------+------------------+----------------+
-|  Clock Signal  |             Enable Signal            | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+----------------+--------------------------------------+------------------+------------------+----------------+
-|  clk_IBUF_BUFG | processor/datapath/fetch_ff          | reset_IBUF       |                5 |              8 |
-|  clk_IBUF_BUFG | buffer_out/temp                      |                  |                3 |              8 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[3]          | reset_IBUF       |                4 |             15 |
-|  clk_IBUF_BUFG | processor/control_unit/E[0]          | reset_IBUF       |               27 |             32 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[6]          | reset_IBUF       |               21 |             32 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[9]          | reset_IBUF       |               14 |             32 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[7]          | reset_IBUF       |               17 |             32 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[5]          | reset_IBUF       |               21 |             32 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[8]          | reset_IBUF       |               16 |             32 |
-|  clk_IBUF_BUFG |                                      | reset_IBUF       |               23 |             37 |
-|  clk_IBUF_BUFG | processor/control_unit/Q[4]          | reset_IBUF       |               19 |             37 |
-|  clk_IBUF_BUFG | processor/datapath/mar_reg_reg[6]_0  |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/mar_reg_reg[6]_1  |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/t_data_out_2__0_0 |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/t_data_out_2__1   |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/mar_reg_reg[6]_3  |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/t_data_out_2__0   |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/mar_reg_reg[6]_2  |                  |               22 |             88 |
-|  clk_IBUF_BUFG | processor/datapath/t_data_out_2__1_0 |                  |               22 |             88 |
-+----------------+--------------------------------------+------------------+------------------+----------------+
++------------------------+--------------------------------------+------------------------+------------------+----------------+
+|      Clock Signal      |             Enable Signal            |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++------------------------+--------------------------------------+------------------------+------------------+----------------+
+|  clk_div/inst/clk_out1 |                                      |                        |                2 |              3 |
+|  clk_div/inst/clk_out1 | buffer_out/temp                      | deb1/cleared_button    |                2 |              8 |
+|  clk_div/inst/clk_out1 | processor/datapath/fetch_ff          | deb1/cleared_button    |                3 |              8 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[3]          | deb1/cleared_button    |                9 |             15 |
+|  clk_div/inst/clk_out1 | deb1/count[31]_i_2_n_0               | deb1/count[31]_i_1_n_0 |                8 |             31 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[6]          | deb1/cleared_button    |               15 |             32 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[5]          | deb1/cleared_button    |               13 |             32 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[9]          | deb1/cleared_button    |               15 |             32 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[8]          | deb1/cleared_button    |               17 |             32 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[7]          | deb1/cleared_button    |               15 |             32 |
+|  clk_div/inst/clk_out1 | processor/control_unit/E[0]          | deb1/cleared_button    |               17 |             32 |
+|  clk_div/inst/clk_out1 |                                      | deb1/cleared_button    |               30 |             37 |
+|  clk_div/inst/clk_out1 | processor/control_unit/Q[4]          | deb1/cleared_button    |               18 |             37 |
+|  clk_div/inst/clk_out1 | processor/datapath/mar_reg_reg[6]_2  |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/mar_reg_reg[6]_0  |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/mar_reg_reg[6]_1  |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/t_data_out_2__1   |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/mar_reg_reg[6]_3  |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/t_data_out_2__0   |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/t_data_out_2__1_0 |                        |               22 |             88 |
+|  clk_div/inst/clk_out1 | processor/datapath/t_data_out_2__0_0 |                        |               22 |             88 |
++------------------------+--------------------------------------+------------------------+------------------+----------------+
 
 
