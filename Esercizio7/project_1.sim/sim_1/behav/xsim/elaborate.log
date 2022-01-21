@@ -1,0 +1,27 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto f35db339789649a8b8b15119f9e5584b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot handshake_tb_behav xil_defaultlib.handshake_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.math_real
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ROM [\ROM(n=4,m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.contatore [\contatore(n=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.interfacciaA [\interfacciaA(m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.sistemaA [\sistemaA(n=4,m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.interfacciaB [\interfacciaB(m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.MemoriaB [\MemoriaB(n=4,m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.control_unit [\control_unit(m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.delay_block [delay_block_default]
+Compiling architecture structural of entity xil_defaultlib.sistemaB [\sistemaB(n=4,m=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.handshake_tb
+Built simulation snapshot handshake_tb_behav

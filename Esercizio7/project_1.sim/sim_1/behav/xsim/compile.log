@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/MemoriaB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'MemoriaB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/imports/new/ROM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ROM'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/imports/new/contatore.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'contatore'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/control_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/interfacciaB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'interfacciaB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sistemaB'

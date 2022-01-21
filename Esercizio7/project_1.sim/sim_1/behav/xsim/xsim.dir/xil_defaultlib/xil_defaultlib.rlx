@@ -1,0 +1,14 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sim_1/new/handshake_tb.vhd,1642775221,vhdl,,,,handshake_tb,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/imports/new/ROM.vhd,1642777555,vhdl,,,,rom,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/imports/new/contatore.vhd,1642777559,vhdl,C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd,,,contatore,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/MemoriaB.vhd,1642781304,vhdl,C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd,,,memoriab,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/control_unit.vhd,1642781544,vhdl,C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd,,,control_unit,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/delay_block.vhd,1641293429,vhdl,C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd,,,delay_block,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/interfaccia.vhd,1642776574,vhdl,,,,interfacciaa,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/interfacciaB.vhd,1642781341,vhdl,C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd,,,interfacciab,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaA.vhd,1642776510,vhdl,,,,sistemaa,,,,,,,,
+C:/Users/davide_420/Esercizio7completo/project_1.srcs/sources_1/new/sistemaB.vhd,1642776212,vhdl,,,,sistemab,,,,,,,,
