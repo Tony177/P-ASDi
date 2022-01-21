@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Webtalk v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jan 19 17:58:05 2022
-# Process ID: 12060
-# Current directory: C:/Users/super/Desktop/magistrale/architetture/esercizio12_finale/esercizio12_finale.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/super/Desktop/magistrale/architetture/esercizio12_finale/esercizio12_finale.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/super/Desktop/magistrale/architetture/esercizio12_finale/esercizio12_finale.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/super/Desktop/magistrale/architetture/esercizio12_finale/esercizio12_finale.sim/sim_1/behav/xsim\webtalk.jou
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jan 20 17:40:23 2022
+# Process ID: 33912
+# Current directory: /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/super/Desktop/magistrale/architetture/esercizio12_finale/esercizio12_finale.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace

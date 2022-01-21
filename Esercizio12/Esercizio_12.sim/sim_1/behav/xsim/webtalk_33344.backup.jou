@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jan 20 17:39:11 2022
+# Process ID: 33344
+# Current directory: /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/anto/Scrivania/P-ASDi/Esercizio12/Esercizio_12.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace

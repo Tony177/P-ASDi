@@ -49,31 +49,23 @@ component mux_16 port(a1 : in STD_LOGIC_VECTOR (0 to 15);
 s1 : in STD_LOGIC_VECTOR (0 to 3);
 o1 : out STD_LOGIC);
 end component;
+
 FOR ALL: mux_16 USE ENTITY WORK.mux_16_1 (Structural);
-
-
 
 SIGNAL input : STD_LOGIC_VECTOR (0 TO 15);
 SIGNAL selection : STD_LOGIC_VECTOR (0 TO 3);
 SIGNAL output : STD_LOGIC;
 
-
-
 begin
-
-
-
 mux_16_1 : mux_16 PORT MAP (a1(0 to 15)=>input(0 to 15), s1(0to 3)=>selection(0 to 3), o1=>output);
 
-
-
 mux_16_2 : input <= "0000000000000000",
-"0000000000000001" AFTER 500 NS,
-"0000000000000011" AFTER 1500 NS,
-"1100000000000000" AFTER 2500 NS;
+"0000000000000001" AFTER 100 NS,
+"0000000000000011" AFTER 200 NS,
+"1100000000000000" AFTER 300 NS;
 
 mux_16_3 : selection <= "0000",
-"1111" AFTER 500 NS,
-"0011" AFTER 1500 NS,
-"1100" AFTER 2500 NS;
+"1111" AFTER 100 NS,
+"0011" AFTER 200 NS,
+"1100" AFTER 300 NS;
 end structural;
