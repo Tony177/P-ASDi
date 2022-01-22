@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio9.srcs/sources_1/imports/Esercizio9/RS232RefComp2.vhd" \
+"../../../../Esercizio9.srcs/sources_1/new/contatore.vhd" \
+"../../../../Esercizio9.srcs/sources_1/new/ROM.vhd" \
+"../../../../Esercizio9.srcs/sources_1/new/control_unitA.vhd" \
+"../../../../Esercizio9.srcs/sources_1/new/delay_block.vhd" \
+"../../../../Esercizio9.srcs/sources_1/new/sistemaA.vhd" \
+"../../../../Esercizio9.srcs/sim_1/new/systemA_tb.vhd" \
+
+# Do not sort compile order
+nosort

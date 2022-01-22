@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Jan 22 17:07:15 2022
+# Process ID: 60498
+# Current directory: /home/anto/Scrivania/P-ASDi/Esercizio9.2_nuovo_vs/Esercizio9.2_nuovo_vs.runs/synth_1
+# Command line: vivado -log sistema_complessivo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sistema_complessivo.tcl
+# Log file: /home/anto/Scrivania/P-ASDi/Esercizio9.2_nuovo_vs/Esercizio9.2_nuovo_vs.runs/synth_1/sistema_complessivo.vds
+# Journal file: /home/anto/Scrivania/P-ASDi/Esercizio9.2_nuovo_vs/Esercizio9.2_nuovo_vs.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source sistema_complessivo.tcl -notrace
