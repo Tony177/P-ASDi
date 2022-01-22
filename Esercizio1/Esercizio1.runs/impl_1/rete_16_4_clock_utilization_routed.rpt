@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date              : Fri Jan 21 18:09:30 2022
+| Date              : Sat Jan 22 11:59:43 2022
 | Host              : tony-MJ running 64-bit Manjaro Linux
 | Command           : report_clock_utilization -file rete_16_4_clock_utilization_routed.rpt
 | Design            : rete_16_4

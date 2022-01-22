@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date             : Fri Jan 21 18:09:30 2022
+| Date             : Sat Jan 22 11:59:42 2022
 | Host             : tony-MJ running 64-bit Manjaro Linux
 | Command          : report_power -file rete_16_4_power_routed.rpt -pb rete_16_4_power_summary_routed.pb -rpx rete_16_4_power_routed.rpx
 | Design           : rete_16_4
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.523        |
+| Total On-Chip Power (W)  | 2.945        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.461        |
-| Device Static (W)        | 0.062        |
+| Dynamic (W)              | 2.878        |
+| Device Static (W)        | 0.067        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 97.5         |
-| Junction Temperature (C) | 27.5         |
+| Max Ambient (C)          | 85.9         |
+| Junction Temperature (C) | 39.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,12 +52,13 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.010 |        4 |       --- |             --- |
-|   LUT as Logic |     0.010 |        4 |     32600 |            0.01 |
-| Signals        |     0.026 |       10 |       --- |             --- |
-| I/O            |     0.424 |       10 |       210 |            4.76 |
-| Static Power   |     0.062 |          |           |                 |
-| Total          |     0.523 |          |           |                 |
+| Slice Logic    |     0.032 |       10 |       --- |             --- |
+|   LUT as Logic |     0.030 |        6 |     32600 |            0.02 |
+|   F7/F8 Muxes  |     0.001 |        2 |     32600 |           <0.01 |
+| Signals        |     0.146 |       28 |       --- |             --- |
+| I/O            |     2.700 |       26 |       210 |           12.38 |
+| Static Power   |     0.067 |          |           |                 |
+| Total          |     2.945 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -67,9 +68,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.069 |       0.062 |      0.006 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.026 |       0.015 |      0.011 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.115 |       0.114 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.285 |       0.275 |      0.010 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.108 |       0.096 |      0.012 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.742 |       0.741 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -134,8 +135,7 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| rete_16_4 |     0.461 |
-|   demux   |     0.010 |
+| rete_16_4 |     2.878 |
 +-----------+-----------+
 
 

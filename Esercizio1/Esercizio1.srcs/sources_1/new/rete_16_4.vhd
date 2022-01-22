@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity rete_16_4 is
-    Port ( uscita : out STD_LOGIC_VECTOR (0 to 3);
+    Port ( ingresso : in STD_LOGIC_VECTOR(0 to 15);
+           uscita : out STD_LOGIC_VECTOR (0 to 3);
            sel_mux : in STD_LOGIC_VECTOR (0 to 3);
            sel_demux : in STD_LOGIC_VECTOR (0 to 1));
 end rete_16_4;
@@ -47,12 +48,11 @@ END COMPONENT;
 FOR ALL: demux_4_1 USE ENTITY WORK.demux_4_1 (Behavioral);
 
 signal interco : STD_LOGIC;
-signal ing: STD_LOGIC_VECTOR(0 to 15) := "1000000000000000";
 begin
     
     mux : mux_16_1
     PORT MAP (
-    a1(0 to 15) => ing(0 to 15),
+    a1(0 to 15) => ingresso(0 to 15),
     s1( 0 to 3) => sel_mux(0 to 3),
     o1 => interco
     ); 
