@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio2.srcs/sources_1/imports/new/arbitro.vhd" \
+"../../../../Esercizio2.srcs/sources_1/imports/new/encoder.vhd" \
+"../../../../Esercizio2.srcs/sources_1/imports/new/encoder10_4.vhd" \
+"../../../../Esercizio2.srcs/sim_1/imports/new/sim_encoderfinale.vhd" \
+
+# Do not sort compile order
+nosort

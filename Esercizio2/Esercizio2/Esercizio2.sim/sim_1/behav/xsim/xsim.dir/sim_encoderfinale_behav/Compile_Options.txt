@@ -1,0 +1,1 @@
+-wto "2e43a958af2a490290588fc8b38a5ee0" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "sim_encoderfinale_behav" "xil_defaultlib.sim_encoderfinale" -log "elaborate.log" 
