@@ -3,14 +3,19 @@
 /*  /   /\/   /                                                       */
 /* /___/  \  /                                                        */
 /* \   \   \/                                                         */
-/*  \   \        Copyright (c) 2003-2013 Xilinx, Inc.                 */
+/*  \   \        Copyright (c) 2003-2020 Xilinx, Inc.                 */
 /*  /   /        All Right Reserved.                                  */
 /* /---/   /\                                                         */
 /* \   \  /  \                                                        */
 /*  \___\/\___\                                                       */
 /**********************************************************************/
 
-
+#if defined(_WIN32)
+ #include "stdio.h"
+ #define IKI_DLLESPEC __declspec(dllimport)
+#else
+ #define IKI_DLLESPEC
+#endif
 #include "iki.h"
 #include <string.h>
 #include <math.h>
@@ -25,14 +30,19 @@
 /*  /   /\/   /                                                       */
 /* /___/  \  /                                                        */
 /* \   \   \/                                                         */
-/*  \   \        Copyright (c) 2003-2013 Xilinx, Inc.                 */
+/*  \   \        Copyright (c) 2003-2020 Xilinx, Inc.                 */
 /*  /   /        All Right Reserved.                                  */
 /* /---/   /\                                                         */
 /* \   \  /  \                                                        */
 /*  \___\/\___\                                                       */
 /**********************************************************************/
 
-
+#if defined(_WIN32)
+ #include "stdio.h"
+ #define IKI_DLLESPEC __declspec(dllimport)
+#else
+ #define IKI_DLLESPEC
+#endif
 #include "iki.h"
 #include <string.h>
 #include <math.h>
@@ -44,27 +54,27 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-extern void execute_32(char*, char *);
-extern void execute_33(char*, char *);
-extern void execute_9(char*, char *);
-extern void execute_11(char*, char *);
-extern void execute_13(char*, char *);
-extern void execute_15(char*, char *);
-extern void execute_16(char*, char *);
-extern void execute_17(char*, char *);
-extern void execute_18(char*, char *);
-extern void execute_21(char*, char *);
-extern void execute_22(char*, char *);
-extern void transaction_0(char*, char*, unsigned, unsigned, unsigned);
-extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
+IKI_DLLESPEC extern void execute_32(char*, char *);
+IKI_DLLESPEC extern void execute_33(char*, char *);
+IKI_DLLESPEC extern void execute_9(char*, char *);
+IKI_DLLESPEC extern void execute_11(char*, char *);
+IKI_DLLESPEC extern void execute_13(char*, char *);
+IKI_DLLESPEC extern void execute_15(char*, char *);
+IKI_DLLESPEC extern void execute_16(char*, char *);
+IKI_DLLESPEC extern void execute_17(char*, char *);
+IKI_DLLESPEC extern void execute_18(char*, char *);
+IKI_DLLESPEC extern void execute_21(char*, char *);
+IKI_DLLESPEC extern void execute_22(char*, char *);
+IKI_DLLESPEC extern void transaction_0(char*, char*, unsigned, unsigned, unsigned);
+IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 funcp funcTab[13] = {(funcp)execute_32, (funcp)execute_33, (funcp)execute_9, (funcp)execute_11, (funcp)execute_13, (funcp)execute_15, (funcp)execute_16, (funcp)execute_17, (funcp)execute_18, (funcp)execute_21, (funcp)execute_22, (funcp)transaction_0, (funcp)vhdl_transfunc_eventcallback};
 const int NumRelocateId= 13;
 
 void relocate(char *dp)
 {
 	iki_relocate(dp, "xsim.dir/testbench_behav/xsim.reloc",  (void **)funcTab, 13);
-	iki_vhdl_file_variable_register(dp + 5608);
-	iki_vhdl_file_variable_register(dp + 5664);
+	iki_vhdl_file_variable_register(dp + 5872);
+	iki_vhdl_file_variable_register(dp + 5928);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
@@ -93,8 +103,6 @@ void sensitize(char *);
 void simulate(char *);
 
 extern SYSTEMCLIB_IMP_DLLSPEC void local_register_implicit_channel(int, char*);
-extern void implicit_HDL_SCinstatiate();
-
 extern SYSTEMCLIB_IMP_DLLSPEC int xsim_argc_copy ;
 extern SYSTEMCLIB_IMP_DLLSPEC char** xsim_argv_copy ;
 
@@ -103,7 +111,7 @@ int main(int argc, char **argv)
     iki_heap_initialize("ms", "isimmm", 0, 2147483648) ;
     iki_set_sv_type_file_path_name("xsim.dir/testbench_behav/xsim.svtype");
     iki_set_crvs_dump_file_path_name("xsim.dir/testbench_behav/xsim.crvsdump");
-    void* design_handle = iki_create_design("xsim.dir/testbench_behav/xsim.mem", (void *)relocate, (void *)sensitize, (void *)simulate, 0, isimBridge_getWdbWriter(), 0, argc, argv);
+    void* design_handle = iki_create_design("xsim.dir/testbench_behav/xsim.mem", (void *)relocate, (void *)sensitize, (void *)simulate, (void*)0, 0, isimBridge_getWdbWriter(), 0, argc, argv);
      iki_set_rc_trial_count(100);
     (void) design_handle;
     return iki_simulate_design();

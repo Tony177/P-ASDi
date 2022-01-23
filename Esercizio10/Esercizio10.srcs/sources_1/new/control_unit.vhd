@@ -39,8 +39,8 @@ entity control_unit is
         start: in std_logic;
         data_in: in std_logic_vector(0 to (N+2)*4-1);
         data_out: out std_logic_vector(0 to (N)*4-1);
-        ind_source: out std_logic_vector(1 downto 0);
-        ind_dest: out std_logic_vector(1 downto 0)
+        ind_source: out std_logic_vector(0 to 1);
+        ind_dest: out std_logic_vector(0 to 1)
     );
 end control_unit;
 
@@ -73,11 +73,11 @@ architecture Structural of control_unit is
     port(
         clk: in std_logic;
         data_in: in std_logic_vector(0 to 4*N-1);
-        ind_source_in: in std_logic_vector(1 downto 0);
-        ind_dest_in: in std_logic_vector(1 downto 0);
+        ind_source_in: in std_logic_vector(0 to 1);
+        ind_dest_in: in std_logic_vector(0 to 1);
         data_out: out std_logic_vector(0 to 4*N-1);
-        ind_source: out std_logic_vector(1 downto 0);
-        ind_dest: out std_logic_vector(1 downto 0);
+        ind_source: out std_logic_vector(0 to 1);
+        ind_dest: out std_logic_vector(0 to 1);
         start: in std_logic
     );
     end component;

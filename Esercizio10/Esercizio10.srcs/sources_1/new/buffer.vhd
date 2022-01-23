@@ -36,18 +36,18 @@ entity buffer_uscita is
     port(
         clk : in std_logic;
         data_in: in std_logic_vector(0 to 4*N-1);
-        ind_source_in: in std_logic_vector(1 downto 0);
-        ind_dest_in: in std_logic_vector(1 downto 0);
+        ind_source_in: in std_logic_vector(0 to 1);
+        ind_dest_in: in std_logic_vector(0 to 1);
         data_out: out std_logic_vector(0 to 4*N-1);
-        ind_source: out std_logic_vector(1 downto 0);
-        ind_dest: out std_logic_vector(1 downto 0);
+        ind_source: out std_logic_vector(0 to 1);
+        ind_dest: out std_logic_vector(0 to 1);
         start: in std_logic
     );
 end buffer_uscita;
 
 architecture Behavioral of buffer_uscita is
 type stato is (qinit,q1);
-signal temp_ind_source,temp_ind_dest: std_logic_vector(1 downto 0);
+signal temp_ind_source,temp_ind_dest: std_logic_vector(0 to 1);
 signal data_temp: std_logic_vector(0 to 4*N-1);
 signal stato_corrente: stato:=qinit;
 begin

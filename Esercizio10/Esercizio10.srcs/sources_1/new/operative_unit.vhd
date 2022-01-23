@@ -32,8 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity operative_unit is
     GENERIC ( N : integer:= 2);
     Port ( 
-        ind_source: in std_logic_vector(1 downto 0);
-        ind_dest: in std_logic_vector(1 downto 0);
+        ind_source: in std_logic_vector(0 to 1);
+        ind_dest: in std_logic_vector(0 to 1);
         data_in: in std_logic_vector(0 to 4*N-1);
         data_out: out std_logic_vector(0 to 4*N-1)                          
         
@@ -60,16 +60,16 @@ begin
                         data_in2 =>  data_in(2*N to 3*N-1),
                         data_out1 => vettore_segnali(0),
                         data_out2 => vettore_segnali(1),
-                        source => ind_source(1),
-                        dest => ind_dest(1)
+                        source => ind_source(0),
+                        dest => ind_dest(0)
                      );
     blocco0_2: blocco_instr port map(
                         data_in1 =>  data_in(N to 2*N-1),
                         data_in2 =>  data_in(3*N to 4*N-1),
                         data_out1 => vettore_segnali(2),
                         data_out2 => vettore_segnali(3),
-                        source => ind_source(1),
-                        dest => ind_dest(1)
+                        source => ind_source(0),
+                        dest => ind_dest(0)
                      );   
                      
       blocco1_1: blocco_instr port map(
@@ -77,8 +77,8 @@ begin
                         data_in2 => vettore_segnali(2),
                         data_out1 => data_out(0 to N-1),
                         data_out2 => data_out(N to 2*N-1),
-                        source => ind_source(0),
-                        dest => ind_dest(0)
+                        source => ind_source(1),
+                        dest => ind_dest(1)
                      );
                      
     blocco1_2: blocco_instr port map(
@@ -86,7 +86,7 @@ begin
                         data_in2 => vettore_segnali(3),
                         data_out1 => data_out(2*N to 3*N-1),
                         data_out2 => data_out(3*N to 4*N-1),
-                        source => ind_source(0),
-                        dest => ind_dest(0)
+                        source => ind_source(1),
+                        dest => ind_dest(1)
                      ); 
 end Structural;
