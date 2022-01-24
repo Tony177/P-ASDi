@@ -53,7 +53,7 @@ signal stato_corrente: stato:=qinit;
 begin
     ctrl_state: process(clk)
         begin
-            if(clk = '0' and clk'event) then
+            if(clk = '1' and clk'event) then
                 case stato_corrente is
                    when qinit => 
                              if(start = '1') then
