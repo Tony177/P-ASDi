@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Jan 16 12:27:37 2022
-# Process ID: 15420
-# Current directory: C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.runs/impl_1
-# Command line: vivado.exe -log sistema_complessivo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sistema_complessivo.tcl -notrace
-# Log file: C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.runs/impl_1/sistema_complessivo.vdi
-# Journal file: C:/Users/super/Desktop/magistrale/architetture/Esercizio11_divisore/Esercizio11_divisore.runs/impl_1\vivado.jou
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jan 24 10:59:10 2022
+# Process ID: 4531
+# Current directory: /home/anto/Scrivania/P-ASDi/Esercizio11_divisore/Esercizio11_divisore.runs/impl_1
+# Command line: vivado -log sistema_complessivo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sistema_complessivo.tcl -notrace
+# Log file: /home/anto/Scrivania/P-ASDi/Esercizio11_divisore/Esercizio11_divisore.runs/impl_1/sistema_complessivo.vdi
+# Journal file: /home/anto/Scrivania/P-ASDi/Esercizio11_divisore/Esercizio11_divisore.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source sistema_complessivo.tcl -notrace

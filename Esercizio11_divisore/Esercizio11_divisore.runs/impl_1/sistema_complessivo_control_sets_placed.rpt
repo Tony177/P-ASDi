@@ -1,8 +1,8 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Jan 16 12:28:14 2022
-| Host         : DESKTOP-HBUA1FM running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Mon Jan 24 10:59:46 2022
+| Host         : tony-MJ running 64-bit Manjaro Linux
 | Command      : report_control_sets -verbose -file sistema_complessivo_control_sets_placed.rpt
 | Design       : sistema_complessivo
 | Device       : xc7a50ti
@@ -58,29 +58,29 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              25 |           11 |
+| No           | No                    | No                     |              25 |            8 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              23 |            7 |
+| No           | Yes                   | No                     |              23 |            6 |
 | Yes          | No                    | No                     |               4 |            2 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             132 |           33 |
+| Yes          | Yes                   | No                     |             132 |           35 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------+--------------------------------+------------------+----------------+
-|  Clock Signal  |          Enable Signal         |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
-+----------------+--------------------------------+--------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG | deb_start/sel0[0]              | deb_reset/cleared_button       |                1 |              4 |
-|  clk_IBUF_BUFG | divisore_1/cu/wr_AQ_reg_0[1]   |                                |                2 |              4 |
-|  clk_IBUF_BUFG |                                | deb_reset/cleared_button       |                7 |             23 |
-|  clk_IBUF_BUFG |                                |                                |               11 |             25 |
-|  clk_IBUF_BUFG | deb_start/count2[0]_i_2__0_n_0 | deb_start/count2[0]_i_1__0_n_0 |                8 |             32 |
-|  clk_IBUF_BUFG | deb_start/count[0]_i_1__0_n_0  | deb_start/count2[0]_i_1__0_n_0 |                8 |             32 |
-|  clk_IBUF_BUFG | deb_reset/count2[0]_i_2_n_0    | deb_reset/count2[0]_i_1_n_0    |                8 |             32 |
-|  clk_IBUF_BUFG | deb_reset/count[0]_i_1_n_0     | deb_reset/count2[0]_i_1_n_0    |                8 |             32 |
-+----------------+--------------------------------+--------------------------------+------------------+----------------+
++----------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |            Enable Signal           |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | deb_start/sel0[0]                  | deb_reset/cleared_button           |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | divisore_1/cu/temp_reg[2]          |                                    |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG |                                    | deb_reset/cleared_button           |                6 |             23 |         3.83 |
+|  clk_IBUF_BUFG |                                    |                                    |                8 |             25 |         3.12 |
+|  clk_IBUF_BUFG | deb_reset/deb.count[0]_i_1_n_0     | deb_reset/deb.count2[0]_i_1_n_0    |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | deb_start/deb.count[0]_i_1__0_n_0  | deb_start/deb.count2[0]_i_1__0_n_0 |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | deb_reset/deb.count2[0]_i_2_n_0    | deb_reset/deb.count2[0]_i_1_n_0    |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG | deb_start/deb.count2[0]_i_2__0_n_0 | deb_start/deb.count2[0]_i_1__0_n_0 |                8 |             32 |         4.00 |
++----------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
 
 
