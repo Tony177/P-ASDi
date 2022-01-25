@@ -1,8 +1,8 @@
-Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Dec 27 12:37:24 2021
-| Host         : DESKTOP-HBUA1FM running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Tue Jan 25 11:18:24 2022
+| Host         : tony-MJ running 64-bit Manjaro Linux
 | Command      : report_control_sets -verbose -file sistema_complessivo_control_sets_placed.rpt
 | Design       : sistema_complessivo
 | Device       : xc7a50ti
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    22 |
-|    Minimum number of control sets                        |    22 |
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    51 |
+| Unused register locations in slices containing registers |    43 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    22 |
+| Total control sets |    21 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     4 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    13 |
+| >= 16              |    12 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,43 +58,42 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              21 |           10 |
+| No           | No                    | No                     |              23 |           10 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              80 |           24 |
-| Yes          | No                    | No                     |              12 |            4 |
+| No           | Yes                   | No                     |              78 |           25 |
+| Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             300 |          114 |
+| Yes          | Yes                   | No                     |             312 |          118 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------+--------------------------------+--------------------------------+------------------+----------------+
-|   Clock Signal   |          Enable Signal         |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
-+------------------+--------------------------------+--------------------------------+------------------+----------------+
-|  clock_IBUF_BUFG | gmodo/tempModo_reg_0           | g_set/leds0_in[1]              |                1 |              1 |
-|  clock_IBUF_BUFG | g_set/leds[0]_i_2_n_0          | g_set/leds0_in[0]              |                1 |              1 |
-|  clock_IBUF_BUFG | g_set/leds[2]_i_2_n_0          | g_set/leds0_in[2]              |                1 |              1 |
-|  clock_IBUF_BUFG | g_set/output[13]_i_2_n_0       | g_set/output[13]_i_1_n_0       |                1 |              5 |
-|  clock_IBUF_BUFG | sis_contatori/cont_minuti/E[0] | deb_reset/reset_button         |                4 |              5 |
-|  clock_IBUF_BUFG | g_set/E[0]                     | deb_reset/reset_button         |                5 |              6 |
-|  clock_IBUF_BUFG | g_set/output[1]_i_1_n_0        |                                |                2 |              6 |
-|  clock_IBUF_BUFG | g_set/output[7]_i_1_n_0        |                                |                2 |              6 |
-|  clock_IBUF_BUFG | g_set/set_reg_0[0]             | deb_reset/reset_button         |                3 |              6 |
-|  clock_IBUF_BUFG |                                |                                |               10 |             21 |
-|  clock_IBUF_BUFG | gmodo/abModo                   | deb_reset/reset_button         |               11 |             24 |
-|  clock_IBUF_BUFG | mem/mem[3]_0                   | deb_reset/reset_button         |               10 |             24 |
-|  clock_IBUF_BUFG | mem/mem[0]_3                   | deb_reset/reset_button         |               10 |             24 |
-|  clock_IBUF_BUFG | mem/mem[1]_2                   | deb_reset/reset_button         |               11 |             24 |
-|  clock_IBUF_BUFG | mem/mem[2]_1                   | deb_reset/reset_button         |               16 |             24 |
-|  clock_IBUF_BUFG |                                | reset_IBUF                     |                9 |             26 |
-|  clock_IBUF_BUFG | deb_modo/count[31]_i_2__1_n_0  | deb_modo/count[31]_i_1__1_n_0  |                8 |             31 |
-|  clock_IBUF_BUFG | deb_read/count[31]_i_2__2_n_0  | deb_read/count[31]_i_1__2_n_0  |                8 |             31 |
-|  clock_IBUF_BUFG | deb_reset/count[31]_i_2_n_0    | deb_reset/count[31]_i_1_n_0    |                8 |             31 |
-|  clock_IBUF_BUFG | deb_set/count[31]_i_2__0_n_0   | deb_set/count[31]_i_1__0_n_0   |                8 |             31 |
-|  clock_IBUF_BUFG | deb_write/count[31]_i_2__3_n_0 | deb_write/count[31]_i_1__3_n_0 |                8 |             31 |
-|  clock_IBUF_BUFG |                                | deb_reset/reset_button         |               15 |             54 |
-+------------------+--------------------------------+--------------------------------+------------------+----------------+
++------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
+|   Clock Signal   |            Enable Signal           |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  clock_IBUF_BUFG | g_set/leds[2]_i_2_n_0              | g_set/leds0_in[2]                  |                1 |              1 |         1.00 |
+|  clock_IBUF_BUFG | g_set/leds[0]_i_2_n_0              | g_set/leds0_in[0]                  |                1 |              1 |         1.00 |
+|  clock_IBUF_BUFG | gmodo/tempModo_reg_0               | gmodo/SR[0]                        |                1 |              1 |         1.00 |
+|  clock_IBUF_BUFG | g_set/output[13]_i_1_n_0           | g_set/output[1]_i_1_n_0            |                1 |              5 |         5.00 |
+|  clock_IBUF_BUFG | sis_contatori/cont_minuti/E[0]     | deb_reset/reset_button             |                3 |              5 |         1.67 |
+|  clock_IBUF_BUFG | g_set/output[7]_i_1_n_0            | g_set/output[1]_i_1_n_0            |                2 |              6 |         3.00 |
+|  clock_IBUF_BUFG | g_set/output[1]_i_2_n_0            | g_set/output[1]_i_1_n_0            |                2 |              6 |         3.00 |
+|  clock_IBUF_BUFG | g_set/E[0]                         | deb_reset/reset_button             |                3 |              6 |         2.00 |
+|  clock_IBUF_BUFG | g_set/set_reg_0[0]                 | deb_reset/reset_button             |                5 |              6 |         1.20 |
+|  clock_IBUF_BUFG |                                    |                                    |               10 |             23 |         2.30 |
+|  clock_IBUF_BUFG | gmodo/E[0]                         | deb_reset/reset_button             |               10 |             24 |         2.40 |
+|  clock_IBUF_BUFG | mem/mem[0]_0                       | deb_reset/reset_button             |               12 |             24 |         2.00 |
+|  clock_IBUF_BUFG | mem/mem[1]_3                       | deb_reset/reset_button             |               11 |             24 |         2.18 |
+|  clock_IBUF_BUFG | mem/mem[2]_1                       | deb_reset/reset_button             |               11 |             24 |         2.18 |
+|  clock_IBUF_BUFG | mem/mem[3]_2                       | deb_reset/reset_button             |               15 |             24 |         1.60 |
+|  clock_IBUF_BUFG | deb_reset/deb.count[31]_i_2__0_n_0 | deb_reset/deb.count[31]_i_1__0_n_0 |                8 |             31 |         3.88 |
+|  clock_IBUF_BUFG | deb_modo/deb.count[31]_i_2__1_n_0  | deb_modo/deb.count[31]_i_1__1_n_0  |                8 |             31 |         3.88 |
+|  clock_IBUF_BUFG | deb_write/deb.count[31]_i_2__3_n_0 | deb_write/deb.count[31]_i_1__3_n_0 |                8 |             31 |         3.88 |
+|  clock_IBUF_BUFG | deb_set/deb.count[31]_i_2_n_0      | deb_set/deb.count[31]_i_1_n_0      |                8 |             31 |         3.88 |
+|  clock_IBUF_BUFG | deb_read/deb.count[31]_i_2__2_n_0  | deb_read/deb.count[31]_i_1__2_n_0  |                8 |             31 |         3.88 |
+|  clock_IBUF_BUFG |                                    | deb_reset/reset_button             |               25 |             78 |         3.12 |
++------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
 
 

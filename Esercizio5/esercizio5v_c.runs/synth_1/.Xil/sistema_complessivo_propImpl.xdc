@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/esercizio5v_c/esercizio5v_c.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc rfile:../../../esercizio5v_c.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/anto/Scrivania/P-ASDi/Esercizio5/esercizio5v_c.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc rfile:../../../esercizio5v_c.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clock }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

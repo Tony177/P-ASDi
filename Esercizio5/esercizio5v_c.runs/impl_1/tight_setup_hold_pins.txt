@@ -1,8 +1,14 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[19]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[10]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                       gmodo/temp_reg[9]/D|
 |              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[12]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                       gmodo/temp_reg[9]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[10]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[11]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[20]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[18]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[19]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[27]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[28]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                      gmodo/temp_reg[17]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
