@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/ROM.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/debouncer.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/delay.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/gestore_led.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/gestore_read.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/macchina_da_testare.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/memoria.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/sistema.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sources_1/new/tester_automatico.vhd" \
+"../../../../Esercizio6_versionenuova.srcs/sim_1/new/tester_tb.vhd" \
+
+# Do not sort compile order
+nosort

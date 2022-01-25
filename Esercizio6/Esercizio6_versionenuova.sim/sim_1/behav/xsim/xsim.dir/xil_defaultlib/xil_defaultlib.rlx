@@ -1,0 +1,14 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sim_1/new/tester_tb.vhd,1643139569,vhdl,,,,tester_tb,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/ROM.vhd,1640631920,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/tester_automatico.vhd,,,rom,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/debouncer.vhd,1643133046,vhdl,,,,debouncer,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/delay.vhd,1640795549,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/tester_automatico.vhd,,,delay,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/gestore_led.vhd,1643139405,vhdl,,,,gestore_led,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/gestore_read.vhd,1640802321,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/tester_automatico.vhd,,,gestore_read,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/macchina_da_testare.vhd,1640535732,vhdl,,,,macchina_da_testare,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/memoria.vhd,1640877413,vhdl,,,,memoria,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/sistema.vhd,1643139549,vhdl,,,,sistema,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/sources_1/new/tester_automatico.vhd,1640792018,vhdl,,,,tester_automatico,,,,,,,,
