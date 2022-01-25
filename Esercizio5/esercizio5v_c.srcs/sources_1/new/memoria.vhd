@@ -36,7 +36,7 @@ entity memoria is
     Port ( input : in STD_LOGIC_VECTOR (1 to 32);
            output : out STD_LOGIC_VECTOR (1 to 32);
            reset : in STD_LOGIC;
-           abModo: in STD_LOGIC; -- se è in intertempo non deve poter salvare valori (1 intertempo, 0 cronometro)
+           abModo: in STD_LOGIC; -- (1 intertempo, 0 cronometro)
            clk : in STD_LOGIC;
            read,write : in STD_LOGIC);
 end memoria;

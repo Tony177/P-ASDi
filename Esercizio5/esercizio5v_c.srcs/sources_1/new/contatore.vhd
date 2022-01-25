@@ -38,7 +38,7 @@ entity contatore is
     Generic( N:positive);
     Port ( clock : in STD_LOGIC;
            reset : in STD_LOGIC; 
-           ab : in STD_LOGIC; -- abilitazione da contatori precedenti (secondi -> minuti)
+           ab : in STD_LOGIC; -- abilitazione da contatori precedenti
            set : in STD_LOGIC; -- set esterno valore iniziale
            input: in std_logic_vector ( 1 to integer( ceil( log2(real(N) ) ) ) ); -- input valore inizale da set
            output : out STD_LOGIC_VECTOR (1 to integer( ceil( log2(real(N) ) ) )); -- valore del conteggio 

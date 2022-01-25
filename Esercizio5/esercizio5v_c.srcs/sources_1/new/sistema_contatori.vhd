@@ -44,7 +44,7 @@ end sistema_contatori;
 architecture Structural of sistema_contatori is
 component cont generic(N: positive); port (clock : in STD_LOGIC;
            reset : in STD_LOGIC; 
-           ab : in STD_LOGIC; -- abilitazione da contatori precedenti (secondi -> minuti)
+           ab : in STD_LOGIC; -- abilitazione da contatori precedenti 
            set : in STD_LOGIC; -- set esterno valore iniziale
            input: in std_logic_vector ( 1 to integer( ceil( log2(real(N) ) ) ) ); -- input valore inizale da set
            output : out STD_LOGIC_VECTOR (1 to integer( ceil( log2(real(N) ) ) ) ); -- valore del conteggio 
@@ -70,10 +70,14 @@ begin
 
 wait_b: wait_block port map(clock=>clock,x=>div_secondi,y=>div_secondi_delayed);
 and_b: and_block port map(a=>div_secondi_delayed,b=>div_minuti,o=>and_ore);
-div_frequenza: cont generic map (N=>frequency) port map (clock => clock, reset => reset, set => '0', ab=>'1',input => (others => '0'), output => open,div => ab_frequency);
-cont_secondi: cont generic map( N=>60 ) port map (clock => clock, reset => reset, set => set, ab=>ab_frequency, input(1 to 6)=> input(1 to 6), output(1 to 6) => output(1 to 6),div => div_secondi);
-cont_minuti: cont generic map( N=>60 ) port map (clock => clock, reset => reset, set => set, ab=>div_secondi, input(1 to 6) => input(7 to 12), output(1 to 6) => output(7 to 12),div => div_minuti);
-cont_ore: cont generic map( N=>24 ) port map (clock => clock, reset => reset, set => set, ab=> and_ore, input(1 to 5) => input(13 to 17), output(1 to 5) => output(13 to 17),div => open);
+div_frequenza: cont generic map (N=>frequency) port map (clock => clock, reset => reset, set => '0', ab=>'1',input => (others => '0'), 
+                                                          output => open,div => ab_frequency);
+cont_secondi: cont generic map( N=>60 ) port map (clock => clock, reset => reset, set => set, ab=>ab_frequency, input(1 to 6)=> input(1 to 6), 
+                                                  output(1 to 6) => output(1 to 6),div => div_secondi);
+cont_minuti: cont generic map( N=>60 ) port map (clock => clock, reset => reset, set => set, ab=>div_secondi, input(1 to 6) => input(7 to 12), 
+                                                 output(1 to 6) => output(7 to 12),div => div_minuti);
+cont_ore: cont generic map( N=>24 ) port map (clock => clock, reset => reset, set => set, ab=> and_ore, input(1 to 5) => input(13 to 17), 
+                                              output(1 to 5) => output(13 to 17),div => open);
 
 
 end Structural;

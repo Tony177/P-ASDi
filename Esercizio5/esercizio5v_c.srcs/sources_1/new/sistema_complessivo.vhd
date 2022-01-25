@@ -57,7 +57,7 @@ component memoria generic( N:integer); port ( input : in STD_LOGIC_VECTOR (1 to 
 end component;
 component gestore_modo port(i_cronometro : in STD_LOGIC_VECTOR (1 to 32); i_intertempi : in STD_LOGIC_VECTOR (1 to 32); output : out STD_LOGIC_VECTOR (1 to 32); cleared_button : in STD_LOGIC; clk : in STD_LOGIC; abModo:out std_logic; reset:in std_logic);
 end component;
-component delay_block is
+component wait_block is
     Port ( input : in STD_LOGIC; --modo
            output : out STD_LOGIC;
            clk: in std_logic);
@@ -72,7 +72,7 @@ FOR ALL: conv USE ENTITY work.conv_per_display(Dataflow);
 FOR ALL: display USE ENTITY work.display_seven_segments(Structural);
 FOR ALL: memoria USE ENTITY work.memoria(Behavioral);
 FOR ALL: gestore_modo USE ENTITY work.gestore_modo(Behavioral);
-FOR ALL: delay_block USE ENTITY work.delay_block(Behavioral);
+FOR ALL: wait_block USE ENTITY work.wait_block(Behavioral);
 
 signal set_button, reset_button, set_contatori,mode_button, abModo, read_button, write_button:std_logic;
 signal output_set, output_contatori: std_logic_vector(1 to 17);
@@ -80,7 +80,7 @@ signal output_value, output_mem, value_display: std_logic_vector(1 to 32);
 begin
 
 sis_contatori: sistema_cont port map(clock => clock, reset => reset_button, set => set_contatori,input(1 to 17) => output_set (1 to 17), output ( 1 to 17) => output_contatori(1 to 17));
-g_set: gestore_set port map(abModo => abModo,clock => clock,reset => reset,clr_button => set_button, dato(1 to 6) => switch_b (1 to 6), output (1 to 17)=> output_set (1 to 17),set => set_contatori, leds => leds);
+g_set: gestore_set port map(abModo => abModo,clock => clock,reset => reset_button,clr_button => set_button, dato(1 to 6) => switch_b (1 to 6), output (1 to 17)=> output_set (1 to 17),set => set_contatori, leds => leds);
 deb_set: debouncer port map(clock => clock,button => set ,cleared_button => set_button);
 deb_reset: debouncer port map(clock => clock,button => reset ,cleared_button => reset_button);
 convert: conv port map(input => output_contatori, output => output_value);
@@ -89,7 +89,7 @@ display_ss : display port map(CLK => clock, RST => reset_button, value(31 downto
 deb_modo:debouncer port map(clock => clock,button => modo ,cleared_button => mode_button);
 deb_read:debouncer port map(clock => clock,button => read ,cleared_button => read_button);
 deb_write:debouncer port map(clock => clock,button => write ,cleared_button => write_button);
-gmodo: gestore_modo port map(clk => clock, cleared_button => mode_button, i_cronometro => output_value, i_intertempi => output_mem, output => value_display, abModo => abModo,reset => reset);
+gmodo: gestore_modo port map(clk => clock, cleared_button => mode_button, i_cronometro => output_value, i_intertempi => output_mem, output => value_display, abModo => abModo,reset => reset_button);
 mem: memoria generic map(N => 4) port map(input => output_value, clk => clock, reset => reset_button, write => write_button, output => output_mem, read => read_button, abModo => abModo); 
 --devi solo fare la memoria e collegarla bene. poi devi fare un altro gestore per i bottoni di set e reset che in modalit� intertempo non devono essere letti come tali ma come bottoni per la memoria.
 

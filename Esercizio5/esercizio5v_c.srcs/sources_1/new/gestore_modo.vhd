@@ -44,7 +44,6 @@ architecture Behavioral of gestore_modo is
 signal temp : std_logic_vector(1 to 32);
 signal tempModo: std_logic;
 begin
-
 process(clk)
 variable modo: bit :='0';
 begin
