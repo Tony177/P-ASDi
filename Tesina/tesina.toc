@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Esercizio 1 - Multiplexer}{2}{}%
+\contentsline {section}{\numberline {2}Esercizio 2 - Encoder BCD}{3}{}%
+\contentsline {section}{\numberline {3}Esercizio 3 - Riconoscitore di Sequenze}{4}{}%
+\contentsline {section}{\numberline {4}Esercizio 4 - Shift Register}{5}{}%
+\contentsline {section}{\numberline {5}Esercizio 5 - Cronometro}{6}{}%
+\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{7}{}%
+\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione con Handshaking}{8}{}%
+\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{9}{}%
+\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{10}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{11}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{12}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{13}{}%
