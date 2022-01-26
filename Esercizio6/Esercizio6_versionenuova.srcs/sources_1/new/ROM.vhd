@@ -50,7 +50,7 @@ begin
 mem: process(clk)
 variable count: integer :=0;
 begin
-if(clk='1' and clk'event) then
+if(clk='0' and clk'event) then
     if(read ='1') then
         temp <= ROM(count);
         count:= (count+1) mod N;

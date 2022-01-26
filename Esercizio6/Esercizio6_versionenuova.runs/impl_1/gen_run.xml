@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1643145704">
+<GenRun Id="impl_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1643193825">
   <File Type="BITSTR-BMM" Name="sistema_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="sistema_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="sistema_timing_summary_init.rpt"/>
@@ -159,7 +159,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../progettiVHDL/P-ASDi/Esercizio5/esercizio5v_c.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio5/esercizio5v_c.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc"/>
         <Attr Name="ImportTime" Val="1640573284"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

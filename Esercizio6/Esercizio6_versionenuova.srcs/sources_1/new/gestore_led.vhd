@@ -40,12 +40,10 @@ entity gestore_led is
 end gestore_led;
 
 architecture Behavioral of gestore_led is
-type state is(q0,q_ready,q_ready2, q_finish);
+type state is(q0,q_ready,q_ready2);
 signal stato: state := q0;
 signal temp: STD_LOGIC_VECTOR (0 to 2);
 begin
-    
-    
     process(clk)
     variable count: integer := 0;
     variable count_valori: integer := 0;
@@ -65,7 +63,6 @@ begin
                                 else
                                     stato <= q0;
                                 end if;
-                                
                      when q_ready =>    if(count_valori /= 0) then
                                             read_mem <= '1';
                                         end if;
@@ -77,13 +74,11 @@ begin
                                             count := count + 1 mod N; 
                                             stato <= q_ready2;
                                         elsif(count_valori < X+1) then
-                                               stato <= q_finish;
+                                                count := 0;
+                                               stato <= q_ready;
                                         else
                                            stato <= q0;
-                                        end if;                 
-                      when q_finish =>  count := 0;
-                                        stato <= q_ready;
-                                                       
+                                        end if;           
                 end case;
          end if;
     end process;

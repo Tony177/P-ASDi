@@ -99,7 +99,7 @@ clock : process
 --    wait for 10ns;
 --    read <= '0';
     
-    wait for 500ns;
+    wait for 600ns;
      
     read <= '1';
     wait for 10ns;

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.runs/impl_1/sistema.tcl"
+  variable script "C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio6/Esercizio6_versionenuova.runs/impl_1/sistema.tcl"
   variable category "vivado_impl"
 }
 
@@ -128,15 +128,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.cache/wt [current_project]
-  set_property parent.project_path C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.xpr [current_project]
-  set_property ip_output_repo C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio6/Esercizio6_versionenuova.cache/wt [current_project]
+  set_property parent.project_path C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio6/Esercizio6_versionenuova.xpr [current_project]
+  set_property ip_output_repo C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio6/Esercizio6_versionenuova.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.runs/synth_1/sistema.dcp
+  add_files -quiet C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio6/Esercizio6_versionenuova.runs/synth_1/sistema.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/super/Desktop/magistrale/architetture/Esercizio6_versionenuova/Esercizio6_versionenuova.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
+  read_xdc C:/Users/super/Desktop/magistrale/architetture/progettiVHDL/P-ASDi/Esercizio6/Esercizio6_versionenuova.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

@@ -17,7 +17,7 @@ Compiling architecture behavioral of entity xil_defaultlib.ROM [\ROM(n=4)\]
 Compiling architecture structural of entity xil_defaultlib.tester_automatico [tester_automatico_default]
 Compiling architecture behavioral of entity xil_defaultlib.macchina_da_testare [macchina_da_testare_default]
 Compiling architecture behavioral of entity xil_defaultlib.memoria [\memoria(n=4)\]
-Compiling architecture behavioral of entity xil_defaultlib.gestore_led [\gestore_led(n=5,x=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.gestore_led [\gestore_led(n=10,x=4)\]
 Compiling architecture behavioral of entity xil_defaultlib.sistema [sistema_default]
 Compiling architecture structural of entity xil_defaultlib.tester_tb
 Built simulation snapshot tester_tb_behav

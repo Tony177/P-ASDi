@@ -1,0 +1,30 @@
+funzionamento: 
+-1 premo il tasto di read una volta
+-2 si accendono automaticamente i led, mostrando le uscite della macchina da testare (una ogni secondo)
+-3 premendo il tasto di reset, la memoria dove vengono inseriti gli output della macchina si resetta e i led si azzerano
+-4 premendo di nuovo il tasto read si ripete la procedura precedente
+
+il tasto read da inizio al testing della macchina ed al caricamento in memoria dei valori
+il tasto di reset resetta sia la memoria che il conteggio del gestore dei led
+
+nota: se premessi il tasto di read più volte, anche se non è avvenuta la fase di reset, 
+      starei soltanto refreshando la memoria andando a rieffettuare il testing e
+      poichè cio avviene alla freq del clk non risulta essere percettibile sui led che scorrono ogni secondo.
+
+struttura:
+	tester: a partire dal segnale ripulito di READ viene prodotto un segnale di OUT_READ 
+		che rimane alto per tanti periodi di clk quanti sono gli input di test N*Tclk. Quest'ultimo:
+		va in ingresso alla rom che mostra in uscita gli N input di test, uno per ogni periodo di clk;
+		va in ingresso al blocco di delay che lo ritarda di un periodo di clk, in modo da aspettare che la
+		rom dia in ingresso alla macchina da testare (si suppone combinatoria, quindi priva di ritardo) l'input corrispettivo;
+	
+	memoria: è una memoria di scrittura/lettura 
+		scrittura -> avviene con la delay_write (che dura N*Tclk), quindi permette di scrivere N valori in uscita dalla macchina combinatoria;
+		lettura -> avviene con la read_gestore (che dura Tclk), permette di scorrere i valori in memoria con periodo di 1s;
+
+	gestore_led:
+		prende in ingresso il risultato_macchina corrente e lo mostra in uscita per 1s, appena il contatore arriva ad 1s invia il
+		segnale di read_gestore alla memoria per visualizzare il risultato_macchina successivo.
+		nota:gestore_led si attiva solo quando viene premuto il pulsante di READ (cioè la memoria è stata effettivamente scritta)
+		nota: se si preme il tasto di reset allora gestore_led smette di mostrare in uscita i valori in memoria
+		Aspetta 1s e poi inizia a mostrare i risultati della macchina, per questo motivo count_valori deve arrivare a X+1
