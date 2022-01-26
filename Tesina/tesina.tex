@@ -2,6 +2,8 @@
 
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{svg}
+
 
 \def \Euno {Allegati/Esercizio1/}
 
@@ -12,12 +14,42 @@
 \tableofcontents
 \newpage
 \section{Esercizio 1 - Multiplexer}
+L’esercizio 1.1 richiede la rappresentazione di un multiplexer 16:1 tramite la composizione di multiplexer 4:1, quindi definiamo il module del componente mux\_4\_1 definito in modo Dataflow, e poi per le proprietà della modularità definiamo il module mux\_16\_1 come composizione dei precedenti, tramite il costrutto \textit{for..generate}.
 
-\begin{figure}
+
+Il multiplexer 4:1 ha come ingressi quattro bit, identificati col vettore a(0 to 3), e $\lceil \log_{2}(n) \rceil$ segnali di abilitazione, dove n è il numero di segnali di ingresso. In questo caso, quindi, due segnali di abilitazione ed uno di uscita.
+\begin{figure}[h]
     \centering
-    \includegraphics{\Euno mux_16_1.svg}
+    \includesvg[width=\textwidth,height=0.3\textheight]{\Euno mux_4_1.svg}
+    \caption{Mux 4:1}
 \end{figure}
 
+Il codice in VHDL per descrivere il comportamento di questo componente è il seguente:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth,height=0.4\textheight,keepaspectratio]{\Euno mux_4_1_dataflow.png}
+    \caption{Mux 4:1 Dataflow}
+\end{figure}
+
+Composto da un costrutto \textit{when...else} che suddivide i diversi casi e gestisce anche tutti i casi non definiti con l’ultima clausola else senza alcuna condizione.
+
+Definito l’elemento base del progetto, si passa a comporre il multiplexer 16:1 tramite un approccio strutturale, nel quale generiamo cinque mux\_4\_1: i primi quattro avranno gli ingressi interfacciati con l’esterno e, tramite segnali interni, le loro uscite sono collegate come ingressi dell’ultimo multiplexer che costituisce  l’uscita del sistema.
+La macchina completa presenta quindi 16 segnali di ingresso, 4 segnali di selezione ed un unico segnale di uscita:
+
+\begin{figure}[h]
+    \centering
+    \includesvg[width=\textwidth,height=0.7\textheight]{\Euno mux_16_1.svg}
+    \caption{Mux 16:1}
+\end{figure}
+Lo schema sopra rappresentato è tradotto in linguaggio VHDL dal seguente codice, dove l’entità mux\_16\_1 è rappresentata con approccio strutturale e, tramite i segnali interni c(0 to 3), colleghiamo le uscite parziali dei primi quattro mux\_4\_1, identificati con la label mux\_4\_1\_in, con i quattro ingressi dell’ultimo mux\_4\_1, identificato con la label mux\_4\_1\_fin.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.4\textwidth,height=0.6\textheight,keepaspectratio]{\Euno mux_16_4_structural.png}
+    \caption{Mux 16:1 Dataflow}
+\end{figure}
+\newpage
+Progettato il mux\_16\_1, è possibile testarlo attraverso un testbench. La prima cosa che bisogna specificare è che il corpo dell’entity è vuoto, questo perché non si tratta di oggetto che realizziamo, ma serve solo per effettuare la simulazione e verificare se il sistema realizzato funziona correttamente. Il testbench effettivamente non ha né segnali d’ingresso né d’uscita, ma sfrutta per i test i segnali interni definiti nel codice. Per testare il mux\_16\_1 definito precedentemente, abbiamo istanziato una uut (Unit
+Under Test) in cui colleghiamo le varie porte ai segnali (input, selection, output).
 \newpage
 \section{Esercizio 2 - Encoder BCD}
 \newpage
