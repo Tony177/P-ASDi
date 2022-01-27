@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1641913988">
   <File Type="PA-TCL" Name="sistema_complessivo.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="sistema_complessivo_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="sistema_complessivo_reports.tcl"/>
   <File Type="RDS-RDS" Name="sistema_complessivo.vds"/>
   <File Type="RDS-UTIL" Name="sistema_complessivo_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="sistema_complessivo_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="sistema_complessivo.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sistema_complessivo_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="sistema_complessivo_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Esercizio9/RS232RefComp2.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/RS232RefComp2.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/RS232RefComp2.vhd"/>
         <Attr Name="ImportTime" Val="1638362400"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -21,7 +18,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/debouncer.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../esercizio_9_vsdavide/esercizio_9_vsdavide.srcs/sources_1/imports/progettiVHDL/Esercizio5/Esercizio5.srcs/sources_1/new/debouncer.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../esercizio_9_vsdavide/esercizio_9_vsdavide.srcs/sources_1/imports/progettiVHDL/Esercizio5/Esercizio5.srcs/sources_1/new/debouncer.vhd"/>
         <Attr Name="ImportTime" Val="1641833359"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -29,7 +26,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sistemaA.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaA.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaA.vhd"/>
         <Attr Name="ImportTime" Val="1641806576"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -37,7 +34,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sistemaB.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaB.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaB.vhd"/>
         <Attr Name="ImportTime" Val="1641806582"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -45,7 +42,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sistema_complessivo.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/Esercizio9.srcs/sources_1/new/sistema_complessivo.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/Esercizio9.srcs/sources_1/new/sistema_complessivo.vhd"/>
         <Attr Name="ImportTime" Val="1641660484"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -61,7 +58,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio5/Esercizio5.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio5/Esercizio5.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc"/>
         <Attr Name="ImportTime" Val="1640573284"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

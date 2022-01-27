@@ -1,79 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1641913988">
-  <File Type="BITSTR-BMM" Name="sistema_complessivo_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="sistema_complessivo_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="sistema_complessivo_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="sistema_complessivo_power_routed.rpt"/>
   <File Type="PA-TCL" Name="sistema_complessivo.tcl"/>
-  <File Type="OPT-TIMING" Name="sistema_complessivo_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="sistema_complessivo_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="sistema_complessivo_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="sistema_complessivo_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="sistema_complessivo.msk"/>
+  <File Type="ROUTE-CLK" Name="sistema_complessivo_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="sistema_complessivo.vdi"/>
+  <File Type="BG-BIT" Name="sistema_complessivo.bit"/>
+  <File Type="BG-DRC" Name="sistema_complessivo.drc"/>
+  <File Type="BG-BGN" Name="sistema_complessivo.bgn"/>
+  <File Type="BG-BIN" Name="sistema_complessivo.bin"/>
+  <File Type="BITSTR-RBT" Name="sistema_complessivo.rbt"/>
+  <File Type="BITSTR-NKY" Name="sistema_complessivo.nky"/>
+  <File Type="BITSTR-BMM" Name="sistema_complessivo_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="sistema_complessivo_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="sistema_complessivo.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="sistema_complessivo.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="sistema_complessivo.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="sistema_complessivo_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="sistema_complessivo.hwdef"/>
-  <File Type="PWROPT-DCP" Name="sistema_complessivo_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="sistema_complessivo_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="sistema_complessivo_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="sistema_complessivo_placed.dcp"/>
   <File Type="PLACE-IO" Name="sistema_complessivo_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="sistema_complessivo_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="sistema_complessivo_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="sistema_complessivo_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="sistema_complessivo_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="sistema_complessivo_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="sistema_complessivo_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="sistema_complessivo.bgn"/>
-  <File Type="PLACE-TIMING" Name="sistema_complessivo_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="sistema_complessivo_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="sistema_complessivo.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="sistema_complessivo_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="sistema_complessivo_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="sistema_complessivo_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="sistema_complessivo.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="sistema_complessivo_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="sistema_complessivo_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="sistema_complessivo_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="sistema_complessivo_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="sistema_complessivo_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="sistema_complessivo_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="sistema_complessivo.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="sistema_complessivo_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="sistema_complessivo.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="sistema_complessivo_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sistema_complessivo_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="sistema_complessivo.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sistema_complessivo_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="sistema_complessivo_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="sistema_complessivo_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="sistema_complessivo_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="sistema_complessivo_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sistema_complessivo_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sistema_complessivo_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="sistema_complessivo_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="sistema_complessivo_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="sistema_complessivo_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="sistema_complessivo_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="sistema_complessivo_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="sistema_complessivo_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="sistema_complessivo_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="sistema_complessivo_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="sistema_complessivo_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="sistema_complessivo_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="sistema_complessivo_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sistema_complessivo_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="sistema_complessivo_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="sistema_complessivo_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sistema_complessivo_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="sistema_complessivo_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="sistema_complessivo_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="sistema_complessivo_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="sistema_complessivo_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="sistema_complessivo_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="sistema_complessivo.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="sistema_complessivo_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="sistema_complessivo.rbt"/>
-  <File Type="BITSTR-NKY" Name="sistema_complessivo.nky"/>
-  <File Type="BG-DRC" Name="sistema_complessivo.drc"/>
-  <File Type="RDI-RDI" Name="sistema_complessivo.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sistema_complessivo_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="sistema_complessivo_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sistema_complessivo_methodology_drc_routed.rpx"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Esercizio9/RS232RefComp2.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/RS232RefComp2.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/RS232RefComp2.vhd"/>
         <Attr Name="ImportTime" Val="1638362400"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -81,7 +63,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/debouncer.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../esercizio_9_vsdavide/esercizio_9_vsdavide.srcs/sources_1/imports/progettiVHDL/Esercizio5/Esercizio5.srcs/sources_1/new/debouncer.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../esercizio_9_vsdavide/esercizio_9_vsdavide.srcs/sources_1/imports/progettiVHDL/Esercizio5/Esercizio5.srcs/sources_1/new/debouncer.vhd"/>
         <Attr Name="ImportTime" Val="1641833359"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -89,7 +71,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sistemaA.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaA.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaA.vhd"/>
         <Attr Name="ImportTime" Val="1641806576"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -97,7 +79,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sistemaB.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaB.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/Esercizio9.srcs/sources_1/new/sistemaB.vhd"/>
         <Attr Name="ImportTime" Val="1641806582"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -105,7 +87,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sistema_complessivo.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio9/Esercizio9.srcs/sources_1/new/sistema_complessivo.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio9/Esercizio9.srcs/sources_1/new/sistema_complessivo.vhd"/>
         <Attr Name="ImportTime" Val="1641660484"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -121,7 +103,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Esercizio5/Esercizio5.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Esercizio5/Esercizio5.srcs/constrs_1/imports/davide_420/Nexys-A7-50T-Master.xdc"/>
         <Attr Name="ImportTime" Val="1640573284"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -148,5 +130,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
