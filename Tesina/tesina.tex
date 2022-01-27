@@ -1,11 +1,24 @@
-\documentclass[a4paper]{article}
+\documentclass[12pt]{article}
 
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{svg}
+\usepackage{graphicx,caption,svg}
+\usepackage[utf8]{inputenc}
 
+\renewcommand{\contentsname}{Indice}
+\setlength{\parindent}{0pt}
 
 \def \Euno {Allegati/Esercizio1/}
+\def \Edue {Allegati/Esercizio2/}
+\def \Etre {Allegati/Esercizio3/}
+\def \Equattro {Allegati/Esercizio4/}
+\def \Ecinque {Allegati/Esercizio5/}
+\def \Esei {Allegati/Esercizio6/}
+\def \Esette {Allegati/Esercizio7/}
+\def \Eotto {Allegati/Esercizio8/}
+\def \Enove {Allegati/Esercizio9/}
+\def \Edieci {Allegati/Esercizio10/}
+\def \Eundici{Allegati/Esercizio11/}
+\def \Edodici {Allegati/Esercizio12/}
+
 
 \begin{document}
 
@@ -14,20 +27,21 @@
 \tableofcontents
 \newpage
 \section{Esercizio 1 - Multiplexer}
+\subsection{Parte 1}
 L’esercizio 1.1 richiede la rappresentazione di un multiplexer 16:1 tramite la composizione di multiplexer 4:1, quindi definiamo il module del componente mux\_4\_1 definito in modo Dataflow, e poi per le proprietà della modularità definiamo il module mux\_16\_1 come composizione dei precedenti, tramite il costrutto \textit{for..generate}.
 
 
 Il multiplexer 4:1 ha come ingressi quattro bit, identificati col vettore a(0 to 3), e $\lceil \log_{2}(n) \rceil$ segnali di abilitazione, dove n è il numero di segnali di ingresso. In questo caso, quindi, due segnali di abilitazione ed uno di uscita.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includesvg[width=\textwidth,height=0.3\textheight]{\Euno mux_4_1.svg}
+    \includesvg[width=\textwidth,height=0.2\textheight]{\Euno mux_4_1.svg}
     \caption{Mux 4:1}
 \end{figure}
 
 Il codice in VHDL per descrivere il comportamento di questo componente è il seguente:
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth,height=0.4\textheight,keepaspectratio]{\Euno mux_4_1_dataflow.png}
+    \includegraphics[width=\textwidth,height=0.3\textheight,keepaspectratio]{\Euno mux_4_1_dataflow.png}
     \caption{Mux 4:1 Dataflow}
 \end{figure}
 
@@ -36,22 +50,154 @@ Composto da un costrutto \textit{when...else} che suddivide i diversi casi e ges
 Definito l’elemento base del progetto, si passa a comporre il multiplexer 16:1 tramite un approccio strutturale, nel quale generiamo cinque mux\_4\_1: i primi quattro avranno gli ingressi interfacciati con l’esterno e, tramite segnali interni, le loro uscite sono collegate come ingressi dell’ultimo multiplexer che costituisce  l’uscita del sistema.
 La macchina completa presenta quindi 16 segnali di ingresso, 4 segnali di selezione ed un unico segnale di uscita:
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includesvg[width=\textwidth,height=0.7\textheight]{\Euno mux_16_1.svg}
+    \includesvg[width=\textwidth,height=0.65\textheight]{\Euno mux_16_1.svg}
     \caption{Mux 16:1}
 \end{figure}
+\newpage
 Lo schema sopra rappresentato è tradotto in linguaggio VHDL dal seguente codice, dove l’entità mux\_16\_1 è rappresentata con approccio strutturale e, tramite i segnali interni c(0 to 3), colleghiamo le uscite parziali dei primi quattro mux\_4\_1, identificati con la label mux\_4\_1\_in, con i quattro ingressi dell’ultimo mux\_4\_1, identificato con la label mux\_4\_1\_fin.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=1.4\textwidth,height=0.6\textheight,keepaspectratio]{\Euno mux_16_4_structural.png}
+    \includegraphics[width=1.3\textwidth,height=0.6\textheight,keepaspectratio]{\Euno mux_16_4_structural.png}
     \caption{Mux 16:1 Dataflow}
 \end{figure}
 \newpage
 Progettato il mux\_16\_1, è possibile testarlo attraverso un testbench. La prima cosa che bisogna specificare è che il corpo dell’entity è vuoto, questo perché non si tratta di oggetto che realizziamo, ma serve solo per effettuare la simulazione e verificare se il sistema realizzato funziona correttamente. Il testbench effettivamente non ha né segnali d’ingresso né d’uscita, ma sfrutta per i test i segnali interni definiti nel codice. Per testare il mux\_16\_1 definito precedentemente, abbiamo istanziato una uut (Unit
-Under Test) in cui colleghiamo le varie porte ai segnali (input, selection, output).
+Under Test) in cui colleghiamo le varie porte ai segnali (input, selection, output).\newline
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.2\textwidth,height=0.6\textheight,keepaspectratio]{\Euno mux_16_1_tb.png}
+    \caption{Mux 16:1 Testbench}
+\end{figure}
+\newpage Dopo aver effettuato queste assegnazioni, compreso di costrutto after per permettere l’evoluzione del sistema durante il tempo, si passa alla schermata di simulazione nella quale si può analizzare e studiare l’evoluzione nel tempo di ogni segnale presente nel codice, compresi eventuali segnali intermedi.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Euno mux_16_1_simulazione.png}
+    \caption{Mux 16:1 Simulazione}
+\end{figure}
+\newline Possiamo analizzare l’evoluzione del programma:
+dopo circa 150ns, l’ingresso è posto a “0000000000000001” e contemporaneamente la selezione è posta a “1111”, ottenendo come uscita del sistema “1”. Questo è effettivamente il comportamento atteso.
+\newpage
+
+
+\subsection{Parte 2}
+L’esercizio 1.2 è in parte riconducibile all’esercizio precedente, in quanto la rappresentazione di una rete 16:4 può essere scomposta da una sottorete 16:1 connessa ad un demux 1:4. Basta quindi aggiungere un demultiplexer 1:4 alla rete precedente. Il demux 1:4 è realizzato con approccio Dataflow.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Euno demux_4_1_dataflow.png}
+    \caption{Demux 1:4 Dataflow}
+\end{figure}
+\newline Il Demux 1:4 presenta come uscita un segnale di 4 bit, di cui 3 pari a zero ed uno pari al valore in ingresso, la cui posizione è determinata a seconda dei segnali di abilitazione.
+\begin{figure}[ht]
+    \centering
+    \includesvg[width=\textwidth,height=0.4\textheight]{\Euno rete_16_4.svg}
+    \caption{Rete 16:1}
+\end{figure}
+\newpage
+Una volta eseguite le interconnessioni tramite un unico segnale interno, utilizzato per collegare l’uscita del mux\_16\_1 con l’ingresso del demux\_1\_4, si ottiene la rete 16:4:  tale rete presenta 16 segnali di ingressi totali, 6 di selezione (di cui 2 utilizzati per il demux) e 4 segnali di uscita.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Euno rete_16_4_structural.png}
+    \caption{Rete 16:4 Structural}
+\end{figure}
+\\
+Anche dopo aver testato il singolo componente, è comunque necessario ripetere il test per la macchina completa, sia perché potrebbero essere presenti errori e problemi derivanti da implementazione di nuove funzioni, sia perché anche nella composizione di una macchina più complessa sono presenti intrinsecamente problemi legati alla coesione dei vari moduli.
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Euno rete_16_4_tb.png}
+    \caption{Rete 16:4 Testbench}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Euno rete_16_4_simulazione.png}
+    \caption{Rete 16:4 Simulazione}
+\end{figure}
+\newpage
+
+\subsection{Parte 3}
+Come esercizio finale, è stato necessario adattare la rete per la sintesi sulla FPGA. Attraverso l’utilizzo di un file di constraint ideato per la board Nexys A7-50t, possiamo definire i collegamenti da effettuare sulla scheda tra le diverse periferiche disponibili e le componenti presenti all’interno della rete.
+\newline
+In questo caso sono necessari 6 switch per le linee di abilitazione dei multiplexer e demultiplexer. Poichè gli switch sono in totale 16, è stato necessario dare un input predefinito alla rete ed utilizzare gli switch unicamente per la selezione.
+Inoltre, sempre dal file di costraint, sono stati abilitati anche 4 led e connessi ai quattro bit di uscita, come indicato nel seguente file.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Euno costraints_es1.png}
+    \caption{Costraints}
+\end{figure}
+\\Quindi, gli switch \textbf{\textit{J15-L16-M13-R15}} sono stati mappati ai quattro bit di selezione dei multiplexer, mentre gli switch \textbf{\textit{R17-T18}} ai due bit di selezione dei multiplexer, ed, infine, i led H17-K15-J13-N14 come rappresentazione visiva dei quattro bit di uscita al sistema complessivo.
+\newline
+Il sistema finale è quello raffigurato nella seguente figura
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Euno rete_16_4_analysis.png}
+    \caption{Rete 16:4 Analysis}
+\end{figure}
+
+
 \newpage
 \section{Esercizio 2 - Encoder BCD}
+\subsection{Traccia}
+
+Progettare, implementare in VHDL e testare mediante simulazione una rete che, data in ingresso una stringa binaria X di 10 bit X9 X8 X7 X6 X5 X4 X3 X2 X1 X0 che corrisponde alla rappresentazione decodificata di una cifra decimale (cioè, una rappresentazione in cui ogni stringa contiene un solo bit alto), fornisce in uscita la rappresentazione Y della cifra mediante codifica Binary-Coded Decimali (BCD).
+\\Input: 0000000001 $\Rightarrow$ Output: 0000 (cifra 0)
+\\Input: 0000000010 $\Rightarrow$ Output: 0001 (cifra 1)
+\\Input: 0000000100 $\Rightarrow$ Output: 0010 (cifra 2)
+\\....
+\\Sintetizzare ed implementare su board il progetto dell’encoder BCD utilizzando gli switch per fornire la stringa X in ingresso, e i led per visualizzare Y. Nel caso in cui si utilizzi una board dotata di soli 8 switch, è possibile sviluppare il progetto considerando X di soli 8 bit (la macchina sarà allora in grado di fornire in uscita la rappresentazione BCD delle cifre decimali da 0 a 7).
+\\Utilizzare un display a 7 segmenti per visualizzare la cifra decimale codificata da Y (pilotare opportunamente i catodi del display per visualizzare la cifra).
+\subsection{Soluzione}
+La rete è stata realizzata con vari componenti secondo un approccio strutturale. Essa ha un ingresso, cioè il valore della stringa X da 10 bit, e 2 uscite, utili per visualizzare la cifra codificata su un display a 7 segmenti.
+La rete utilizza i seguenti componenti:
+\begin{itemize}
+    \item Un encoder: a sua volta composto da un arbitro a priorità e da un encoder 10:4;
+    \item Un display manager per la visualizzazione dell’output;
+\end{itemize}
+Si è partiti, dunque, da una descrizione dataflow dei componenti base, per poi procedere con una descrizione strutturale dell’encoder ed una descrizione comportamentale del display manager. Infine, mettendo insieme questi ultimi 2 componenti, si è descritto l’intero sistema, chiaramente a livello strutturale.
+
+    {\large  \textbf{Arbitro a priorità:}}
+\\Il componente relativo all’arbitro di priorità dispone di un vettore di ingresso di 10 bit e di un vettore di uscita di altrettanti bit, in cui l’uscita avrà tutti 0 e un solo bit alto nella prima posizione in cui è stato trovato un 1 (a partire dalla posizione più significativa).
+\\\\{\large \textbf{Encoder 10:4:}}
+\\Il componente relativo all’encoder 10:4 presenta in ingresso un vettore di 10 bit ed in uscita un vettore di 4 bit, che rappresenta il numero in binario della prima posizione con bit alto in ingresso (valore compreso nel range [0,9]).
+\\\\Facendo uso dei due componenti appena descritti, si è realizzato un encoder, il quale facendo uso di un segnale interno che fa da interconnessione tra l’uscita dell’arbitro e l’ingresso dell’encoder 10:4, prende in ingresso un vettore di 10 bit e restituisce in uscita un vettore di 4 bit effettuando la codifica Binary-Coded Decimal (BCD).
+\\\\{\large \textbf{Display Manager:}}
+\\Il componente display manager prende in ingresso un vettore di 4 bit e lo rappresenta sul display a 7 segmenti con 2 uscite. Al suo interno vengono definite delle costanti su 7 bit relative ai segmenti di una cifra del display da illuminare, in questo modo si visualizza un determinato valore in esadecimale. La prima uscita è fissa, al fine di illuminare costantemente solo la prima cifra del display, poiché il valore da mostrare è rappresentabile con una sola cifra. La seconda uscita determina i segmenti della cifra da illuminare, pertanto dipende dall’ingresso.
+\\La rete complessiva dispone dell’encoder e del display manager. Il vettore di ingresso di 10 bit andrà nell’encoder e la sua uscita su 4 bit, mediante un segnale di interconnessione, andrà in ingresso al display manager che mostra il valore di uscita sul display.
+\newpage
+\subsection{Codice}
+{\large \textbf{Arbitro}}
+\\L’architettura è stata descritta a livello dataflow e, scorrendo un vettore a partire dalla posizione 9 fino a 0, se tra i 10 bit uno solo è alto, l’uscità sarà una stringa con tutti 0 e solo un bit alto nella posizione in cui lo era nel vettore di ingresso. Nel caso in cui il vettore di ingresso presenta più bit uguali a 1, la stringa in uscita avrà il solo bit alto nella prima posizione, partendo dalla 9, in cui trova un 1.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Edue codice_arbitro.jpg}
+    \caption{Codice Arbitro}
+\end{figure}
+\newpage
+{\large \textbf{Encoder 10:4}}
+
+L’encoder 10:4 è stato descritto a livello dataflow. L’architettura, partendo da un vettore con solo un bit alto, restituisce in uscita il valore su 4 bit della posizione in cui il bit è alto.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder10_4.jpg}
+    \caption{Codice Encoder 10:4}
+\end{figure}
+\newpage
+{\large \textbf{Encoder complessivo}}
+\\L’encoder complessivo è descritto a livello strutturale utilizzando i componenti “arbitro” e “encoder10\_4”. All’interno del sistema è definito un segnale t di tipo std\_logic\_vector(9 downto 0), che fa da interconnessione e viene utilizzato come uscita dell’arbitro e come ingresso dell’encoder 10:4.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder_parte1.jpg}
+    \caption{Codice Encoder 10:4}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder_parte2.jpg}
+    \caption{Codice Encoder 10:4}
+\end{figure}
+
+
 \newpage
 \section{Esercizio 3 - Riconoscitore di Sequenze}
 \newpage
@@ -72,4 +218,7 @@ Under Test) in cui colleghiamo le varie porte ai segnali (input, selection, outp
 \section{Esercizio 11 - Divisore Restoring}
 \newpage
 \section{Esercizio 12 - Interfaccia VGA}
+
+\newpage
+\listoffigures
 \end{document}
