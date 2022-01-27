@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/debouncer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debouncer'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/filtro_modo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'filtro_modo'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/gestore_modo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'gestore_modo'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/sistema.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sistema'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/riconoscitore.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'riconoscitore'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sim_1/new/riconoscitore_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'riconoscitore_tb'

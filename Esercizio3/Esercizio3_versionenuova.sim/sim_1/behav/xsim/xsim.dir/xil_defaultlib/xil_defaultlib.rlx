@@ -1,0 +1,10 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sim_1/new/riconoscitore_tb.vhd,1643276758,vhdl,,,,riconoscitore_tb,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/debouncer.vhd,1643276222,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/gestore_modo.vhd;C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/riconoscitore.vhd,,,debouncer,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/filtro_modo.vhd,1640602234,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/gestore_modo.vhd,,,filtro_modo,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/gestore_modo.vhd,1640602234,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/riconoscitore.vhd,,,gestore_modo,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/riconoscitore.vhd,1640602234,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sim_1/new/riconoscitore_tb.vhd,,,riconoscitore,,,,,,,,
+C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/sistema.vhd,1643275934,vhdl,C:/Users/super/Desktop/magistrale/architetture/Esercizio3_versionenuova/Esercizio3_versionenuova.srcs/sources_1/new/riconoscitore.vhd,,,sistema,,,,,,,,

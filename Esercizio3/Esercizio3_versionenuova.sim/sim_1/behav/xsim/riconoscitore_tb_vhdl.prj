@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Esercizio3_versionenuova.srcs/sources_1/new/debouncer.vhd" \
+"../../../../Esercizio3_versionenuova.srcs/sources_1/new/filtro_modo.vhd" \
+"../../../../Esercizio3_versionenuova.srcs/sources_1/new/gestore_modo.vhd" \
+"../../../../Esercizio3_versionenuova.srcs/sources_1/new/sistema.vhd" \
+"../../../../Esercizio3_versionenuova.srcs/sources_1/new/riconoscitore.vhd" \
+"../../../../Esercizio3_versionenuova.srcs/sim_1/new/riconoscitore_tb.vhd" \
+
+# Do not sort compile order
+nosort
