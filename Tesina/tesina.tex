@@ -392,16 +392,18 @@ Lo shift register realizzato prevede un ingresso seriale ed un output parallelo,
     \item Ingresso a: tale segnale funge da abilitazione, ovvero il registro effettua uno shift solo se, sul fronte di salita del clock, rileva un’abilitazione pari ad 1.
     \item Ingresso shift: è il segnale che gestisce il numero di posizioni dello shift: quando è pari a 0, avviene lo shift di una posizione, altrimenti di due.
 \end{itemize}
-\begin{figure}[ht]
+\begin{figure}[ht!]
     \centering
-    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro architecture_shift.png}
+    \includegraphics[width=0.8\textwidth,height=0.8\textheight,keepaspectratio]{\Equattro architecture_shift.png}
+
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.3\textwidth,height=0.3\textheight,keepaspectratio]{\Equattro architecture_shift_2.png}
     \caption{Architecture Shift Register Bidirezionale}
 \end{figure}
 \clearpage
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{\Equattro architecture_shift_2.png}
-\end{figure}
 \subsection{Approccio Strutturale}
 Per la realizzazione tramite un approccio strutturale, sono stati realizzati dei flip flop D bidirezionali.
 \\\\{\large \textbf{Component Ffd\_bidirezionali:}}
@@ -431,7 +433,11 @@ Vediamo ora come tali componenti sono stati combinati:
 \clearpage
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=1\textwidth,height=0.4\textheight]{\Equattro generate.png}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro generate1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro generate2.png}
     \caption{ Generate FFD}
 \end{figure}
 \begin{itemize}
