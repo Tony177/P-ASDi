@@ -461,6 +461,48 @@ Verrà ora presentata una simulazione del funzionamento della macchina, verifica
 \end{figure}
 \newpage
 \section{Esercizio 5 - Cronometro}
+\subsection{Traccia}
+{\large \textbf{Cronometro}}
+\\L’obiettivo di questo esercizio è quello di progettare un cronometro tramite un approccio strutturale, visualizzando i valori di ore, minuti e secondi sul display presente sulla board.
+Il progetto prevede sicuramente l’utilizzo di una serie di contatori, i quali dovranno scandire il tempo.
+\\{\large \textbf{Contatore:}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=0.2\textheight]{\Ecinque entity_contatore.png}
+    \caption{Entity Contatore}
+\end{figure}
+\\Tale contatore è stato implementato tramite un approccio comportamentale, in modo da incrementare il valore di conteggio solo in presenza di un opportuno segnale di abilitazione.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=0.3\textheight,keepaspectratio]{\Ecinque architecture_contatore.png}
+    \caption{Architecture Contatore}
+\end{figure}
+\\Data la richiesta di poter settare i valori di secondi, minuti e ore da cui il cronometro deve partire, si è deciso di introdurre due ingressi aggiuntivi: un segnale di set ed un vettore d’ingresso.
+Sostanzialmente, quando il segnale di set è alto, il contatore non rileva il segnale di abilitazione e carica il valore presente in ingresso; quando il segnale di set si abbassa, il contatore ritorna al suo normale funzionamento.
+Una volta definiti tre contatori differenti per scandire ore, minuti e secondi, vediamo come questi sono stati combinati tra loro.
+\\\\{\large \textbf{Sistema Contatori:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Ecinque entity_sistema_c.png}
+    \caption{Entity Sistema Contatori}
+\end{figure}
+\\E’ formato da 4 contatori, 1 blocco di delay ed un blocco AND. Il primo contatore che ritroviamo è un divisore di frequenza, il quale ha il compito di passare dalla frequenza del clock della board a quella di 1HZ, la cui uscita di div funge da abilitazione per  il contatore dei secondi.
+L’uscita di div del contatore  dei secondi entra, poi, come abilitazione del contatore relativo ai minuti; entrambi i contatori sono definiti modulo 60.
+Leggermente più complessa è la connessione con il contatore relativo alle ore, il quale dovrà effettuare un conteggio quando sia il contatore dei secondi che quello dei minuti sono arrivati al termine. Come segnale di abilitazione, dunque, si utilizza l’uscita di una porta and, che presenta come ingresso entrambi i segnali di div dei contatori precedenti.
+Si presenta però un problema di tempificazione: il segnale di div del contatore relativo ai secondi, fungendo da abilitazione al contatore dei minuti e rimanendo alto per 1 solo colpo di clock, si alzerebbe appunto un colpo di clock prima di quello dei minuti; si è realizzato pertanto un blocco di delay, il quale ritarda tale segnale di 1 colpo di clock, in modo che la porta AND possa vedere entrambi i segnali alti. Se non avessimo usato tale blocco, il contatore delle ore non avrebbe mai visto il segnale di abilitazione alto.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Ecinque architecture_sistema_c.png}
+    \caption{Architecture Sistema Contatori}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.3\textheight]{\Ecinque struct.png}
+    \caption{Structural Sistema Contatori}
+\end{figure}
+\clearpage
+{\large \textbf{Component wait\_block:}}
+\\E' stato progettato mediante un approccio comportamentale, con lo scopo di ritardare di 1 colpo di clock il segnale in ingresso.
 \newpage
 \section{Esercizio 6 - Sistema di Testing}
 \newpage

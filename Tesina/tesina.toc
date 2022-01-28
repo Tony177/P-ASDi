@@ -16,10 +16,11 @@
 \contentsline {subsection}{\numberline {4.3}Approccio Strutturale}{32}{}%
 \contentsline {subsection}{\numberline {4.4}Simulazione}{37}{}%
 \contentsline {section}{\numberline {5}Esercizio 5 - Cronometro}{38}{}%
-\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{39}{}%
-\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione con Handshaking}{40}{}%
-\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{41}{}%
-\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{42}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{43}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{44}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{45}{}%
+\contentsline {subsection}{\numberline {5.1}Traccia}{38}{}%
+\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{42}{}%
+\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione con Handshaking}{43}{}%
+\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{44}{}%
+\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{45}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{46}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{47}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{48}{}%
