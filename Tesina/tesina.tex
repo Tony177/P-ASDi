@@ -372,6 +372,87 @@ Questo componente prende in ingresso il segnale filtrato dal debouncer, chiamato
 \end{figure}
 \newpage
 \section{Esercizio 4 - Shift Register}
+\subsection{Traccia}
+{\large \textbf{Shift register}}
+\\L’esercizio richiede la progettazione di uno shift register, mediante un approccio sia comportamentale che strutturale, con le seguenti caratteristiche:
+\begin{itemize}
+    \item Modo variabile: lo shift register, sulla base di un segnale in ingresso, deve effettuare shift verso destra o verso sinistra.
+    \item Shift variabile: sulla base di un segnale in ingresso, il registro deve poter variare il numero di posizioni di shift.
+\end{itemize}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro entity_shift.png}
+    \caption{Entity Shift Bidirezionale}
+\end{figure}
+\subsection{Approccio comportamentale}
+Per la progettazione di tipo comportamentale è stato utilizzato il costrutto \textit{if}, dato che sia le opzioni di modo che di shift comprendevano solo due possibilità; in un caso più generale, il costrutto case sarebbe più appropriato.
+Lo shift register realizzato prevede un ingresso seriale ed un output parallelo, gestiti nel seguente modo:
+\begin{itemize}
+    \item Ingresso mode: tale segnale varia la modalità di shift: se pari ad 1, il valore viene inserito da destra, altrimenti da sinistra.
+    \item Ingresso a: tale segnale funge da abilitazione, ovvero il registro effettua uno shift solo se, sul fronte di salita del clock, rileva un’abilitazione pari ad 1.
+    \item Ingresso shift: è il segnale che gestisce il numero di posizioni dello shift: quando è pari a 0, avviene lo shift di una posizione, altrimenti di due.
+\end{itemize}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro architecture_shift.png}
+    \caption{Architecture Shift Register Bidirezionale}
+\end{figure}
+\clearpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{\Equattro architecture_shift_2.png}
+\end{figure}
+\subsection{Approccio Strutturale}
+Per la realizzazione tramite un approccio strutturale, sono stati realizzati dei flip flop D bidirezionali.
+\\\\{\large \textbf{Component Ffd\_bidirezionali:}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro ffd1.png}
+    \caption{Entity Flip Flop D}
+\end{figure}
+\\La logica di tale componente è molto semplice:
+\\prevede 2 ingressi (leftInput e RightInput) e, in base al segnale di mode in ingresso, decide quale riportare in uscita. Tale componente è sincrono e lavora solo con abilitazione pari ad 1.
+\clearpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{\Equattro ffd2.png}
+    \caption{Architecture Flip Flop D}
+\end{figure}
+{\large \textbf{Component mux\_2\_1:}}
+\\Tale componente è necessario per selezionare quale valore deve essere riportato in ingresso ai flipflop, in base allo shift richiesto.
+Dato che lo shift può variare al massimo di una posizione, un multiplexer 2:1 è sufficiente; in un caso più generale, si potrebbe ricorrere ad un multiplexer con un numero maggiore di ingressi.
+\clearpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Equattro mux.png}
+    \caption{Mux 2:1}
+\end{figure}
+Vediamo ora come tali componenti sono stati combinati:
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1\textwidth,height=0.4\textheight]{\Equattro generate.png}
+    \caption{ Generate FFD}
+\end{figure}
+\begin{itemize}
+    \item \textbf{PrimoFF:} è il primo flip flop da sinistra, ovvero quello di posizione 1. È stato differenziato dagli altri poiché presenterà il multiplexer solo sull’ingresso destro, dato che il sinistro è legato all’input del registro.
+    \item \textbf{UltimoFF:} è il primo flip flop da destra, ovvero quello di posizione N. È stato differenziato dagli altri poiché presenterà il multiplexer solo sull’ingresso sinistro, dato che il destro è legato all’input del registro.
+    \item \textbf{FF\_with0:} sono i flipflop che, nel multiplexer per la selezione, presentano degli 0, in quanto non hanno abbastanza flipflop che li precedono. Es: nel flipflop di posizione 2, per l’ingresso sinistro, la scelta ricadrà tra l’uscita del flipflop di posizione 1 ed uno 0, dato che non esiste un flipflop di posizione 0.
+    \item \textbf{FFintermedi:} sono quei flipflop che presentano multiplexer si per l’ingresso di destra che di sinistra, ed entrambi prendono gli ingressi da flipflop precedenti.
+\end{itemize}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includesvg[width=\textwidth,height=0.9\textheight]{\Equattro esercizio4.svg}
+    \caption{Progetto Completo}
+\end{figure}
+\subsection{Simulazione}
+Verrà ora presentata una simulazione del funzionamento della macchina, verificando tutte le combinazioni dei segnali mode e shift. I risultati della simulazione sono analoghi per entrambe le architecture.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth,height=0.4\textheight]{\Equattro sim.png}
+    \caption{Simulazione Shift Register}
+\end{figure}
 \newpage
 \section{Esercizio 5 - Cronometro}
 \newpage

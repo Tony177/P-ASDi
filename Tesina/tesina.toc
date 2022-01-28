@@ -11,11 +11,15 @@
 \contentsline {subsection}{\numberline {3.1}Traccia}{21}{}%
 \contentsline {subsection}{\numberline {3.2}Soluzione}{21}{}%
 \contentsline {section}{\numberline {4}Esercizio 4 - Shift Register}{30}{}%
-\contentsline {section}{\numberline {5}Esercizio 5 - Cronometro}{31}{}%
-\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{32}{}%
-\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione con Handshaking}{33}{}%
-\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{34}{}%
-\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{35}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{36}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{37}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{38}{}%
+\contentsline {subsection}{\numberline {4.1}Traccia}{30}{}%
+\contentsline {subsection}{\numberline {4.2}Approccio comportamentale}{30}{}%
+\contentsline {subsection}{\numberline {4.3}Approccio Strutturale}{32}{}%
+\contentsline {subsection}{\numberline {4.4}Simulazione}{37}{}%
+\contentsline {section}{\numberline {5}Esercizio 5 - Cronometro}{38}{}%
+\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{39}{}%
+\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione con Handshaking}{40}{}%
+\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{41}{}%
+\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{42}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{43}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{44}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{45}{}%
