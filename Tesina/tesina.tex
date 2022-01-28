@@ -188,18 +188,188 @@ L’encoder 10:4 è stato descritto a livello dataflow. L’architettura, parten
 \\L’encoder complessivo è descritto a livello strutturale utilizzando i componenti “arbitro” e “encoder10\_4”. All’interno del sistema è definito un segnale t di tipo std\_logic\_vector(9 downto 0), che fa da interconnessione e viene utilizzato come uscita dell’arbitro e come ingresso dell’encoder 10:4.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder_parte1.jpg}
-    \caption{Codice Encoder 10:4}
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder_parte1.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder_parte2.jpg}
+    \caption{Codice Encoder Complessivo}
+\end{figure}
+\newpage
+{\large \textbf{Display Manager}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.2\textwidth,height=\textheight,keepaspectratio]{\Edue display.jpg}
+    \caption{Display Segment}
+\end{figure}
+\newline
+Questo componente viene descritto a livello comportamentale. Viene definita l’entity con una porta in ingresso, value, e due porte in uscita, anode e cathode, tutte di tipo std\_logic\_vector. Nel costrutto architecture sono definite delle costanti di 7 bit, dove la posizione rappresenta un segmento di una cifra del display: quando il bit è 0 il segmento è acceso, altrimenti è spento. Poiché il valore è in notazione esadecimale, sono state definite le costanti che rappresentano i valori da 0 a f. Per tenere accesa solo la prima cifra del display, l’uscita anode viene settata con tutti i bit alti, ad eccezione di quello meno significativo; in questo modo le cifre successive alla prima sono spente. Si usa l’altra uscita, cathode, per rappresentare il valore tramite una AND tra ‘1’ e la costante che rappresenta il valore da mostrare a video.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Edue codice_display_manager_parte1.jpg}
 \end{figure}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edue codice_encoder_parte2.jpg}
-    \caption{Codice Encoder 10:4}
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Edue codice_display_manager_parte2.jpg}
 \end{figure}
-
-
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Edue codice_display_manager_parte3.jpg}
+    \caption{Codice Display Manager}
+\end{figure}
 \newpage
+{\large \textbf{Sistema Completo}}
+\\Nella descrizione strutturale dell’architettura si definiscono i componenti encoder, quello complessivo, e display manager e si definisce un segnale interno temp, di tipo std\_logic\_vector, che fa da interconnessione tra l’uscita dell’encoder e l’ingresso del display manager, al fine di rappresentare a video l’output dell’encoder.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edue codice_sistema_completo_parte1.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edue codice_sistema_completo_parte2.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Edue codice_sistema_completo_parte3.jpg}
+    \caption{Codice Sistema Completo}
+\end{figure}
+\subsection{Simulazione}
+Per effettuare la simulazione è stato utilizzato il seguente testbench per l’encoder:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edue sim1.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edue sim2.jpg}
+    \caption{Codice Testbench}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edue simulazione_encoder.jpg}
+    \caption{Simulazione Encoder}
+\end{figure}
+\clearpage
 \section{Esercizio 3 - Riconoscitore di Sequenze}
+\subsection{Traccia}
+Progettare, implementare in VHDL e testare mediante simulazione una macchina in grado di riconoscere la sequenza 1001. La macchina prende in ingresso un segnale binario i che rappresenta il dato, un segnale A di tempificazione e un segnale M di modo, che ne disciplina il funzionamento, e fornisce un’uscita Y alta quando la sequenza viene riconosciuta. In particolare,
+\begin{itemize}
+    \item se M=0, la macchina valuta i bit seriali in ingresso a gruppi di 4,
+    \item se M=1, la macchina valuta i bit seriali in ingresso uno alla volta, tornando allo stato iniziale ogni volta che la sequenza viene correttamente riconosciuta.
+\end{itemize}
+Sintetizzare e implementare su board la rete sviluppata al punto precedente, utilizzando uno switch S1 per codificare l’input i e uno switch S2 per codificare il modo M, in combinazione con due bottoni B1 e B2 utilizzati rispettivamente per acquisire l’input da S1 e S2 in sincronismo con il segnale di tempificazione A, che deve essere ottenuto a partire dal clock della board. Infine, l’uscita Y può essere codificata utilizzando un led.
+\subsection{Soluzione}
+
+La macchina realizzata è un riconoscitore che, in base al modo stabilito, riconosce la sequenza 1001. Pertanto, il riconoscitore viene descritto a livello strutturale e dispone di 3 componenti:
+\begin{itemize}
+    \item Il debouncer (descritto a livello comportamentale);
+    \item Un gestore per il modo (descritto a livello strutturale);
+    \item Il sistema che si occupa del riconoscimento vero e proprio (descritto a livello comportamentale).
+\end{itemize}
+\newpage
+{\large \textbf{Sistema per il riconoscimento}}
+
+Il sistema che effettua il riconoscimento viene descritto a livello comportamentale.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Etre codice_sistema_parte1.png}
+    \caption{Codice Sistema Pt1}
+\end{figure}
+\\Nella descrizione è definito un tipo enumerativo “status” che contiene tutti i possibili stati della macchina: S0, S1, S2, S3, S4, S5, S6, S7. Per quanto riguarda il modo, nello specifico, se M=1 vengono considerati i primi 5 stati, se M=0 vengono considerati tutti.
+Tra questi, lo stato S4 viene raggiunto se la sequenza 1001 è stata riconosciuta.
+Il comportamento della macchina è definito da un process sensibile al clock:
+Se il segnale di RESET è alto, allora resetta lo stato corrente della macchina, riportandolo a S0, e permette di acquisire il nuovo modo M.
+Se M=1,
+\begin{itemize}
+    \item Stato S0: se si riceve in ingresso 0, si permane in S0; se si riceve 1, si va in S1, poiché è stato riconosciuto un 1 (prima cifra della sequenza cercata);
+    \item Stato S1: se si riceve 1, si permane in S1, poiché non è la prossima cifra cercata, ma l’ultima trovata è un 1; se si riceve 0, si va in S2 ed è stata riconosciuta la sequenza 10;
+    \item Stato S2: se si riceve 1, si ritorna in S1; se si riceve 0, si va in S3 ed è stata riconosciuta 100;
+    \item Stato S3: se si riceve 0, si ritorna in S0, poiché sarebbe stata riconosciuta la sequenza 1000, che non è quella che si ricercava; se si riceve 1, si va in S4 e si riconosce proprio la sequenza 1001.
+\end{itemize}
+Se M=0, c’è un concetto di conteggio su 4 bit, pertanto anche in caso di valore non ricercato in ingresso, si procede in avanti verso altri stati. Nello specifico,
+\begin{itemize}
+    \item Stato S0: se si riceve 1, come prima si va in S1; altrimenti si va in S5;
+    \item Stato S1: se si riceve 0, si va in S2; altrimenti si va in S6;
+    \item Stato S2: se si riceve 0, si va in S3; altrimenti in S7;
+    \item Stato S3: se si riceve 1, si va in S4 e la sequenza 1001 è stata riconosciuta; altrimenti si torna in S0 perché su 4 bit è stata riconosciuta la sequenza 1000, che non è quella cercata.
+\end{itemize}
+Per gli stati successivi non importa il bit ricevuto in ingresso, in quanto a gruppi di 4 bit alla volta non sarebbe riconosciuta la sequenza ricercata, pertanto
+\begin{itemize}
+    \item Stato S5: va in S6;
+    \item Stato S6: va in S7;
+    \item Stato S7: va in S0.
+\end{itemize}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.4\textheight,keepaspectratio]{\Etre codice_sistema_parte2.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.55\textheight,keepaspectratio]{\Etre codice_sistema_parte3.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.3\textheight,keepaspectratio]{\Etre codice_sistema_parte4.png}
+    \caption{Codice Sistema Pt2}
+\end{figure}
+\clearpage
+{\large \textbf{Debouncer}}
+\\Tale componente ha il compito di trasformare un segnale rumoroso in un segnale pulito. Quando un segnale arriva da un bottone sarà sicuramente effetto da rumore, come riportato in figura. Ad un occhio umano, tali oscillazioni non vengono percepite ma, quando tale segnale viene analizzato ad un microcontrollore, queste vengono rilevate a pieno e potrebbero creare problemi (se tale segnale va in ingresso ad un contatore si traduce in conteggi spuri).
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Etre debouncer.png}
+    \caption{Debouncer}
+\end{figure}
+Il debouncer viene progettato come una macchina a stati:
+\begin{itemize}
+    \item Stato not pressed: il sistema permane in questo stato finchè non vede il segnale in ingresso alzarsi. Passa così nello stato pressed.
+    \item Stato pressed: il sistema permane in questo stato finchè il segnale in ingresso non si abbassa. Quando ciò accade, si utilizza una variabile di conteggio, la quale fa si che passi un periodo di tempo pari a D2 prima di riportare il segnale come alto in uscita e tornare nello stato not pressed.
+\end{itemize}
+Il segnale in uscita rimane alto per un periodo di clock dato che, quando il sistema ritorna nello stato not pressed, l’uscita viene abbassata nuovamente. A differenza di un debouncer classico, l’uscita viene riportata alta solo dopo che il segnale si è abbassato e non dopo un tempo D1 dal fronte di salita; la scelta è stata fatta poiché, altrimenti, se il bottone venisse premuto troppo a lungo potrebbe essere rilevato nuovamente ed in uscita si produrrebbero 2 segnali puliti invece di 1.
+\newpage
+{\large \textbf{Filtro per il modo}}
+
+Questo componente prende in ingresso il segnale filtrato dal debouncer, chiamato “cleared\_button”, il clock e l’input dallo switch S2, che rappresenta il modo, e restituisce il modo. Viene descritto a livello comportamentale:  se il bottone B2 è premuto, il modo viene impostato tramite S2.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Etre codice_filtro_modo.jpg}
+    \caption{Codice filtro modo}
+\end{figure}
+\\{\large \textbf{Gestore per il modo}}
+\\Il componente relativo alla gestione del modo viene descritto a livello strutturale e si compone di un debouncer e di un filtro per il modo. Prende in ingresso il clock, il segnale del bottone B2, l’input dallo switch S2. B2 va in ingresso al debouncer per la pulizia del segnale e l’uscita del debouncer, attraverso il segnale interno cb\_temp va in ingresso al filtro insieme a S2. L’uscita sarà data dal filtro, pertanto sarà il modo, che successivamente sarà dato in ingresso al sistema di riconoscimento.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Etre codice_gestore_modo_parte1.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=1.1\textwidth,height=0.7\textheight]{\Etre codice_gestore_modo_parte2.jpg}
+    \caption{Codice gestore modo}
+\end{figure}
+\clearpage
+{\large \textbf {Riconoscitore}}
+\\Il riconoscitore complessivo viene descritto in modo Strutturale tramite i componenti presentati finora.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Etre codice_riconoscitore_parte1.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Etre codice_riconoscitore_parte2.jpg}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Etre codice_riconoscitore_parte3.jpg}
+    \caption{Codice riconoscitore}
+\end{figure}
+{\large \textbf{Simulazione}}
+\\Per la simulazione si è usato il seguente testbench sul riconoscitore completo, compreso di sistema di riconoscimento, debouncer e gestore del modo:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.15\textheight]{\Etre simulazione_riconoscitore.jpg}
+    \caption{Simulazione riconoscitore}
+\end{figure}
 \newpage
 \section{Esercizio 4 - Shift Register}
 \newpage
