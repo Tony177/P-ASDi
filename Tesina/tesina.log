@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.26)  29 JAN 2022 12:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.26)  29 JAN 2022 17:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -853,26 +853,194 @@ Package pdftex.def Info: Allegati/Esercizio6/board.jpg  used on input line 721.
 (pdftex.def)             Requested size: 389.98872pt x 358.2192pt.
  [59
 
- <./Allegati/Esercizio6/board.jpg>] [60
+ <./Allegati/Esercizio6/board.jpg>]
+Package svg Info: Last page of `./svg-inkscape/sistema_completo_svg-tex.pdf' is 1 on input line 749.
+ (./svg-inkscape/sistema_completo_svg-tex.pdf_tex
+<./svg-inkscape/sistema_completo_svg-tex.pdf, id=378, page=1, 493.845pt x 416.42294pt>
+File: ./svg-inkscape/sistema_completo_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/sistema_completo_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/sistema_completo_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 390.0pt x 328.85614pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 727--752
 
-] [61] [62] [63] [64] [65] (./tesina.lof [66])
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--752
+
+ []
+
+[60
+
+] [61] [62 <./svg-inkscape/sistema_completo_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/sistema_a_svg-tex.pdf' is 1 on input line 764.
+ (./svg-inkscape/sistema_a_svg-tex.pdf_tex
+<./svg-inkscape/sistema_a_svg-tex.pdf, id=395, page=1, 497.86pt x 246.67548pt>
+File: ./svg-inkscape/sistema_a_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/sistema_a_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/sistema_a_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 350.99762pt x 173.91376pt.
+) [63
+
+ <./svg-inkscape/sistema_a_svg-tex.pdf>]
+<Allegati/Esercizio7/entity_contatore.png, id=407, 724.7075pt x 123.46124pt>
+File: Allegati/Esercizio7/entity_contatore.png Graphic file (type png)
+<use Allegati/Esercizio7/entity_contatore.png>
+Package pdftex.def Info: Allegati/Esercizio7/entity_contatore.png  used on input line 775.
+(pdftex.def)             Requested size: 390.00925pt x 66.442pt.
+<Allegati/Esercizio7/architecture_counter.png, id=408, 724.7075pt x 449.68pt>
+File: Allegati/Esercizio7/architecture_counter.png Graphic file (type png)
+<use Allegati/Esercizio7/architecture_counter.png>
+Package pdftex.def Info: Allegati/Esercizio7/architecture_counter.png  used on input line 785.
+(pdftex.def)             Requested size: 312.00519pt x 193.59877pt.
+ [64
+
+ <./Allegati/Esercizio7/entity_contatore.png> <./Allegati/Esercizio7/architecture_counter.png>]
+<Allegati/Esercizio7/entity_rom.png, id=414, 584.68437pt x 104.39pt>
+File: Allegati/Esercizio7/entity_rom.png Graphic file (type png)
+<use Allegati/Esercizio7/entity_rom.png>
+Package pdftex.def Info: Allegati/Esercizio7/entity_rom.png  used on input line 792.
+(pdftex.def)             Requested size: 390.01463pt x 69.6335pt.
+<Allegati/Esercizio7/architecture_rom.png, id=415, 490.83376pt x 404.51125pt>
+File: Allegati/Esercizio7/architecture_rom.png Graphic file (type png)
+<use Allegati/Esercizio7/architecture_rom.png>
+Package pdftex.def Info: Allegati/Esercizio7/architecture_rom.png  used on input line 797.
+(pdftex.def)             Requested size: 390.00876pt x 321.41824pt.
+ [65
+
+ <./Allegati/Esercizio7/entity_rom.png> <./Allegati/Esercizio7/architecture_Rom.png>]
+<Allegati/Esercizio7/entity_interfacciaa.png, id=421, 528.97626pt x 187.70125pt>
+File: Allegati/Esercizio7/entity_interfacciaa.png Graphic file (type png)
+<use Allegati/Esercizio7/entity_interfacciaa.png>
+Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciaa.png  used on input line 805.
+(pdftex.def)             Requested size: 389.99957pt x 138.38693pt.
+ [66
+
+ <./Allegati/Esercizio7/entity_interfacciaA.png>] [67]
+<Allegati/Esercizio7/arc_inta_1.png, id=430, 456.70625pt x 466.74374pt>
+File: Allegati/Esercizio7/arc_inta_1.png Graphic file (type png)
+<use Allegati/Esercizio7/arc_inta_1.png>
+Package pdftex.def Info: Allegati/Esercizio7/arc_inta_1.png  used on input line 823.
+(pdftex.def)             Requested size: 214.49864pt x 219.2129pt.
+<Allegati/Esercizio7/arc_inta_2.png, id=431, 400.49625pt x 435.12563pt>
+File: Allegati/Esercizio7/arc_inta_2.png Graphic file (type png)
+<use Allegati/Esercizio7/arc_inta_2.png>
+Package pdftex.def Info: Allegati/Esercizio7/arc_inta_2.png  used on input line 827.
+(pdftex.def)             Requested size: 214.50476pt x 233.05217pt.
+ [68
+
+ <./Allegati/Esercizio7/arc_inta_1.png> <./Allegati/Esercizio7/arc_inta_2.png>]
+Package svg Info: Last page of `./svg-inkscape/sistema_b_svg-tex.pdf' is 1 on input line 842.
+ (./svg-inkscape/sistema_b_svg-tex.pdf_tex
+<./svg-inkscape/sistema_b_svg-tex.pdf, id=438, page=1, 549.97658pt x 383.75793pt>
+File: ./svg-inkscape/sistema_b_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/sistema_b_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/sistema_b_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 350.99762pt x 244.91327pt.
+) [69
+
+ <./svg-inkscape/sistema_b_svg-tex.pdf>]
+<Allegati/Esercizio7/entity_controlunitb.png, id=453, 590.205pt x 189.70876pt>
+File: Allegati/Esercizio7/entity_controlunitb.png Graphic file (type png)
+<use Allegati/Esercizio7/entity_controlunitb.png>
+Package pdftex.def Info: Allegati/Esercizio7/entity_controlunitb.png  used on input line 850.
+(pdftex.def)             Requested size: 214.49994pt x 68.9464pt.
+ [70
+
+ <./Allegati/Esercizio7/entity_ControlUnitB.png>] [71]
+<Allegati/Esercizio7/arc_control_b1.png, id=461, 399.4925pt x 414.54875pt>
+File: Allegati/Esercizio7/arc_control_b1.png Graphic file (type png)
+<use Allegati/Esercizio7/arc_control_b1.png>
+Package pdftex.def Info: Allegati/Esercizio7/arc_control_b1.png  used on input line 866.
+(pdftex.def)             Requested size: 214.50357pt x 222.58789pt.
+<Allegati/Esercizio7/arc_control_b2.png, id=462, 358.84062pt x 416.55624pt>
+File: Allegati/Esercizio7/arc_control_b2.png Graphic file (type png)
+<use Allegati/Esercizio7/arc_control_b2.png>
+Package pdftex.def Info: Allegati/Esercizio7/arc_control_b2.png  used on input line 870.
+(pdftex.def)             Requested size: 214.5066pt x 249.00768pt.
+ [72
+
+ <./Allegati/Esercizio7/arc_control_b1.png> <./Allegati/Esercizio7/arc_control_b2.png>]
+<Allegati/Esercizio7/entity_memoriab.png, id=468, 750.805pt x 146.5475pt>
+File: Allegati/Esercizio7/entity_memoriab.png Graphic file (type png)
+<use Allegati/Esercizio7/entity_memoriab.png>
+Package pdftex.def Info: Allegati/Esercizio7/entity_memoriab.png  used on input line 880.
+(pdftex.def)             Requested size: 390.00842pt x 76.12462pt.
+<Allegati/Esercizio7/architecture_memoriab.png, id=469, 625.83812pt x 433.11812pt>
+File: Allegati/Esercizio7/architecture_memoriab.png Graphic file (type png)
+<use Allegati/Esercizio7/architecture_memoriab.png>
+Package pdftex.def Info: Allegati/Esercizio7/architecture_memoriab.png  used on input line 885.
+(pdftex.def)             Requested size: 292.51099pt x 202.43542pt.
+
+Overfull \hbox (26.8465pt too wide) in paragraph at lines 874--888
+\OT1/cmr/m/n/12 quando il seg-nale di ab[]interfaccia si alza, ovvero quando ^^Re ter-mi-nata l'elaborazione
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--888
+
+ []
+
+[73
+
+ <./Allegati/Esercizio7/entity_MemoriaB.png> <./Allegati/Esercizio7/architecture_MemoriaB.png>]
+<Allegati/Esercizio7/entity_interfacciab.png, id=477, 522.45187pt x 191.21437pt>
+File: Allegati/Esercizio7/entity_interfacciab.png Graphic file (type png)
+<use Allegati/Esercizio7/entity_interfacciab.png>
+Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciab.png  used on input line 893.
+(pdftex.def)             Requested size: 390.00438pt x 142.73935pt.
+ [74
+
+ <./Allegati/Esercizio7/entity_interfacciaB.png>] [75]
+<Allegati/Esercizio7/arc_inter_b1.png, id=485, 480.29437pt x 413.545pt>
+File: Allegati/Esercizio7/arc_inter_b1.png Graphic file (type png)
+<use Allegati/Esercizio7/arc_inter_b1.png>
+Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b1.png  used on input line 909.
+(pdftex.def)             Requested size: 253.49947pt x 218.26913pt.
+<Allegati/Esercizio7/arc_inter_b2.png, id=486, 337.26pt x 445.665pt>
+File: Allegati/Esercizio7/arc_inter_b2.png Graphic file (type png)
+<use Allegati/Esercizio7/arc_inter_b2.png>
+Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b2.png  used on input line 913.
+(pdftex.def)             Requested size: 175.49971pt x 231.91034pt.
+ [76
+
+ <./Allegati/Esercizio7/arc_inter_b1.png> <./Allegati/Esercizio7/arc_inter_b2.png>]
+<Allegati/Esercizio7/sim1.png, id=492, 1168.365pt x 381.425pt>
+File: Allegati/Esercizio7/sim1.png Graphic file (type png)
+<use Allegati/Esercizio7/sim1.png>
+Package pdftex.def Info: Allegati/Esercizio7/sim1.png  used on input line 925.
+(pdftex.def)             Requested size: 390.00076pt x 127.31982pt.
+<Allegati/Esercizio7/sim2.png, id=493, 1168.365pt x 381.425pt>
+File: Allegati/Esercizio7/sim2.png Graphic file (type png)
+<use Allegati/Esercizio7/sim2.png>
+Package pdftex.def Info: Allegati/Esercizio7/sim2.png  used on input line 929.
+(pdftex.def)             Requested size: 390.00076pt x 127.31982pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 918--932
+
+ []
+
+[77
+
+ <./Allegati/Esercizio7/sim1.png> <./Allegati/Esercizio7/sim2.png>] [78] [79] [80] [81] [82] (./tesina.lof [83])
 \tf@lof=\write5
 \openout5 = `tesina.lof'.
 
- [67] (./tesina.aux) ) 
+ [84] (./tesina.aux) ) 
 Here is how much of TeX's memory you used:
- 6531 strings out of 478353
- 140313 string characters out of 5854635
+ 6690 strings out of 478353
+ 146775 string characters out of 5854635
  441616 words of memory out of 5000000
- 24432 multiletter control sequences out of 15000+600000
+ 24564 multiletter control sequences out of 15000+600000
  408727 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,10n,92p,932b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,10n,92p,959b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesina.pdf (67 pages, 4411125 bytes).
+Output written on tesina.pdf (84 pages, 5054465 bytes).
 PDF statistics:
- 446 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
+ 564 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 443 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 558 words of extra memory for PDF output out of 10000 (max. 10000000)
 

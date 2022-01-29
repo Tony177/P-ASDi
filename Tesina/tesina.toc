@@ -22,9 +22,17 @@
 \contentsline {subsection}{\numberline {6.1}Traccia}{51}{}%
 \contentsline {subsection}{\numberline {6.2}Implementazione}{51}{}%
 \contentsline {subsection}{\numberline {6.3}Simulazione e Sinstesi}{58}{}%
-\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione con Handshaking}{60}{}%
-\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{61}{}%
-\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{62}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{63}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{64}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{65}{}%
+\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione Handshaking}{60}{}%
+\contentsline {subsection}{\numberline {7.1}Introduzione all'handshaking}{60}{}%
+\contentsline {subsection}{\numberline {7.2}Sistema A}{63}{}%
+\contentsline {subsubsection}{\numberline {7.2.1}Unità Operativa A}{64}{}%
+\contentsline {subsubsection}{\numberline {7.2.2}Unità di Controllo A}{66}{}%
+\contentsline {subsection}{\numberline {7.3}Sistema B}{69}{}%
+\contentsline {subsubsection}{\numberline {7.3.1}Unita Operativa B}{70}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}Unità di controllo}{74}{}%
+\contentsline {subsection}{\numberline {7.4}Considerazioni Finali}{77}{}%
+\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{78}{}%
+\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{79}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{80}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{81}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{82}{}%
