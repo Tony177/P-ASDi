@@ -1,36 +1,58 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Mux 4:1\relax }}{2}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Mux 4:1 Dataflow\relax }}{2}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Mux 16:1\relax }}{3}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Mux 16:1 Dataflow\relax }}{4}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Mux 16:1 Testbench\relax }}{5}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Mux 16:1 Simulazione\relax }}{6}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Demux 1:4 Dataflow\relax }}{7}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Rete 16:1\relax }}{7}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Rete 16:4 Structural\relax }}{8}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Rete 16:4 Testbench\relax }}{9}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Rete 16:4 Simulazione\relax }}{9}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Costraints\relax }}{10}{}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Rete 16:4 Analysis\relax }}{10}{}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Codice Arbitro\relax }}{13}{}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Codice Encoder 10:4\relax }}{14}{}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Codice Encoder Complessivo\relax }}{15}{}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Display Segment\relax }}{16}{}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Codice Display Manager\relax }}{17}{}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Codice Sistema Completo\relax }}{18}{}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Codice Testbench\relax }}{19}{}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Simulazione Encoder\relax }}{20}{}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Codice Sistema Pt1\relax }}{22}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Codice Sistema Pt2\relax }}{24}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Debouncer\relax }}{25}{}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Codice filtro modo\relax }}{26}{}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Codice gestore modo\relax }}{27}{}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Codice riconoscitore\relax }}{29}{}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Simulazione riconoscitore\relax }}{29}{}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Entity Shift Bidirezionale\relax }}{30}{}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Architecture Shift Register Bidirezionale\relax }}{31}{}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Entity Flip Flop D\relax }}{32}{}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Architecture Flip Flop D\relax }}{33}{}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Mux 2:1\relax }}{34}{}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Generate FFD\relax }}{35}{}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Progetto Completo\relax }}{36}{}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Simulazione Shift Register\relax }}{37}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Mux 4:1\relax }}{3}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Mux 4:1 Dataflow\relax }}{3}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Mux 16:1\relax }}{4}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Mux 16:1 Dataflow\relax }}{5}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Mux 16:1 Testbench\relax }}{6}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Mux 16:1 Simulazione\relax }}{7}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Demux 1:4 Dataflow\relax }}{8}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Rete 16:1\relax }}{8}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Rete 16:4 Structural\relax }}{9}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Rete 16:4 Testbench\relax }}{10}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Rete 16:4 Simulazione\relax }}{10}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Costraints\relax }}{11}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Rete 16:4 Analysis\relax }}{11}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Codice Arbitro\relax }}{14}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Codice Encoder 10:4\relax }}{15}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Codice Encoder Complessivo\relax }}{16}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Display Segment\relax }}{17}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Codice Display Manager\relax }}{18}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Codice Sistema Completo\relax }}{19}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Codice Testbench\relax }}{20}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Simulazione Encoder\relax }}{21}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Codice Sistema Pt1\relax }}{23}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Codice Sistema Pt2\relax }}{25}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Debouncer\relax }}{26}{}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Codice filtro modo\relax }}{27}{}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Codice gestore modo\relax }}{28}{}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Codice riconoscitore\relax }}{30}{}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Simulazione riconoscitore\relax }}{30}{}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Entity Shift Bidirezionale\relax }}{31}{}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Architecture Shift Register Bidirezionale\relax }}{32}{}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Entity Flip Flop D\relax }}{33}{}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Architecture Flip Flop D\relax }}{34}{}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Mux 2:1\relax }}{35}{}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Generate FFD\relax }}{36}{}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Progetto Completo Esercizio 1\relax }}{37}{}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Simulazione Shift Register\relax }}{38}{}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Entity Contatore\relax }}{39}{}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Architecture Contatore\relax }}{39}{}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Entity Sistema Contatori\relax }}{40}{}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Struct Sistema Contatori\relax }}{41}{}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Wait Block\relax }}{42}{}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Gestore set\relax }}{43}{}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Architecture Gestore set\relax }}{44}{}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Convertitore per display\relax }}{46}{}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Entity Gestore modo\relax }}{46}{}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Architecture Gestore modo\relax }}{48}{}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Entity Memoria\relax }}{49}{}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Architecture Memoria\relax }}{50}{}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Schema Completo Esercizio 5\relax }}{50}{}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Sistema Complessivo\relax }}{52}{}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Tester\relax }}{52}{}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Gestore Read\relax }}{53}{}%
+\contentsline {figure}{\numberline {53}{\ignorespaces ROM\relax }}{54}{}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Delay Block\relax }}{55}{}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Memoria Esterna\relax }}{56}{}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Gestore Led\relax }}{57}{}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Simulazione Es.6\relax }}{58}{}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Sintesi Es.6\relax }}{59}{}%
