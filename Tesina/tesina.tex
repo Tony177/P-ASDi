@@ -338,7 +338,6 @@ Questo componente prende in ingresso il segnale filtrato dal debouncer, chiamato
 \\{\large \textbf{Gestore per il modo}}
 \\Il componente relativo alla gestione del modo viene descritto a livello strutturale e si compone di un debouncer e di un filtro per il modo. Prende in ingresso il clock, il segnale del bottone B2, l’input dallo switch S2. B2 va in ingresso al debouncer per la pulizia del segnale e l’uscita del debouncer, attraverso il segnale interno cb\_temp va in ingresso al filtro insieme a S2. L’uscita sarà data dal filtro, pertanto sarà il modo, che successivamente sarà dato in ingresso al sistema di riconoscimento.
 \begin{figure}[ht]
-    \centering
     \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Etre codice_gestore_modo_parte1.jpg}
 \end{figure}
 \begin{figure}[ht!]
@@ -450,7 +449,7 @@ Vediamo ora come tali componenti sono stati combinati:
 \begin{figure}[ht!]
     \centering
     \includesvg[width=\textwidth,height=0.9\textheight]{\Equattro esercizio4.svg}
-    \caption{Progetto Completo}
+    \caption{Progetto Completo Esercizio 1}
 \end{figure}
 \subsection{Simulazione}
 Verrà ora presentata una simulazione del funzionamento della macchina, verificando tutte le combinazioni dei segnali mode e shift. I risultati della simulazione sono analoghi per entrambe le architecture.
@@ -493,19 +492,236 @@ Si presenta però un problema di tempificazione: il segnale di div del contatore
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Ecinque architecture_sistema_c.png}
-    \caption{Architecture Sistema Contatori}
 \end{figure}
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=\textwidth,height=0.3\textheight]{\Ecinque struct.png}
-    \caption{Structural Sistema Contatori}
+    \includegraphics[width=\textwidth,height=0.4\textheight]{\Ecinque struct.png}
+    \caption{Struct Sistema Contatori}
 \end{figure}
 \clearpage
 {\large \textbf{Component wait\_block:}}
 \\E' stato progettato mediante un approccio comportamentale, con lo scopo di ritardare di 1 colpo di clock il segnale in ingresso.
-\newpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.4\textheight,keepaspectratio]{\Ecinque wait_block.png}
+    \caption{Wait Block}
+\end{figure}
+\\{\large \textbf{Schema sistema contatori}}
+\begin{figure}[ht!]
+    \centering
+    \includesvg[width=\textwidth,height=\textheight]{\Ecinque sistema_contatori.svg}
+\end{figure}
+\\Definita la parte relativa al conteggio, possiamo ora vedere i componenti necessari al set di un valore iniziale dei contatori, in modo da far partire il cronometro da un orario scelto.
+\\\\{\large \textbf{Component gestore\_set:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.4\textheight,keepaspectratio]{\Ecinque gestore_set.png}
+    \caption{Gestore set}
+\end{figure}
+\\Il segnale di set in ingresso ai contatori viene processato da un gestore di set, il quale ha il compito di mantenere quel segnale sempre alto finché non vengono settate ore, minuti e secondi.
+Il segnale di set viene prodotto dal gestore\_set in base ad un segnale fornito dall’esterno tramite un pulsante: la prima volta che si riceve tale segnale, il valore di set viene posto ad 1.
+A questo punto, tutti i contatori fermano il conteggio e rimangono in attesa di un vettore in ingresso e, tramite una variabile di conteggio chiamata count, si gestisce quale contatore inizializzare ad ogni passo.
+Il vettore in ingresso, infatti, contiene solo 6 bit e viene ogni volta aggiornato con il valore di ore, minuti e secondi che si vuole caricare; si è preferita una scelta di questo tipo rispetto ad un unico vettore contenente 17 ingressi dato che, quando si passerà alla sintesi su fpga, non saranno presenti 17 switch per gli input.
+Tornando alla variabile count, vediamo come il componente gestisce gli ingressi:
+\begin{itemize}
+    \item Count=1 : i valori in ingresso vengono caricati nel counter dei secondi;
+    \item Count=2 : i valori in ingresso vengono caricati nel counter dei minuti;
+    \item Count=3 : i valori in ingresso vengono caricati nel counter delle ore;
+\end{itemize}
+Quando il count arriva a 3, inoltre, il suo valore viene portato a 0, indicando la fine dei dati in input da ricevere.
+Il valore di count viene incrementato ogni volta che arriva il segnale esterno che definisce il set; la quarta volta che il gestore riceve tale segnale, il valore di count sarà pari a 0 e, dunque, il segnale di set in uscita verrà abbassato e il cronometro riprende il suo normale funzionamento.
+È bene notare che, tutte le operazioni del gestore\_set vengono eseguite quando il segnale di ingresso ab\_modo è pari a 0; il motivo verrà spiegato nel seguito.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.3\textheight,keepaspectratio]{\Ecinque set1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.3\textheight,keepaspectratio]{\Ecinque set2.png}
+    \caption{Architecture Gestore set}
+\end{figure}
+\clearpage
+L’implementazione riportata è già adattata alla sintesi su fpga, introducendo dei valori di output relativi all’accensione di alcuni led, i quali indicano quale counter stiamo inizializzando.
+
+\subsection{Sintesi su fpga}
+Così come richiesto nell’esercizio 5.2, il componente cronometro realizzato in precedenza verrà sintetizzato su fpga. In particolare, verrà utilizzato il display a 7 segmenti presente sulla board, per la visualizzazione dell’orario, e 2 bottoni, per inviare i segnali di set e reset.
+Tuttavia, tale sintesi non può essere immediata, ma  necessita di 2 componenti aggiuntivi:
+\begin{itemize}
+    \item Debouncer: componente che serve a ripulire il segnale inviato dal bottone, che sarà sicuramente caratterizzato da rumore.
+    \item Convertitore per display: l’uscita dei contatori deve essere tradotta in un formato leggibile dal display.
+\end{itemize}
+{\large \textbf{Componente debouncer:}}
+\\Tale componente ha il compito di trasformare un segnale rumoroso in un segnale pulito e la sua implementazione è analoga a quella riportata nell’esercizio 3.
+\\\\\\{\large \textbf{Componente conv\_per\_display:}}
+\\Tale componente è stato progettato con un approccio dataflow: prende in ingresso i vettori in uscita dai contatori e traduce ognuno di essi in 2 vettori da 4 bit (richiesti dal display in ingresso), i quali rappresentano i valori di decine e unità.
+\clearpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=0.6\textheight,keepaspectratio]{\Ecinque conv.png}
+    \caption{Convertitore per display}
+\end{figure}
+Le uscite di questo componente andranno poi in ingresso al display\_manager.
+\newline\newline\textbf{Estensione con intertempi:}
+\\Per far si che il sistema sia in grado di memorizzare degli intertempi, sono stati aggiunti ulteriori componenti:
+\begin{itemize}
+    \item Gestore modo: necessario per la visualizzazione degli intertempi salvati.
+    \item Memoria: componente nel quale salvare gli intertempi.
+\end{itemize}
+{\large \textbf{Componente Gestore\_modo:}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=0.3\textheight,keepaspectratio]{\Ecinque modo1.png}
+    \caption{Entity Gestore modo}
+\end{figure}
+\clearpage
+E' stato realizzato come una macchina a 2 stati
+\begin{itemize}
+    \item Stato cronometro: a tale stato è associata l’uscita ab\_modo=0, la quale indica che l’uscita sul display è quella del sistema dei contatori, ovvero stiamo visualizzando il cronometro che scorre. Quando riceve in ingresso il segnale di cambio modo, inviato da un pulsante e gestito da un debouncer, si passa allo stato intertempo.
+    \item Stato intertempo: a tale stato è associata l’uscita ab\_modo=1, la quale indica dunque che l’uscita sul display è quella della memoria, ovvero stiamo visualizzando gli intertempi salvati.
+\end{itemize}
+Per implementare la modalità intertempi, dunque, le uscite dei contatori e della memoria entrano nel gestore modo il quale, in base alla modalità di funzionamento del sistema, decide quale dei due ingressi riportare in uscita. Tale uscita andrà poi in ingresso al convertitore per display.
+L’uscita ab\_modo verrà inoltre riportata in ingresso alla memoria ed al gestore set, in quanto ne limita le funzionalità:
+\begin{itemize}
+    \item Gestore set: quando siamo nella modalità intertempo, non è possibile settare un valore nei contatori.
+    \item Memoria: quando si è nella modalità cronometro e si invia un segnale di write, allora l’intertempo viene scritto in memoria, altrimenti no. Inoltre, i dati possono essere letti dalla memoria e riportati sullo schermo, in corrispondenza di un segnale di read, solo quando il sistema è in modalità intertempo.
+\end{itemize}
+È bene notare che il segnale di ab\_modo non va in ingresso al sistema di contatori. Si è infatti supposto che, anche quando si è in modalità intertempo, il cronometro continua a lavorare, ma il tempo non viene mostrato sul display. Quando si ripassa alla modalità cronometro, infatti, si noterà che il valore di conteggio sarà avanzato.
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{\Ecinque modo2.png}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=0.1\textheight,keepaspectratio]{\Ecinque modo3.png}
+    \caption{Architecture Gestore modo}
+\end{figure}
+\clearpage
+{\large \textbf{Componente memoria:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{\Ecinque memoria.png}
+    \caption{Entity Memoria}
+\end{figure}
+\\Tale componente è stato progettato tramite un approccio comportamentale e varia le sua funzionalità in base alla modalità di lavoro del sistema:
+\begin{itemize}
+    \item Modalità intertempo: permette, in corrispondenza di un segnale di read, di scorrere gli intertempi salvati. Non si possono salvare nuovi intertempi in tale modalità.
+    \item Modalità cronometro: permette, in corrispondenza di un segnale di write, di salvare l’intertempo in memoria. Non si possono visualizzare gli intertempi salvati in tale modalità.
+\end{itemize}
+Per come è stata progettata, se si salvano più di N intertempi, vengono sovrascritti i primi che sono stati salvati.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Ecinque memoriab.png}
+    \caption{Architecture Memoria}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includesvg[width=\textwidth,height=\textheight]{\Ecinque esercizio5.svg}
+    \caption{Schema Completo Esercizio 5}
+\end{figure}
+\clearpage
 \section{Esercizio 6 - Sistema di Testing}
-\newpage
+\subsection{Traccia}
+\textbf{Esercizio 6.1:} Progettare, implementare in VHDL e verificare mediante simulazione un sistema in grado di testare in maniera automatica una macchina combinatoria M avente 4 ingressi e 3 uscite binarie sottoponendole N ingressi diversi (si considerino una macchina M e un numero di input N a scelta dello studente).
+Gli N valori di input per il test devono essere letti da una ROM, in cui essi sono precaricati, in corrispondenza di un segnale read. Le N uscite fornite della macchina in corrispondenza di ciascuno degli input devono essere memorizzati in una memoria interna, che deve poter essere svuotata in qualsiasi momento in presenza di un segnale di reset.
+\\\\\textbf{Esercizio 6.2:} Sintetizzare ed implementare su board il componente sviluppato al punto precedente, utilizzando due bottoni per i segnali di read e reset rispettivamente e i led per la visualizzazione delle uscite della macchina istante per istante.
+\subsection{Implementazione}
+{\large \textbf{Scelte progettuali:}}
+\\L’esercizio richiedeva di progettare un sistema di testing per una macchina combinatoria, a partire da dei valori di input per la macchina precaricati in una ROM, si visualizza l’output della macchina combinatoria a tali valori tramite dei LED. Gli output vengono visualizzati a intervalli di 1s. Per poter iniziare il testing della macchina occorre un segnale di RESET, necessario per svuotare la memoria, ed un segnale di READ, per presentare in ingresso alla macchina gli input presenti nella ROM.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esei sistema_esterno.jpg}
+\end{figure}
+\clearpage
+Il sistema è stato progettato mediante un approccio strutturale:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esei sistema_comp.jpg}
+    \caption{Sistema Complessivo}
+\end{figure}
+\\\\{\large \textbf{Tester:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esei tester.jpg}
+    \caption{Tester}
+\end{figure}
+\clearpage
+Il tester è anch’esso realizzato con approccio strutturale. Lo scopo di questo componente è quello di presentare in uscita dei valori da dare in input alla macchina che si vuole testare ed inviare un segnale di scrittura per il salvataggio dei risultati.Il sistema è composto da:
+\\\\{\large \textbf{Gestore read:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.55\textwidth,height=0.55\textheight,keepaspectratio]{\Esei gestore_read_entity.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.55\textwidth,height=0.55\textheight,keepaspectratio]{\Esei gestore_read_archit.png}
+    \caption{Gestore Read}
+\end{figure}
+\clearpage
+A partire dal segnale ripulito di READ viene prodotto un segnale di OUT\_READ  che rimane alto per tanti periodi di clk quanti sono gli input di test: $N \cdot Tclk$. E’ realizzato come una macchina a stati:
+\begin{itemize}
+    \item Stato NOTREAD: in tale state il valore di out\_read è pari a 0 e rimane in attesa di un segnale cleared\_read, appena questo arriva si passa nello stato di READ.
+    \item Stato READ: a tale stato è associata l’uscita out\_read pari a 1; il sistema rimane in questo stato per N colpi di clock per poi tornare allo stato NOTREAD.
+\end{itemize}
+{\large \textbf{ROM:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Esei rom_entity.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Esei rom_process.png}
+    \caption{ROM}
+\end{figure}
+\clearpage
+E’ stata realizzata come una memoria precaricata, che all’arrivo del segnale di read visualizza in uscita il valore puntato ed incrementa il puntatore ai valori memorizzati. Il generic permette di memorizzare i valori al variare della variabile N.
+\\{\large \textbf{DELAY:}}
+\\Il blocco di delay è necessario per poter ritardare il segnale di write in memoria, in questo modo si sincronizza l’uscita della macchina combinatoria al segnale di scrittura. Si suppone che la macchina combinatoria abbia un ritardo inferiore al $Tclock\over{2}$; se così non fosse allora dovremmo aumentare il periodo del clock con un divisore in frequenza.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esei delay_block.png}
+    \caption{Delay Block}
+\end{figure}
+\\Il blocco di delay e la ROM agiscono sul fronte di discesa del clock in modo che il ritardo ottenuto sia tale da campionare il valore di uscita della macchina quando è stabile e non sulla transizione. Il segnale di write, infatti, varia sul fronte di discesa del clock, mentre la scrittura in memoria avviene sul fronte di salita.
+\\\\Memoria: è realizzata in maniera comportamentale. La scrittura avviene con la delay\_write (che dura $N \cdot Tclk$), quindi permette di scrivere N valori in uscita dalla macchina combinatoria. La lettura avviene con la read\_gestore (che dura Tclk), la quale permette di scorrere i valori in memoria con periodo di 1s. Agiscono due puntatori: uno per la lettura ed uno per la scrittura.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{\Esei memoria_esterna.png}
+    \caption{Memoria Esterna}
+\end{figure}
+\\{\large \textbf{Gestore Led:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Esei gestore_led_entity.png}
+\end{figure}
+\clearpage
+È realizzato come una macchina a stati che gestisce la visualizzazione degli output, visualizzandoli ad intervalli di 1s. Il generic N permette di gestire, tramite una variabile count, l’intervallo di visualizzazione degli output. Il generic X permette di stabilire, tramite la variabile count\_valori, il numero di valori da visualizzare.
+\begin{figure}[ht!]
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Esei gestore_led_archit1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=0.75\textwidth,height=\textheight,keepaspectratio]{\Esei gestore_led_archit2.png}
+    \caption{Gestore Led}
+\end{figure}
+\clearpage
+Lista di stati:
+\begin{itemize}
+    \item Stato q0: è lo stato in cui si arriva dopo ogni segnale di RESET o dopo la visualizzazione completa dei valori in memoria. Vengono resettati i valori di count, count\_valori e si rimane in attesa di un segnale di READ per poter passare allo stato q\_ready.
+    \item Stato q\_ready: si confronta il valore di count\_valori con 0 per poter stabilire se è la prima iterazione, in questo caso si aspetta che la macchina elabora i dati in ingresso per poi passare alla visualizzazione effettiva, altrimenti si alza il segnale di lettura della memoria. Si incrementa, poi, il valore di count\_valori e si passa allo stato q\_ready2.
+    \item Stato q\_ready2: si abbassa il segnale di lettura della memoria e si mostrano i risultati, attendendo un numero di impulsi di clock pari ad N tramite la variabile count, prima di procedere alla visualizzazione del risultato successivo. Si effettua, poi, un controllo per stabilire se il valore visualizzato è l’ultimo o meno tramite count\_valori: se è così, allora si passa allo stato di q0;  altrimenti si passa in q\_ready.
+\end{itemize}
+\subsection{Simulazione e Sinstesi}
+Simulazione:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esei simulazione.png}
+    \caption{Simulazione Es.6}
+\end{figure}
+\clearpage
+Sintesi su FPGA:
+\\Per la sintesi su fpga sono stati inseriti i debouncer per i pulsanti di READ e RESET.
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esei board.jpg}
+    \caption{Sintesi Es.6}
+\end{figure}
+\clearpage
 \section{Esercizio 7 - Comunicazione con Handshaking}
 \newpage
 \section{Esercizio 8 - Processor}
