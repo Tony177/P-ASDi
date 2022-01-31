@@ -1,9 +1,10 @@
 \documentclass[12pt]{article}
 
-\usepackage{graphicx,caption,svg}
+\usepackage{graphicx,caption,svg,enumitem}
 \usepackage[utf8]{inputenc}
 
 \renewcommand{\contentsname}{Indice}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
 \setlength{\parindent}{0pt}
 
 \def \Euno {Allegati/Esercizio1/}
@@ -886,7 +887,7 @@ Anche per tale sistema, l’interfaccia rappresenta la parte di controllo mentre
     \caption{Architecture Memoria B}
 \end{figure}
 \clearpage
-\subsubsection{Unità di controllo}
+\subsubsection{Unità di controllo B}
 {\large \textbf{Componente Interfaccia:}}
 \begin{figure}[ht]
     \centering
@@ -929,9 +930,204 @@ Per come è stato implementato, il protocollo è efficiente con $f_B=N \cdot f_A
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Esette sim2.png}
     \caption{Simulazione Es.7}
 \end{figure}
-\newpage
+\clearpage
 \section{Esercizio 8 - Processor}
-\newpage
+A partire dall’implementazione fornita di un processore operante secondo il modello IJVM:
+\begin{enumerate}[label=\alph*.]
+    \item Si proceda all’analisi dell’architettura mediante simulazione e si approfondisca lo studio del suo funzionamento per due istruzioni a scelta,
+    \item Si modifichi un codice operativo a scelta, documentando tutte le modifiche effettuate,
+    \item (opzionale) si descriva il funzionamento del processore in merito alle istruzioni di input/output,
+    \item (solo ove possibile) si sintetizzi il processore su FPGA.
+\end{enumerate}
+\subsection{Introduzione a IJVM}
+E’ un linguaggio di livello macchina, semplificazione dell’Instruction Set Architecture JVM. La semplificazione consiste nell’utilizzo di sole operazioni su interi. L’IJVM organizza la memoria suddividendola in:
+\begin{itemize}
+    \item Constant Pool: area che non permette la scrittura da parte del programma IJVM. I dati qui caricati (costanti, puntatori e stringhe), possono essere scritti solamente quando il programma è portato in memoria ed è accessibile tramite il registro Constant Pool Pointer;
+    \item Local Variable Frame: area dove vengono inserite le variabili locali al programma ed i parametri relativi ad esso. L’ indirizzo relativo all’inizio di quest’area è gestito tramite il registro LV;
+    \item Stack degli operandi: è localizzato al di sopra del Local Variable Frame e permette di gestire gli operandi durante un’operazione. E’ accessibile tramite il registro SP, il quale punta sempre all’ultima locazione inserita nello stack;
+    \item Method Area: area in cui risiedono i programmi IJVM da eseguire. Quest’area della memoria viene gestita come un array di byte, mentre tutte le precedenti sono gestite come array di parole da 4 byte.
+\end{itemize}
+Per i registri LV,SP e CPP, indicare un offset equivale quindi ad indicare uno spiazzamento di 32 bit, mentre per il PC equivale ad indicare uno spiazzamento di 8 bit.
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Eotto memoriaIJVM.png}
+    \caption{Memoria IJVM}
+\end{figure}
+Le istruzioni IJVM sono a lunghezza variabile in base alla presenza di operandi o altri parametri; in generale possono occupare da 8 bit a 24 bit e vengono dunque memorizzate nella Method Area in locazioni contigue. Il primo byte di ogni istruzione è il Codice Operativo, ossia un indirizzo che verrà utilizzato per mappare l’istruzione IJVM con l’indirizzo start del microprogramma contenuto nella control\_store del processore.
+\\\\{\large \textbf{Esempi di istruzioni IJVM:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Eotto istruzioniIJVM.png}
+    \caption{Istruzioni IJVM}
+\end{figure}
+\clearpage
+{\large \textbf{Il processore MIC-1:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto mic-1completo.png}
+    \caption{Processore MIC-1}
+\end{figure}
+\\E’ una macchina a stack, ossia che non utilizza registri general purpose (ad esempio di tipo indirizzo o dato), ma le istruzioni presentano operandi contenuti in uno stack allocato nella memoria principale. Il processore MIC-1 è organizzato in parte operativa e parte di controllo.
+\clearpage
+\subsection{Parte operativa}
+La parte operativa realizza il datapath dell’architettura ed è composto da registri a 32 bit, 3 bus, ALU e shifter, come mostrato in figura:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto datapath.png}
+    \caption{Datapath Processore}
+\end{figure}
+\clearpage
+{\large \textbf{Comunicazione in memoria:}}
+\\La comunicazione in memoria differisce in tempificazione se si tratta di una read o di una write. In particolare nel caso della write, nello stesso periodo di clock avviene sia l’acquisizione sulle linee dell’indirizzo che del dato da scrivere in memoria, mentre nel caso della read è necessario un colpo di clk in più per la presentazione del dato in uscita alla memoria.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto tempificazionemem.png}
+    \caption{Tempificazione Memoria}
+\end{figure}
+\\I registri utilizzati per la comunicazione in memoria si suddividono in coppie:
+\begin{itemize}
+    \item MAR-MDR: Quest’interfaccia è relativa alle aree di memoria accessibili in parole di 4 byte (Constant Pool,Local Variable, Stack). Questa consente di specificare l’indirizzo in memoria in MAR a partire dal quale leggere o scrivere 4 byte consecutivi nel MDR.
+    \item PC-MBR  Quest’interfaccia è relativa all’ aree di memoria in cui è contenuto il programma, la quale è accessibile in parole da 1 byte (Method Area). Questa consente di specificare l’indirizzo in memoria in PC a partire dal quale leggere 1 byte ponendolo nel MBR. Ciò significa che se un’istruzione prevede di specificare sia il codice operativo, che un operando, allora verrà prelevato prima il codice operativo e poi l’operando; le microprocedure sono realizzate tenendo conto proprio di questa modalità di comunicazione della memoria dell’interfaccia PC-MBR.
+\end{itemize}
+\clearpage
+{\large \textbf{Bus:}}
+\\\\L’unità operativa dispone di tre bus con parallelismo a 32 bit:
+\begin{itemize}
+    \item A: per utilizzare un secondo operando ed effettuare le operazioni in ALU;
+    \item B: è utilizzato per effettuare la lettura dai registri;
+    \item C: utilizzato per la scrittura dei registri;
+\end{itemize}
+{\large \textbf{ALU:}}
+\\\\L’ALU ha due ingressi: A,collegato direttamente al registro tampone H, e B collegato al bus B. Per poter definire l’operazione da effettuare a partire dagli operandi si utilizza una stringa di segnali di controllo di 6 bit. Inoltre, quando il risultato passa nello shifter, vi sono ulteriori 2 segnali che permettono di effettuare lo shift di quest’ultimo, prima che venga posto sul bus C.
+\clearpage
+\subsection{Parte di controllo}
+E’ realizzata tramite una memoria di sola lettura, detta control store, un microPC ed un microIR. La control store memorizza tutti i microprogrammi relativi alle istruzioni del set IJVM, allocandoli in memoria all’indirizzo corrispondente al codice operativo dell’istruzione.
+Ad ogni ciclo di clk, viene continuamente letta dalla control store la microistruzione all’indirizzo puntato dal mPC.
+\\\\Il formato delle microistruzioni è dato dalla seguente figura:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto formatomicroistr.png}
+    \caption{Formato Microistruzione}
+\end{figure}
+\\Ogni microistruzione è legata alla successiva tramite i bit di NEXT\_ADDRESS e i bit di salto JAM. È necessario effettuare questo concatenamento delle microistruzioni poiché, quelle relative allo stesso microprogramma, potrebbero non essere salvate in locazioni contigue della control\_store (si pensi a POP e DUP). Oltre a questo concatenamento è possibile che ci sia la presenza dei salti in base al tipo di microistruzione (ad esempio quando vengono utilizzati i costrutti if, else e goto).
+\\In particolare, se JAM = “000”, allora mPC = NEXT\_ADDRESS, altrimenti, se almeno uno dei flag di salto è alto, occorre calcolare il nuovo mPC:
+\begin{itemize}
+    \item JAMN = 1: il bit più significativo di mPC viene messo in OR  con il flag N dell’ALU (risultato negativo in uscita).
+    \item JAMZ = 1: il bit più significativo viene messo in OR con il flag Z dell’ALU (risultato nullo in uscita).
+    \item JAMC = 1: gli 8 bit meno significativi di NEXT\_ADDRESS sono messi in OR con MBR. In questo modo ottengo un salto di un valore pari a quello contenuto in MBR.
+\end{itemize}
+Per caricare la prossima microistruzione è necessario che trascorra un certo intervallo di tempo, necessario al caricamento del nuovo mPC. Il ciclo di clock inizia sul fronte di discesa in cui è disponibile il nuovo valore del mPC, il quale è stato caricato sul fronte di salita dello stesso impulso di clock. E’ necessario scegliere una frequenza adeguata del clock, in modo tale che tutti i ritardi dovuti ai vari componenti del datapath siano contenuti e quindi i segnali sui bus si stabiliscano.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto clocktiming.png}
+    \caption{Timing Clock}
+\end{figure}
+\clearpage
+{\large \textbf{Flusso di esecuzione delle istruzioni:}}
+\\Il processore MIC-1 dispone del set di istruzioni relative all’ Integer Java Virtual Machine e sfrutta la logica microprogrammata, ovvero realizza ogni istruzione tramite un microprogramma.
+\\Per innescare l’esecuzione di un programma assembler è necessario effettuare prima la traduzione da assembler a microassembler e poi da microassembler a parole di controllo.
+\\A partire dal set di istruzioni IJVM, l’assemblatore Java effettua la corrispondenza tra le istruzioni ed i microprogrammi, i quali verranno tradotti dal microassemblatore MAL in sequenze di segnali di controllo rispetto all’architettura MIC-1. Tutte le sequenze generate vengono inserite all’interno della control\_store del processore.
+\\Una volta scritto il programma in AJVM, tutte le istruzioni IJVM sono tradotte in sequenze di bit che contengono il codice operativo dell'istruzione, ovvero l’indirizzo start del microprogramma contenuto nella control\_store del processore, ed eventuali operandi. Il programma tradotto viene poi inserito nella memoria del sistema.
+\\\\{\large \textbf{Flusso di esecuzione di esempio:}}
+\textit{
+    \\.main
+    \\  .var
+    \\a
+    \\.endvar
+    \\BIPUSH 0xA
+    \\BIPUSH 0xE
+    \\IADD
+    \\ISTORE a
+    \\HALT // HALT is a no operand instruction but translates as a GOTO (short value)
+    \\.endmethod
+}
+\clearpage
+Per ogni programma vengono eseguite le microprocedure seguenti:
+\begin{enumerate}
+    \item Viene prima eseguita la routine mic1\_entry, la quale inizializza i registri del datapath ed inizializza la memoria locale del programma.
+    \item Viene inizializzato il valore a cui punta LV, il quale contiene l'indirizzo di memoria da cui deve partire lo stack pointer, ossia dopo l'allocazione di memoria per le variabili locali.
+    \item Viene poi eseguita la procedura main, ed inizia l'effettivo programma.
+\end{enumerate}
+{\large \textbf{Flusso di esecuzione BIPUSH:}}
+\begin{enumerate}[resume]
+    \item Si effettua il push dell'operando 0xA sullo stack. L'op. bipush prevede:
+          \begin{enumerate}
+              \item Lo spostamento del puntatore SP una cella di memoria in avanti. Il nuovo valore di SP viene poi assegnato al registro MAR;
+              \item Fetch della 2a parte dell'istruzione (operando 0xA);
+              \item Pone in MDR il valore estratto 0xA ed effettua la scrittura in memoria all'indirizzo MAR, ovvero in cima allo stack;
+              \item Go to main
+          \end{enumerate}
+    \item Si effettua il push dell'operando 0xE sullo stack. L'op. bipush è analoga.
+\end{enumerate}
+{\large \textbf{Flusso di esecuzione IADD:}}
+\begin{enumerate}[resume]
+    \item Si effettua l'operazione di IADD, la quale prende gli ultimi due valori nello stack (ossia quello in cima allo stack e quello immediatamente precedente) ed effettuare la somma tra i due, ponendola nello stack alla posizione del primo operando.
+          \begin{enumerate}
+              \item Decremento lo stack pointer per puntare al valore 0xA, lo assegno a MAR ed effettuo la lettura (in MDR avrò 0xA)
+              \item Il registro tampone viene assegnato con il valore in cima allo stack (H = TOS);
+              \item Effettuo la somma tra H e MDR e la pongo in MDR. Tale somma è assegnata al registro TOS dato che la cima dello stack è cambiata. Infine viene effettuata la write del risultato sullo stack alla posizione puntata dal registro MAR.
+              \item Go to main
+          \end{enumerate}
+\end{enumerate}
+{\large \textbf{Flusso di esecuzione ISTORE:}}
+\begin{enumerate}[resume]
+    \item si effettua l'operazione di ISTORE, la quale memorizza nella memoria locale del programma il valore dell'operazione.
+          \begin{enumerate}
+              \item H = LV
+              \item In MAR viene inserito l’indirizzo della locazione di memoria nella quale sarà effettuata la store. Tale locazione è ricavata dalla somma tra MBRU (unsigned perchè MBR è un registro a 8 bit ed è necessario che abbia spiazzamento a 32 bit, in modo da essere un indirizzo di memoria) ed il registro H, che contiene il valore di LV.
+              \item Si inserisce in MDR il valore che si vuole scrivere in memoria locale, ossia quello della cima dello stack, contenente la somma, e si effettua la scrittura all'indirizzo puntato da MAR.
+              \item Si decrementa lo stack pointer effettuando una pop della somma, si legge il nuovo valore da inserire nel TOS e lo si pone in MDR.
+              \item Si effettua la fetch per spostarsi all'istruzione successiva, poichè l'istruzione ISTORE necessità di due fetch per poter essere eseguita completamente: una per saltare all'operando ed una per andare all'istruzione successiva (questa viene fatta nel main).
+              \item Go to main
+          \end{enumerate}
+\end{enumerate}
+\clearpage
+\subsection{Analisi delle istruzioni IADD e ISTORE}
+\subsubsection{Istruzione IADD}
+\textit{
+    \\iadd = 0x65:
+    \\\hspace*{2cm} MAR = SP = SP - 1; rd
+    \\\hspace*{2cm} H = TOS
+    \\\hspace*{2cm} MDR = TOS = MDR + H; wr; goto main
+}
+\\\\La traduzione in segnali di controllo, rispetto al formato delle microistruzioni descritto precedentemente, è la seguente:
+\\ \textbf{Microistruzione 1:}	\hspace*{1cm} \textit{MAR = SP = SP - 1; rd}
+\\\hspace*{1cm} next\_address: 102
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00110110
+\\\hspace*{1cm} bus C: 000001001
+\\\hspace*{1cm} mem: 010
+\\\hspace*{1cm} bus B: 0100
+\\ \textbf{Microistruzione 2:} \hspace*{1cm} \textit{ H = TOS}
+\\\hspace*{1cm} next\_address: 103
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00010100
+\\\hspace*{1cm} bus C: 100000000
+\\\hspace*{1cm} mem: 000
+\\\hspace*{1cm} bus B: 0111
+\\ \textbf{Microistruzione 3:} \hspace*{1cm} \textit{MDR = TOS = MDR + H; wr; goto main}
+\\\hspace*{1cm} next\_address: 6
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00111100
+\\\hspace*{1cm} bus C: 001000010
+\\\hspace*{1cm} mem: 100
+\\\hspace*{1cm} bus B: 0000
+\clearpage
+{\large \textbf{SIMULAZIONE IADD}}
+\\Programma AJVM associato:
+\textit{
+    \\.main
+    \\.var
+    \\a
+    \\.endvar
+    \\BIPUSH 0xA
+    \\BIPUSH 0xE
+    \\IADD
+    \\HALT // HALT is a no operand instruction but translates as a GOTO (short value)
+    \\.endmethod
+}
+\clearpage
 \section{Esercizio 9 - Interfaccia UART}
 \newpage
 \section{Esercizio 10 - Switch Multistadio}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.26)  29 JAN 2022 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.26)  31 JAN 2022 18:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -172,44 +172,52 @@ File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfsyssoftpath@bigbuffer@items=\count267
 ) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-)) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+)) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen160
+\enit@toks=\toks24
+\enit@inbox=\box52
+\enit@count@id=\count268
+\enitdp@description=\count269
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks24
-\inpenc@posthook=\toks25
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count268
-\l__pdf_internal_box=\box52
+\l__color_backend_stack_int=\count270
+\l__pdf_internal_box=\box53
 ) (./tesina.aux)
 \openout1 = `tesina.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count269
-\scratchdimen=\dimen160
-\scratchbox=\box53
-\nofMPsegments=\count270
-\nofMParguments=\count271
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count272
-\MPscratchDim=\dimen161
-\MPnumerator=\count273
-\makeMPintoPDFobject=\count274
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count271
+\scratchdimen=\dimen161
+\scratchbox=\box54
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count274
+\MPscratchDim=\dimen162
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
@@ -244,7 +252,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `tesina.toc'.
 
  [2]
-Package svg Info: Last page of `./svg-inkscape/mux_4_1_svg-tex.pdf' is 1 on input line 37.
+Package svg Info: Last page of `./svg-inkscape/mux_4_1_svg-tex.pdf' is 1 on input line 38.
  (./svg-inkscape/mux_4_1_svg-tex.pdf_tex
 <./svg-inkscape/mux_4_1_svg-tex.pdf, id=15, page=1, 174.6525pt x 145.41827pt>
 File: ./svg-inkscape/mux_4_1_svg-tex.pdf Graphic file (type pdf)
@@ -255,10 +263,10 @@ Package pdftex.def Info: ./svg-inkscape/mux_4_1_svg-tex.pdf , page1 used on inpu
 <Allegati/Esercizio1/mux_4_1_dataflow.png, id=16, 602.25pt x 181.67876pt>
 File: Allegati/Esercizio1/mux_4_1_dataflow.png Graphic file (type png)
 <use Allegati/Esercizio1/mux_4_1_dataflow.png>
-Package pdftex.def Info: Allegati/Esercizio1/mux_4_1_dataflow.png  used on input line 44.
+Package pdftex.def Info: Allegati/Esercizio1/mux_4_1_dataflow.png  used on input line 45.
 (pdftex.def)             Requested size: 390.01509pt x 117.65454pt.
  [3 <./svg-inkscape/mux_4_1_svg-tex.pdf> <./Allegati/Esercizio1/mux_4_1_dataflow.png>]
-Package svg Info: Last page of `./svg-inkscape/mux_16_1_svg-tex.pdf' is 1 on input line 55.
+Package svg Info: Last page of `./svg-inkscape/mux_16_1_svg-tex.pdf' is 1 on input line 56.
  (./svg-inkscape/mux_16_1_svg-tex.pdf_tex
 <./svg-inkscape/mux_16_1_svg-tex.pdf, id=32, page=1, 419.5675pt x 657.17395pt>
 File: ./svg-inkscape/mux_16_1_svg-tex.pdf Graphic file (type pdf)
@@ -269,10 +277,10 @@ Package pdftex.def Info: ./svg-inkscape/mux_16_1_svg-tex.pdf , page1 used on inp
 <Allegati/Esercizio1/mux_16_4_structural.png, id=41, 860.21375pt x 415.5525pt>
 File: Allegati/Esercizio1/mux_16_4_structural.png Graphic file (type png)
 <use Allegati/Esercizio1/mux_16_4_structural.png>
-Package pdftex.def Info: Allegati/Esercizio1/mux_16_4_structural.png  used on input line 62.
+Package pdftex.def Info: Allegati/Esercizio1/mux_16_4_structural.png  used on input line 63.
 (pdftex.def)             Requested size: 507.0098pt x 244.92656pt.
 
-Overfull \hbox (117.0098pt too wide) in paragraph at lines 62--63
+Overfull \hbox (117.0098pt too wide) in paragraph at lines 63--64
  [][] 
  []
 
@@ -280,10 +288,10 @@ Overfull \hbox (117.0098pt too wide) in paragraph at lines 62--63
 <Allegati/Esercizio1/mux_16_1_tb.png, id=45, 709.65125pt x 273.02pt>
 File: Allegati/Esercizio1/mux_16_1_tb.png Graphic file (type png)
 <use Allegati/Esercizio1/mux_16_1_tb.png>
-Package pdftex.def Info: Allegati/Esercizio1/mux_16_1_tb.png  used on input line 70.
+Package pdftex.def Info: Allegati/Esercizio1/mux_16_1_tb.png  used on input line 71.
 (pdftex.def)             Requested size: 468.01393pt x 180.05627pt.
 
-Overfull \hbox (78.01393pt too wide) in paragraph at lines 70--71
+Overfull \hbox (78.01393pt too wide) in paragraph at lines 71--72
  [][] 
  []
 
@@ -291,15 +299,15 @@ Overfull \hbox (78.01393pt too wide) in paragraph at lines 70--71
 <Allegati/Esercizio1/mux_16_1_simulazione.png, id=49, 728.7225pt x 576.1525pt>
 File: Allegati/Esercizio1/mux_16_1_simulazione.png Graphic file (type png)
 <use Allegati/Esercizio1/mux_16_1_simulazione.png>
-Package pdftex.def Info: Allegati/Esercizio1/mux_16_1_simulazione.png  used on input line 76.
+Package pdftex.def Info: Allegati/Esercizio1/mux_16_1_simulazione.png  used on input line 77.
 (pdftex.def)             Requested size: 389.99055pt x 308.33963pt.
  [7 <./Allegati/Esercizio1/mux_16_1_simulazione.png>]
 <Allegati/Esercizio1/demux_4_1_dataflow.png, id=54, 472.76625pt x 149.55875pt>
 File: Allegati/Esercizio1/demux_4_1_dataflow.png Graphic file (type png)
 <use Allegati/Esercizio1/demux_4_1_dataflow.png>
-Package pdftex.def Info: Allegati/Esercizio1/demux_4_1_dataflow.png  used on input line 88.
+Package pdftex.def Info: Allegati/Esercizio1/demux_4_1_dataflow.png  used on input line 89.
 (pdftex.def)             Requested size: 312.00504pt x 98.70222pt.
-Package svg Info: Last page of `./svg-inkscape/rete_16_4_svg-tex.pdf' is 1 on input line 94.
+Package svg Info: Last page of `./svg-inkscape/rete_16_4_svg-tex.pdf' is 1 on input line 95.
  (./svg-inkscape/rete_16_4_svg-tex.pdf_tex
 <./svg-inkscape/rete_16_4_svg-tex.pdf, id=56, page=1, 689.57625pt x 575.14874pt>
 File: ./svg-inkscape/rete_16_4_svg-tex.pdf Graphic file (type pdf)
@@ -310,10 +318,10 @@ Package pdftex.def Info: ./svg-inkscape/rete_16_4_svg-tex.pdf , page1 used on in
 <Allegati/Esercizio1/rete_16_4_structural.png, id=74, 323.2075pt x 278.03876pt>
 File: Allegati/Esercizio1/rete_16_4_structural.png Graphic file (type png)
 <use Allegati/Esercizio1/rete_16_4_structural.png>
-Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_structural.png  used on input line 101.
+Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_structural.png  used on input line 102.
 (pdftex.def)             Requested size: 312.01657pt x 268.41177pt.
 
-Overfull \hbox (3.81258pt too wide) in paragraph at lines 98--106
+Overfull \hbox (3.81258pt too wide) in paragraph at lines 99--107
 \OT1/cmr/m/n/12 Anche dopo aver tes-tato il sin-golo com-po-nente, ^^Re co-munque nec-es-sario ripetere
  []
 
@@ -321,36 +329,36 @@ Overfull \hbox (3.81258pt too wide) in paragraph at lines 98--106
 <Allegati/Esercizio1/rete_16_4_tb.png, id=78, 311.1625pt x 306.14375pt>
 File: Allegati/Esercizio1/rete_16_4_tb.png Graphic file (type png)
 <use Allegati/Esercizio1/rete_16_4_tb.png>
-Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_tb.png  used on input line 109.
+Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_tb.png  used on input line 110.
 (pdftex.def)             Requested size: 155.99869pt x 153.48257pt.
 <Allegati/Esercizio1/rete_16_4_simulazione.png, id=79, 712.6625pt x 743.77875pt>
 File: Allegati/Esercizio1/rete_16_4_simulazione.png Graphic file (type png)
 <use Allegati/Esercizio1/rete_16_4_simulazione.png>
-Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_simulazione.png  used on input line 115.
+Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_simulazione.png  used on input line 116.
 (pdftex.def)             Requested size: 273.0003pt x 284.92003pt.
  [10 <./Allegati/Esercizio1/rete_16_4_tb.png> <./Allegati/Esercizio1/rete_16_4_simulazione.png>]
 <Allegati/Esercizio1/costraints_es1.png, id=83, 885.3075pt x 389.455pt>
 File: Allegati/Esercizio1/costraints_es1.png Graphic file (type png)
 <use Allegati/Esercizio1/costraints_es1.png>
-Package pdftex.def Info: Allegati/Esercizio1/costraints_es1.png  used on input line 127.
+Package pdftex.def Info: Allegati/Esercizio1/costraints_es1.png  used on input line 128.
 (pdftex.def)             Requested size: 272.99706pt x 120.09393pt.
 <Allegati/Esercizio1/rete_16_4_analysis.png, id=84, 1101.11375pt x 359.3425pt>
 File: Allegati/Esercizio1/rete_16_4_analysis.png Graphic file (type png)
 <use Allegati/Esercizio1/rete_16_4_analysis.png>
-Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_analysis.png  used on input line 135.
+Package pdftex.def Info: Allegati/Esercizio1/rete_16_4_analysis.png  used on input line 136.
 (pdftex.def)             Requested size: 311.9893pt x 101.81601pt.
  [11 <./Allegati/Esercizio1/costraints_es1.png> <./Allegati/Esercizio1/rete_16_4_analysis.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 160--168
+Underfull \hbox (badness 10000) in paragraph at lines 161--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--168
+Underfull \hbox (badness 10000) in paragraph at lines 161--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--168
+Underfull \hbox (badness 10000) in paragraph at lines 161--169
 
  []
 
@@ -358,45 +366,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--168
 <Allegati/Esercizio2/codice_arbitro.jpg, id=97, 289.08pt x 310.15875pt>
 File: Allegati/Esercizio2/codice_arbitro.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_arbitro.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_arbitro.jpg  used on input line 174.
+Package pdftex.def Info: Allegati/Esercizio2/codice_arbitro.jpg  used on input line 175.
 (pdftex.def)             Requested size: 273.01442pt x 292.92172pt.
  [14 <./Allegati/Esercizio2/codice_arbitro.jpg>]
 <Allegati/Esercizio2/codice_encoder10_4.jpg, id=101, 253.69781pt x 326.72063pt>
 File: Allegati/Esercizio2/codice_encoder10_4.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_encoder10_4.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_encoder10_4.jpg  used on input line 183.
+Package pdftex.def Info: Allegati/Esercizio2/codice_encoder10_4.jpg  used on input line 184.
 (pdftex.def)             Requested size: 234.00871pt x 301.36433pt.
  [15 <./Allegati/Esercizio2/codice_encoder10_4.jpg>]
 <Allegati/Esercizio2/codice_encoder_parte1.jpg, id=105, 273.27094pt x 310.91156pt>
 File: Allegati/Esercizio2/codice_encoder_parte1.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_encoder_parte1.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_encoder_parte1.jpg  used on input line 191.
+Package pdftex.def Info: Allegati/Esercizio2/codice_encoder_parte1.jpg  used on input line 192.
 (pdftex.def)             Requested size: 234.0035pt x 266.23538pt.
 <Allegati/Esercizio2/codice_encoder_parte2.jpg, id=106, 245.41687pt x 176.91093pt>
 File: Allegati/Esercizio2/codice_encoder_parte2.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_encoder_parte2.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_encoder_parte2.jpg  used on input line 195.
+Package pdftex.def Info: Allegati/Esercizio2/codice_encoder_parte2.jpg  used on input line 196.
 (pdftex.def)             Requested size: 195.00436pt x 140.57062pt.
  [16 <./Allegati/Esercizio2/codice_encoder_parte1.jpg> <./Allegati/Esercizio2/codice_encoder_parte2.jpg>]
 <Allegati/Esercizio2/display.jpg, id=110, 117.43875pt x 163.3603pt>
 File: Allegati/Esercizio2/display.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/display.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/display.jpg  used on input line 202.
+Package pdftex.def Info: Allegati/Esercizio2/display.jpg  used on input line 203.
 (pdftex.def)             Requested size: 77.99901pt x 108.49863pt.
 <Allegati/Esercizio2/codice_display_manager_parte1.jpg, id=111, 322.20375pt x 139.27031pt>
 File: Allegati/Esercizio2/codice_display_manager_parte1.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_display_manager_parte1.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_display_manager_parte1.jpg  used on input line 209.
+Package pdftex.def Info: Allegati/Esercizio2/codice_display_manager_parte1.jpg  used on input line 210.
 (pdftex.def)             Requested size: 351.01321pt x 151.72298pt.
 <Allegati/Esercizio2/codice_display_manager_parte2.jpg, id=112, 353.06906pt x 252.945pt>
 File: Allegati/Esercizio2/codice_display_manager_parte2.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_display_manager_parte2.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_display_manager_parte2.jpg  used on input line 213.
+Package pdftex.def Info: Allegati/Esercizio2/codice_display_manager_parte2.jpg  used on input line 214.
 (pdftex.def)             Requested size: 312.00548pt x 223.5263pt.
 <Allegati/Esercizio2/codice_display_manager_parte3.jpg, id=113, 306.39468pt x 226.59656pt>
 File: Allegati/Esercizio2/codice_display_manager_parte3.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_display_manager_parte3.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_display_manager_parte3.jpg  used on input line 217.
+Package pdftex.def Info: Allegati/Esercizio2/codice_display_manager_parte3.jpg  used on input line 218.
 (pdftex.def)             Requested size: 351.01872pt x 259.59859pt.
  [17 <./Allegati/Esercizio2/display.jpg> <./Allegati/Esercizio2/codice_display_manager_parte1.jpg>]
 
@@ -406,35 +414,35 @@ LaTeX Warning: Text page 18 contains only floats.
 <Allegati/Esercizio2/codice_sistema_completo_parte1.jpg, id=120, 284.56313pt x 106.14656pt>
 File: Allegati/Esercizio2/codice_sistema_completo_parte1.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_sistema_completo_parte1.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_sistema_completo_parte1.jpg  used on input line 225.
+Package pdftex.def Info: Allegati/Esercizio2/codice_sistema_completo_parte1.jpg  used on input line 226.
 (pdftex.def)             Requested size: 195.00706pt x 72.74072pt.
 <Allegati/Esercizio2/codice_sistema_completo_parte2.jpg, id=121, 325.96782pt x 269.50688pt>
 File: Allegati/Esercizio2/codice_sistema_completo_parte2.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_sistema_completo_parte2.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_sistema_completo_parte2.jpg  used on input line 229.
+Package pdftex.def Info: Allegati/Esercizio2/codice_sistema_completo_parte2.jpg  used on input line 230.
 (pdftex.def)             Requested size: 195.00522pt x 161.22833pt.
 <Allegati/Esercizio2/codice_sistema_completo_parte3.jpg, id=122, 225.09094pt x 181.42781pt>
 File: Allegati/Esercizio2/codice_sistema_completo_parte3.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/codice_sistema_completo_parte3.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/codice_sistema_completo_parte3.jpg  used on input line 233.
+Package pdftex.def Info: Allegati/Esercizio2/codice_sistema_completo_parte3.jpg  used on input line 234.
 (pdftex.def)             Requested size: 156.00327pt x 125.74176pt.
 <Allegati/Esercizio2/sim1.jpg, id=123, 274.02374pt x 214.55156pt>
 File: Allegati/Esercizio2/sim1.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/sim1.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/sim1.jpg  used on input line 240.
+Package pdftex.def Info: Allegati/Esercizio2/sim1.jpg  used on input line 241.
 (pdftex.def)             Requested size: 234.0084pt x 183.22086pt.
 <Allegati/Esercizio2/sim2.jpg, id=124, 292.84406pt x 292.84406pt>
 File: Allegati/Esercizio2/sim2.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/sim2.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/sim2.jpg  used on input line 244.
+Package pdftex.def Info: Allegati/Esercizio2/sim2.jpg  used on input line 245.
 (pdftex.def)             Requested size: 234.01192pt x 234.01192pt.
 <Allegati/Esercizio2/simulazione_encoder.jpg, id=125, 423.08063pt x 343.2825pt>
 File: Allegati/Esercizio2/simulazione_encoder.jpg Graphic file (type jpg)
 <use Allegati/Esercizio2/simulazione_encoder.jpg>
-Package pdftex.def Info: Allegati/Esercizio2/simulazione_encoder.jpg  used on input line 249.
+Package pdftex.def Info: Allegati/Esercizio2/simulazione_encoder.jpg  used on input line 250.
 (pdftex.def)             Requested size: 390.01358pt x 316.45229pt.
  [19 <./Allegati/Esercizio2/codice_sistema_completo_parte1.jpg> <./Allegati/Esercizio2/codice_sistema_completo_parte2.jpg> <./Allegati/Esercizio2/codice_sistema_completo_parte3.jpg>] [20 <./Allegati/Esercizio2/sim1.jpg> <./Allegati/Esercizio2/sim2.jpg>] [21 <./Allegati/Esercizio2/simulazione_encoder.jpg>]
-Overfull \hbox (17.21533pt too wide) in paragraph at lines 255--256
+Overfull \hbox (17.21533pt too wide) in paragraph at lines 256--258
 \OT1/cmr/m/n/12 Progettare, im-ple-mentare in VHDL e testare me-di-ante sim-u-lazione una macchina
  []
 
@@ -444,29 +452,29 @@ Overfull \hbox (17.21533pt too wide) in paragraph at lines 255--256
 <Allegati/Esercizio3/codice_sistema_parte1.png, id=139, 287.57437pt x 160.34906pt>
 File: Allegati/Esercizio3/codice_sistema_parte1.png Graphic file (type png)
 <use Allegati/Esercizio3/codice_sistema_parte1.png>
-Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte1.png  used on input line 275.
+Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte1.png  used on input line 276.
 (pdftex.def)             Requested size: 273.00542pt x 152.22552pt.
  [23 <./Allegati/Esercizio3/codice_sistema_parte1.PNG>]
 <Allegati/Esercizio3/codice_sistema_parte2.png, id=144, 274.77657pt x 424.58624pt>
 File: Allegati/Esercizio3/codice_sistema_parte2.png Graphic file (type png)
 <use Allegati/Esercizio3/codice_sistema_parte2.png>
-Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte2.png  used on input line 304.
+Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte2.png  used on input line 305.
 (pdftex.def)             Requested size: 141.98738pt x 219.39967pt.
 <Allegati/Esercizio3/codice_sistema_parte3.png, id=145, 170.88844pt x 445.665pt>
 File: Allegati/Esercizio3/codice_sistema_parte3.png Graphic file (type png)
 <use Allegati/Esercizio3/codice_sistema_parte3.png>
-Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte3.png  used on input line 308.
+Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte3.png  used on input line 309.
 (pdftex.def)             Requested size: 115.67848pt x 301.68134pt.
 <Allegati/Esercizio3/codice_sistema_parte4.png, id=146, 253.69781pt x 258.9675pt>
 File: Allegati/Esercizio3/codice_sistema_parte4.png Graphic file (type png)
 <use Allegati/Esercizio3/codice_sistema_parte4.png>
-Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte4.png  used on input line 312.
+Package pdftex.def Info: Allegati/Esercizio3/codice_sistema_parte4.png  used on input line 313.
 (pdftex.def)             Requested size: 161.20857pt x 164.55711pt.
  [24 <./Allegati/Esercizio3/codice_sistema_parte2.PNG>] [25 <./Allegati/Esercizio3/codice_sistema_parte3.PNG> <./Allegati/Esercizio3/codice_sistema_parte4.PNG>]
 <Allegati/Esercizio3/debouncer.png, id=157, 660.4675pt x 154.5775pt>
 File: Allegati/Esercizio3/debouncer.png Graphic file (type png)
 <use Allegati/Esercizio3/debouncer.png>
-Package pdftex.def Info: Allegati/Esercizio3/debouncer.png  used on input line 320.
+Package pdftex.def Info: Allegati/Esercizio3/debouncer.png  used on input line 321.
 (pdftex.def)             Requested size: 390.01509pt x 91.2801pt.
  [26
 
@@ -474,25 +482,25 @@ Package pdftex.def Info: Allegati/Esercizio3/debouncer.png  used on input line 3
 <Allegati/Esercizio3/codice_filtro_modo.jpg, id=162, 268.00125pt x 279.29344pt>
 File: Allegati/Esercizio3/codice_filtro_modo.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/codice_filtro_modo.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/codice_filtro_modo.jpg  used on input line 335.
+Package pdftex.def Info: Allegati/Esercizio3/codice_filtro_modo.jpg  used on input line 336.
 (pdftex.def)             Requested size: 234.0016pt x 243.86124pt.
 <Allegati/Esercizio3/codice_gestore_modo_parte1.jpg, id=163, 201.00093pt x 94.10156pt>
 File: Allegati/Esercizio3/codice_gestore_modo_parte1.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/codice_gestore_modo_parte1.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/codice_gestore_modo_parte1.jpg  used on input line 341.
+Package pdftex.def Info: Allegati/Esercizio3/codice_gestore_modo_parte1.jpg  used on input line 342.
 (pdftex.def)             Requested size: 194.99826pt x 91.2913pt.
 <Allegati/Esercizio3/codice_gestore_modo_parte2.jpg, id=164, 456.20438pt x 342.5297pt>
 File: Allegati/Esercizio3/codice_gestore_modo_parte2.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/codice_gestore_modo_parte2.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/codice_gestore_modo_parte2.jpg  used on input line 345.
+Package pdftex.def Info: Allegati/Esercizio3/codice_gestore_modo_parte2.jpg  used on input line 346.
 (pdftex.def)             Requested size: 429.01315pt x 383.97559pt.
 
-Overfull \hbox (39.01315pt too wide) in paragraph at lines 345--346
+Overfull \hbox (39.01315pt too wide) in paragraph at lines 346--347
  [][] 
  []
 
 
-Overfull \hbox (2.83759pt too wide) in paragraph at lines 332--348
+Overfull \hbox (2.83759pt too wide) in paragraph at lines 333--349
 []\OT1/cmr/m/n/12 Questo com-po-nente prende in in-gresso il seg-nale fil-trato dal de-bouncer, chiam-
  []
 
@@ -504,12 +512,12 @@ LaTeX Warning: Text page 28 contains only floats.
 <Allegati/Esercizio3/codice_riconoscitore_parte1.jpg, id=171, 332.74312pt x 210.7875pt>
 File: Allegati/Esercizio3/codice_riconoscitore_parte1.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/codice_riconoscitore_parte1.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte1.jpg  used on input line 353.
+Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte1.jpg  used on input line 354.
 (pdftex.def)             Requested size: 312.02205pt x 197.66104pt.
 <Allegati/Esercizio3/codice_riconoscitore_parte2.jpg, id=172, 319.94531pt x 225.09094pt>
 File: Allegati/Esercizio3/codice_riconoscitore_parte2.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/codice_riconoscitore_parte2.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte2.jpg  used on input line 357.
+Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte2.jpg  used on input line 358.
 (pdftex.def)             Requested size: 312.00644pt x 219.5057pt.
  [29
 
@@ -517,12 +525,12 @@ Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte2.jpg  us
 <Allegati/Esercizio3/codice_riconoscitore_parte3.jpg, id=176, 554.07pt x 180.675pt>
 File: Allegati/Esercizio3/codice_riconoscitore_parte3.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/codice_riconoscitore_parte3.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte3.jpg  used on input line 362.
+Package pdftex.def Info: Allegati/Esercizio3/codice_riconoscitore_parte3.jpg  used on input line 363.
 (pdftex.def)             Requested size: 390.00223pt x 127.17462pt.
 <Allegati/Esercizio3/simulazione_riconoscitore.jpg, id=177, 908.64468pt x 173.89969pt>
 File: Allegati/Esercizio3/simulazione_riconoscitore.jpg Graphic file (type jpg)
 <use Allegati/Esercizio3/simulazione_riconoscitore.jpg>
-Package pdftex.def Info: Allegati/Esercizio3/simulazione_riconoscitore.jpg  used on input line 369.
+Package pdftex.def Info: Allegati/Esercizio3/simulazione_riconoscitore.jpg  used on input line 370.
 (pdftex.def)             Requested size: 390.0025pt x 82.27151pt.
  [30
 
@@ -530,27 +538,27 @@ Package pdftex.def Info: Allegati/Esercizio3/simulazione_riconoscitore.jpg  used
 <Allegati/Esercizio4/entity_shift.png, id=183, 453.19313pt x 156.585pt>
 File: Allegati/Esercizio4/entity_shift.png Graphic file (type png)
 <use Allegati/Esercizio4/entity_shift.png>
-Package pdftex.def Info: Allegati/Esercizio4/entity_shift.png  used on input line 383.
+Package pdftex.def Info: Allegati/Esercizio4/entity_shift.png  used on input line 384.
 (pdftex.def)             Requested size: 390.00127pt x 134.75125pt.
  [31 <./Allegati/Esercizio4/entity_shift.png>]
 <Allegati/Esercizio4/architecture_shift.png, id=189, 485.815pt x 464.73625pt>
 File: Allegati/Esercizio4/architecture_shift.png Graphic file (type png)
 <use Allegati/Esercizio4/architecture_shift.png>
-Package pdftex.def Info: Allegati/Esercizio4/architecture_shift.png  used on input line 396.
+Package pdftex.def Info: Allegati/Esercizio4/architecture_shift.png  used on input line 397.
 (pdftex.def)             Requested size: 311.9954pt x 298.45842pt.
 <Allegati/Esercizio4/architecture_shift_2.png, id=190, 131.49126pt x 90.3375pt>
 File: Allegati/Esercizio4/architecture_shift_2.png Graphic file (type png)
 <use Allegati/Esercizio4/architecture_shift_2.png>
-Package pdftex.def Info: Allegati/Esercizio4/architecture_shift_2.png  used on input line 402.
+Package pdftex.def Info: Allegati/Esercizio4/architecture_shift_2.png  used on input line 403.
 (pdftex.def)             Requested size: 117.00677pt x 80.38632pt.
  [32 <./Allegati/Esercizio4/architecture_shift.png> <./Allegati/Esercizio4/architecture_shift_2.png>]
 <Allegati/Esercizio4/ffd1.png, id=196, 427.5975pt x 89.33376pt>
 File: Allegati/Esercizio4/ffd1.png Graphic file (type png)
 <use Allegati/Esercizio4/ffd1.png>
-Package pdftex.def Info: Allegati/Esercizio4/ffd1.png  used on input line 411.
+Package pdftex.def Info: Allegati/Esercizio4/ffd1.png  used on input line 412.
 (pdftex.def)             Requested size: 390.00168pt x 81.47922pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--416
+Underfull \hbox (badness 10000) in paragraph at lines 408--417
 
  []
 
@@ -560,7 +568,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--416
 <Allegati/Esercizio4/ffd2.png, id=201, 375.4025pt x 330.23375pt>
 File: Allegati/Esercizio4/ffd2.png Graphic file (type png)
 <use Allegati/Esercizio4/ffd2.png>
-Package pdftex.def Info: Allegati/Esercizio4/ffd2.png  used on input line 419.
+Package pdftex.def Info: Allegati/Esercizio4/ffd2.png  used on input line 420.
 (pdftex.def)             Requested size: 390.0256pt x 343.09737pt.
  [34
 
@@ -568,7 +576,7 @@ Package pdftex.def Info: Allegati/Esercizio4/ffd2.png  used on input line 419.
 <Allegati/Esercizio4/mux.png, id=206, 298.11375pt x 226.8475pt>
 File: Allegati/Esercizio4/mux.png Graphic file (type png)
 <use Allegati/Esercizio4/mux.png>
-Package pdftex.def Info: Allegati/Esercizio4/mux.png  used on input line 428.
+Package pdftex.def Info: Allegati/Esercizio4/mux.png  used on input line 429.
 (pdftex.def)             Requested size: 390.0224pt x 296.78471pt.
  [35
 
@@ -576,17 +584,17 @@ Package pdftex.def Info: Allegati/Esercizio4/mux.png  used on input line 428.
 <Allegati/Esercizio4/generate1.png, id=211, 919.435pt x 226.8475pt>
 File: Allegati/Esercizio4/generate1.png Graphic file (type png)
 <use Allegati/Esercizio4/generate1.png>
-Package pdftex.def Info: Allegati/Esercizio4/generate1.png  used on input line 435.
+Package pdftex.def Info: Allegati/Esercizio4/generate1.png  used on input line 436.
 (pdftex.def)             Requested size: 390.00414pt x 96.22372pt.
 <Allegati/Esercizio4/generate2.png, id=212, 955.57pt x 166.6225pt>
 File: Allegati/Esercizio4/generate2.png Graphic file (type png)
 <use Allegati/Esercizio4/generate2.png>
-Package pdftex.def Info: Allegati/Esercizio4/generate2.png  used on input line 439.
+Package pdftex.def Info: Allegati/Esercizio4/generate2.png  used on input line 440.
 (pdftex.def)             Requested size: 389.9928pt x 68.00293pt.
  [36
 
  <./Allegati/Esercizio4/generate1.png> <./Allegati/Esercizio4/generate2.png>]
-Package svg Info: Last page of `./svg-inkscape/esercizio4_svg-tex.pdf' is 1 on input line 451.
+Package svg Info: Last page of `./svg-inkscape/esercizio4_svg-tex.pdf' is 1 on input line 452.
  (./svg-inkscape/esercizio4_svg-tex.pdf_tex
 <./svg-inkscape/esercizio4_svg-tex.pdf, id=219, page=1, 461.725pt x 785.8147pt>
 File: ./svg-inkscape/esercizio4_svg-tex.pdf Graphic file (type pdf)
@@ -597,7 +605,7 @@ Package pdftex.def Info: ./svg-inkscape/esercizio4_svg-tex.pdf , page1 used on i
 <Allegati/Esercizio4/sim.png, id=220, 483.8805pt x 175.419pt>
 File: Allegati/Esercizio4/sim.png Graphic file (type png)
 <use Allegati/Esercizio4/sim.png>
-Package pdftex.def Info: Allegati/Esercizio4/sim.png  used on input line 458.
+Package pdftex.def Info: Allegati/Esercizio4/sim.png  used on input line 459.
 (pdftex.def)             Requested size: 389.9992pt x 219.40971pt.
  [37
 
@@ -605,30 +613,30 @@ Package pdftex.def Info: Allegati/Esercizio4/sim.png  used on input line 458.
 <Allegati/Esercizio5/entity_contatore.png, id=234, 797.98125pt x 167.62625pt>
 File: Allegati/Esercizio5/entity_contatore.png Graphic file (type png)
 <use Allegati/Esercizio5/entity_contatore.png>
-Package pdftex.def Info: Allegati/Esercizio5/entity_contatore.png  used on input line 470.
+Package pdftex.def Info: Allegati/Esercizio5/entity_contatore.png  used on input line 471.
 (pdftex.def)             Requested size: 390.0036pt x 109.69751pt.
 <Allegati/Esercizio5/architecture_contatore.png, id=235, 245.718pt x 200.0565pt>
 File: Allegati/Esercizio5/architecture_contatore.png Graphic file (type png)
 <use Allegati/Esercizio5/architecture_contatore.png>
-Package pdftex.def Info: Allegati/Esercizio5/architecture_contatore.png  used on input line 476.
+Package pdftex.def Info: Allegati/Esercizio5/architecture_contatore.png  used on input line 477.
 (pdftex.def)             Requested size: 202.1162pt x 164.55717pt.
 <Allegati/Esercizio5/entity_sistema_c.png, id=236, 488.82625pt x 122.4575pt>
 File: Allegati/Esercizio5/entity_sistema_c.png Graphic file (type png)
 <use Allegati/Esercizio5/entity_sistema_c.png>
-Package pdftex.def Info: Allegati/Esercizio5/entity_sistema_c.png  used on input line 485.
+Package pdftex.def Info: Allegati/Esercizio5/entity_sistema_c.png  used on input line 486.
 (pdftex.def)             Requested size: 390.00981pt x 97.70265pt.
 <Allegati/Esercizio5/architecture_sistema_c.png, id=237, 588.69937pt x 397.485pt>
 File: Allegati/Esercizio5/architecture_sistema_c.png Graphic file (type png)
 <use Allegati/Esercizio5/architecture_sistema_c.png>
-Package pdftex.def Info: Allegati/Esercizio5/architecture_sistema_c.png  used on input line 494.
+Package pdftex.def Info: Allegati/Esercizio5/architecture_sistema_c.png  used on input line 495.
 (pdftex.def)             Requested size: 389.99799pt x 263.32346pt.
 <Allegati/Esercizio5/struct.png, id=238, 1016.79875pt x 251.94125pt>
 File: Allegati/Esercizio5/struct.png Graphic file (type png)
 <use Allegati/Esercizio5/struct.png>
-Package pdftex.def Info: Allegati/Esercizio5/struct.png  used on input line 498.
+Package pdftex.def Info: Allegati/Esercizio5/struct.png  used on input line 499.
 (pdftex.def)             Requested size: 390.00256pt x 219.39854pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--501
+Underfull \hbox (badness 10000) in paragraph at lines 465--502
 
  []
 
@@ -640,9 +648,9 @@ LaTeX Warning: Text page 41 contains only floats.
 <Allegati/Esercizio5/wait_block.png, id=254, 324.21124pt x 307.1475pt>
 File: Allegati/Esercizio5/wait_block.png Graphic file (type png)
 <use Allegati/Esercizio5/wait_block.png>
-Package pdftex.def Info: Allegati/Esercizio5/wait_block.png  used on input line 506.
+Package pdftex.def Info: Allegati/Esercizio5/wait_block.png  used on input line 507.
 (pdftex.def)             Requested size: 231.58665pt x 219.39789pt.
-Package svg Info: Last page of `./svg-inkscape/sistema_contatori_svg-tex.pdf' is 1 on input line 512.
+Package svg Info: Last page of `./svg-inkscape/sistema_contatori_svg-tex.pdf' is 1 on input line 513.
  (./svg-inkscape/sistema_contatori_svg-tex.pdf_tex
 <./svg-inkscape/sistema_contatori_svg-tex.pdf, id=256, page=1, 695.59875pt x 356.0803pt>
 File: ./svg-inkscape/sistema_contatori_svg-tex.pdf Graphic file (type pdf)
@@ -653,10 +661,10 @@ Package pdftex.def Info: ./svg-inkscape/sistema_contatori_svg-tex.pdf , page1 us
 <Allegati/Esercizio5/gestore_set.png, id=257, 481.8pt x 160.6pt>
 File: Allegati/Esercizio5/gestore_set.png Graphic file (type png)
 <use Allegati/Esercizio5/gestore_set.png>
-Package pdftex.def Info: Allegati/Esercizio5/gestore_set.png  used on input line 518.
+Package pdftex.def Info: Allegati/Esercizio5/gestore_set.png  used on input line 519.
 (pdftex.def)             Requested size: 390.01324pt x 130.00441pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--526
+Underfull \hbox (badness 10000) in paragraph at lines 503--528
 
  []
 
@@ -666,20 +674,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 502--526
 <Allegati/Esercizio5/set1.png, id=266, 428.60126pt x 414.04688pt>
 File: Allegati/Esercizio5/set1.png Graphic file (type png)
 <use Allegati/Esercizio5/set1.png>
-Package pdftex.def Info: Allegati/Esercizio5/set1.png  used on input line 536.
+Package pdftex.def Info: Allegati/Esercizio5/set1.png  used on input line 537.
 (pdftex.def)             Requested size: 170.33875pt x 164.55441pt.
 <Allegati/Esercizio5/set2.png, id=267, 442.15187pt x 446.66875pt>
 File: Allegati/Esercizio5/set2.png Graphic file (type png)
 <use Allegati/Esercizio5/set2.png>
-Package pdftex.def Info: Allegati/Esercizio5/set2.png  used on input line 540.
+Package pdftex.def Info: Allegati/Esercizio5/set2.png  used on input line 541.
 (pdftex.def)             Requested size: 162.88522pt x 164.54921pt.
  [43 <./Allegati/Esercizio5/gestore_set.png>] [44 <./Allegati/Esercizio5/set1.png> <./Allegati/Esercizio5/set2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 553--557
+Underfull \hbox (badness 10000) in paragraph at lines 554--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 553--557
+Underfull \hbox (badness 10000) in paragraph at lines 554--558
 
  []
 
@@ -689,17 +697,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 553--557
 <Allegati/Esercizio5/conv.png, id=281, 360.3645pt x 164.5785pt>
 File: Allegati/Esercizio5/conv.png Graphic file (type png)
 <use Allegati/Esercizio5/conv.png>
-Package pdftex.def Info: Allegati/Esercizio5/conv.png  used on input line 560.
+Package pdftex.def Info: Allegati/Esercizio5/conv.png  used on input line 561.
 (pdftex.def)             Requested size: 390.01816pt x 178.12132pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--566
+Underfull \hbox (badness 10000) in paragraph at lines 564--568
 
  []
 
 <Allegati/Esercizio5/modo1.png, id=282, 419.06563pt x 138.01563pt>
 File: Allegati/Esercizio5/modo1.png Graphic file (type png)
 <use Allegati/Esercizio5/modo1.png>
-Package pdftex.def Info: Allegati/Esercizio5/modo1.png  used on input line 573.
+Package pdftex.def Info: Allegati/Esercizio5/modo1.png  used on input line 574.
 (pdftex.def)             Requested size: 389.99556pt x 128.44164pt.
 [46
 
@@ -707,12 +715,12 @@ Package pdftex.def Info: Allegati/Esercizio5/modo1.png  used on input line 573.
 <Allegati/Esercizio5/modo2.png, id=288, 356.33125pt x 442.65375pt>
 File: Allegati/Esercizio5/modo2.png Graphic file (type png)
 <use Allegati/Esercizio5/modo2.png>
-Package pdftex.def Info: Allegati/Esercizio5/modo2.png  used on input line 590.
+Package pdftex.def Info: Allegati/Esercizio5/modo2.png  used on input line 591.
 (pdftex.def)             Requested size: 309.09222pt x 383.9709pt.
 <Allegati/Esercizio5/modo3.png, id=289, 138.5175pt x 54.2025pt>
 File: Allegati/Esercizio5/modo3.png Graphic file (type png)
 <use Allegati/Esercizio5/modo3.png>
-Package pdftex.def Info: Allegati/Esercizio5/modo3.png  used on input line 593.
+Package pdftex.def Info: Allegati/Esercizio5/modo3.png  used on input line 594.
 (pdftex.def)             Requested size: 140.18689pt x 54.85573pt.
  [47
 
@@ -720,14 +728,14 @@ Package pdftex.def Info: Allegati/Esercizio5/modo3.png  used on input line 593.
 <Allegati/Esercizio5/memoria.png, id=298, 462.72874pt x 154.07562pt>
 File: Allegati/Esercizio5/memoria.png Graphic file (type png)
 <use Allegati/Esercizio5/memoria.png>
-Package pdftex.def Info: Allegati/Esercizio5/memoria.png  used on input line 600.
+Package pdftex.def Info: Allegati/Esercizio5/memoria.png  used on input line 601.
 (pdftex.def)             Requested size: 390.00278pt x 129.85992pt.
 <Allegati/Esercizio5/memoriab.png, id=299, 820.06375pt x 463.7325pt>
 File: Allegati/Esercizio5/memoriab.png Graphic file (type png)
 <use Allegati/Esercizio5/memoriab.png>
-Package pdftex.def Info: Allegati/Esercizio5/memoriab.png  used on input line 611.
+Package pdftex.def Info: Allegati/Esercizio5/memoriab.png  used on input line 612.
 (pdftex.def)             Requested size: 390.00983pt x 220.5441pt.
-Package svg Info: Last page of `./svg-inkscape/esercizio5_svg-tex.pdf' is 1 on input line 616.
+Package svg Info: Last page of `./svg-inkscape/esercizio5_svg-tex.pdf' is 1 on input line 617.
  (./svg-inkscape/esercizio5_svg-tex.pdf_tex
 <./svg-inkscape/esercizio5_svg-tex.pdf, id=301, page=1, 894.2197pt x 333.96645pt>
 File: ./svg-inkscape/esercizio5_svg-tex.pdf Graphic file (type pdf)
@@ -737,14 +745,14 @@ Package pdftex.def Info: ./svg-inkscape/esercizio5_svg-tex.pdf , page1 used on i
 ) [49
 
  <./Allegati/Esercizio5/memoria.png>] [50 <./Allegati/Esercizio5/memoriab.png> <./svg-inkscape/esercizio5_svg-tex.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 622--625
+Underfull \hbox (badness 10000) in paragraph at lines 623--626
 
  []
 
 <Allegati/Esercizio6/sistema_esterno.jpg, id=324, 601.4972pt x 149.05687pt>
 File: Allegati/Esercizio6/sistema_esterno.jpg Graphic file (type jpg)
 <use Allegati/Esercizio6/sistema_esterno.jpg>
-Package pdftex.def Info: Allegati/Esercizio6/sistema_esterno.jpg  used on input line 630.
+Package pdftex.def Info: Allegati/Esercizio6/sistema_esterno.jpg  used on input line 631.
 (pdftex.def)             Requested size: 390.01402pt x 96.64928pt.
 [51
 
@@ -752,15 +760,15 @@ Package pdftex.def Info: Allegati/Esercizio6/sistema_esterno.jpg  used on input 
 <Allegati/Esercizio6/sistema_comp.jpg, id=328, 601.4972pt x 304.88907pt>
 File: Allegati/Esercizio6/sistema_comp.jpg Graphic file (type jpg)
 <use Allegati/Esercizio6/sistema_comp.jpg>
-Package pdftex.def Info: Allegati/Esercizio6/sistema_comp.jpg  used on input line 636.
+Package pdftex.def Info: Allegati/Esercizio6/sistema_comp.jpg  used on input line 637.
 (pdftex.def)             Requested size: 390.01402pt x 197.69171pt.
 <Allegati/Esercizio6/tester.jpg, id=329, 601.4972pt x 173.89969pt>
 File: Allegati/Esercizio6/tester.jpg Graphic file (type jpg)
 <use Allegati/Esercizio6/tester.jpg>
-Package pdftex.def Info: Allegati/Esercizio6/tester.jpg  used on input line 642.
+Package pdftex.def Info: Allegati/Esercizio6/tester.jpg  used on input line 643.
 (pdftex.def)             Requested size: 390.01402pt x 112.75748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--645
+Underfull \hbox (badness 10000) in paragraph at lines 634--646
 
  []
 
@@ -770,34 +778,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 633--645
 <Allegati/Esercizio6/gestore_read_entity.png, id=333, 286.06876pt x 101.88063pt>
 File: Allegati/Esercizio6/gestore_read_entity.png Graphic file (type png)
 <use Allegati/Esercizio6/gestore_read_entity.png>
-Package pdftex.def Info: Allegati/Esercizio6/gestore_read_entity.png  used on input line 650.
+Package pdftex.def Info: Allegati/Esercizio6/gestore_read_entity.png  used on input line 651.
 (pdftex.def)             Requested size: 214.50302pt x 76.39317pt.
 <Allegati/Esercizio6/gestore_read_archit.png, id=334, 329.23pt x 462.72874pt>
 File: Allegati/Esercizio6/gestore_read_archit.png Graphic file (type png)
 <use Allegati/Esercizio6/gestore_read_archit.png>
-Package pdftex.def Info: Allegati/Esercizio6/gestore_read_archit.png  used on input line 654.
+Package pdftex.def Info: Allegati/Esercizio6/gestore_read_archit.png  used on input line 655.
 (pdftex.def)             Requested size: 214.50435pt x 301.48325pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--657
+Underfull \hbox (badness 10000) in paragraph at lines 647--658
 
  []
 
 [53
 
  <./Allegati/Esercizio6/gestore_read_entity.png> <./Allegati/Esercizio6/gestore_read_archit.png>]
-Overfull \hbox (14.8038pt too wide) in paragraph at lines 658--659
+Overfull \hbox (14.8038pt too wide) in paragraph at lines 659--661
 []\OT1/cmr/m/n/12 A par-tire dal seg-nale rip-ulito di READ viene prodotto un seg-nale di OUT[]READ
  []
 
 <Allegati/Esercizio6/rom_entity.png, id=340, 600.2425pt x 87.32625pt>
 File: Allegati/Esercizio6/rom_entity.png Graphic file (type png)
 <use Allegati/Esercizio6/rom_entity.png>
-Package pdftex.def Info: Allegati/Esercizio6/rom_entity.png  used on input line 666.
+Package pdftex.def Info: Allegati/Esercizio6/rom_entity.png  used on input line 667.
 (pdftex.def)             Requested size: 351.00764pt x 51.06631pt.
 <Allegati/Esercizio6/rom_process.png, id=341, 602.25pt x 415.5525pt>
 File: Allegati/Esercizio6/rom_process.png Graphic file (type png)
 <use Allegati/Esercizio6/rom_process.png>
-Package pdftex.def Info: Allegati/Esercizio6/rom_process.png  used on input line 670.
+Package pdftex.def Info: Allegati/Esercizio6/rom_process.png  used on input line 671.
 (pdftex.def)             Requested size: 351.0145pt x 242.20001pt.
 [54
 
@@ -805,20 +813,20 @@ Package pdftex.def Info: Allegati/Esercizio6/rom_process.png  used on input line
 <Allegati/Esercizio6/delay_block.png, id=347, 600.2425pt x 297.11pt>
 File: Allegati/Esercizio6/delay_block.png Graphic file (type png)
 <use Allegati/Esercizio6/delay_block.png>
-Package pdftex.def Info: Allegati/Esercizio6/delay_block.png  used on input line 679.
+Package pdftex.def Info: Allegati/Esercizio6/delay_block.png  used on input line 680.
 (pdftex.def)             Requested size: 390.00645pt x 193.04666pt.
 <Allegati/Esercizio6/memoria_esterna.png, id=348, 344.78813pt x 466.74374pt>
 File: Allegati/Esercizio6/memoria_esterna.png Graphic file (type png)
 <use Allegati/Esercizio6/memoria_esterna.png>
-Package pdftex.def Info: Allegati/Esercizio6/memoria_esterna.png  used on input line 686.
+Package pdftex.def Info: Allegati/Esercizio6/memoria_esterna.png  used on input line 687.
 (pdftex.def)             Requested size: 283.63824pt x 383.96443pt.
 <Allegati/Esercizio6/gestore_led_entity.png, id=349, 318.43968pt x 100.12407pt>
 File: Allegati/Esercizio6/gestore_led_entity.png Graphic file (type png)
 <use Allegati/Esercizio6/gestore_led_entity.png>
-Package pdftex.def Info: Allegati/Esercizio6/gestore_led_entity.png  used on input line 692.
+Package pdftex.def Info: Allegati/Esercizio6/gestore_led_entity.png  used on input line 693.
 (pdftex.def)             Requested size: 272.9976pt x 85.83612pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--694
+Underfull \hbox (badness 10000) in paragraph at lines 675--695
 
  []
 
@@ -828,12 +836,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 674--694
 <Allegati/Esercizio6/gestore_led_archit1.png, id=361, 273.27094pt x 67.75313pt>
 File: Allegati/Esercizio6/gestore_led_archit1.png Graphic file (type png)
 <use Allegati/Esercizio6/gestore_led_archit1.png>
-Package pdftex.def Info: Allegati/Esercizio6/gestore_led_archit1.png  used on input line 697.
+Package pdftex.def Info: Allegati/Esercizio6/gestore_led_archit1.png  used on input line 698.
 (pdftex.def)             Requested size: 234.0035pt x 58.01738pt.
 <Allegati/Esercizio6/gestore_led_archit2.png, id=362, 408.02437pt x 465.99094pt>
 File: Allegati/Esercizio6/gestore_led_archit2.png Graphic file (type png)
 <use Allegati/Esercizio6/gestore_led_archit2.png>
-Package pdftex.def Info: Allegati/Esercizio6/gestore_led_archit2.png  used on input line 700.
+Package pdftex.def Info: Allegati/Esercizio6/gestore_led_archit2.png  used on input line 701.
 (pdftex.def)             Requested size: 292.51346pt x 334.0698pt.
  [57
 
@@ -841,7 +849,7 @@ Package pdftex.def Info: Allegati/Esercizio6/gestore_led_archit2.png  used on in
 <Allegati/Esercizio6/simulazione.png, id=368, 1032.10594pt x 395.22656pt>
 File: Allegati/Esercizio6/simulazione.png Graphic file (type png)
 <use Allegati/Esercizio6/simulazione.png>
-Package pdftex.def Info: Allegati/Esercizio6/simulazione.png  used on input line 714.
+Package pdftex.def Info: Allegati/Esercizio6/simulazione.png  used on input line 715.
 (pdftex.def)             Requested size: 389.99953pt x 149.34335pt.
  [58
 
@@ -849,12 +857,12 @@ Package pdftex.def Info: Allegati/Esercizio6/simulazione.png  used on input line
 <Allegati/Esercizio6/board.jpg, id=373, 2079.26813pt x 1909.88531pt>
 File: Allegati/Esercizio6/board.jpg Graphic file (type jpg)
 <use Allegati/Esercizio6/board.jpg>
-Package pdftex.def Info: Allegati/Esercizio6/board.jpg  used on input line 721.
+Package pdftex.def Info: Allegati/Esercizio6/board.jpg  used on input line 722.
 (pdftex.def)             Requested size: 389.98872pt x 358.2192pt.
  [59
 
  <./Allegati/Esercizio6/board.jpg>]
-Package svg Info: Last page of `./svg-inkscape/sistema_completo_svg-tex.pdf' is 1 on input line 749.
+Package svg Info: Last page of `./svg-inkscape/sistema_completo_svg-tex.pdf' is 1 on input line 750.
  (./svg-inkscape/sistema_completo_svg-tex.pdf_tex
 <./svg-inkscape/sistema_completo_svg-tex.pdf, id=378, page=1, 493.845pt x 416.42294pt>
 File: ./svg-inkscape/sistema_completo_svg-tex.pdf Graphic file (type pdf)
@@ -862,19 +870,19 @@ File: ./svg-inkscape/sistema_completo_svg-tex.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./svg-inkscape/sistema_completo_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 390.0pt x 328.85614pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 727--752
+Underfull \hbox (badness 10000) in paragraph at lines 728--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 727--752
+Underfull \hbox (badness 10000) in paragraph at lines 728--753
 
  []
 
 [60
 
 ] [61] [62 <./svg-inkscape/sistema_completo_svg-tex.pdf>]
-Package svg Info: Last page of `./svg-inkscape/sistema_a_svg-tex.pdf' is 1 on input line 764.
+Package svg Info: Last page of `./svg-inkscape/sistema_a_svg-tex.pdf' is 1 on input line 765.
  (./svg-inkscape/sistema_a_svg-tex.pdf_tex
 <./svg-inkscape/sistema_a_svg-tex.pdf, id=395, page=1, 497.86pt x 246.67548pt>
 File: ./svg-inkscape/sistema_a_svg-tex.pdf Graphic file (type pdf)
@@ -887,12 +895,12 @@ Package pdftex.def Info: ./svg-inkscape/sistema_a_svg-tex.pdf , page1 used on in
 <Allegati/Esercizio7/entity_contatore.png, id=407, 724.7075pt x 123.46124pt>
 File: Allegati/Esercizio7/entity_contatore.png Graphic file (type png)
 <use Allegati/Esercizio7/entity_contatore.png>
-Package pdftex.def Info: Allegati/Esercizio7/entity_contatore.png  used on input line 775.
+Package pdftex.def Info: Allegati/Esercizio7/entity_contatore.png  used on input line 776.
 (pdftex.def)             Requested size: 390.00925pt x 66.442pt.
 <Allegati/Esercizio7/architecture_counter.png, id=408, 724.7075pt x 449.68pt>
 File: Allegati/Esercizio7/architecture_counter.png Graphic file (type png)
 <use Allegati/Esercizio7/architecture_counter.png>
-Package pdftex.def Info: Allegati/Esercizio7/architecture_counter.png  used on input line 785.
+Package pdftex.def Info: Allegati/Esercizio7/architecture_counter.png  used on input line 786.
 (pdftex.def)             Requested size: 312.00519pt x 193.59877pt.
  [64
 
@@ -900,12 +908,12 @@ Package pdftex.def Info: Allegati/Esercizio7/architecture_counter.png  used on i
 <Allegati/Esercizio7/entity_rom.png, id=414, 584.68437pt x 104.39pt>
 File: Allegati/Esercizio7/entity_rom.png Graphic file (type png)
 <use Allegati/Esercizio7/entity_rom.png>
-Package pdftex.def Info: Allegati/Esercizio7/entity_rom.png  used on input line 792.
+Package pdftex.def Info: Allegati/Esercizio7/entity_rom.png  used on input line 793.
 (pdftex.def)             Requested size: 390.01463pt x 69.6335pt.
 <Allegati/Esercizio7/architecture_rom.png, id=415, 490.83376pt x 404.51125pt>
 File: Allegati/Esercizio7/architecture_rom.png Graphic file (type png)
 <use Allegati/Esercizio7/architecture_rom.png>
-Package pdftex.def Info: Allegati/Esercizio7/architecture_rom.png  used on input line 797.
+Package pdftex.def Info: Allegati/Esercizio7/architecture_rom.png  used on input line 798.
 (pdftex.def)             Requested size: 390.00876pt x 321.41824pt.
  [65
 
@@ -913,7 +921,7 @@ Package pdftex.def Info: Allegati/Esercizio7/architecture_rom.png  used on input
 <Allegati/Esercizio7/entity_interfacciaa.png, id=421, 528.97626pt x 187.70125pt>
 File: Allegati/Esercizio7/entity_interfacciaa.png Graphic file (type png)
 <use Allegati/Esercizio7/entity_interfacciaa.png>
-Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciaa.png  used on input line 805.
+Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciaa.png  used on input line 806.
 (pdftex.def)             Requested size: 389.99957pt x 138.38693pt.
  [66
 
@@ -921,17 +929,17 @@ Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciaa.png  used on in
 <Allegati/Esercizio7/arc_inta_1.png, id=430, 456.70625pt x 466.74374pt>
 File: Allegati/Esercizio7/arc_inta_1.png Graphic file (type png)
 <use Allegati/Esercizio7/arc_inta_1.png>
-Package pdftex.def Info: Allegati/Esercizio7/arc_inta_1.png  used on input line 823.
+Package pdftex.def Info: Allegati/Esercizio7/arc_inta_1.png  used on input line 824.
 (pdftex.def)             Requested size: 214.49864pt x 219.2129pt.
 <Allegati/Esercizio7/arc_inta_2.png, id=431, 400.49625pt x 435.12563pt>
 File: Allegati/Esercizio7/arc_inta_2.png Graphic file (type png)
 <use Allegati/Esercizio7/arc_inta_2.png>
-Package pdftex.def Info: Allegati/Esercizio7/arc_inta_2.png  used on input line 827.
+Package pdftex.def Info: Allegati/Esercizio7/arc_inta_2.png  used on input line 828.
 (pdftex.def)             Requested size: 214.50476pt x 233.05217pt.
  [68
 
  <./Allegati/Esercizio7/arc_inta_1.png> <./Allegati/Esercizio7/arc_inta_2.png>]
-Package svg Info: Last page of `./svg-inkscape/sistema_b_svg-tex.pdf' is 1 on input line 842.
+Package svg Info: Last page of `./svg-inkscape/sistema_b_svg-tex.pdf' is 1 on input line 843.
  (./svg-inkscape/sistema_b_svg-tex.pdf_tex
 <./svg-inkscape/sistema_b_svg-tex.pdf, id=438, page=1, 549.97658pt x 383.75793pt>
 File: ./svg-inkscape/sistema_b_svg-tex.pdf Graphic file (type pdf)
@@ -944,7 +952,7 @@ Package pdftex.def Info: ./svg-inkscape/sistema_b_svg-tex.pdf , page1 used on in
 <Allegati/Esercizio7/entity_controlunitb.png, id=453, 590.205pt x 189.70876pt>
 File: Allegati/Esercizio7/entity_controlunitb.png Graphic file (type png)
 <use Allegati/Esercizio7/entity_controlunitb.png>
-Package pdftex.def Info: Allegati/Esercizio7/entity_controlunitb.png  used on input line 850.
+Package pdftex.def Info: Allegati/Esercizio7/entity_controlunitb.png  used on input line 851.
 (pdftex.def)             Requested size: 214.49994pt x 68.9464pt.
  [70
 
@@ -952,12 +960,12 @@ Package pdftex.def Info: Allegati/Esercizio7/entity_controlunitb.png  used on in
 <Allegati/Esercizio7/arc_control_b1.png, id=461, 399.4925pt x 414.54875pt>
 File: Allegati/Esercizio7/arc_control_b1.png Graphic file (type png)
 <use Allegati/Esercizio7/arc_control_b1.png>
-Package pdftex.def Info: Allegati/Esercizio7/arc_control_b1.png  used on input line 866.
+Package pdftex.def Info: Allegati/Esercizio7/arc_control_b1.png  used on input line 867.
 (pdftex.def)             Requested size: 214.50357pt x 222.58789pt.
 <Allegati/Esercizio7/arc_control_b2.png, id=462, 358.84062pt x 416.55624pt>
 File: Allegati/Esercizio7/arc_control_b2.png Graphic file (type png)
 <use Allegati/Esercizio7/arc_control_b2.png>
-Package pdftex.def Info: Allegati/Esercizio7/arc_control_b2.png  used on input line 870.
+Package pdftex.def Info: Allegati/Esercizio7/arc_control_b2.png  used on input line 871.
 (pdftex.def)             Requested size: 214.5066pt x 249.00768pt.
  [72
 
@@ -965,20 +973,20 @@ Package pdftex.def Info: Allegati/Esercizio7/arc_control_b2.png  used on input l
 <Allegati/Esercizio7/entity_memoriab.png, id=468, 750.805pt x 146.5475pt>
 File: Allegati/Esercizio7/entity_memoriab.png Graphic file (type png)
 <use Allegati/Esercizio7/entity_memoriab.png>
-Package pdftex.def Info: Allegati/Esercizio7/entity_memoriab.png  used on input line 880.
+Package pdftex.def Info: Allegati/Esercizio7/entity_memoriab.png  used on input line 881.
 (pdftex.def)             Requested size: 390.00842pt x 76.12462pt.
 <Allegati/Esercizio7/architecture_memoriab.png, id=469, 625.83812pt x 433.11812pt>
 File: Allegati/Esercizio7/architecture_memoriab.png Graphic file (type png)
 <use Allegati/Esercizio7/architecture_memoriab.png>
-Package pdftex.def Info: Allegati/Esercizio7/architecture_memoriab.png  used on input line 885.
+Package pdftex.def Info: Allegati/Esercizio7/architecture_memoriab.png  used on input line 886.
 (pdftex.def)             Requested size: 292.51099pt x 202.43542pt.
 
-Overfull \hbox (26.8465pt too wide) in paragraph at lines 874--888
+Overfull \hbox (26.8465pt too wide) in paragraph at lines 875--889
 \OT1/cmr/m/n/12 quando il seg-nale di ab[]interfaccia si alza, ovvero quando ^^Re ter-mi-nata l'elaborazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--888
+Underfull \hbox (badness 10000) in paragraph at lines 875--889
 
  []
 
@@ -988,7 +996,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 874--888
 <Allegati/Esercizio7/entity_interfacciab.png, id=477, 522.45187pt x 191.21437pt>
 File: Allegati/Esercizio7/entity_interfacciab.png Graphic file (type png)
 <use Allegati/Esercizio7/entity_interfacciab.png>
-Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciab.png  used on input line 893.
+Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciab.png  used on input line 894.
 (pdftex.def)             Requested size: 390.00438pt x 142.73935pt.
  [74
 
@@ -996,12 +1004,12 @@ Package pdftex.def Info: Allegati/Esercizio7/entity_interfacciab.png  used on in
 <Allegati/Esercizio7/arc_inter_b1.png, id=485, 480.29437pt x 413.545pt>
 File: Allegati/Esercizio7/arc_inter_b1.png Graphic file (type png)
 <use Allegati/Esercizio7/arc_inter_b1.png>
-Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b1.png  used on input line 909.
+Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b1.png  used on input line 910.
 (pdftex.def)             Requested size: 253.49947pt x 218.26913pt.
 <Allegati/Esercizio7/arc_inter_b2.png, id=486, 337.26pt x 445.665pt>
 File: Allegati/Esercizio7/arc_inter_b2.png Graphic file (type png)
 <use Allegati/Esercizio7/arc_inter_b2.png>
-Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b2.png  used on input line 913.
+Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b2.png  used on input line 914.
 (pdftex.def)             Requested size: 175.49971pt x 231.91034pt.
  [76
 
@@ -1009,38 +1017,148 @@ Package pdftex.def Info: Allegati/Esercizio7/arc_inter_b2.png  used on input lin
 <Allegati/Esercizio7/sim1.png, id=492, 1168.365pt x 381.425pt>
 File: Allegati/Esercizio7/sim1.png Graphic file (type png)
 <use Allegati/Esercizio7/sim1.png>
-Package pdftex.def Info: Allegati/Esercizio7/sim1.png  used on input line 925.
+Package pdftex.def Info: Allegati/Esercizio7/sim1.png  used on input line 926.
 (pdftex.def)             Requested size: 390.00076pt x 127.31982pt.
 <Allegati/Esercizio7/sim2.png, id=493, 1168.365pt x 381.425pt>
 File: Allegati/Esercizio7/sim2.png Graphic file (type png)
 <use Allegati/Esercizio7/sim2.png>
-Package pdftex.def Info: Allegati/Esercizio7/sim2.png  used on input line 929.
+Package pdftex.def Info: Allegati/Esercizio7/sim2.png  used on input line 930.
 (pdftex.def)             Requested size: 390.00076pt x 127.31982pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--932
+Underfull \hbox (badness 10000) in paragraph at lines 919--933
 
  []
 
 [77
 
- <./Allegati/Esercizio7/sim1.png> <./Allegati/Esercizio7/sim2.png>] [78] [79] [80] [81] [82] (./tesina.lof [83])
+ <./Allegati/Esercizio7/sim1.png> <./Allegati/Esercizio7/sim2.png>] [78
+
+]
+<Allegati/Esercizio8/memoriaIJVM.png, id=502, 494.59781pt x 230.36063pt>
+File: Allegati/Esercizio8/memoriaIJVM.png Graphic file (type png)
+<use Allegati/Esercizio8/memoriaIJVM.png>
+Package pdftex.def Info: Allegati/Esercizio8/memoriaIJVM.png  used on input line 954.
+(pdftex.def)             Requested size: 311.99825pt x 145.31424pt.
+<Allegati/Esercizio8/istruzioniIJVM.png, id=503, 550.30594pt x 414.79968pt>
+File: Allegati/Esercizio8/istruzioniIJVM.png Graphic file (type png)
+<use Allegati/Esercizio8/istruzioniIJVM.png>
+Package pdftex.def Info: Allegati/Esercizio8/istruzioniIJVM.png  used on input line 961.
+(pdftex.def)             Requested size: 273.00267pt x 205.77902pt.
+
+Overfull \hbox (2.55853pt too wide) in paragraph at lines 957--964
+[]\OT1/cmr/m/n/12 Le istruzioni IJVM sono a lunghezza vari-abile in base alla pre-senza di operandi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--964
+
+ []
+
+[79
+
+ <./Allegati/Esercizio8/memoriaIJVM.PNG> <./Allegati/Esercizio8/istruzioniIJVM.PNG>]
+<Allegati/Esercizio8/mic-1completo.png, id=510, 505.13719pt x 463.7325pt>
+File: Allegati/Esercizio8/mic-1completo.png Graphic file (type png)
+<use Allegati/Esercizio8/mic-1completo.png>
+Package pdftex.def Info: Allegati/Esercizio8/mic-1completo.png  used on input line 968.
+(pdftex.def)             Requested size: 390.0051pt x 358.03745pt.
+ [80
+
+ <./Allegati/Esercizio8/mic-1completo.PNG>]
+<Allegati/Esercizio8/datapath.png, id=515, 411.03563pt x 468.24937pt>
+File: Allegati/Esercizio8/datapath.png Graphic file (type png)
+<use Allegati/Esercizio8/datapath.png>
+Package pdftex.def Info: Allegati/Esercizio8/datapath.png  used on input line 977.
+(pdftex.def)             Requested size: 389.99869pt x 444.28421pt.
+ [81
+
+ <./Allegati/Esercizio8/datapath.PNG>]
+<Allegati/Esercizio8/tempificazionemem.png, id=520, 280.04625pt x 109.91063pt>
+File: Allegati/Esercizio8/tempificazionemem.png Graphic file (type png)
+<use Allegati/Esercizio8/tempificazionemem.png>
+Package pdftex.def Info: Allegati/Esercizio8/tempificazionemem.png  used on input line 985.
+(pdftex.def)             Requested size: 390.01949pt x 153.07214pt.
+ [82
+
+ <./Allegati/Esercizio8/tempificazionemem.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 994--997
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1001--1003
+
+ []
+
+[83
+
+]
+<Allegati/Esercizio8/formatomicroistr.png, id=528, 469.00218pt x 210.03468pt>
+File: Allegati/Esercizio8/formatomicroistr.png Graphic file (type png)
+<use Allegati/Esercizio8/formatomicroistr.png>
+Package pdftex.def Info: Allegati/Esercizio8/formatomicroistr.png  used on input line 1010.
+(pdftex.def)             Requested size: 389.9945pt x 174.65242pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1016
+
+ []
+
+
+Overfull \hbox (4.33566pt too wide) in paragraph at lines 1005--1016
+\OT1/cmr/m/n/12 Ogni mi-croistruzione ^^Re legata alla suc-ces-siva tramite i bit di NEXT[]ADDRESS
+ []
+
+[84
+
+ <./Allegati/Esercizio8/formatomicroistr.PNG>]
+<Allegati/Esercizio8/clocktiming.png, id=533, 471.26062pt x 281.55188pt>
+File: Allegati/Esercizio8/clocktiming.png Graphic file (type png)
+<use Allegati/Esercizio8/clocktiming.png>
+Package pdftex.def Info: Allegati/Esercizio8/clocktiming.png  used on input line 1023.
+(pdftex.def)             Requested size: 390.00287pt x 233.0049pt.
+ [85 <./Allegati/Esercizio8/clocktiming.PNG>]
+Overfull \hbox (11.60565pt too wide) in paragraph at lines 1027--1045
+\OT1/cmr/m/n/12 croassem-bla-tore MAL in se-quenze di seg-nali di con-trollo rispetto all'architettura
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1045
+
+ []
+
+[86
+
+] [87
+
+] [88]
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1116
+
+ []
+
+[89
+
+] [90
+
+] [91
+
+] [92] [93] [94] (./tesina.lof [95] [96])
 \tf@lof=\write5
 \openout5 = `tesina.lof'.
 
- [84] (./tesina.aux) ) 
+ [97] (./tesina.aux) ) 
 Here is how much of TeX's memory you used:
- 6690 strings out of 478353
- 146775 string characters out of 5854635
- 441616 words of memory out of 5000000
- 24564 multiletter control sequences out of 15000+600000
+ 7075 strings out of 478353
+ 154530 string characters out of 5854635
+ 450164 words of memory out of 5000000
+ 24937 multiletter control sequences out of 15000+600000
  408727 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,10n,92p,959b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesina.pdf (84 pages, 5054465 bytes).
+Output written on tesina.pdf (97 pages, 5392625 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
+ 621 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 558 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 593 words of extra memory for PDF output out of 10000 (max. 10000000)
 

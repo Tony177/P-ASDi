@@ -29,10 +29,15 @@
 \contentsline {subsubsection}{\numberline {7.2.2}Unità di Controllo A}{66}{}%
 \contentsline {subsection}{\numberline {7.3}Sistema B}{69}{}%
 \contentsline {subsubsection}{\numberline {7.3.1}Unita Operativa B}{70}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}Unità di controllo}{74}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}Unità di controllo B}{74}{}%
 \contentsline {subsection}{\numberline {7.4}Considerazioni Finali}{77}{}%
 \contentsline {section}{\numberline {8}Esercizio 8 - Processor}{78}{}%
-\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{79}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{80}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{81}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{82}{}%
+\contentsline {subsection}{\numberline {8.1}Introduzione a IJVM}{78}{}%
+\contentsline {subsection}{\numberline {8.2}Parte operativa}{81}{}%
+\contentsline {subsection}{\numberline {8.3}Parte di controllo}{84}{}%
+\contentsline {subsection}{\numberline {8.4}Analisi delle istruzioni IADD e ISTORE}{89}{}%
+\contentsline {subsubsection}{\numberline {8.4.1}Istruzione IADD}{89}{}%
+\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{91}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{92}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{93}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{94}{}%
