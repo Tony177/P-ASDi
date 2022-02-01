@@ -50,9 +50,14 @@
 \contentsline {paragraph}{\numberline {9.3.2.1}Unità Operativa B}{111}{}%
 \contentsline {paragraph}{\numberline {9.3.2.2}Unità di Controllo B}{112}{}%
 \contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{116}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{117}{}%
-\contentsline {subsection}{\numberline {11.1}Introduzione}{117}{}%
-\contentsline {subsection}{\numberline {11.2}Unità Operativa}{119}{}%
-\contentsline {subsection}{\numberline {11.3}Unità di Controllo }{125}{}%
-\contentsline {subsection}{\numberline {11.4}Simulazione e Sintesi}{131}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{134}{}%
+\contentsline {subsection}{\numberline {10.1}Approccio utilizzato}{116}{}%
+\contentsline {subsection}{\numberline {10.2}Parte Operativa}{117}{}%
+\contentsline {subsection}{\numberline {10.3}Parte di Controllo}{120}{}%
+\contentsline {subsection}{\numberline {10.4}Simulazione}{128}{}%
+\contentsline {subsection}{\numberline {10.5}Considerazioni finali}{130}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{131}{}%
+\contentsline {subsection}{\numberline {11.1}Introduzione}{131}{}%
+\contentsline {subsection}{\numberline {11.2}Unità Operativa}{133}{}%
+\contentsline {subsection}{\numberline {11.3}Unità di Controllo }{139}{}%
+\contentsline {subsection}{\numberline {11.4}Simulazione e Sintesi}{145}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{148}{}%
