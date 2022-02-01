@@ -1114,8 +1114,10 @@ Per ogni programma vengono eseguite le microprocedure seguenti:
 \\\hspace*{1cm} mem: 100
 \\\hspace*{1cm} bus B: 0000
 \clearpage
-{\large \textbf{SIMULAZIONE IADD}}
-\\Programma AJVM associato:
+{\large \textbf{Simulazione IADD}}
+
+\vspace{0.5cm}
+Programma ajvm associato:
 \textit{
     \\.main
     \\.var
@@ -1127,6 +1129,129 @@ Per ogni programma vengono eseguite le microprocedure seguenti:
     \\HALT // HALT is a no operand instruction but translates as a GOTO (short value)
     \\.endmethod
 }
+\vspace{3cm}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto iadd.png}
+    \caption{Simulazione IADD}
+\end{figure}
+\clearpage
+Dalla simulazione si nota che all’esecuzione dell’istruzione IADD (0x36) vengono estratti: 0xA, decrementando lo stack pointer a 0x105, 0xE che viene mantenuto nel registro TOS e viene poi effettuata la somma tra 0xA e 0xE che produce in uscita 0x18, che verrà scritto sulla cima dello stack all’indirizzo 0x105, con un ritardo dovuto al posizionamento nei registri dei valori degli operandi e dalla scrittura in memoria. La simulazione termina appena PC raggiunge il valore 0xB.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto iadd_flusso.png}
+    \caption{Datapath esecuzione IADD}
+\end{figure}
+\clearpage
+\subsubsection{Istruzione ISTORE}
+\textit{
+    \\istore = 0x36:
+    \\\hspace*{2cm} H = LV
+    \\\hspace*{2cm} MAR = MBRU + H
+    \\istore\_cont:
+    \\\hspace*{2cm} MDR = TOS; wr
+    \\\hspace*{2cm} SP = MAR = SP - 1; rd
+    \\\hspace*{2cm} PC = PC + 1; fetch
+    \\\hspace*{2cm} TOS = MDR; goto main
+}
+\vspace*{1cm}\\La traduzione in segnali di controllo, rispetto al formato delle microistruzioni descritto precedentemente, è la seguente:
+\\\\\\\textbf{Microistruzione 1:}	\hspace*{1cm} \textit{H = LV}
+\\\hspace*{1cm} next\_address: 55
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00010100
+\\\hspace*{1cm} bus C: 100000000
+\\\hspace*{1cm} mem: 000
+\\\hspace*{1cm} bus B: 0101
+\\ \textbf{Microistruzione 2:}	\hspace*{1cm} \textit{MAR = MDRU + H}
+\\\hspace*{1cm} next\_address: 56
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00111100
+\\\hspace*{1cm} bus C: 000000001
+\\\hspace*{1cm} mem: 000
+\\\hspace*{1cm} bus B: 0011
+\\ \textbf{Microistruzione 3:}	\hspace*{1cm} \textit{MDR = TOS; wr}
+\\\hspace*{1cm} next\_address: 57
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00010100
+\\\hspace*{1cm} bus C: 000000010
+\\\hspace*{1cm} mem: 100
+\\\hspace*{1cm} bus B: 0111
+\\ \textbf{Microistruzione 4:}	\hspace*{1cm} \textit{SP = MAR = SP - 1; rd}
+\\\hspace*{1cm} next\_address: 58
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00110110
+\\\hspace*{1cm} bus C: 000001001
+\\\hspace*{1cm} mem: 010
+\\\hspace*{1cm} bus B: 0100
+\\ \textbf{Microistruzione 5:}	\hspace*{1cm} \textit{PC = PC + 1; fetch}
+\\\hspace*{1cm} next\_address: 59
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00110101
+\\\hspace*{1cm} bus C: 000000100
+\\\hspace*{1cm} mem: 001
+\\\hspace*{1cm} bus B: 0001
+\\ \textbf{Microistruzione 6:}	\hspace*{1cm} \textit{TOS = MDR; goto main}
+\\\hspace*{1cm} next\_address: 6
+\\\hspace*{1cm} jmp: 000
+\\\hspace*{1cm} alu: 00010100
+\\\hspace*{1cm} bus C: 001000000
+\\\hspace*{1cm} mem: 000
+\\\hspace*{1cm} bus B: 0000
+\\\\{\large \textbf{Simulazione ISTORE}}
+
+\vspace{0.5cm}
+Programma AJVM associato:
+\textit{
+    \\.main
+    \\.var
+    \\a
+    \\.endvar
+    \\BIPUSH 0xA
+    \\ISTORE
+    \\HALT // HALT is a no operand instruction but translates as a GOTO (short value)
+    \\.endmethod
+}
+\clearpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto istore.png}
+    \caption{Simulazione ISTORE}
+\end{figure}
+Dalla simulazione si nota che:
+\begin{itemize}
+    \item Viene caricato il registro H con il valore di LV, ossia 0x101;
+    \item All’indirizzo base LV viene aggiunto l’offset di 0x01 per puntare alla variabile A nel Local Variable Frame e viene inserito nel MAR ottenendo 0x102;
+    \item Si effettua poi la write in memoria all’indirizzo 0x102 del valore in TOS, ossia 0xA;
+    \item Si decrementa poi lo stack pointer a 0x104 e si riaggiornano i registri.
+\end{itemize}
+\clearpage
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto istore1flusso.png}
+\end{figure}
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto istore2flusso.png}
+    \caption{Datapath esecuzione ISTORE}
+\end{figure}
+\clearpage
+\subsubsection{Modifica istruzione IADD}
+E’ stato modificato il microprogramma relativo all’istruzione IADD in questo modo:
+\textit{
+    \\iadd = 0x65:
+    \\\hspace*{2cm} MAR = SP = SP - 1; rd
+    \\\hspace*{2cm} H = TOS
+    \\\hspace*{2cm} H = H+1
+    \\\hspace*{2cm} MDR = TOS = MDR + H; wr; goto main
+}
+\\L’istruzione di IADD, oltre ad effettuare la somma tra i due operandi, effettua anche l’incremento di 1 al valore ottenuto. Nel microprogramma viene incrementato di 1 il valore dell’operando in cima allo stack, contenuto nel registro H. L’istruzione IADD, in questo caso, impiegherà un ciclo di clk in più ad essere eseguita, per via della microistruzione di incremento.
+\\Il programma AJVM associato alla istruzione IADD è lo stesso precedente.
+\\\\{\large \textbf{Simulazione IADD Modificata}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eotto iaddmodificata.png}
+    \caption{Simulazione IADD Modificata}
+\end{figure}
+\\Dalla simulazione si nota che l’esecuzione dell’istruzione IADD (0x36) è esattamente uguale a quella precedente, se non per l’incremento intermedio del valore in cima allo stack, che passa da 0xE a 0xF.
+
 \clearpage
 \section{Esercizio 9 - Interfaccia UART}
 \newpage

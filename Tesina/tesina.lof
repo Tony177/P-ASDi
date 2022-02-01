@@ -77,3 +77,8 @@
 \contentsline {figure}{\numberline {77}{\ignorespaces Tempificazione Memoria\relax }}{82}{}%
 \contentsline {figure}{\numberline {78}{\ignorespaces Formato Microistruzione\relax }}{84}{}%
 \contentsline {figure}{\numberline {79}{\ignorespaces Timing Clock\relax }}{85}{}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Simulazione IADD\relax }}{90}{}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Datapath esecuzione IADD\relax }}{91}{}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Simulazione ISTORE\relax }}{94}{}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Datapath esecuzione ISTORE\relax }}{95}{}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Simulazione IADD Modificata\relax }}{96}{}%

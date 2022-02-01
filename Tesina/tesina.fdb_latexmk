@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1643650053 "/home/anto/Scrivania/P-ASDi/Tesina/tesina.tex" "tesina.pdf" "tesina" 1643650058
-  "/dev/null" 1643639530 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "/home/anto/Scrivania/P-ASDi/Tesina/tesina.tex" 1643650053 89762 87f5a1b6c6c55f34f5782559f4864bfc ""
+["pdflatex"] 1643712650 "/home/anto/Scrivania/P-ASDi/Tesina/tesina.tex" "tesina.pdf" "tesina" 1643712656
+  "/dev/null" 1643707150 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/home/anto/Scrivania/P-ASDi/Tesina/tesina.tex" 1643712650 95054 a020c5f565d664ef1711cd6ef634a51f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640600964 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1640600964 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -187,6 +187,12 @@
   "Allegati/Esercizio8/clocktiming.PNG" 1643208646 51160 88ca79c2209cc6c321eccaea54c73cc0 ""
   "Allegati/Esercizio8/datapath.PNG" 1643643155 57278 32444562ab47e4218603c3600a23a648 ""
   "Allegati/Esercizio8/formatomicroistr.PNG" 1643208646 29473 3c6685824b7030f389552c421ba3ac74 ""
+  "Allegati/Esercizio8/iadd.PNG" 1643208646 53252 5899cc428224cba4a9c6849b0fd42f82 ""
+  "Allegati/Esercizio8/iadd_flusso.PNG" 1643711218 114948 23928e90d45f43e7bb6bea925e81c8a0 ""
+  "Allegati/Esercizio8/iaddmodificata.PNG" 1643208646 58337 6f6a4c0f495a63c3b14459b3b2a6fb3e ""
+  "Allegati/Esercizio8/istore.PNG" 1643208646 53463 e0f647e867beabf1e62d42a56dc1c73d ""
+  "Allegati/Esercizio8/istore1flusso.PNG" 1643712417 256531 7f26c765a1ecaefcf347651c559bf1b7 ""
+  "Allegati/Esercizio8/istore2flusso.PNG" 1643712432 261440 c611e30d5dddb5c7aad36e268f038709 ""
   "Allegati/Esercizio8/istruzioniIJVM.PNG" 1643643412 205085 6512c863809eaa015a53dd4bd3f5d7fe ""
   "Allegati/Esercizio8/memoriaIJVM.PNG" 1643643123 27584 7bd3d1931a91172297649ffa834ad2ba ""
   "Allegati/Esercizio8/mic-1completo.PNG" 1643208646 61989 ca7177776f9631d6982930d2c11313a8 ""
@@ -209,10 +215,10 @@
   "svg-inkscape/sistema_completo_svg-tex.pdf_tex" 1643470168 2103 60128d36759d67131d86529e825d2514 ""
   "svg-inkscape/sistema_contatori_svg-tex.pdf" 1643388490 68005 ad5a26a6899b74296cff1c9ae4ad132b ""
   "svg-inkscape/sistema_contatori_svg-tex.pdf_tex" 1643388490 2105 b45dd6728711682654e126447135cf62 ""
-  "tesina.aux" 1643650057 15219 cf1f449a65870917de3dc79c3b8b0093 "pdflatex"
-  "tesina.lof" 1643650057 7040 2e8ec90a896834c8ca552d110e21676a "pdflatex"
-  "tesina.tex" 1643650053 89762 87f5a1b6c6c55f34f5782559f4864bfc ""
-  "tesina.toc" 1643650057 3054 47fdc92af9bd21187d060d8c11d46faa "pdflatex"
+  "tesina.aux" 1643712655 16131 74463ac8578621f2484ac129b56e0e3f "pdflatex"
+  "tesina.lof" 1643712655 7506 7d88f7f9ed078a197b1efbd38c939d77 "pdflatex"
+  "tesina.tex" 1643712650 95054 a020c5f565d664ef1711cd6ef634a51f ""
+  "tesina.toc" 1643712655 3212 1cb5a9fca1229c81aaac02640ce6c9dd "pdflatex"
   (generated)
   "tesina.aux"
   "tesina.lof"
