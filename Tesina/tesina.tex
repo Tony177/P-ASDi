@@ -899,7 +899,7 @@ Anche per tale sistema, l’interfaccia rappresenta la parte di controllo mentre
     \caption{Architecture Memoria B}
 \end{figure}
 \clearpage
-\subsubsection{Unità di controllo B}
+\subsubsection{C B}
 {\large \textbf{Componente Interfaccia:}}
 \begin{figure}[ht]
     \centering
@@ -982,7 +982,7 @@ Le istruzioni IJVM sono a lunghezza variabile in base alla presenza di operandi 
 \end{figure}
 \\E’ una macchina a stack, ossia che non utilizza registri general purpose (ad esempio di tipo indirizzo o dato), ma le istruzioni presentano operandi contenuti in uno stack allocato nella memoria principale. Il processore MIC-1 è organizzato in parte operativa e parte di controllo.
 \clearpage
-\subsection{Parte operativa}
+\subsection{Unità Operativa}
 La parte operativa realizza il datapath dell’architettura ed è composto da registri a 32 bit, 3 bus, ALU e shifter, come mostrato in figura:
 \begin{figure}[ht!]
     \centering
@@ -1013,7 +1013,7 @@ La parte operativa realizza il datapath dell’architettura ed è composto da re
 {\large \textbf{ALU:}}
 \\\\L’ALU ha due ingressi: A,collegato direttamente al registro tampone H, e B collegato al bus B. Per poter definire l’operazione da effettuare a partire dagli operandi si utilizza una stringa di segnali di controllo di 6 bit. Inoltre, quando il risultato passa nello shifter, vi sono ulteriori 2 segnali che permettono di effettuare lo shift di quest’ultimo, prima che venga posto sul bus C.
 \clearpage
-\subsection{Parte di controllo}
+\subsection{Unità di Controllo}
 E’ realizzata tramite una memoria di sola lettura, detta control store, un microPC ed un microIR. La control store memorizza tutti i microprogrammi relativi alle istruzioni del set IJVM, allocandoli in memoria all’indirizzo corrispondente al codice operativo dell’istruzione.
 Ad ogni ciclo di clk, viene continuamente letta dalla control store la microistruzione all’indirizzo puntato dal mPC.
 \\\\Il formato delle microistruzioni è dato dalla seguente figura:
@@ -1350,7 +1350,7 @@ Il sistema complessivo comprende inoltre 2 debouncer, utilizzati per ripulire i 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove sintesi9.1.jpg}
-    \caption{Sintesi su FPGA Es.9.1}
+    \caption{Sintesi su FPGA Es. 9.1}
 \end{figure}
 \clearpage
 \subsection{Parte 2}
@@ -1368,10 +1368,10 @@ Il sistema A è stato realizzato attraverso un approccio strutturale partendo da
 \begin{figure}[ht!]
     \centering
     \includesvg[width=\textwidth,height=\textheight]{\Enove sistemaA.svg}
-    \caption{Schema Sistema A Es.9.2}
+    \caption{Schema Sistema A Es. 9.2}
 \end{figure}
 \clearpage
-\paragraph{Parte Operativa A}
+\paragraph{Unità Operativa A}
 {\large \textbf{Componente Contatore:}}
 \begin{figure}[ht]
     \centering
@@ -1387,12 +1387,12 @@ Il sistema A è stato realizzato attraverso un approccio strutturale partendo da
 \\{\large \textbf{Componente ROM:}}
 \\Tale componente è analogo a quello utilizzato nei progetti precedenti e pertanto non viene riportata nuovamente la sua implementazione.
 \clearpage
-\paragraph{Parte Controllo A}
+\paragraph{Unità di Controllo A}
 {\large \textbf{Control Unit A:}}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_controlunita.png}
-    \caption{Entity Control Unit A Es.9.2}
+    \caption{Entity Control Unit A Es. 9.2}
 \end{figure}
 \\La control unit è definita come una macchina a stati, dove alcune uscite sono associate direttamente agli stati, mentre altre sono associate alla transizione tra stati in base agli ingressi:
 \begin{enumerate}
@@ -1416,7 +1416,7 @@ Il sistema A è stato realizzato attraverso un approccio strutturale partendo da
 \end{figure}
 \begin{figure}[ht!]
     \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_controlunita3.png}
-    \caption{Architecture Control Unit A Es.9.2}
+    \caption{Architecture Control Unit A Es. 9.2}
 \end{figure}
 \clearpage
 {\large \textbf{Considerazioni finali:}}
@@ -1435,17 +1435,17 @@ Siccome i dati salvati non vengono riportati in uscita, è stato introdotto un d
 \begin{figure}[ht!]
     \centering
     \includesvg[width=1.2\textwidth,height=\textheight]{\Enove sistemaB.svg}
-    \caption{Schema Sistema B Es.9.2}
+    \caption{Schema Sistema B Es. 9.2}
 \end{figure}
-\paragraph{Parte Operativa B}
+\paragraph{Unità Operativa B}
 Il componente contatore è analogo a quello utilizzato per il sistema A, mentre il componente ROM è analogo a quello presentato nei progetti precedenti; pertanto non verrà riproposta la loro implementazione.
 \clearpage
-\paragraph{Parte Controllo B}
+\paragraph{Unità di Controllo B}
 {\large \textbf{Componente Control Unit B:}}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_controlunitb.png}
-    \caption{Entity Control Unit B Es.9.2}
+    \caption{Entity Control Unit B Es. 9.2}
 \end{figure}
 \\La Control Unit è stata realizzata come una macchina a stati, dove alcune uscite sono associate direttamente agli stati, altre alle transizioni in funzione degli ingressi:
 \begin{enumerate}
@@ -1477,7 +1477,195 @@ Così come fatto per la Control Unit A, anche questa Control Unit è impostata s
 \section{Esercizio 10 - Switch Multistadio}
 \newpage
 \section{Esercizio 11 - Divisore Restoring}
-\newpage
+\subsection{Introduzione}
+L’obiettivo di questo esercizio è quello di progettare, tramite un approccio strutturale, un divisore che ci permetta di effettuare una divisione tra un dividendo espresso su M bit ed un divisore, espresso su N bit. Il risultato sarà composto da un resto, codificato su al più N bit, ed un quoziente, espresso al più su M-N+1 bit (supponendo che il primo degli $m \over{n}$ bit non sia nullo).
+\\Analizziamo ora il procedimento di divisione, per comprendere quali sono i componenti da utilizzare:
+\begin{itemize}
+    \item Passo iniziale: si confrontano gli n bit più significativi del dividendo (dividendo parziale) con gli n bit del divisore: se il divisore è contenuto nel dividendo parziale, allora il quoziente parziale (qi) sarà pari ad 1, 0 altrimenti (Il risultato delle operazioni di divisione parziale può essere al massimo 1, quindi in binario si ha un grande vantaggio).
+          Si effettua quindi la sottrazione tra il dividendo parziale ed il prodotto $q_i \cdot V$ (dove V rappresenta il divisore), ottenendo così il primo resto parziale.
+    \item Generico passo i: si pone il dividendo parziale $D_i$ pari al resto parziale $R_i$ (calcolato all’iterazione i-1) e si confronta con il divisore. A questo punto i passaggi successivi sono analoghi a quelli riportati al passo 1, con l’unica differenza che il resto parziale andrà riportato con uno shift a destra di i posizioni.
+\end{itemize}
+La formula generale per calcolare i resti parziali al passo i+1 è dunque:
+\begin{center}
+    \vspace{5mm}$R_{i+1} = R_i -q_i \cdot V \cdot 2^{(-i)}$ \vspace{5mm}
+\end{center}
+Mantenendo questo procedimento avremmo dunque bisogno di uno shift register con shift variabile, in modo da poter effettuare uno shift diverso ad ogni passo.
+\\Si è tuttavia ricavato un algoritmo alternativo, al fine di effettuare uno shift di una sola posizione ad ogni iterazione: invece di effettuare uno shift del resto parziale i+1 al termine delle operazioni, si effettua (ad ogni iterazione) uno shift a sinistra del dividendo parziale $R_i$ e, con tale valore che in binario coincide a $2R_i$, si calcola $R_{i+1}$.
+\\L’algoritmo alternativo è del tutto equivalente a quello standard, con l’unica differenza che richiede uno shift di un’unica posizione ad ogni iterazione, a differenza del precedente, dove lo shift variava in base al passo i.
+\\Valutiamo ora il numero di registri necessari per effettuare completamente le operazioni: il registro A, in cui immettiamo il dividendo, ad ogni iterazione viene svuotato di 1 bit (a causa degli shift verso sinistra dei dividendi parziali), mentre, il registro Q (contenente il quoziente) si riempie di 1 bit. Si può utilizzare quindi un unico registro AQ, il quale, al termine delle operazioni conterrà il resto negli N bit più significativi e nei restanti M-N+1 bit il quoziente.
+\\Utilizzando tale algoritmo però, il registro AQ dovrà presentare la prima cella vuota, in modo da effettuare lo shift anche al primo passo senza perdere alcun bit.
+\\Come visto dalla procedura manuale, l’operazione di divisione richiede una successione di sottrazioni e confronti; l’operazione di comparazione, idealmente, potrebbe essere effettuata mediante un componente comparatore. Tuttavia, anziché definire un nuovo componente, l’operazione di comparazione viene effettuata mediante un sottrattore, valutando il bit più significativo del risultato. Supponiamo infatti di voler effettuare un confronto tra A e B: effettuando l’operazione A-B, se il risultato presenta il bit più significativo, che chiameremo S per comodità, pari ad 1 (ovvero il risultato è negativo in una rappresentazione in complemento a 2), allora $A<B$, altrimenti $A>=B$.
+\\Utilizzando questo metodo, possiamo sfruttare il sottrattore per effettuare anche la comparazione, il che porta un ulteriore vantaggio: siccome la comparazione avviene tra $2R_i$ e V, il risultato ci fornisce anche il valore di $R_i+1$, nel caso in cui $2R_i > V$. Nel caso in cui, invece, $2R_i < V$ va effettuata un’operazione di ripristino del valore di $R_{i+1}$, riportandolo pari a $R_i$.
+\\Per gestire tale rispristino ci sono 2 algoritmi possibili:
+\begin{itemize}
+    \item Restoring: effettua il ripristino sempre al passo i-esimo; se il risultato della sottrazione da esito negativo, nello stesso passo si somma nuovamente V al valore di $R_{i+1}$, in modo da ottenere nuovamente il valore di Ri.
+    \item Not restoring: effettua una correzione al passo i+1; tramite manipolazioni algebriche si è visto che, se al passo i+1 effettuo una somma al posto di una sottrazione, ottengo lo stesso risultato del restoring.
+\end{itemize}
+Dato che entrambe le tecniche prevedono sia l’addizione che la sottrazione, avremo bisogno di un componente che implementa entrambe operazioni.
+\\È bene notare che, a differenza dei moltiplicatori, i divisori sono implementati unicamente con un approccio sequenziale, dato che il risultato al passo i-esimo dipende dal risultato del passo i-1, non permettendo quindi un’implementazione di tipo parallelo.
+\\Come tutte le macchine complesse, il divisore restoring è composto da una parte operativa ed una di controllo.
+\begin{figure}[ht]
+    \centering
+    \includesvg[width=\textwidth,height=\textheight]{\Eundici divisore.svg}
+    \caption{Schema Divisore Es. 11}
+\end{figure}
+\subsection{Unità Operativa}
+La parte operativa è stata progettata tramite un approccio strutturale, ed è composta da:
+\begin{itemize}
+    \item Registro AQ: registro che inizialmente contiene il dividendo e che, al termine delle operazioni, conterrà il quoziente ed il resto.
+    \item Registro V: registro che contiene il divisore.
+    \item Sommatore RippleCarry: sommatore/sottrattore.
+    \item Contatore: necessario ad indicare il termine delle operazioni da svolgere.
+\end{itemize}
+\clearpage
+{\large \textbf{Componente Registro AQ:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici e_regAQ.png}
+    \caption{Entity Registro AQ}
+\end{figure}
+\vspace*{1cm}
+\\E' stato progettato tramite un approccio comportamentale, dato che ci sono più segnali di controllo da gestire.
+\\Implicitamente, con tale implementazione, è stato definita anche una priorità tra i segnali in ingresso, anche se ha poca rilevanza dato che, tali segnali, non saranno mai alti contemporaneamente (fa eccezione il solo segnale di reset, il quale potrebbe alzarsi in qualsiasi momento poiché proveniente dall’esterno e non dall’unità di controllo).
+\\La dimensione ti tale registro è pari a 2N, dato che sia il resto che il quoziente saranno codificati su N bit.
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici b_regAQ.png}
+    \caption{Architecture Registro AQ}
+\end{figure}
+{\large \textbf{Componente Registro V:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Eundici e_regV.png}
+    \caption{Entity Registro V}
+\end{figure}
+\\Così come il registroAQ, anche tale registro è stato implementato mediante un approccio di tipo comportamentale.
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici b_regV.png}
+    \caption{Architecture Registro V}
+\end{figure}
+{\large \textbf{Componente Contatore:}}
+\\Tale componente è analogo a quello presentato nell’esercizio 9; pertanto non verrà riportata nuovamente la sua implementazione.
+\\\\{\large \textbf{Componente Adder-Subtracter:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici e_add.png}
+    \caption{Entity Adder-Subtracter}
+\end{figure}
+\clearpage
+Le operazioni necessarie per la divisione richiedono sia operazioni di somma che di differenza; pertanto, la scelta è ricaduta su un unico componente in grado di effettuare entrambe le operazioni. È stato progettato tramite un approccio strutturale, utilizzando un Ripple carry adder ed un signal che effettua il complemento a 2 di uno degli ingressi.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici b_add.png}
+    \caption{Architecture Adder-Subtracter}
+\end{figure}
+\vspace*{2cm}
+\\{\large \textbf{Component Ripple Carry Adder:}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici e_ripple.png}
+    \caption{Entity Ripple Carry Adder}
+\end{figure}
+\clearpage
+Nonostante dal punto di vista prestazionale tale componente non sia tra i più efficienti, la scelta è ricaduta comunque su di esso data la sua struttura semplice e ritardi comunque trascurabili per operandi a 4 bit. È stato realizzato mediante interconnessione di componenti full-adder:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici b_ripple.png}
+    \caption{Architecture Ripple Carry Adder}
+\end{figure}
+\\\\{\large \textbf{Componente Full-Adder:}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Eundici e_full.png}
+    \caption{Entity Full-Adder}
+\end{figure}
+\clearpage
+E' il componente base che ci permette di effettuare la somma su 2 bit ed è stato progettato mediante approccio Dataflow:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici d_full.png}
+    \caption{Architecture Full-Adder}
+\end{figure}
+\subsection{Unità di Controllo }
+Al termine di tale panoramica sui componenti presenti nell’unità operativa, passiamo ora allo studio dell’unità di controllo.
+\\{\large \textbf{Control Unit}}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici e_cu.png}
+    \caption{Entity Control Unit}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici schema_cu.png}
+    \caption{Schema Control Unit}
+\end{figure}
+L’unità di controllo è stata realizzata come una macchina a stati:
+\begin{enumerate}
+    \item q\_start $\rightarrow$ In tale stato si attende il segnale di reset. Quando arriva, si passa in q0;
+    \item q0 $\rightarrow$ In tale stato si attende il segnale di start. Quando questo arriva si passa nello stato shift1;
+    \item Shift1$\rightarrow$ A tale stato sono associate le uscite en\_load =0 e subtract=1. Queste servono a modificare le uscite dello stato di load: en load perché deve essere alto 1 colpo di clock, subtract perché di base la prima operazione che facciamo svolgere all’adder è la sottrazione per il confronto, poi se necessario viene effettuata l’addizione per il restore.
+          Si effettua poi un controllo sul valore di stop, corrispondente all’uscita div del contatore: se questa è alta, ovvero abbiamo effettuato tutte le operazioni, non si effettua un nuovo shift ma si ritorna nello stato di start e ci si pone in attesa di un reset. Se invece il valore del div è basso, si passa allo stato di shift2 e si alza il segnale di shift, per abilitare lo scorrimento del registro AQ, e si alza il segnale di abilitazione per il conteggio del contatore;
+    \item Shift2$\rightarrow$ In tale stato semplicemente si abbassano i segnali alzati nella transizione, poiché vogliamo siano alti solo 1 colpo di clock per evitare conteggi o shift spuri. A questo punto si passa allo stato di wait;
+    \item Wait $\rightarrow$ In tale stato si attende semplicemente che il sommatore abbia effettuato il confronto. Siccome è una macchina puramente combinatoria e non ha nessun segnale di abilitazione, il sommatore darà sempre un valore in uscita; sta a noi aspettare il tempo necessario, per far si che il risultato sia relativo agli operandi immessi e non ai precedenti. Il sommatore ha il suo ritardo dovuto alla propagazione, per questo è necessario tale stato. Con operandi a 4 bit, questo stato intermedio è sufficiente a garantire che il risultato in uscita sia quello corretto; tuttavia, all’aumentare del numero di bit, potrebbe essere necessario aggiungere un nuovo stato di attesa oppure abbassare la frequenza del clock. Si passa poi allo stato di check;
+    \item Check $\rightarrow$ In tale stato si effettua il controllo sul confronto avvenuto tramite sottrazione:
+          \begin{itemize}
+              \item Se il bit più significativo è basso, ovvero il risultato è positivo, si passa allo stato di write e non è necessario il restore. Si pone, inoltre, il valore del quoziente parziale pari a 1;
+              \item Se il bit più significativo è alto, ovvero il risultato è negativo, si passa allo stato di restore.
+                    Si pone, inoltre, il valore del quoziente parziale pari a 0 e si alza il segnale di wr\_aq, al fine di scrivere il valore in uscita dal sommatore nel registro aq per effettuare il restore.
+          \end{itemize}
+    \item Restore $\rightarrow$ In tale stato si abbassa il valore di subtract, poiché è necessario fare la somma per effettuare il restore, e si abbassa inoltre il segnale di wr\_aq, per evitare sovrascritture indesiderate. Si passa poi allo stato di complete restore;
+    \item Complete Restore$\rightarrow$ Tale stato ha sostanzialmente lo stesso scopo dello stato di wait, ovvero dare il tempo all’adder di effettuare il restore e prendere il risultato corretto. Si passa poi allo stato di write;
+    \item Write $\rightarrow$ Tale stato scrive l’uscita Z dell’adder nella parte del registro AQ dedicata ad A, che ovviamente sarà diversa in base a se viene effettuato il restore o meno: nel primo caso il valore scritto coinciderà con il precedente, altrimenti sarà pari al valore della differenza calcolata. Si alza quindi il segnale di wr\_aq e si passa nello stato di load;
+    \item Load $\rightarrow$ In tale stato si abbassa il segnale di wr\_aq e si alza quello di en\_load, per caricare nella parte dedicata a Q il bit del risultato parziale. Si ritorna poi nello stato di shift1.
+\end{enumerate}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici b_cu1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Eundici b_cu2.png}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici b_cu3.png}
+    \caption{Architecture Control Unit}
+\end{figure}
+\clearpage
+\subsection{Simulazione e Sintesi}
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici sim1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Eundici sim2.png}
+    \caption{Simulazione Sistema Es. 11}
+\end{figure}
+{\large \textbf{Implementazione su fpga:}}
+\\Per l’implementazione su scheda sono stati introdotti 2 debouncer per i segnali di start e reset ed il componente display, necessario per la visualizzazione dei risultati.
+\\Il problema principale del passaggio da simulazione ad fpga, per un progetto di questo tipo, riguarda la frequenza del clock: quest’ultimo potrebbe essere troppo veloce e non dare il tempo all’adder di svolgere le operazioni e di fornire il risultato corretto. Nel nostro caso, dato che gli operandi sono su soli 4 bit, non è stato necessario introdurre un divisore di frequenza; all’aumentare però della dimensione degli operandi, potrebbe tuttavia essere necessario introdurlo.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Eundici e_sis.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Eundici s_sis1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Eundici s_sis2.png}
+    \caption{Sistema Complessivo Es. 11}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Eundici fpga.jpg}
+    \caption{FPGA Es. 11}
+\end{figure}
+\clearpage
 \section{Esercizio 12 - Interfaccia VGA}
 
 \newpage

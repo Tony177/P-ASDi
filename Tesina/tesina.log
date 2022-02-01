@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.26)  1 FEB 2022 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.26)  1 FEB 2022 20:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1362,24 +1362,201 @@ Underfull \hbox (badness 10000) in paragraph at lines 1468--1476
 
  <./Allegati/Esercizio9/sintesi9.2.jpg>] [116
 
-] [117] [118] (./tesina.lof [119] [120])
+] [117]
+Package svg Info: Last page of `./svg-inkscape/divisore_svg-tex.pdf' is 1 on input line 1509.
+ (./svg-inkscape/divisore_svg-tex.pdf_tex
+<./svg-inkscape/divisore_svg-tex.pdf, id=695, page=1, 842.14626pt x 265.6644pt>
+File: ./svg-inkscape/divisore_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/divisore_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/divisore_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 390.0pt x 123.03pt.
+) [118] [119 <./svg-inkscape/divisore_svg-tex.pdf>]
+<Allegati/Esercizio11/e_regAQ.png, id=708, 457.71pt x 284.06125pt>
+File: Allegati/Esercizio11/e_regAQ.png Graphic file (type png)
+<use Allegati/Esercizio11/e_regAQ.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_regAQ.png  used on input line 1524.
+(pdftex.def)             Requested size: 390.01216pt x 242.047pt.
+ [120
+
+ <./Allegati/Esercizio11/e_regAQ.png>]
+<Allegati/Esercizio11/b_regAQ.png, id=713, 566.115pt x 354.82562pt>
+File: Allegati/Esercizio11/b_regAQ.png Graphic file (type png)
+<use Allegati/Esercizio11/b_regAQ.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_regAQ.png  used on input line 1534.
+(pdftex.def)             Requested size: 390.00645pt x 244.44553pt.
+<Allegati/Esercizio11/e_regV.png, id=714, 365.365pt x 203.76125pt>
+File: Allegati/Esercizio11/e_regV.png Graphic file (type png)
+<use Allegati/Esercizio11/e_regV.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_regV.png  used on input line 1540.
+(pdftex.def)             Requested size: 273.01399pt x 152.2578pt.
+ [121
+
+ <./Allegati/Esercizio11/b_regAQ.png> <./Allegati/Esercizio11/e_regV.png>]
+<Allegati/Esercizio11/b_regV.png, id=721, 487.32062pt x 259.97125pt>
+File: Allegati/Esercizio11/b_regV.png Graphic file (type png)
+<use Allegati/Esercizio11/b_regV.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_regV.png  used on input line 1547.
+(pdftex.def)             Requested size: 389.9983pt x 208.05264pt.
+<Allegati/Esercizio11/e_add.png, id=722, 378.91562pt x 146.04562pt>
+File: Allegati/Esercizio11/e_add.png Graphic file (type png)
+<use Allegati/Esercizio11/e_add.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_add.png  used on input line 1555.
+(pdftex.def)             Requested size: 390.00414pt x 150.31944pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1550--1558
+
+ []
+
+[122
+
+ <./Allegati/Esercizio11/b_regV.png> <./Allegati/Esercizio11/e_add.png>]
+<Allegati/Esercizio11/b_add.png, id=728, 843.65187pt x 283.0575pt>
+File: Allegati/Esercizio11/b_add.png Graphic file (type png)
+<use Allegati/Esercizio11/b_add.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_add.png  used on input line 1562.
+(pdftex.def)             Requested size: 390.00266pt x 130.85156pt.
+<Allegati/Esercizio11/e_ripple.png, id=729, 376.40625pt x 141.02687pt>
+File: Allegati/Esercizio11/e_ripple.png Graphic file (type png)
+<use Allegati/Esercizio11/e_ripple.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_ripple.png  used on input line 1569.
+(pdftex.def)             Requested size: 390.02887pt x 146.1308pt.
+ [123
+
+ <./Allegati/Esercizio11/b_add.png> <./Allegati/Esercizio11/e_ripple.png>]
+<Allegati/Esercizio11/b_ripple.png, id=735, 722.7pt x 303.1325pt>
+File: Allegati/Esercizio11/b_ripple.png Graphic file (type png)
+<use Allegati/Esercizio11/b_ripple.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_ripple.png  used on input line 1576.
+(pdftex.def)             Requested size: 389.99855pt x 163.58272pt.
+<Allegati/Esercizio11/e_full.png, id=736, 246.42062pt x 124.465pt>
+File: Allegati/Esercizio11/e_full.png Graphic file (type png)
+<use Allegati/Esercizio11/e_full.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_full.png  used on input line 1582.
+(pdftex.def)             Requested size: 351.01389pt x 177.29419pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1573--1585
+
+ []
+
+[124
+
+ <./Allegati/Esercizio11/b_ripple.png> <./Allegati/Esercizio11/e_full.png>]
+<Allegati/Esercizio11/d_full.png, id=742, 321.2pt x 121.95563pt>
+File: Allegati/Esercizio11/d_full.png Graphic file (type png)
+<use Allegati/Esercizio11/d_full.png>
+Package pdftex.def Info: Allegati/Esercizio11/d_full.png  used on input line 1589.
+(pdftex.def)             Requested size: 390.01082pt x 148.0822pt.
+<Allegati/Esercizio11/e_cu.png, id=743, 594.72188pt x 200.75pt>
+File: Allegati/Esercizio11/e_cu.png Graphic file (type png)
+<use Allegati/Esercizio11/e_cu.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_cu.png  used on input line 1597.
+(pdftex.def)             Requested size: 389.99489pt x 131.64383pt.
+ [125
+
+ <./Allegati/Esercizio11/d_full.png> <./Allegati/Esercizio11/e_cu.png>]
+<Allegati/Esercizio11/schema_cu.png, id=749, 821.0675pt x 605.26125pt>
+File: Allegati/Esercizio11/schema_cu.png Graphic file (type png)
+<use Allegati/Esercizio11/schema_cu.png>
+Package pdftex.def Info: Allegati/Esercizio11/schema_cu.png  used on input line 1603.
+(pdftex.def)             Requested size: 389.9986pt x 287.49283pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 1608.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1608.
+ [126
+
+ <./Allegati/Esercizio11/schema_cu.png>]
+Overfull \hbox (8.58118pt too wide) in paragraph at lines 1613--1614
+\OT1/cmr/m/n/14.4 ma-tore ab-bia ef-fet-tuato il con-fronto. Sic-come ^^Re una macchina
+ []
+
+[127] [128]
+<Allegati/Esercizio11/b_cu1.png, id=762, 694.09312pt x 312.66812pt>
+File: Allegati/Esercizio11/b_cu1.png Graphic file (type png)
+<use Allegati/Esercizio11/b_cu1.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_cu1.png  used on input line 1628.
+(pdftex.def)             Requested size: 390.01337pt x 175.68932pt.
+<Allegati/Esercizio11/b_cu2.png, id=763, 377.91188pt x 413.545pt>
+File: Allegati/Esercizio11/b_cu2.png Graphic file (type png)
+<use Allegati/Esercizio11/b_cu2.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_cu2.png  used on input line 1632.
+(pdftex.def)             Requested size: 273.00168pt x 298.74286pt.
+<Allegati/Esercizio11/b_cu3.png, id=764, 490.33188pt x 310.66063pt>
+File: Allegati/Esercizio11/b_cu3.png Graphic file (type png)
+<use Allegati/Esercizio11/b_cu3.png>
+Package pdftex.def Info: Allegati/Esercizio11/b_cu3.png  used on input line 1635.
+(pdftex.def)             Requested size: 390.01399pt x 247.102pt.
+ [129
+
+ <./Allegati/Esercizio11/b_cu1.png> <./Allegati/Esercizio11/b_cu2.png>] [130 <./Allegati/Esercizio11/b_cu3.png>]
+<Allegati/Esercizio11/sim1.png, id=774, 483.8805pt x 193.815pt>
+File: Allegati/Esercizio11/sim1.png Graphic file (type png)
+<use Allegati/Esercizio11/sim1.png>
+Package pdftex.def Info: Allegati/Esercizio11/sim1.png  used on input line 1641.
+(pdftex.def)             Requested size: 389.9992pt x 156.21149pt.
+<Allegati/Esercizio11/sim2.png, id=775, 1166.3575pt x 466.74374pt>
+File: Allegati/Esercizio11/sim2.png Graphic file (type png)
+<use Allegati/Esercizio11/sim2.png>
+Package pdftex.def Info: Allegati/Esercizio11/sim2.png  used on input line 1644.
+(pdftex.def)             Requested size: 389.98915pt x 156.06277pt.
+<Allegati/Esercizio11/e_sis.png, id=776, 455.20062pt x 184.18813pt>
+File: Allegati/Esercizio11/e_sis.png Graphic file (type png)
+<use Allegati/Esercizio11/e_sis.png>
+Package pdftex.def Info: Allegati/Esercizio11/e_sis.png  used on input line 1652.
+(pdftex.def)             Requested size: 312.00502pt x 126.24678pt.
+<Allegati/Esercizio11/s_sis1.png, id=777, 450.18187pt x 380.42125pt>
+File: Allegati/Esercizio11/s_sis1.png Graphic file (type png)
+<use Allegati/Esercizio11/s_sis1.png>
+Package pdftex.def Info: Allegati/Esercizio11/s_sis1.png  used on input line 1656.
+(pdftex.def)             Requested size: 312.0134pt x 263.6635pt.
+<Allegati/Esercizio11/s_sis2.png, id=778, 665.48625pt x 416.55624pt>
+File: Allegati/Esercizio11/s_sis2.png Graphic file (type png)
+<use Allegati/Esercizio11/s_sis2.png>
+Package pdftex.def Info: Allegati/Esercizio11/s_sis2.png  used on input line 1660.
+(pdftex.def)             Requested size: 351.00008pt x 219.70592pt.
+<Allegati/Esercizio11/fpga.jpg, id=779, 982.67125pt x 884.30376pt>
+File: Allegati/Esercizio11/fpga.jpg Graphic file (type jpg)
+<use Allegati/Esercizio11/fpga.jpg>
+Package pdftex.def Info: Allegati/Esercizio11/fpga.jpg  used on input line 1665.
+(pdftex.def)             Requested size: 273.00188pt x 245.67381pt.
+
+Overfull \hbox (5.3017pt too wide) in paragraph at lines 1647--1668
+\OT1/cmr/m/n/14.4 Per l'implementazione su scheda sono stati in-trodotti 2 de-bouncer
+ []
+
+[131
+
+ <./Allegati/Esercizio11/sim1.png> <./Allegati/Esercizio11/sim2.png>] [132 <./Allegati/Esercizio11/e_sis.png> <./Allegati/Esercizio11/s_sis1.png>]
+
+LaTeX Warning: Text page 133 contains only floats.
+
+
+Overfull \vbox (1.8797pt too high) has occurred while \output is active []
+
+ [133 <./Allegati/Esercizio11/s_sis2.png> <./Allegati/Esercizio11/fpga.jpg>] [134
+
+] (./tesina.lof [135] [136] [137])
 \tf@lof=\write5
 \openout5 = `tesina.lof'.
 
- [121] (./tesina.aux) ) 
+ [138] (./tesina.aux) )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1579 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 7235 strings out of 478353
- 161195 string characters out of 5854635
- 450177 words of memory out of 5000000
- 25071 multiletter control sequences out of 15000+600000
- 408727 words of font info for 44 fonts, out of 8000000 for 9000
+ 7402 strings out of 478353
+ 166582 string characters out of 5854635
+ 448177 words of memory out of 5000000
+ 25213 multiletter control sequences out of 15000+600000
+ 409683 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,10n,92p,959b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesina.pdf (121 pages, 8821289 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
+Output written on tesina.pdf (138 pages, 10079892 bytes).
 PDF statistics:
- 751 PDF objects out of 1000 (max. 8388607)
- 365 compressed objects within 4 object streams
+ 863 PDF objects out of 1000 (max. 8388607)
+ 411 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 708 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 823 words of extra memory for PDF output out of 10000 (max. 10000000)
 

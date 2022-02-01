@@ -29,12 +29,12 @@
 \contentsline {subsubsection}{\numberline {7.2.2}Unità di Controllo A}{66}{}%
 \contentsline {subsection}{\numberline {7.3}Sistema B}{69}{}%
 \contentsline {subsubsection}{\numberline {7.3.1}Unita Operativa B}{70}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}Unità di controllo B}{74}{}%
+\contentsline {subsubsection}{\numberline {7.3.2}C B}{74}{}%
 \contentsline {subsection}{\numberline {7.4}Considerazioni Finali}{77}{}%
 \contentsline {section}{\numberline {8}Esercizio 8 - Processor}{78}{}%
 \contentsline {subsection}{\numberline {8.1}Introduzione a IJVM}{78}{}%
-\contentsline {subsection}{\numberline {8.2}Parte operativa}{81}{}%
-\contentsline {subsection}{\numberline {8.3}Parte di controllo}{84}{}%
+\contentsline {subsection}{\numberline {8.2}Unità Operativa}{81}{}%
+\contentsline {subsection}{\numberline {8.3}Unità di Controllo}{84}{}%
 \contentsline {subsection}{\numberline {8.4}Analisi delle istruzioni IADD e ISTORE}{89}{}%
 \contentsline {subsubsection}{\numberline {8.4.1}Istruzione IADD}{89}{}%
 \contentsline {subsubsection}{\numberline {8.4.2}Istruzione ISTORE}{92}{}%
@@ -44,11 +44,15 @@
 \contentsline {subsection}{\numberline {9.2}Parte 1}{100}{}%
 \contentsline {subsection}{\numberline {9.3}Parte 2}{103}{}%
 \contentsline {subsubsection}{\numberline {9.3.1}Sistema A}{103}{}%
-\contentsline {paragraph}{\numberline {9.3.1.1}Parte Operativa A}{105}{}%
-\contentsline {paragraph}{\numberline {9.3.1.2}Parte Controllo A}{106}{}%
+\contentsline {paragraph}{\numberline {9.3.1.1}Unità Operativa A}{105}{}%
+\contentsline {paragraph}{\numberline {9.3.1.2}Unità di Controllo A}{106}{}%
 \contentsline {subsubsection}{\numberline {9.3.2}Sistema B}{110}{}%
-\contentsline {paragraph}{\numberline {9.3.2.1}Parte Operativa B}{111}{}%
-\contentsline {paragraph}{\numberline {9.3.2.2}Parte Controllo B}{112}{}%
+\contentsline {paragraph}{\numberline {9.3.2.1}Unità Operativa B}{111}{}%
+\contentsline {paragraph}{\numberline {9.3.2.2}Unità di Controllo B}{112}{}%
 \contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{116}{}%
 \contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{117}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{118}{}%
+\contentsline {subsection}{\numberline {11.1}Introduzione}{117}{}%
+\contentsline {subsection}{\numberline {11.2}Unità Operativa}{119}{}%
+\contentsline {subsection}{\numberline {11.3}Unità di Controllo }{125}{}%
+\contentsline {subsection}{\numberline {11.4}Simulazione e Sintesi}{131}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{134}{}%
