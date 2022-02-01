@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{51}{}%
 \contentsline {subsection}{\numberline {6.1}Traccia}{51}{}%
 \contentsline {subsection}{\numberline {6.2}Implementazione}{51}{}%
-\contentsline {subsection}{\numberline {6.3}Simulazione e Sinstesi}{58}{}%
+\contentsline {subsection}{\numberline {6.3}Simulazione e Sintesi}{58}{}%
 \contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione Handshaking}{60}{}%
 \contentsline {subsection}{\numberline {7.1}Introduzione all'handshaking}{60}{}%
 \contentsline {subsection}{\numberline {7.2}Sistema A}{63}{}%
@@ -41,10 +41,14 @@
 \contentsline {subsubsection}{\numberline {8.4.3}Modifica istruzione IADD}{96}{}%
 \contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{97}{}%
 \contentsline {subsection}{\numberline {9.1}Introduzione all'UART}{97}{}%
-\contentsline {subsection}{\numberline {9.2}Esercizio 9.1}{100}{}%
-\contentsline {subsection}{\numberline {9.3}Esercizio 9.2}{103}{}%
+\contentsline {subsection}{\numberline {9.2}Parte 1}{100}{}%
+\contentsline {subsection}{\numberline {9.3}Parte 2}{103}{}%
 \contentsline {subsubsection}{\numberline {9.3.1}Sistema A}{103}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Sistema B}{103}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{104}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{105}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{106}{}%
+\contentsline {paragraph}{\numberline {9.3.1.1}Parte Operativa A}{105}{}%
+\contentsline {paragraph}{\numberline {9.3.1.2}Parte Controllo A}{106}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Sistema B}{110}{}%
+\contentsline {paragraph}{\numberline {9.3.2.1}Parte Operativa B}{111}{}%
+\contentsline {paragraph}{\numberline {9.3.2.2}Parte Controllo B}{112}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{116}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{117}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{118}{}%

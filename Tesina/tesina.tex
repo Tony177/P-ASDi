@@ -5,6 +5,18 @@
 
 \renewcommand{\contentsname}{Indice}
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\large\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+            {-3.25ex\@plus -1ex \@minus -.2ex}%
+            {1.5ex \@plus .2ex}%
+            {\normalfont\large\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
 \setlength{\parindent}{0pt}
 
 \def \Euno {Allegati/Esercizio1/}
@@ -708,7 +720,7 @@ Lista di stati:
     \item Stato q\_ready: si confronta il valore di count\_valori con 0 per poter stabilire se è la prima iterazione, in questo caso si aspetta che la macchina elabora i dati in ingresso per poi passare alla visualizzazione effettiva, altrimenti si alza il segnale di lettura della memoria. Si incrementa, poi, il valore di count\_valori e si passa allo stato q\_ready2.
     \item Stato q\_ready2: si abbassa il segnale di lettura della memoria e si mostrano i risultati, attendendo un numero di impulsi di clock pari ad N tramite la variabile count, prima di procedere alla visualizzazione del risultato successivo. Si effettua, poi, un controllo per stabilire se il valore visualizzato è l’ultimo o meno tramite count\_valori: se è così, allora si passa allo stato di q0;  altrimenti si passa in q\_ready.
 \end{itemize}
-\subsection{Simulazione e Sinstesi}
+\subsection{Simulazione e Sintesi}
 Simulazione:
 \begin{figure}[ht!]
     \centering
@@ -753,7 +765,7 @@ Vediamo ora come i 2 sistemi implementano tale protocollo.
 \clearpage
 %{\large \textbf{SistemaA:}}
 \subsection{Sistema A}
-Come precedentemente detto, il sistemaA è stato definito tramite un approccio strutturale, utilizzando i seguenti componenti:
+Come precedentemente detto, il sistema A è stato definito tramite un approccio strutturale, utilizzando i seguenti componenti:
 \begin{itemize}
     \item Una memoria ROM dove vengono salvati i valori X(i);
     \item Un'interfaccia per effettuare l'handshaking e la trasmissione;
@@ -813,8 +825,8 @@ L’interfaccia rappresenta la parte di controllo mentre il contatore e la rom c
     \item q1 $\rightarrow$ viene abbassato il segnale di read, dato che deve durare solo 1 colpo di clock, al fine di evitare letture spurie in memoria. Si passa poi nello stato q2.
           Anche se può sembrare superfluo, lo stato q1 è necessario, per dare il tempo al componente memoria di porre in uscita il dato i-esimo.
     \item q2 $\rightarrow$ siamo ora sicuri che il dato in uscita dalla memoria è quello corretto: possiamo dunque riporlo sul canale ed alzare il segnale r. Si passa ora nello stato q3.
-    \item q3 $\rightarrow$ tale stato è sostanzialmente di attesa: finchè non si alza il segnale di ris in ingresso, si permane in q3. Quando invece tale segnale viene rilevato come alto, i dati sono stati acquisiti dal sistemaB e si può passare dunque allo stato q4.
-    \item q4 $\rightarrow$ quando ci si ritrova in questo stato, si è sicuri che il sistemaB ha ricevuto i dati inviati: si abbassa dunque il segnale di r e si passa allo stato q5.
+    \item q3 $\rightarrow$ tale stato è sostanzialmente di attesa: finchè non si alza il segnale di ris in ingresso, si permane in q3. Quando invece tale segnale viene rilevato come alto, i dati sono stati acquisiti dal sistema B e si può passare dunque allo stato q4.
+    \item q4 $\rightarrow$ quando ci si ritrova in questo stato, si è sicuri che il sistema B ha ricevuto i dati inviati: si abbassa dunque il segnale di r e si passa allo stato q5.
     \item q5 $\rightarrow$ tale stato è sostanzialmente analogo a q0, solo che viene utilizzato per le trasmissioni successive alla prima. Si valuta quindi il segnale di div e, se alto, si procede verso q0, altrimenti si alza il segnale di read e si procede verso q6. È bene notare che, tali controlli sul segnale di div, potevano essere fatti anche in q4; tuttavia, dato che il contatore si incrementa sul segnale di ris in ingresso al sistema, si è preferito aggiungere uno stato per essere sicuri di vedere tale segnale stabile.
     \item q6 $\rightarrow$ se ci ritroviamo in questo stato, vuol dire che si deve procedere ad una trasmissione successiva alla prima. Per questo motivo si controlla il segnale di ris: se questo è basso, allora la precedente elaborazione è terminata e si può procedere ad inviare i nuovi dati, passando allo stato q2, mentre, se alto, si permane in q6 in attesa che si abbassi.
 \end{enumerate}
@@ -900,7 +912,7 @@ L’interfaccia è stata definita come una macchina a 5 stati, dove:
     \item q1 $\rightarrow$ In tale stato l’interfaccia permane finché non vede una variazione da 0 a 1 del segnale ab\_interfaccia, il quale viene fatto variare dalla control unit una volta terminata l’elaborazione dei dati ricevuti. Quando viene rilevata la variazione su tale segnale, l’interfaccia abbassa il segnale ab\_control, disabilitando così la control unit fino alla ricezione di nuovi dati. Passa infine nello stato q2.
     \item q2 $\rightarrow$ La prima operazione che si effettua in questo stato è la valutazione del segnale r, verificando se questo è ancora alto o meno. Tale operazione potrebbe risultare inutile, dato che il sistema A abbassa tale segnale nel momento in cui vede il segnale di ris alzarsi, ma così non è. Bisogna ricordare infatti che il sistema B lavora in genere con un clock a frequenza maggiore (o semplicemente con fase diversa) e potrebbe quindi svolgere le operazioni in maniera molto rapida e non dare il tempo al sistema A di abbassare tale segnale. Se non venisse effettuato tale controllo, negli stati successivi si potrebbe interpretare il segnale di r pari ad 1 come indice di nuova trasmissione, portando alla rielaborazione di dati già processati.
           \\L’interfaccia pertanto rimane in tale stato finché non rileva una variazione da 1 a 0 del segnale di r; quando tale segnale varia, abbassa il segnale di ris e passa nello stato q3.
-          \\Valutare il segnale r prima di abbassare quello di ris risolve inoltre un altro problema: dato che il segnale di ris viene valutato dal sistemaA, così facendo, si fa in modo che duri almeno 1 colpo di clock di A, in modo che quest’ultimo possa rilevarne le variazioni, indipendentemente dal numero di operazioni effettuate dal sistema B.
+          \\Valutare il segnale r prima di abbassare quello di ris risolve inoltre un altro problema: dato che il segnale di ris viene valutato dal sistema A, così facendo, si fa in modo che duri almeno 1 colpo di clock di A, in modo che quest’ultimo possa rilevarne le variazioni, indipendentemente dal numero di operazioni effettuate dal sistema B.
     \item q3 $\rightarrow$ Tale stato è il responsabile del controllo dei dati rimanenti da elaborare. Se il segnale di div in uscita dal contatore è alto, allora vuol dire che il dato appena elaborato era l’ultimo e l’interfaccia torna dunque nello stato q0. In caso contrario si procede verso lo stato q4.
     \item q4 $\rightarrow$ Questo stato è sostanzialmente l’analogo dello stato q0, ma quando si sono già ricevuti dei dati.  È necessario introdurre questo tipo di stato per effettuare un controllo sul numero di elaborazioni effettuate per determinare la terminazione di esse.
 \end{enumerate}
@@ -1316,7 +1328,7 @@ Uscite:
 \end{itemize}
 Entrambe le unità, inoltre, presentano un ingresso per il clock ed uno per il segnale di reset.
 \clearpage
-\subsection{Esercizio 9.1}
+\subsection{Parte 1}
 Tale esercizio richiedeva una trasmissione di 1 carattere da 8 bit tra 2 sistemi A e B, utilizzando il componente standard UART fornito dalla Digilent.
 \\Si sono implementati 2 componenti, A e B, progettati tramite approccio strutturale ma composti unicamente dal componente UART, dato che la stringa da trasferire viene passata dall’esterno, così come i segnali di write e reset.
 \begin{figure}[ht]
@@ -1338,28 +1350,130 @@ Il sistema complessivo comprende inoltre 2 debouncer, utilizzati per ripulire i 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove sintesi9.1.jpg}
-    \caption{Sintesi su FPGA}
+    \caption{Sintesi su FPGA Es.9.1}
 \end{figure}
 \clearpage
-\subsection{Esercizio 9.2}
-L’esercizio è stato impostato sulla falsa riga dell’esercizio 7, dato che la richiesta di leggere un valore in memoria e trasferirlo era analoga. 
-\\La differenza sta nel fatto che il protocollo di trasmissione non è parallelo, ma seriale ed è implementato dall’UART. Cosi come fatto però nell’esercizio 7, viene implementato anche un protocollo di handshaking per la comunicazione tra i due sistemi, al fine di evitare errori di overrun dei dati. 
+\subsection{Parte 2}
+L’esercizio è stato impostato sulla falsa riga dell’esercizio 7, dato che la richiesta di leggere un valore in memoria e trasferirlo era analoga.
+\\La differenza sta nel fatto che il protocollo di trasmissione non è parallelo, ma seriale ed è implementato dall’UART. Cosi come fatto però nell’esercizio 7, viene implementato anche un protocollo di handshaking per la comunicazione tra i due sistemi, al fine di evitare errori di overrun dei dati.
 \subsubsection{Sistema A}
 Il sistema A è stato realizzato attraverso un approccio strutturale partendo dall’entita sviluppata nell’esercizio 9.1, e comprende:
 \begin{itemize}
-    \item Control unit: ha il compito di effettuare l’handshaking con il sistema B, inviare il segnale di read alla memoria e contemporaneamente quello di write all’UART, per definire la trasmissione. La control unit ha inoltre il compito di effettuare una ritrasmissione nel caso in cui il sistemaB notifichi un errore in ricezione.
+    \item Control unit: ha il compito di effettuare l’handshaking con il sistema B, inviare il segnale di read alla memoria e contemporaneamente quello di write all’UART, per definire la trasmissione. La control unit ha inoltre il compito di effettuare una ritrasmissione nel caso in cui il sistema B notifichi un errore in ricezione.
     \item Contatore: per scandire il termine della trasmissione ed i valori da trasmettere.
     \item ROM: contenente i valori da trasferire.
     \item Delay block: per applicare un delay ai segnali quando necessario.
     \item UART: responsabile della trasmissione dei dati sul canale.
 \end{itemize}
-%/\begin{figure}[ht]
-%/    \centering
-%/    \includesvg[width=\textwidth,height=\textheight]{\Enove sistemaA.svg}
-%/   \caption{Schema Sistema A Es.9.1}
-%/\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includesvg[width=\textwidth,height=\textheight]{\Enove sistemaA.svg}
+    \caption{Schema Sistema A Es.9.2}
+\end{figure}
+\clearpage
+\paragraph{Parte Operativa A}
+{\large \textbf{Componente Contatore:}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_counter.png}
+    \caption{Entity Contatore}
+\end{figure}
+\\E' stato realizzato tramite approccio comportamentale e l’incremento è definito dal segnale di ab\_counter:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_counter.png}
+    \caption{Architecture Contatore}
+\end{figure}
+\\{\large \textbf{Componente ROM:}}
+\\Tale componente è analogo a quello utilizzato nei progetti precedenti e pertanto non viene riportata nuovamente la sua implementazione.
+\clearpage
+\paragraph{Parte Controllo A}
+{\large \textbf{Control Unit A:}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_controlunita.png}
+    \caption{Entity Control Unit A Es.9.2}
+\end{figure}
+\\La control unit è definita come una macchina a stati, dove alcune uscite sono associate direttamente agli stati, mentre altre sono associate alla transizione tra stati in base agli ingressi:
+\begin{enumerate}
+    \item q\_start $\rightarrow$ tale stato è quello in cui si trova la macchina prima di iniziare la trasmissione. La macchina permane in tale stato finché non vede alzarsi il segnale di reset (essendo uscita di un debouncer durerà solo 1 colpo di clock) che viene interpretato come segnale per partire con la trasmissione. A questo punto la macchina passa nello stato q\_trasmett.
+    \item q\_trasmett $\rightarrow$ in questo stato la control unit verifica che il segnale di ris in uscita dal sistema B sia basso, ovvero che il sistema non stia elaborando un dato precedentemente inviato. Nel caso in cui il dato trasmesso sia il primo, tale segnale sarà sempre basso; questo controllo è necessario per i dati successivi al primo. Se il segnale di ris viene visto basso, allora il sistema alza il segnale di r e passa nello stato q0, altrimenti permane nello stato q\_trasmett.
+    \item q0 $\rightarrow$ tale stato è uno stato di transizione per completare l’handshaking, prima di iniziare la trasmissione vera e propria del dato. Alzando il segnale di r, il sistema A ha espresso la sua intenzione nel trasmettere dei dati, avendo visto che il sistema B è disponibile a ricevere ed elaborarli, ma non ha ancora saputo da esso se effettivamente è pronto a ricevere tali dati o è occupato in operazioni con priorità maggiore. Pertanto, il sistema A rimane nello stato q0 finché non vede alzarsi il segnale di ris da parte del sistema B, sintomo che quest’ultimo è pronto per elaborare i dati trasmessi. Quando ciò accade, si passa nello stato q1 e si abbassa il segnale di r.
+    \item q1 $\rightarrow$ arrivati in questo stato vuol dire che può iniziare la vera e propria trasmissione dei dati. Per questo motivo, a tale stato è associata l’uscita write = ‘1’, che viene passata alla memoria ROM come un segnale di read per emettere il dato, e viene inoltre passata con delay di un periodo di clock all’UART, per segnalare la possibilità di trasmettere i dati in ingresso. Il motivo del colpo di delay è dato dal tempo che la memoria impiega per leggere il dato e porlo in uscita. Si passa a questo punto nello stato q2.
+    \item q2 $\rightarrow$ allo stato q2 è associata l’uscita write =’0’, dato che tale segnale deve durare 1 colpo di clock per evitare ulteriori letture non richieste alla memoria. Il fatto che il segnale di write però si abbassi, non vuol dire che la trasmissione sia effettivamente iniziata. Per questo motivo si effettua un controllo su TBE, ovvero il segnale in uscita dall’uart che, quando è 0 indica che il canale è occupato e dunque la trasmissione è iniziata, altrimenti inidica un canale ancora libero.
+          A questo punto, quando il valore di TBE è diventato 0, si passa nello stato q3, altrimenti si permane in q2.
+    \item q3 $\rightarrow$ è lo stato in cui avviene il controllo dell’errore. Finchè ris è alto, ovvero il sistema B sta ancora elaborando i dati, si permane nello stato q3, altrimenti si valuta il segnale di error in entrata dal sistema B. Se il segnale di errore è pari ad 1, non si incrementa ab\_counter e dunque verrà ritrasmesso lo stesso dato, altrimenti il contatore viene incrementato e si procede alla trasmissione del dato successivo se ce ne sono di nuovi. Indistintamente si passa poi nello stato q4.
+    \item q4 $\rightarrow$ in tale stato semplicemente si valuta il valore del div del contatore. Se questo è pari a 1, si ritorna nello stato di start e si attende un nuovo segnale di reset per trasmettere nuovi dati, altrimenti si ripassa nello stato q0 e si attende che il segnale di ris da parte del sistema B si abbassi per procedere ad un nuovo handshaking ed una nuova trasmissione.
+          Si noti inoltre che a tale stato è associata l’uscita ab\_counter=’0’. Il segnale di ab\_counter serve a dare il segnale di conteggio al contatore e dunque trasmettere il dato seguente, cosa che avviene se il dato è stato ricevuto correttamente dal sistema B e viene abbassato poiché deve durare un colpo di clock per evitare conteggi spuri.
+\end{enumerate}
+\begin{figure}[ht!]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_controlunita1.png}
+\end{figure}
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.55\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_controlunita2.png}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_controlunita3.png}
+    \caption{Architecture Control Unit A Es.9.2}
+\end{figure}
+\clearpage
+{\large \textbf{Considerazioni finali:}}
+\\La control unit ha come particolarità quella di lavorare sul fronte di discesa del clock, ovvero in opposizione rispetto a tutti i componenti a cui fornisce dei segnali, in modo che questi li vedano quando sono assestati e non durante la fase di transizione.
+\\Il sistema di rilevamento dell’errore e ritrasmissione, implementata tramite il segnale di error, potrebbe andare in loop infinito se gli errori persistono e non vengono risolti con una semplice ritrasmissione. Per evitare ciò andrebbe elaborato un sistema di correzione oltre che uno di ritrasmissione.
 \subsubsection{Sistema B}
-\newpage
+Il sistema B è stato realizzato attraverso un approccio strutturale partendo dall’entita sviluppata nell’esercizio 9.1, e comprende:
+\begin{itemize}
+    \item Control Unit: per coordinare i dispositivi ed effettuare l’handshaking con il sistema A;
+    \item UART: responsabile della ricezione dei dati da un canale seriale e del loro posizionamento in parallelo in uscita;
+    \item Contatore: per fornire l’indice della prima cella di memoria disponibile per salvare il dato ricevuto;
+    \item Memoria: per contenere i dati ricevuti.
+\end{itemize}
+Siccome i dati salvati non vengono riportati in uscita, è stato introdotto un debouncer interno per il segnale di read dato dall’esterno tramite un bottone, in modo che ad ogni segnale si scorra di una posizione la memoria e viene riportato in uscita il valore corrispondente.
+\clearpage
+\begin{figure}[ht!]
+    \centering
+    \includesvg[width=1.2\textwidth,height=\textheight]{\Enove sistemaB.svg}
+    \caption{Schema Sistema B Es.9.2}
+\end{figure}
+\paragraph{Parte Operativa B}
+Il componente contatore è analogo a quello utilizzato per il sistema A, mentre il componente ROM è analogo a quello presentato nei progetti precedenti; pertanto non verrà riproposta la loro implementazione.
+\clearpage
+\paragraph{Parte Controllo B}
+{\large \textbf{Componente Control Unit B:}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_controlunitb.png}
+    \caption{Entity Control Unit B Es.9.2}
+\end{figure}
+\\La Control Unit è stata realizzata come una macchina a stati, dove alcune uscite sono associate direttamente agli stati, altre alle transizioni in funzione degli ingressi:
+\begin{enumerate}
+    \item q\_start $\rightarrow$ tale stato è quello in cui permane la macchina prima di rilevare un valore di r alto da parte del sistemaA, segno di richiesta di iniziare una nuova trasmissione. Quando viene rilevato tale segnale, si passa nello stato q0 e si pone alto il segnale di ris.
+    \item q0 $\rightarrow$ si permane in questo stato finchè la ricezione dei dati da parte dell’UART non è terminata e quest’ultimi sono presenti nel buffer di uscita. Per capire quando effettivamente ciò avviene, si sfrutta il segnale RDA in uscita dall’UART il quale, quando è pari a 1, indica la presenza dei dati nel buffer. Quando tale segnale viene visto alto quindi, si alza il segnale di RD, che viene dato come strobe per la lettura, e si effettua un controllo sui valori di PE ed FE in uscita dall’UART. Se uno dei due è alto vuol dire che c’è stato un errore nella trasmissione e dunque viene alzato il segnale di error, ma non quello di write, ovvero viene notificato l’errore ad A ed il valore letto non viene salvato in memoria.
+          Nel caso di ricezione corretta, invece, viene alzato il segnale di write ed abbassato il segnale di error, il quale che poteva essere alto nella trasmissione precedente. Non abbiamo necessità che il segnale di error duri 1 colpo di clock, ma solo che il suo valore venga aggiornato prima che si abbassi il segnale di ris, poiché è solo in quel momento che tale valore verrà letto dal sistema A.
+          Da qui, si passa nello stato q1.
+    \item q1 $\rightarrow$  a tale stato è associata l’uscita write =’0’, poiché si vuole che tale segnale rimanga alto solo un colpo di clock per evitare conteggi spuri, dato che tale segnale viene dato come abilitazione al contatore. Viene inoltre abbassato il segnale di RD, il quale sostanzialmente comunica all’UART che il dato posto in uscita è stato letto. Così come definito dal protocollo di handshaking implementato nell’esercizio 7 e riutilizzato per questo progetto, si attende che il segnale di r sia basso prima di abbassare il segnale di ris e passare nello stato q\_start.
+\end{enumerate}
+\clearpage
+\begin{figure}[ht!]
+    \includegraphics[width=0.65\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_controlunitb1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=0.65\textwidth,height=\textheight,keepaspectratio]{\Enove architecture_controlunitb2.png}
+    \caption{Architecture Control Unit B Es.9.2}
+\end{figure}
+Così come fatto per la Control Unit A, anche questa Control Unit è impostata sul fronte di discesa del clock, per far si che le unità controllate vedano i segnali stabili e non sulle trasizioni.
+\clearpage
+{\large \textbf{Sintesi su FPGA}}
+\\\\A causa dell’alto tempo di simulazione e del numero di segnali da visualizzare, si è ritenuto poco opportuno riportare esempi di simulazione (la quale può essere mandata in esecuzione tramite il file del progetto) e si presenterà unicamente il funzionamento sull’fpga.
+\\\\l led V11 (sulla sinistra) corrisponde al segnale di div del contatore del sistema A e rappresenta la fine della trasmissione.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove sintesi9.2.jpg}
+    \caption{Sintesi su FPGA Es. 9.2}
+\end{figure}
+\clearpage
 \section{Esercizio 10 - Switch Multistadio}
 \newpage
 \section{Esercizio 11 - Divisore Restoring}
