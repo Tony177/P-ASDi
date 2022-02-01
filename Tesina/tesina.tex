@@ -1254,6 +1254,111 @@ E’ stato modificato il microprogramma relativo all’istruzione IADD in questo
 
 \clearpage
 \section{Esercizio 9 - Interfaccia UART}
+\subsection{Introduzione all'UART}
+L’UART (Universal Asynchronous Receiver-Transmitter) è un dispositivo hardware che converte flussi di bit di dati da un formato parallelo ad uno seriale e viceversa e, generalmente, è parte di un circuito integrato.
+\\Il componente findamentale di tale dispositivo è uno shift register, il quale ci permette di convertire frame paralleli in seriali e viceversa.
+\\Il protocollo di trasmissione implementato dall’UART è di tipo asincrono ed il frame trasmesso è composto da:
+\begin{itemize}
+    \item 1 bit di start
+    \item 8 bit su cui è espresso il carattere
+    \item 1 bit di controllo
+    \item 1 o più bit di stop
+\end{itemize}
+Implementando un protocollo di tipo asincrono, a differenza di uno sincrono, manca la serie di byte iniziali che definisce proprio il sincronismo tra le 2 entità che vogliono comunicare.
+\\Quando non ci sono dati da trasmettere, la linea dati si definisce “a riposo” ed è impostata sul livello logico alto; appena invece ci sono nuovi dati da trasmettere, il valore logico passa da 1 a 0, per poi trasmettere effettivamente il dato.
+\\La trasmissione parte, dunque, con un valore logico basso e, di conseguenza, termina con valore logico alto: ciò implica che ci saranno almeno 2 variazioni del segnale durante la trasmissione.
+\\Al fine di interpretare i dati trasmessi correttamente, il dispositivo in ricezione deve capire, in un intervallo di tempo, quanti bit ha ricevuto; per tale motivo, i 2 dispositivi devono accordarsi su alcuni parametri della trasmissione:
+\begin{itemize}
+    \item Velocità dei bit (baud rate)
+    \item Numero di bit per carattere
+    \item Numero di bit di stop
+    \item Numero di bit di parità
+\end{itemize}
+Generalmente, il numero di bit totali trasmessi è pari a 10, con 8 bit per carattere, un bit di start, uno di stop e nessun bit di parità.
+\\Il bit di parità è un metodo di rilevamento, ma non di correzione, di un errore avvenuto su un numero dispari di bit, che prevede l’aggiunta di un bit al termine del carattere, in modo che il numero di bit alti all’interno del dato sia pari.
+\\Tale errore, noto come parity error, non è però l’unico che potrebbe verificarsi; ci sono infatti altri 2 tipi di errore da tenere in considerazione:
+\begin{itemize}
+    \item Overrun error: si verifica quando il destinatario sta ancora elaborando il dato precedente e ne riceve uno nuovo; tale errore porta alla perdita del dato.
+    \item Farming error: dopo la rilevazione di tutti i bit relativi al carattere, il dispositivo in ricezione si aspetta un bit di stop; se questo non arriva, vuol dire che c’è stato un errore di campionamento oppure un errore durante la trasmissione.
+\end{itemize}
+Per evidenziare la presenza di errori, tuttavia, il dispositivo in ricezione deve essere sicuro di campionare correttamente i valori ricevuti; a questo scopo, la parte in ricezione dell’uart lavora con un clock interno a frequenza molto più alta (in genere 16 volte), in modo da campionare il valore trasmesso “al centro”, distante da fasi transitorie.
+\\Le 2 frequenze di clock presenti vengono implementate mediante degli stati di wait nelle FSM e gestiti tramite i valori di baud rate e baud divide presenti nell’implementazione.
+\\Un ulteriore modo per valutare se il bit ricevuto è pari a 0 o 1 è quello di campionare il dato N volte in ingresso tramite il clock e contare il numero di volte in cui leggo 0 e 1: il valore che leggo più volte sarà quello che salvo.
+\\Un’implementazione di questo tipo è però più costosa della precedente e raramente viene implementata; in genere si preferisce ritrasmettere il dato piuttosto che effettuare tali controlli.
+\\Al termine di questa breve introduzione sul funzionamento dell’UART, vediamo ora ingressi ed uscite relative alla parte di ricezione e di trasmissione.
+\clearpage
+{\large \textbf{Trasmissione}}
+\\\\Ingressi:
+\begin{itemize}
+    \item DBIN: dato da trasmettere, formato parallelo;
+    \item WR: segnale di write che dà il via alle operazioni per la trasmissione del dato sul canale.
+\end{itemize}
+Uscite:
+\begin{itemize}
+    \item TXD: dati trasmessi in formato seriale;
+    \item TBE: indica lo stato del buffer di trasmissione: quando è vuoto è pari a 1, 0 altrimenti.
+\end{itemize}
+\vspace{0.5cm}
+{\large \textbf{Ricezione}}
+\\\\Ingressi:
+\begin{itemize}
+    \item RXD: dati in formato seriale in ingresso;
+    \item RD: segnale di strobe, ovvero di confermata lettura del dato ricevuto;
+    \item RDA: indica la disponibilità di nuovi dati.
+\end{itemize}
+Uscite:
+\begin{itemize}
+    \item DBOUT: dato ricevuto, formato parallelo;
+    \item RDA: indica la disponibilità di nuovi dati in ingresso;
+    \item PE: parity error;
+    \item OE: Overrun error;
+    \item FE: Farming error.
+\end{itemize}
+Entrambe le unità, inoltre, presentano un ingresso per il clock ed uno per il segnale di reset.
+\clearpage
+\subsection{Esercizio 9.1}
+Tale esercizio richiedeva una trasmissione di 1 carattere da 8 bit tra 2 sistemi A e B, utilizzando il componente standard UART fornito dalla Digilent.
+\\Si sono implementati 2 componenti, A e B, progettati tramite approccio strutturale ma composti unicamente dal componente UART, dato che la stringa da trasferire viene passata dall’esterno, così come i segnali di write e reset.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_sistemaA.png}
+    \caption{Codice Sistema A}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove entity_sistemaB.png}
+    \caption{Codice Sistema B}
+\end{figure}
+\newpage
+Il sistema complessivo comprende inoltre 2 debouncer, utilizzati per ripulire i bottoni per i segnali di write e reset.
+\\Si è deciso di realizzare 2 entità e di non utilizzare direttamente i componenti UART per poterle riutilizzare nell’esercizio 9.2.
+\clearpage
+{\large \textbf{Sintesi su FPGA}}
+\\\\Per la sintesi su board, così come richiesto dalla traccia, sono stati utilizzati gli switch per definire la stringa di input al sistema A e dei led per visualizzare la stringa riconosciuta dal sistema B.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Enove sintesi9.1.jpg}
+    \caption{Sintesi su FPGA}
+\end{figure}
+\clearpage
+\subsection{Esercizio 9.2}
+L’esercizio è stato impostato sulla falsa riga dell’esercizio 7, dato che la richiesta di leggere un valore in memoria e trasferirlo era analoga. 
+\\La differenza sta nel fatto che il protocollo di trasmissione non è parallelo, ma seriale ed è implementato dall’UART. Cosi come fatto però nell’esercizio 7, viene implementato anche un protocollo di handshaking per la comunicazione tra i due sistemi, al fine di evitare errori di overrun dei dati. 
+\subsubsection{Sistema A}
+Il sistema A è stato realizzato attraverso un approccio strutturale partendo dall’entita sviluppata nell’esercizio 9.1, e comprende:
+\begin{itemize}
+    \item Control unit: ha il compito di effettuare l’handshaking con il sistema B, inviare il segnale di read alla memoria e contemporaneamente quello di write all’UART, per definire la trasmissione. La control unit ha inoltre il compito di effettuare una ritrasmissione nel caso in cui il sistemaB notifichi un errore in ricezione.
+    \item Contatore: per scandire il termine della trasmissione ed i valori da trasmettere.
+    \item ROM: contenente i valori da trasferire.
+    \item Delay block: per applicare un delay ai segnali quando necessario.
+    \item UART: responsabile della trasmissione dei dati sul canale.
+\end{itemize}
+%/\begin{figure}[ht]
+%/    \centering
+%/    \includesvg[width=\textwidth,height=\textheight]{\Enove sistemaA.svg}
+%/   \caption{Schema Sistema A Es.9.1}
+%/\end{figure}
+\subsubsection{Sistema B}
 \newpage
 \section{Esercizio 10 - Switch Multistadio}
 \newpage

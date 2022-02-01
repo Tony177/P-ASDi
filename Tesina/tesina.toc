@@ -40,6 +40,11 @@
 \contentsline {subsubsection}{\numberline {8.4.2}Istruzione ISTORE}{92}{}%
 \contentsline {subsubsection}{\numberline {8.4.3}Modifica istruzione IADD}{96}{}%
 \contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{97}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{98}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{99}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{100}{}%
+\contentsline {subsection}{\numberline {9.1}Introduzione all'UART}{97}{}%
+\contentsline {subsection}{\numberline {9.2}Esercizio 9.1}{100}{}%
+\contentsline {subsection}{\numberline {9.3}Esercizio 9.2}{103}{}%
+\contentsline {subsubsection}{\numberline {9.3.1}Sistema A}{103}{}%
+\contentsline {subsubsection}{\numberline {9.3.2}Sistema B}{103}{}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{104}{}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{105}{}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{106}{}%
