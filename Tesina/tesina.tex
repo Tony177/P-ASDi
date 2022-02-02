@@ -1793,7 +1793,154 @@ L’unità di controllo è stata realizzata come una macchina a stati:
 \end{figure}
 \clearpage
 \section{Esercizio 12 - Interfaccia VGA}
-
+Progettare, implementare in VHDL e testare mediante simulazione (e, opzionalmente, mediante sintesi su board), un sistema le cui specifiche siano definite dallo studente e rientrino in una delle seguenti tipologie:
+\begin{enumerate}[label=\alph*.]
+    \item Modifica di esercizi già proposti (processore, rete di interconnessione o interfaccia seriale) mediante aggiunta/aggiornamento di funzionalità.
+    \begin{itemize}
+        \item Esempio: si potrebbe pensare di modificare l’interfaccia seriale aggiungendo segnali specifici per l’handshaking fra due entità.
+    \end{itemize}
+    \item Progetto di sistemi che assolvono a specifici compiti noti
+    \begin{itemize}
+        \item Esempio: si potrebbe pensare di implementare una specifica macchina aritmetica non trattata a lezione, una funzione crittografica, una rete neurale, ecc.
+    \end{itemize}
+    \item Progetto di sistemi che integrano opportunamente componenti visti a lezione (contatori, registri, macchine aritmetiche, ecc.).
+    \begin{itemize}
+        \item A titolo di esempio, è possibile fare riferimento ai seguenti due esercizi:
+        \begin{enumerate}[label=\roman{*}., ref=(\roman{*})]
+            \item Progettare un sommatore di byte seriale (le cifre degli addendi devono essere fornite serialmente a coppie alla macchina) a partire da un sommatore di bit. Il sommatore deve terminare le sue operazioni appena il valore temporaneo della somma diventa maggiore di un valore M fornito in input.
+            \item Si consideri un nodo A che contiene una memoria ROM di N (N$\geq$4) locazioni da 8 bit ciascuna. Progettare un sistema in grado di trasmettere mediante handshaking completo tutti i valori strettamente positivi contenuti nella memoria di A ad un nodo B. Il nodo B, ricevuti i valori da A, li trasmetterà ad un nodo C mediante una comunicazione parallela con handshaking.
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}
+\subsection{Scelta progettuale}
+E’ stato scelto di progettare ed implementare in VHDL un visualizzatore di immagini su schermo tramite periferica VGA ed il relativo protocollo di comunicazione. A partire dalla bitmap di un’immagine a colori, il sistema riesce a visualizzare l’immagine sullo schermo ed a muoverla all’interno dello spazio del display, andando a gestire le collisioni con i bordi. L’immagine è già presente in una memoria interna del sistema.
+\\Si utilizza come schermo di riferimento:
+\begin{itemize}
+    \item risoluzione in pixel 640x480;
+    \item frequenza di aggiornamento dei frame 60Hz.
+\end{itemize}
+\subsection{Realizzazione automatica della memoria}
+A partire dall’immagine da mostrare si utilizza lo script Python “scriptcreazioneimmagine.py” per:
+\begin{itemize}
+    \item convertire l’immagine rispetto al protocollo VGA a 12 bit, quindi 4 bit per ogni colore RGB;
+    \item adattare l’immagine alla risoluzione in pixel dello schermo;
+    \item generare automaticamente un file di testo che realizza la memoria interna del sistema.
+\end{itemize}
+E’ stato opportuno effettuare un ridimensionamento dell’immagine alle dimensioni 200x200 pixel, preservando le caratteristiche di essa, in modo da evitare il sovraccaricamento  del processo di sintesi ed implementazione su FPGA della memoria interna.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Edodici immagine.jpg}
+    \caption{Immagine iniziale}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Edodici immagine_compressa.jpg}
+    \caption{Immagine elaborata}
+\end{figure}
+\subsection{Protocollo VGA}
+Il protocollo VGA (Video Graphics Array) è uno standard di comunicazione con display per computer, prevede l’utilizzo di connettori DE-15 o anche detti VGA ed è uno standard analogico. Questo standard fornisce la risoluzione di 640x480 a 16 colori o di 320x400 a 256 colori. Ad oggi è stato esteso anche a risoluzioni più alte.
+\\Il connettore VGA o DE-15 presenta 3 righe da 5 pin:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edodici vga_pinout.jpg}
+    \caption{PIN}
+\end{figure}
+\\Ci si focalizza sui segnali in ingresso di Red, Green e Blue, i quali indicano rispettivamente le intensità dei colori in modo analogico (in base alla differenza di potenziale trasmessa) ed Horizontal sync e Vertical sync, i quali trasmettono un riferimento posizionale per mostrare il pixel.
+\\Durante la visualizzazione lo schermo viene scansionato da sinistra verso destra e dall’alto verso il basso, procedendo riga per riga, andando a proiettare su schermo un fascio di luce di intensità e colore in base al segnale RGB analogico proveniente dal controller VGA. La deflessione del fascio di luce permette di far variare la posizione del pixel da mostrare e tale fenomeno viene controllato tramite i segnali di Sync. Il monitor VGA, a partire dai segnali di HSync e VSync, genera due forme d’onda (delle rampe con una certa frequenza) per la corrente che attraversa le bobine di deflessione, una orizzontale ed una verticale. La frequenza di tali forme d’onda permette di descrivere la durata del tempo di display sia orizzontale che verticale, mentre l’ampiezza delle correnti ad ogni istante permette di definire il punto in cui visualizzare il pixel.
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici display1.png}
+    \caption{Display}
+\end{figure}
+\\In quest’esempio viene mostrata solo la forma d’onda orizzontale. A man a mano che il valore della corrente aumenta ci si sposta verso destra nel display, fino a raggiungere la fine dello schermo. Qui inizia la fase di “blanking” orizzontale, in cui il fascio di luce viene resettato per poter iniziare una nuova scansione sulla riga successiva e non viene mostrato nulla a schermo. La durata della fase di blanking orizzontale è data da: Front Porch + sync pulse + back porch. 
+\\La fase di “blanking” si ripete anche per la scansione in verticale: una volta terminate le righe da mostrare, bisogna ritornare alla riga iniziale dello schermo e resettare ancora una volta il fascio di luce prodotto. La durata della fase di “blanking” verticale ha la stessa formula di quella orizzontale.
+\\I tempi di Front Porch, sync pulse e back porch, sia orizzontali che verticali, vengono calcolati in base alla risoluzione dello schermo di riferimento. 
+\\Il segnale di HS e di VS saranno quindi formati da una regione attiva, in cui vengono estratti dalla memoria i pixel da mostrare, ed una regione di blanking per sincronizzare la visualizzazione, in cui i pixel non vengono estratti e si disattiva un segnale di abilitazione del display.  
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici signal_timing_diagram.jpg}
+    \caption{Diagramma timing dei segnali}
+\end{figure}
+\newpage
+E’ necessario sincronizzare i dati video trasmessi allo schermo con la posizione alla quale vogliono essere visualizzati, ossia sincronizzare la consegna allo schermo dei valori dei pixel con i segnali di HS e VS. Ciò avviene tramite un pixel clock, che definisce la frequenza con la quale viene visualizzato un singolo pixel di informazione. Ad ogni colpo di pixel clock, si incrementano il contatore orizzontale e verticale (seguendo la scansione riga per riga) : in base al valore che si ottiene dai contatori si stabilisce se ci si trova nella regione di visualizzazione o in quella di blanking. Nel caso in cui ci si trova nella regione di visualizzazione, si indicizza in memoria al valore dei contatori per poter estrarre il pixel da mostrare ed al colpo di pixel clock successivo il dato viene portato in ingresso allo schermo e mostrato in uscita. In base al valore dei contatori, si passa da una fase all’altra generando i sync pulse. 
+\\Per uno schermo 640x480 con frequenza di aggiornamento pari a 60Hz, le specifiche temporali sono:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Edodici timingspec.png}
+    \caption{Specifiche temporali}
+\end{figure}
+\clearpage
+{\large \textbf{Implementazione del controller VGA}}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici block_diagram.jpg}
+    \caption{Schema controller VGA}
+\end{figure}
+\\Il controller in ingresso riceve il clock della board e produce in uscita i segnali: Red, Green e Blue, codificati ognuno su 4 bit, H\_sync e V\_sync. I primi 3 vengono resi analogici dalla board in automatico tramite un DAC.
+\begin{figure}[ht!]
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Edodici interfaccia_top_vhdl.PNG}
+    \caption{Entity top module}
+\end{figure}
+\\Per la realizzazione del controller VGA è stata utilizzata un progetto demo della Digilent per l’utilizzo della VGA, relativo alle board Artyx. (https://digilent.com/reference/learn/programmable-logic/tutorials/arty-pmod-vga-demo/start)
+\\E’ stato rimodellato il top module, ossia quello che realizza il controller VGA, per farsi che venga prelevato dalla memoria il pixel da mostrare ad ogni colpo di pixel clock e vengano gestite le collisioni tra l’immagine ed i bordi. Il tutto utilizzando un approccio misto tra comportamentale e strutturale. 
+\\Il sistema complessivo è formato dal controller VGA che comunica con una memoria che contiene l’immagine, il tutto sincronizzato tramite un pixel clock realizzato come divisore in frequenza tramite il Clock Wizard presente nell’Ip Catalog.
+\\Vengono dichiarate le costanti relative alla tempificazione:
+\begin{figure}[ht!]
+    \includegraphics[width=0.8\textwidth,height=\textheight,keepaspectratio]{\Edodici constanti_vhdl.PNG}
+    \caption{Costanti tempificazione}
+\end{figure}
+\\Vengono dichiarate le costanti relative al box dell’immagine:
+\begin{figure}[ht!]
+    \includegraphics[width=0.9\textwidth,height=\textheight,keepaspectratio]{\Edodici constanti2_bhdl.PNG}
+    \caption{Costanti box immagine}
+\end{figure}
+\newpage
+Vengono dichiarati i segnali che interagiscono internamente al controller:
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici segnali_top_vhdl.PNG}
+    \caption{Segnali interni}
+\end{figure}
+\\I componenti interni al top module sono:
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici port_map_top_vhdl.PNG}
+    \caption{Componenti interni al top module}
+\end{figure}
+\newpage
+Vengono, poi, definiti due process per la realizzazione dei contatori in cascata di modulo rispettivamente pari a: H\_MAX e V\_MAX. Questi permettono l’indicizzazione in memoria del pixel successivo a quello che si sta visualizzando tramite i segnali h\_cntr\_reg e v\_cntr\_reg.
+\begin{figure}[ht!]
+    \includegraphics[width=0.75\textwidth,height=\textheight,keepaspectratio]{\Edodici contatore_orizz_vert_vhdl.PNG}
+    \caption{Process contatori}
+\end{figure}
+\clearpage
+In base al valore dei contatori orizzontale e verticale, vengono generati i segnali di h\_sync e v\_sync tramite i seguenti process:
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici generazione_sync_vhdl.PNG}
+    \caption{Process generazione segnali sync}
+\end{figure}
+\\In entrambi i process, la prima condizione indica se il contatore si trova nella fase di blanking, in questo caso allora genera il sync pulse della durata H\_PW o V\_PW, altrimenti il segnale di sync rimane alto.
+\\Per la gestione del box dell’immagine e il relativo movimento sono stati creati 3 process, in cui si utilizza il primo pixel in alto a sinistra del box come posizione di riferimento per il box totale. Al box viene poi assegnata una direzione corrente di movimento, sia orizzontale che verticale.
+\\Il primo process gestisce il  movimento in base alla direzione corrente (ad esempio se si sposta in diagonale verso il basso, allora incremento di 1 la posizione del box in entrambe le direzioni x e y).
+\begin{figure}[ht!]
+    \includegraphics[width=0.5\textwidth,height=\textheight,keepaspectratio]{\Edodici moving_box_logic_1_vhdl.PNG}
+    \caption{Process 1}
+\end{figure}
+\newpage
+Il secondo process gestisce le collisioni dell’immagine sui bordi dello schermo e quindi fa variare la direzione corrente del box (ad esempio se la posizione del box raggiunge il limite inferiore dello schermo, allora devo invertire la direzione corrente verticale y).
+\begin{figure}[ht!]
+    \includegraphics[width=1.1\textwidth,height=\textheight,keepaspectratio]{\Edodici moving_box_logic_2_vhdl.PNG}
+    \caption{Process 2}
+\end{figure}
+\clearpage
+Il terzo process realizza un divisore in frequenza, che gestisce ogni quando viene effettuato l’update del box su schermo, cioè quante volte si entra all’interno dei process precedenti, gestendo così la velocità di movimento del box.
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici moving_box_logic_3_vhdl.PNG}
+    \caption{Process 3}
+\end{figure}
+\\Il segnale pixel\_in\_box indica se il pixel corrente, cioè quello puntato dal contatore orizzontale e verticale, si trova all’interno del box contenente l’immagine.
+\\Per aumentare la velocità del box basta diminuire la divisione in frequenza; più è basso il valore di BOX\_CLK\_DIV maggiori saranno i numeri di update e dunque maggiore sarà la velocità del box.
+\\Per accedere in memoria si utilizzano due registri: mem\_h\_cntr\_reg, mem\_v\_cntr\_reg. Questi vengono assegnati a partire dai valori di h\_cntr\_reg e v\_cntr\_reg, a cui vengono sottratti rispettivamente box\_x\_reg e box\_y\_reg, ossia la posizione del box.  Ciò avviene solo se il pixel si trova nel box.
+\clearpage
+%arrivato a pag. 9 dell'Esercizio 12
 \newpage
 \listoffigures
 \end{document}
