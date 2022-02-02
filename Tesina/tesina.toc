@@ -64,3 +64,5 @@
 \contentsline {subsection}{\numberline {12.1}Scelta progettuale}{148}{}%
 \contentsline {subsection}{\numberline {12.2}Realizzazione automatica della memoria}{148}{}%
 \contentsline {subsection}{\numberline {12.3}Protocollo VGA}{150}{}%
+\contentsline {subsection}{\numberline {12.4}Memoria}{163}{}%
+\contentsline {subsection}{\numberline {12.5}Esempi di risultati ottenuti}{164}{}%

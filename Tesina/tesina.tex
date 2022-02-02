@@ -1940,7 +1940,49 @@ Il terzo process realizza un divisore in frequenza, che gestisce ogni quando vie
 \\Per aumentare la velocità del box basta diminuire la divisione in frequenza; più è basso il valore di BOX\_CLK\_DIV maggiori saranno i numeri di update e dunque maggiore sarà la velocità del box.
 \\Per accedere in memoria si utilizzano due registri: mem\_h\_cntr\_reg, mem\_v\_cntr\_reg. Questi vengono assegnati a partire dai valori di h\_cntr\_reg e v\_cntr\_reg, a cui vengono sottratti rispettivamente box\_x\_reg e box\_y\_reg, ossia la posizione del box.  Ciò avviene solo se il pixel si trova nel box.
 \clearpage
-%arrivato a pag. 9 dell'Esercizio 12
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici assegnazione_indici_mem_vhdl.PNG}
+    \caption{Process assegnazione indici memoria}
+\end{figure}
+Si assegnano poi i segnali di Red, Green e Blue con quelli in uscita dalla memoria solo se si è in regione attiva ed il pixel appartiene al box, altrimenti li si pone a 0.
+\begin{figure}[ht!]
+    \includegraphics[width=0.95\textwidth,height=\textheight,keepaspectratio]{\Edodici vga_pixel_assegnaz_vhdl.PNG}
+    \caption{Process assegnazione pixel}
+\end{figure}
+\begin{figure}[ht!]
+    \includegraphics[width=0.95\textwidth,height=\textheight,keepaspectratio]{\Edodici assegnazione_segnali_vga_vhdl.PNG}
+    \caption{Process assegnazione segnali}
+\end{figure}
+\newpage
+Si sincronizzano tutte le uscite del controller VGA, rispetto al pixel clock, tramite dei registri intermedi.
+\clearpage
+\subsection{Memoria}
+La memoria è di sola lettura ed è realizzata come array di BIT\_VECTOR, ognuno di 12 elementi:  4 bit per il rosso, 4 bit per il verde, 4 bit per il blu.
+\begin{figure}[ht!]
+    \includegraphics[width=0.7\textwidth,height=\textheight,keepaspectratio]{\Edodici memoria1_vhdl.PNG}
+\end{figure}
+\\Per leggere il valore all’indirizzo dato da (indice\_riga, indice\_colonna) si utilizza il process:
+\begin{figure}[ht]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{\Edodici memoria2_vhdl.PNG}
+    \caption{Memoria}
+\end{figure}
+\\Si è utilizzato questo tipo di indicizzazione poiché l’immagine viene inserita come matrice serializzata lungo le colonne.
+\clearpage
+\subsection{Esempi di risultati ottenuti}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.3\textwidth,height=\textheight,keepaspectratio]{\Edodici boardvga.jpg}
+    \caption{Sintesi su FPGA}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici fotoschermo1.jpg}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici fotoschermo2.jpg}
+    \caption{Schermo con movimento dell'immagine}
+\end{figure}
 \newpage
 \listoffigures
 \end{document}
