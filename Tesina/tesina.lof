@@ -1,150 +1,149 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Mux 4:1\relax }}{4}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Mux 4:1 Dataflow\relax }}{4}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Mux 16:1\relax }}{5}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Mux 16:1 Dataflow\relax }}{6}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Mux 16:1 Testbench\relax }}{7}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Mux 16:1 Simulazione\relax }}{8}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Demux 1:4 Dataflow\relax }}{9}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Rete 16:1\relax }}{9}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Rete 16:4 Structural\relax }}{10}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Rete 16:4 Testbench\relax }}{11}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Rete 16:4 Simulazione\relax }}{11}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Costraints\relax }}{12}{}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Rete 16:4 Analysis\relax }}{12}{}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Codice Arbitro\relax }}{15}{}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Codice Encoder 10:4\relax }}{16}{}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Codice Encoder Complessivo\relax }}{17}{}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Display Segment\relax }}{18}{}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Codice Display Manager\relax }}{19}{}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Codice Sistema Completo\relax }}{20}{}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Codice Testbench\relax }}{21}{}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Simulazione Encoder\relax }}{22}{}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Codice Sistema Pt1\relax }}{24}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Codice Sistema Pt2\relax }}{26}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Debouncer\relax }}{27}{}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Codice filtro modo\relax }}{28}{}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Codice gestore modo\relax }}{29}{}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Codice riconoscitore\relax }}{31}{}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Simulazione riconoscitore\relax }}{31}{}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Entity Shift Bidirezionale\relax }}{32}{}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Architecture Shift Register Bidirezionale\relax }}{33}{}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Entity Flip Flop D\relax }}{34}{}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Architecture Flip Flop D\relax }}{35}{}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Mux 2:1\relax }}{36}{}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Generate FFD\relax }}{37}{}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Progetto Completo Esercizio 1\relax }}{38}{}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Simulazione Shift Register\relax }}{39}{}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Entity Contatore\relax }}{40}{}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Architecture Contatore\relax }}{40}{}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Entity Sistema Contatori\relax }}{41}{}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Struct Sistema Contatori\relax }}{42}{}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Wait Block\relax }}{43}{}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Gestore set\relax }}{44}{}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Architecture Gestore set\relax }}{45}{}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Convertitore per display\relax }}{47}{}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Entity Gestore modo\relax }}{47}{}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Architecture Gestore modo\relax }}{49}{}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Entity Memoria\relax }}{50}{}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Architecture Memoria\relax }}{51}{}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Schema Completo Esercizio 5\relax }}{51}{}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Sistema Complessivo\relax }}{53}{}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Tester\relax }}{53}{}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Gestore Read\relax }}{54}{}%
-\contentsline {figure}{\numberline {53}{\ignorespaces ROM\relax }}{55}{}%
-\contentsline {figure}{\numberline {54}{\ignorespaces Delay Block\relax }}{56}{}%
-\contentsline {figure}{\numberline {55}{\ignorespaces Memoria Esterna\relax }}{57}{}%
-\contentsline {figure}{\numberline {56}{\ignorespaces Gestore Led\relax }}{58}{}%
-\contentsline {figure}{\numberline {57}{\ignorespaces Simulazione Es.6\relax }}{59}{}%
-\contentsline {figure}{\numberline {58}{\ignorespaces Sintesi Es.6\relax }}{60}{}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Schema Sistema Completo Es.7\relax }}{63}{}%
-\contentsline {figure}{\numberline {60}{\ignorespaces Schema Sistema A Es.7\relax }}{64}{}%
-\contentsline {figure}{\numberline {61}{\ignorespaces Entity Contatore\relax }}{65}{}%
-\contentsline {figure}{\numberline {62}{\ignorespaces Architecture Contatore\relax }}{65}{}%
-\contentsline {figure}{\numberline {63}{\ignorespaces Architecture ROM\relax }}{66}{}%
-\contentsline {figure}{\numberline {64}{\ignorespaces Entity Interfaccia A Es.7\relax }}{67}{}%
-\contentsline {figure}{\numberline {65}{\ignorespaces Architecture Interfaccia A Es.7\relax }}{69}{}%
-\contentsline {figure}{\numberline {66}{\ignorespaces Schema Sistema B Es.7\relax }}{70}{}%
-\contentsline {figure}{\numberline {67}{\ignorespaces Entity Control Unit\relax }}{71}{}%
-\contentsline {figure}{\numberline {68}{\ignorespaces Entity Control Unit\relax }}{73}{}%
-\contentsline {figure}{\numberline {69}{\ignorespaces Architecture Memoria B\relax }}{74}{}%
-\contentsline {figure}{\numberline {70}{\ignorespaces Interfaccia B\relax }}{75}{}%
-\contentsline {figure}{\numberline {71}{\ignorespaces Architecture Interfaccia B Es.7\relax }}{77}{}%
-\contentsline {figure}{\numberline {72}{\ignorespaces Simulazione Es.7\relax }}{78}{}%
-\contentsline {figure}{\numberline {73}{\ignorespaces Memoria IJVM\relax }}{80}{}%
-\contentsline {figure}{\numberline {74}{\ignorespaces Istruzioni IJVM\relax }}{80}{}%
-\contentsline {figure}{\numberline {75}{\ignorespaces Processore MIC-1\relax }}{81}{}%
-\contentsline {figure}{\numberline {76}{\ignorespaces Datapath Processore\relax }}{82}{}%
-\contentsline {figure}{\numberline {77}{\ignorespaces Tempificazione Memoria\relax }}{83}{}%
-\contentsline {figure}{\numberline {78}{\ignorespaces Formato Microistruzione\relax }}{85}{}%
-\contentsline {figure}{\numberline {79}{\ignorespaces Timing Clock\relax }}{86}{}%
-\contentsline {figure}{\numberline {80}{\ignorespaces Simulazione IADD\relax }}{91}{}%
-\contentsline {figure}{\numberline {81}{\ignorespaces Datapath esecuzione IADD\relax }}{92}{}%
-\contentsline {figure}{\numberline {82}{\ignorespaces Simulazione ISTORE\relax }}{95}{}%
-\contentsline {figure}{\numberline {83}{\ignorespaces Datapath esecuzione ISTORE\relax }}{96}{}%
-\contentsline {figure}{\numberline {84}{\ignorespaces Simulazione IADD Modificata\relax }}{97}{}%
-\contentsline {figure}{\numberline {85}{\ignorespaces Codice Sistema A\relax }}{101}{}%
-\contentsline {figure}{\numberline {86}{\ignorespaces Codice Sistema B\relax }}{102}{}%
-\contentsline {figure}{\numberline {87}{\ignorespaces Sintesi su FPGA Es. 9.1\relax }}{103}{}%
-\contentsline {figure}{\numberline {88}{\ignorespaces Schema Sistema A Es. 9.2\relax }}{105}{}%
-\contentsline {figure}{\numberline {89}{\ignorespaces Entity Contatore\relax }}{106}{}%
-\contentsline {figure}{\numberline {90}{\ignorespaces Architecture Contatore\relax }}{106}{}%
-\contentsline {figure}{\numberline {91}{\ignorespaces Entity Control Unit A Es. 9.2\relax }}{107}{}%
-\contentsline {figure}{\numberline {92}{\ignorespaces Architecture Control Unit A Es. 9.2\relax }}{110}{}%
-\contentsline {figure}{\numberline {93}{\ignorespaces Schema Sistema B Es. 9.2\relax }}{112}{}%
-\contentsline {figure}{\numberline {94}{\ignorespaces Entity Control Unit B Es. 9.2\relax }}{113}{}%
-\contentsline {figure}{\numberline {95}{\ignorespaces Architecture Control Unit B Es.9.2\relax }}{115}{}%
-\contentsline {figure}{\numberline {96}{\ignorespaces Sintesi su FPGA Es. 9.2\relax }}{116}{}%
-\contentsline {figure}{\numberline {97}{\ignorespaces Schema blocco instradamento\relax }}{118}{}%
-\contentsline {figure}{\numberline {98}{\ignorespaces Architecture blocco instradamento\relax }}{118}{}%
-\contentsline {figure}{\numberline {99}{\ignorespaces Entity Unità Operativa\relax }}{119}{}%
-\contentsline {figure}{\numberline {100}{\ignorespaces Unità Operativa\relax }}{119}{}%
-\contentsline {figure}{\numberline {101}{\ignorespaces Architecture Unità Operativa\relax }}{120}{}%
-\contentsline {figure}{\numberline {102}{\ignorespaces Interfaccia Unità di Controllo\relax }}{121}{}%
-\contentsline {figure}{\numberline {103}{\ignorespaces Unità di Controllo\relax }}{121}{}%
-\contentsline {figure}{\numberline {104}{\ignorespaces Mux 4:1\relax }}{122}{}%
-\contentsline {figure}{\numberline {105}{\ignorespaces Demux 4:1\relax }}{123}{}%
-\contentsline {figure}{\numberline {106}{\ignorespaces Encoder\relax }}{123}{}%
-\contentsline {figure}{\numberline {107}{\ignorespaces Buffer\relax }}{124}{}%
-\contentsline {figure}{\numberline {108}{\ignorespaces Architecture Unità di Controllo\relax }}{126}{}%
-\contentsline {figure}{\numberline {109}{\ignorespaces Testbench\relax }}{127}{}%
-\contentsline {figure}{\numberline {110}{\ignorespaces Simulazione\relax }}{128}{}%
-\contentsline {figure}{\numberline {111}{\ignorespaces Schema Divisore Es. 11\relax }}{132}{}%
-\contentsline {figure}{\numberline {112}{\ignorespaces Entity Registro AQ\relax }}{133}{}%
-\contentsline {figure}{\numberline {113}{\ignorespaces Architecture Registro AQ\relax }}{134}{}%
-\contentsline {figure}{\numberline {114}{\ignorespaces Entity Registro V\relax }}{134}{}%
-\contentsline {figure}{\numberline {115}{\ignorespaces Architecture Registro V\relax }}{135}{}%
-\contentsline {figure}{\numberline {116}{\ignorespaces Entity Adder-Subtracter\relax }}{135}{}%
-\contentsline {figure}{\numberline {117}{\ignorespaces Architecture Adder-Subtracter\relax }}{136}{}%
-\contentsline {figure}{\numberline {118}{\ignorespaces Entity Ripple Carry Adder\relax }}{136}{}%
-\contentsline {figure}{\numberline {119}{\ignorespaces Architecture Ripple Carry Adder\relax }}{137}{}%
-\contentsline {figure}{\numberline {120}{\ignorespaces Entity Full-Adder\relax }}{137}{}%
-\contentsline {figure}{\numberline {121}{\ignorespaces Architecture Full-Adder\relax }}{138}{}%
-\contentsline {figure}{\numberline {122}{\ignorespaces Entity Control Unit\relax }}{138}{}%
-\contentsline {figure}{\numberline {123}{\ignorespaces Schema Control Unit\relax }}{139}{}%
-\contentsline {figure}{\numberline {124}{\ignorespaces Architecture Control Unit\relax }}{143}{}%
-\contentsline {figure}{\numberline {125}{\ignorespaces Simulazione Sistema Es. 11\relax }}{144}{}%
-\contentsline {figure}{\numberline {126}{\ignorespaces Sistema Complessivo Es. 11\relax }}{146}{}%
-\contentsline {figure}{\numberline {127}{\ignorespaces FPGA Es. 11\relax }}{146}{}%
-\contentsline {figure}{\numberline {128}{\ignorespaces Immagine iniziale\relax }}{149}{}%
-\contentsline {figure}{\numberline {129}{\ignorespaces Immagine elaborata\relax }}{149}{}%
-\contentsline {figure}{\numberline {130}{\ignorespaces PIN\relax }}{150}{}%
-\contentsline {figure}{\numberline {131}{\ignorespaces Display\relax }}{151}{}%
-\contentsline {figure}{\numberline {132}{\ignorespaces Diagramma timing dei segnali\relax }}{152}{}%
-\contentsline {figure}{\numberline {133}{\ignorespaces Specifiche temporali\relax }}{153}{}%
-\contentsline {figure}{\numberline {134}{\ignorespaces Schema controller VGA\relax }}{154}{}%
-\contentsline {figure}{\numberline {135}{\ignorespaces Entity top module\relax }}{154}{}%
-\contentsline {figure}{\numberline {136}{\ignorespaces Costanti tempificazione\relax }}{155}{}%
-\contentsline {figure}{\numberline {137}{\ignorespaces Costanti box immagine\relax }}{155}{}%
-\contentsline {figure}{\numberline {138}{\ignorespaces Segnali interni\relax }}{156}{}%
-\contentsline {figure}{\numberline {139}{\ignorespaces Componenti interni al top module\relax }}{157}{}%
-\contentsline {figure}{\numberline {140}{\ignorespaces Process contatori\relax }}{157}{}%
-\contentsline {figure}{\numberline {141}{\ignorespaces Process generazione segnali sync\relax }}{158}{}%
-\contentsline {figure}{\numberline {142}{\ignorespaces Process 1\relax }}{159}{}%
-\contentsline {figure}{\numberline {143}{\ignorespaces Process 2\relax }}{159}{}%
-\contentsline {figure}{\numberline {144}{\ignorespaces Process 3\relax }}{160}{}%
-\contentsline {figure}{\numberline {145}{\ignorespaces Process assegnazione indici memoria\relax }}{161}{}%
-\contentsline {figure}{\numberline {146}{\ignorespaces Process assegnazione pixel\relax }}{162}{}%
-\contentsline {figure}{\numberline {147}{\ignorespaces Process assegnazione segnali\relax }}{162}{}%
-\contentsline {figure}{\numberline {148}{\ignorespaces Memoria\relax }}{163}{}%
-\contentsline {figure}{\numberline {149}{\ignorespaces Sintesi su FPGA\relax }}{164}{}%
-\contentsline {figure}{\numberline {150}{\ignorespaces Schermo con movimento dell'immagine\relax }}{164}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Mux 4:1\relax }}{5}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Mux 4:1 Dataflow\relax }}{5}{figure.caption.4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Mux 16:1\relax }}{6}{figure.caption.5}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Mux 16:1 Dataflow\relax }}{7}{figure.caption.6}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Mux 16:1 Testbench\relax }}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Mux 16:1 Simulazione\relax }}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Demux 1:4 Dataflow\relax }}{10}{figure.caption.9}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Rete 16:1\relax }}{10}{figure.caption.10}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Rete 16:4 Structural\relax }}{11}{figure.caption.11}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Rete 16:4 Simulazione\relax }}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Costraints\relax }}{13}{figure.caption.14}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Rete 16:4 Analysis\relax }}{13}{figure.caption.15}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Codice Arbitro\relax }}{16}{figure.caption.16}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Codice Encoder 10:4\relax }}{17}{figure.caption.17}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Codice Encoder Complessivo\relax }}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Display Segment\relax }}{19}{figure.caption.20}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Codice Display Manager\relax }}{20}{figure.caption.23}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Codice Sistema Completo\relax }}{21}{figure.caption.26}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Codice Testbench\relax }}{22}{figure.caption.28}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Simulazione Encoder\relax }}{23}{figure.caption.29}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Codice Sistema Pt1\relax }}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Codice Sistema Pt2\relax }}{27}{figure.caption.33}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Debouncer\relax }}{28}{figure.caption.34}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Codice filtro modo\relax }}{29}{figure.caption.35}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Codice gestore modo\relax }}{30}{figure.caption.37}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Codice riconoscitore\relax }}{32}{figure.caption.40}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Simulazione riconoscitore\relax }}{32}{figure.caption.41}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Entity Shift Bidirezionale\relax }}{33}{figure.caption.42}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Architecture Shift Register Bidirezionale\relax }}{34}{figure.caption.44}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Entity Flip Flop D\relax }}{35}{figure.caption.45}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Architecture Flip Flop D\relax }}{36}{figure.caption.46}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Mux 2:1\relax }}{37}{figure.caption.47}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Generate FFD\relax }}{38}{figure.caption.49}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Progetto Completo Esercizio 1\relax }}{39}{figure.caption.50}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Simulazione Shift Register\relax }}{40}{figure.caption.51}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Entity Contatore\relax }}{41}{figure.caption.52}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Architecture Contatore\relax }}{41}{figure.caption.53}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Entity Sistema Contatori\relax }}{42}{figure.caption.54}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Struct Sistema Contatori\relax }}{43}{figure.caption.56}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Wait Block\relax }}{44}{figure.caption.57}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Gestore set\relax }}{45}{figure.caption.59}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Architecture Gestore set\relax }}{46}{figure.caption.61}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Convertitore per display\relax }}{48}{figure.caption.62}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Entity Gestore modo\relax }}{48}{figure.caption.63}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Architecture Gestore modo\relax }}{50}{figure.caption.65}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Entity Memoria\relax }}{51}{figure.caption.66}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Architecture Memoria\relax }}{52}{figure.caption.67}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Schema Completo Esercizio 5\relax }}{52}{figure.caption.68}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Sistema Complessivo\relax }}{54}{figure.caption.70}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Tester\relax }}{54}{figure.caption.71}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Gestore Read\relax }}{55}{figure.caption.73}%
+\contentsline {figure}{\numberline {52}{\ignorespaces ROM\relax }}{56}{figure.caption.75}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Delay Block\relax }}{57}{figure.caption.76}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Memoria Esterna\relax }}{58}{figure.caption.77}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Gestore Led\relax }}{59}{figure.caption.80}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Simulazione Es.6\relax }}{60}{figure.caption.81}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Sintesi Es.6\relax }}{61}{figure.caption.82}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Schema Sistema Completo Es.7\relax }}{64}{figure.caption.83}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Schema Sistema A Es.7\relax }}{65}{figure.caption.84}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Entity Contatore\relax }}{66}{figure.caption.85}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Architecture Contatore\relax }}{66}{figure.caption.86}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Architecture ROM\relax }}{67}{figure.caption.88}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Entity Interfaccia A Es.7\relax }}{68}{figure.caption.89}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Architecture Interfaccia A Es.7\relax }}{70}{figure.caption.91}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Schema Sistema B Es.7\relax }}{71}{figure.caption.92}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Entity Control Unit\relax }}{72}{figure.caption.93}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Entity Control Unit\relax }}{74}{figure.caption.95}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Architecture Memoria B\relax }}{75}{figure.caption.97}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Interfaccia B\relax }}{76}{figure.caption.98}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Architecture Interfaccia B Es.7\relax }}{78}{figure.caption.100}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Simulazione Es.7\relax }}{79}{figure.caption.102}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Memoria IJVM\relax }}{81}{figure.caption.103}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Istruzioni IJVM\relax }}{81}{figure.caption.104}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Processore MIC-1\relax }}{82}{figure.caption.105}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Datapath Processore\relax }}{83}{figure.caption.106}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Tempificazione Memoria\relax }}{84}{figure.caption.107}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Formato Microistruzione\relax }}{86}{figure.caption.108}%
+\contentsline {figure}{\numberline {78}{\ignorespaces Timing Clock\relax }}{87}{figure.caption.109}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Simulazione IADD\relax }}{92}{figure.caption.110}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Datapath esecuzione IADD\relax }}{93}{figure.caption.111}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Simulazione ISTORE\relax }}{96}{figure.caption.112}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Datapath esecuzione ISTORE\relax }}{97}{figure.caption.114}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Simulazione IADD Modificata\relax }}{98}{figure.caption.115}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Codice Sistema A\relax }}{102}{figure.caption.116}%
+\contentsline {figure}{\numberline {85}{\ignorespaces Codice Sistema B\relax }}{103}{figure.caption.117}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Sintesi su FPGA Es. 9.1\relax }}{104}{figure.caption.118}%
+\contentsline {figure}{\numberline {87}{\ignorespaces Schema Sistema A Es. 9.2\relax }}{106}{figure.caption.119}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Entity Contatore\relax }}{107}{figure.caption.120}%
+\contentsline {figure}{\numberline {89}{\ignorespaces Architecture Contatore\relax }}{107}{figure.caption.121}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Entity Control Unit A Es. 9.2\relax }}{108}{figure.caption.122}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Architecture Control Unit A Es. 9.2\relax }}{111}{figure.caption.125}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Schema Sistema B Es. 9.2\relax }}{113}{figure.caption.126}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Entity Control Unit B Es. 9.2\relax }}{114}{figure.caption.127}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Architecture Control Unit B Es.9.2\relax }}{116}{figure.caption.129}%
+\contentsline {figure}{\numberline {95}{\ignorespaces Sintesi su FPGA Es. 9.2\relax }}{117}{figure.caption.130}%
+\contentsline {figure}{\numberline {96}{\ignorespaces Schema blocco instradamento\relax }}{119}{figure.caption.131}%
+\contentsline {figure}{\numberline {97}{\ignorespaces Architecture blocco instradamento\relax }}{119}{figure.caption.132}%
+\contentsline {figure}{\numberline {98}{\ignorespaces Entity Unità Operativa\relax }}{120}{figure.caption.133}%
+\contentsline {figure}{\numberline {99}{\ignorespaces Unità Operativa\relax }}{120}{figure.caption.134}%
+\contentsline {figure}{\numberline {100}{\ignorespaces Architecture Unità Operativa\relax }}{121}{figure.caption.136}%
+\contentsline {figure}{\numberline {101}{\ignorespaces Interfaccia Unità di Controllo\relax }}{122}{figure.caption.137}%
+\contentsline {figure}{\numberline {102}{\ignorespaces Unità di Controllo\relax }}{122}{figure.caption.138}%
+\contentsline {figure}{\numberline {103}{\ignorespaces Mux 4:1\relax }}{123}{figure.caption.139}%
+\contentsline {figure}{\numberline {104}{\ignorespaces Demux 4:1\relax }}{124}{figure.caption.140}%
+\contentsline {figure}{\numberline {105}{\ignorespaces Encoder\relax }}{124}{figure.caption.141}%
+\contentsline {figure}{\numberline {106}{\ignorespaces Buffer\relax }}{125}{figure.caption.143}%
+\contentsline {figure}{\numberline {107}{\ignorespaces Architecture Unità di Controllo\relax }}{127}{figure.caption.145}%
+\contentsline {figure}{\numberline {108}{\ignorespaces Testbench\relax }}{128}{figure.caption.146}%
+\contentsline {figure}{\numberline {109}{\ignorespaces Simulazione\relax }}{129}{figure.caption.147}%
+\contentsline {figure}{\numberline {110}{\ignorespaces Schema Divisore Es. 11\relax }}{133}{figure.caption.148}%
+\contentsline {figure}{\numberline {111}{\ignorespaces Entity Registro AQ\relax }}{134}{figure.caption.149}%
+\contentsline {figure}{\numberline {112}{\ignorespaces Architecture Registro AQ\relax }}{135}{figure.caption.150}%
+\contentsline {figure}{\numberline {113}{\ignorespaces Entity Registro V\relax }}{135}{figure.caption.151}%
+\contentsline {figure}{\numberline {114}{\ignorespaces Architecture Registro V\relax }}{136}{figure.caption.152}%
+\contentsline {figure}{\numberline {115}{\ignorespaces Entity Adder-Subtracter\relax }}{136}{figure.caption.153}%
+\contentsline {figure}{\numberline {116}{\ignorespaces Architecture Adder-Subtracter\relax }}{137}{figure.caption.154}%
+\contentsline {figure}{\numberline {117}{\ignorespaces Entity Ripple Carry Adder\relax }}{137}{figure.caption.155}%
+\contentsline {figure}{\numberline {118}{\ignorespaces Architecture Ripple Carry Adder\relax }}{138}{figure.caption.156}%
+\contentsline {figure}{\numberline {119}{\ignorespaces Entity Full-Adder\relax }}{138}{figure.caption.157}%
+\contentsline {figure}{\numberline {120}{\ignorespaces Architecture Full-Adder\relax }}{139}{figure.caption.158}%
+\contentsline {figure}{\numberline {121}{\ignorespaces Entity Control Unit\relax }}{139}{figure.caption.159}%
+\contentsline {figure}{\numberline {122}{\ignorespaces Schema Control Unit\relax }}{140}{figure.caption.160}%
+\contentsline {figure}{\numberline {123}{\ignorespaces Architecture Control Unit\relax }}{144}{figure.caption.163}%
+\contentsline {figure}{\numberline {124}{\ignorespaces Simulazione Sistema Es. 11\relax }}{145}{figure.caption.165}%
+\contentsline {figure}{\numberline {125}{\ignorespaces Sistema Complessivo Es. 11\relax }}{147}{figure.caption.168}%
+\contentsline {figure}{\numberline {126}{\ignorespaces FPGA Es. 11\relax }}{147}{figure.caption.169}%
+\contentsline {figure}{\numberline {127}{\ignorespaces Immagine iniziale\relax }}{150}{figure.caption.170}%
+\contentsline {figure}{\numberline {128}{\ignorespaces Immagine elaborata\relax }}{150}{figure.caption.171}%
+\contentsline {figure}{\numberline {129}{\ignorespaces PIN\relax }}{151}{figure.caption.172}%
+\contentsline {figure}{\numberline {130}{\ignorespaces Display\relax }}{152}{figure.caption.173}%
+\contentsline {figure}{\numberline {131}{\ignorespaces Diagramma timing dei segnali\relax }}{153}{figure.caption.174}%
+\contentsline {figure}{\numberline {132}{\ignorespaces Specifiche temporali\relax }}{154}{figure.caption.175}%
+\contentsline {figure}{\numberline {133}{\ignorespaces Schema controller VGA\relax }}{155}{figure.caption.176}%
+\contentsline {figure}{\numberline {134}{\ignorespaces Entity top module\relax }}{155}{figure.caption.177}%
+\contentsline {figure}{\numberline {135}{\ignorespaces Costanti tempificazione\relax }}{156}{figure.caption.178}%
+\contentsline {figure}{\numberline {136}{\ignorespaces Costanti box immagine\relax }}{156}{figure.caption.179}%
+\contentsline {figure}{\numberline {137}{\ignorespaces Segnali interni\relax }}{157}{figure.caption.180}%
+\contentsline {figure}{\numberline {138}{\ignorespaces Componenti interni al top module\relax }}{158}{figure.caption.181}%
+\contentsline {figure}{\numberline {139}{\ignorespaces Process contatori\relax }}{158}{figure.caption.182}%
+\contentsline {figure}{\numberline {140}{\ignorespaces Process generazione segnali sync\relax }}{159}{figure.caption.183}%
+\contentsline {figure}{\numberline {141}{\ignorespaces Process 1\relax }}{160}{figure.caption.184}%
+\contentsline {figure}{\numberline {142}{\ignorespaces Process 2\relax }}{160}{figure.caption.185}%
+\contentsline {figure}{\numberline {143}{\ignorespaces Process 3\relax }}{161}{figure.caption.186}%
+\contentsline {figure}{\numberline {144}{\ignorespaces Process assegnazione indici memoria\relax }}{162}{figure.caption.187}%
+\contentsline {figure}{\numberline {145}{\ignorespaces Process assegnazione pixel\relax }}{163}{figure.caption.188}%
+\contentsline {figure}{\numberline {146}{\ignorespaces Process assegnazione segnali\relax }}{163}{figure.caption.189}%
+\contentsline {figure}{\numberline {147}{\ignorespaces Memoria\relax }}{164}{figure.caption.191}%
+\contentsline {figure}{\numberline {148}{\ignorespaces Sintesi su FPGA\relax }}{165}{figure.caption.192}%
+\contentsline {figure}{\numberline {149}{\ignorespaces Schermo con movimento dell'immagine\relax }}{165}{figure.caption.194}%

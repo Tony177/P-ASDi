@@ -2,6 +2,15 @@
 
 \usepackage{graphicx,caption,svg,enumitem}
 \usepackage[utf8]{inputenc}
+\usepackage{color,hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=black,
+    pdfpagemode=FullScreen,
+    }
 
 \renewcommand{\contentsname}{Indice}
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
@@ -35,8 +44,19 @@
 
 \begin{document}
 
-\title{Tesina Architettura dei Sistemi Digitali}
-\date{\today}
+\title{Elaborato Architettura dei Sistemi Digitali}
+\author{Antonio Avolio - M63001352\\Davide Marcello - M63001375\\Christian Marescalco - M63001367\\Umberto Caturano - M63001260\\Gruppo 57}
+\date{}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici immagine.jpg}
+\end{figure}
+\vfill
+{\let\newpage\relax\maketitle}
+% {\centering \Huge \textbf{Progetto di Architettura dei}}
+% \\{\centering \Huge \textbf{Sistemi Digitali}}
+
+\newpage
 \tableofcontents
 \newpage
 \section{Esercizio 1 - Multiplexer}
@@ -120,7 +140,6 @@ Anche dopo aver testato il singolo componente, è comunque necessario ripetere i
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.4\textwidth,height=\textheight,keepaspectratio]{\Euno rete_16_4_tb.png}
-    \caption{Rete 16:4 Testbench}
 \end{figure}
 
 \begin{figure}[ht!]
@@ -742,28 +761,40 @@ Quando l’entità slave è completamente asservita all’entità master, quest�
 \\Tuttavia, non sempre tra 2 entità l’asservimento è assoluto, e dunque, bisogna assicurarsi che, quando l’entità master vuole iniziare una nuova trasmissione, l’entità slave sia a sua volta disponibile.
 Oltre ad un problema di asservimento, in genere, sussiste un problema di riferimento temporale, il quale nasce quando le 2 entità che devono interagire si trovano su 2 schede differenti, e dunque non possono essere fatte considerazioni sui riferimenti temporali. Infatti, anche se le 2 schede presentano clock isofrequenziali, non è detto che i riferimenti temporali siano analoghi, dato che questi possono variare per via alla fase iniziale.
 Al fine di risolvere queste problematiche e garantire una corretta comunicazione tra 2 entità, si utilizza un protocollo di comunicazione basato su handshaking, che nel senso letterale indica una “stretta di mano” prima di avviare la comunicazione, il quale si basa sull’ipotesi che sia sempre il master ad inviare dati sul canale.
-\\Di un protocollo basato su handshaking vi sono più implementazioni, le quali differiscono per le modalità di inizio della comunicazione e, di conseguenza, per il numero di segnali trasmessi sul canale.
-Il protocollo più semplice è quello che prevede un segnale strobe da parte del master, che, come detto, evidenzia la presenza di dati sul canale, ed un segnale di risposta (generalmente chiamato di acknowledgment) da parte dello slave, il quale indica la corretta ricezione dei dati e può essere inviato sia appena ricevuti i dati, sia dopo la loro elaborazione.
-Una implementazione di questo tipo è utile per risolvere un problema di riferimento temporale, ma può non essere adatta a comunicazione prive di asservimento, per le quali generalmente si fa uso di un protocollo basato su handshake interlacciato.
-\\L’handshaking interlacciato prevede la verifica della disponibilità dello slave alla ricezione di nuovi dati, prima di immettere quest’ultimi sul canale. In tale implementazione, quando il master vuole inviare dei dati, prima invia un segnale di request allo slave, il quale, se disponibile, invia a sua volta un segnale di risposta. A questo punto parte la comunicazione.
-Un ulteriore protocollo di handshaking, definito semisincrono, viene utilizzato quando lo slave deve inviare un dato di risposta al master, e prevede un ulteriore segnale per indicare quando l’elaborazione è terminata ed il dato di risposta è effettivamente presente sul canale. Si parla di protocollo semi sincrono poiché, il master, vede il segnale solo in corrispondenza di un colpo di clock (un protocollo di questo tipo è generalmente implementato nella comunicazione tra il processore e la memoria cache).
-\\Come detto all’inizio della trattazione, in genere il master e lo slave lavorano con 2 clock differenti: un protocollo di handshaking prevede che, la frequenza del riferimento temporale dello slave, sia N volte quella del master, in modo da riuscire a campionare il segnale ricevuto anche nel caso di sfasamenti del clock.
-Entrando ora nel merito dell’esercizio, si è deciso di implementare un protocollo con handshaking di tipo semisincrono.
-\\\\{\large \textbf{Approccio Utilizzato}}
+\\I protocolli di trasmissione si dividono in 3 categorie:
+\begin{enumerate}
+    \item Protocolli sincroni: le 2 entità che vogliono comunicare presentano un riferimento temporale condiviso ed il trasferimento avviene all’interno di 1 o più cicli di clock.
+    \item Protocolli Asincroni: le 2 entità presentano riferimenti temporali differenti, sui quali non possono essere fatte previsioni sulla fase iniziale. Tali protocolli prevedono una sincronizzazione non legata più a transizioni regolari dei fronti di un clock, ma a segnali di controllo/stato che le entità si scambiano in aggiunta ai dati, al fine di identificare l’inizio e la fine di un’operazione.
+    \item Protocolli semi-sincroni: le 2 entità presentano un clock comune, così come nei protocolli sincroni, ma in aggiunta utilizzano un ulteriore segnale di controllo, detto wait. Tale segnale viene inviato dall’unità più lenta a quella più veloce quando non riesce ad elaborare i dati in un singolo colpo di clock. Il termine semi-sincrono deriva dal fatto che, seppur la trasmissione avviene tramite segnali di controllo/stato, questi vengono rilevati solo in presenza di un fronte del clock. (un protocollo di questo tipo è generalmente implementato nella comunicazione tra il processore e la memoria cache).
+\end{enumerate}
+I protocolli di handshake sono protocolli di tipo asincrono e si differenziano per il numero di eventi utilizzati nelle fasi di un trasferimento; si individuano 2 principali tipologie:
+\begin{itemize}
+    \item Handshake semplice: le 2 entità si sincronizzano solo all’inizio o alla fine di un trasferimento. Una volta sincronizzate, le 2 entità svolgono autonomamente le proprie operazioni e sono sempre pronte ad avviare una nuova trasmissione.
+    \item Handshake completo: le 2 entità si scambiano eventi per definire l’inizio e la fine di ciascuna fase del protocollo, indipendentemente dalle rispettive velocità operative.
+\end{itemize}
+I protocolli di handshake, inoltre, si basano sulle seguenti ipotesi:
+\begin{itemize}
+    \item Le 2 entità lavorano sempre una come master e l’altra come slave.
+    \item La trasmissione può essere avviata da entrambe.
+    \item È l’entità più lenta a definire il ritmo della trasmissione.
+    \item Non si pongono vincoli sulla velocità delle rispettive unità operative.
+\end{itemize}
+Per implementare un protocollo basato su handshake sono necessari almeno 2 segnali, tramite i quali codificare 2 o 4 eventi, a seconda che sia un protocollo semplice o completo.
+\clearpage
+{\large \textbf{Approccio Utilizzato}}
 \\L’esercizio in esame prevede 2 sistemi, A e B, dove il sistema A deve inviare N valori al sistema B il quale, a sua volta, dovrà sommare tali valori a quelli contenuti in memoria per poi salvare il risultato in ulteriori locazioni della memoria stessa.
 Entrambi i sistemi sono stati definiti mediante un approccio strutturale, dove l’elemento principale è l’interfaccia dei 2 sistemi, la quale è responsabile dell’implementazione del protocollo di handshaking. Prima di passare alla descrizione dei 2 sistemi, nel paragrafo successivo verrà descritto il protocollo di handshaking implementato.
 \\\\{\large \textbf{Descrizione Protocollo}}
-\\Il protocollo di handshaking implementato prevede un segnale r, ovvero di request, alzato dal sistema A (il master), il quale indica la volontà di trasmettere dei dati, ed un segnale di ris, alzato dal sistema B(lo slave) in ricezione del segnale di request, che indica la disponibilità nel ricevere i dati e che rimarrà alto fino alla completa elaborazione di quest’ultimi.
+\\l protocollo di handshaking implementato è di tipo completo e prevede un segnale r, ovvero di request, alzato dal sistema A (il master), il quale indica la volontà di trasmettere dei dati, ed un segnale di ris, alzato dal sistema B(lo slave) in ricezione del segnale di request, che indica la disponibilità nel ricevere i dati e che rimarrà alto fino alla completa elaborazione di quest’ultimi.
 La variazione da 1 a 0 del segnale di ris indica, dunque, la completa elaborazione dei dati da parte dello slave e viene interpretata dal master come la possibilità di inoltrare nuovi dati.
 L’handshake avviene prima della trasmissione di ogni dato.
 Vediamo ora come i 2 sistemi implementano tale protocollo.
 \begin{figure}[ht!]
     \centering
-    \includesvg[width=\textwidth,height=\textheight]{\Esette sistema_completo.svg}
+    \includesvg[width=0.6\textwidth,height=\textheight]{\Esette sistema_completo.svg}
     \caption{Schema Sistema Completo Es.7}
 \end{figure}
 \clearpage
-%{\large \textbf{SistemaA:}}
 \subsection{Sistema A}
 Come precedentemente detto, il sistema A è stato definito tramite un approccio strutturale, utilizzando i seguenti componenti:
 \begin{itemize}
@@ -1607,7 +1638,7 @@ Il sistema è funzionante solo per una comunicazione alla volta, secondo una pri
 L’obiettivo di questo esercizio è quello di progettare, tramite un approccio strutturale, un divisore che ci permetta di effettuare una divisione tra un dividendo espresso su M bit ed un divisore, espresso su N bit. Il risultato sarà composto da un resto, codificato su al più N bit, ed un quoziente, espresso al più su M-N+1 bit (supponendo che il primo degli $m \over{n}$ bit non sia nullo).
 \\Analizziamo ora il procedimento di divisione, per comprendere quali sono i componenti da utilizzare:
 \begin{itemize}
-    \item Passo iniziale: si confrontano gli n bit più significativi del dividendo (dividendo parziale) con gli n bit del divisore: se il divisore è contenuto nel dividendo parziale, allora il quoziente parziale (qi) sarà pari ad 1, 0 altrimenti (Il risultato delle operazioni di divisione parziale può essere al massimo 1, quindi in binario si ha un grande vantaggio).
+    \item Passo iniziale: si confrontano gli n bit più significativi del dividendo (dividendo parziale) con gli n bit del divisore: se il divisore è contenuto nel dividendo parziale, allora il quoziente parziale ($q_i$) sarà pari ad 1, 0 altrimenti (Il risultato delle operazioni di divisione parziale può essere al massimo 1, quindi in binario si ha un grande vantaggio).
           Si effettua quindi la sottrazione tra il dividendo parziale ed il prodotto $q_i \cdot V$ (dove V rappresenta il divisore), ottenendo così il primo resto parziale.
     \item Generico passo i: si pone il dividendo parziale $D_i$ pari al resto parziale $R_i$ (calcolato all’iterazione i-1) e si confronta con il divisore. A questo punto i passaggi successivi sono analoghi a quelli riportati al passo 1, con l’unica differenza che il resto parziale andrà riportato con uno shift a destra di i posizioni.
 \end{itemize}
@@ -1796,21 +1827,21 @@ L’unità di controllo è stata realizzata come una macchina a stati:
 Progettare, implementare in VHDL e testare mediante simulazione (e, opzionalmente, mediante sintesi su board), un sistema le cui specifiche siano definite dallo studente e rientrino in una delle seguenti tipologie:
 \begin{enumerate}[label=\alph*.]
     \item Modifica di esercizi già proposti (processore, rete di interconnessione o interfaccia seriale) mediante aggiunta/aggiornamento di funzionalità.
-    \begin{itemize}
-        \item Esempio: si potrebbe pensare di modificare l’interfaccia seriale aggiungendo segnali specifici per l’handshaking fra due entità.
-    \end{itemize}
+          \begin{itemize}
+              \item Esempio: si potrebbe pensare di modificare l’interfaccia seriale aggiungendo segnali specifici per l’handshaking fra due entità.
+          \end{itemize}
     \item Progetto di sistemi che assolvono a specifici compiti noti
-    \begin{itemize}
-        \item Esempio: si potrebbe pensare di implementare una specifica macchina aritmetica non trattata a lezione, una funzione crittografica, una rete neurale, ecc.
-    \end{itemize}
+          \begin{itemize}
+              \item Esempio: si potrebbe pensare di implementare una specifica macchina aritmetica non trattata a lezione, una funzione crittografica, una rete neurale, ecc.
+          \end{itemize}
     \item Progetto di sistemi che integrano opportunamente componenti visti a lezione (contatori, registri, macchine aritmetiche, ecc.).
-    \begin{itemize}
-        \item A titolo di esempio, è possibile fare riferimento ai seguenti due esercizi:
-        \begin{enumerate}[label=\roman{*}., ref=(\roman{*})]
-            \item Progettare un sommatore di byte seriale (le cifre degli addendi devono essere fornite serialmente a coppie alla macchina) a partire da un sommatore di bit. Il sommatore deve terminare le sue operazioni appena il valore temporaneo della somma diventa maggiore di un valore M fornito in input.
-            \item Si consideri un nodo A che contiene una memoria ROM di N (N$\geq$4) locazioni da 8 bit ciascuna. Progettare un sistema in grado di trasmettere mediante handshaking completo tutti i valori strettamente positivi contenuti nella memoria di A ad un nodo B. Il nodo B, ricevuti i valori da A, li trasmetterà ad un nodo C mediante una comunicazione parallela con handshaking.
-        \end{enumerate}
-    \end{itemize}
+          \begin{itemize}
+              \item A titolo di esempio, è possibile fare riferimento ai seguenti due esercizi:
+                    \begin{enumerate}[label=\roman{*}., ref=(\roman{*})]
+                        \item Progettare un sommatore di byte seriale (le cifre degli addendi devono essere fornite serialmente a coppie alla macchina) a partire da un sommatore di bit. Il sommatore deve terminare le sue operazioni appena il valore temporaneo della somma diventa maggiore di un valore M fornito in input.
+                        \item Si consideri un nodo A che contiene una memoria ROM di N (N$\geq$4) locazioni da 8 bit ciascuna. Progettare un sistema in grado di trasmettere mediante handshaking completo tutti i valori strettamente positivi contenuti nella memoria di A ad un nodo B. Il nodo B, ricevuti i valori da A, li trasmetterà ad un nodo C mediante una comunicazione parallela con handshaking.
+                    \end{enumerate}
+          \end{itemize}
 \end{enumerate}
 \subsection{Scelta progettuale}
 E’ stato scelto di progettare ed implementare in VHDL un visualizzatore di immagini su schermo tramite periferica VGA ed il relativo protocollo di comunicazione. A partire dalla bitmap di un’immagine a colori, il sistema riesce a visualizzare l’immagine sullo schermo ed a muoverla all’interno dello spazio del display, andando a gestire le collisioni con i bordi. L’immagine è già presente in una memoria interna del sistema.
@@ -1852,17 +1883,17 @@ Il protocollo VGA (Video Graphics Array) è uno standard di comunicazione con di
     \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici display1.png}
     \caption{Display}
 \end{figure}
-\\In quest’esempio viene mostrata solo la forma d’onda orizzontale. A man a mano che il valore della corrente aumenta ci si sposta verso destra nel display, fino a raggiungere la fine dello schermo. Qui inizia la fase di “blanking” orizzontale, in cui il fascio di luce viene resettato per poter iniziare una nuova scansione sulla riga successiva e non viene mostrato nulla a schermo. La durata della fase di blanking orizzontale è data da: Front Porch + sync pulse + back porch. 
+\\In quest’esempio viene mostrata solo la forma d’onda orizzontale. A man a mano che il valore della corrente aumenta ci si sposta verso destra nel display, fino a raggiungere la fine dello schermo. Qui inizia la fase di “blanking” orizzontale, in cui il fascio di luce viene resettato per poter iniziare una nuova scansione sulla riga successiva e non viene mostrato nulla a schermo. La durata della fase di blanking orizzontale è data da: Front Porch + sync pulse + back porch.
 \\La fase di “blanking” si ripete anche per la scansione in verticale: una volta terminate le righe da mostrare, bisogna ritornare alla riga iniziale dello schermo e resettare ancora una volta il fascio di luce prodotto. La durata della fase di “blanking” verticale ha la stessa formula di quella orizzontale.
-\\I tempi di Front Porch, sync pulse e back porch, sia orizzontali che verticali, vengono calcolati in base alla risoluzione dello schermo di riferimento. 
-\\Il segnale di HS e di VS saranno quindi formati da una regione attiva, in cui vengono estratti dalla memoria i pixel da mostrare, ed una regione di blanking per sincronizzare la visualizzazione, in cui i pixel non vengono estratti e si disattiva un segnale di abilitazione del display.  
+\\I tempi di Front Porch, sync pulse e back porch, sia orizzontali che verticali, vengono calcolati in base alla risoluzione dello schermo di riferimento.
+\\Il segnale di HS e di VS saranno quindi formati da una regione attiva, in cui vengono estratti dalla memoria i pixel da mostrare, ed una regione di blanking per sincronizzare la visualizzazione, in cui i pixel non vengono estratti e si disattiva un segnale di abilitazione del display.
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.6\textwidth,height=\textheight,keepaspectratio]{\Edodici signal_timing_diagram.jpg}
     \caption{Diagramma timing dei segnali}
 \end{figure}
 \newpage
-E’ necessario sincronizzare i dati video trasmessi allo schermo con la posizione alla quale vogliono essere visualizzati, ossia sincronizzare la consegna allo schermo dei valori dei pixel con i segnali di HS e VS. Ciò avviene tramite un pixel clock, che definisce la frequenza con la quale viene visualizzato un singolo pixel di informazione. Ad ogni colpo di pixel clock, si incrementano il contatore orizzontale e verticale (seguendo la scansione riga per riga) : in base al valore che si ottiene dai contatori si stabilisce se ci si trova nella regione di visualizzazione o in quella di blanking. Nel caso in cui ci si trova nella regione di visualizzazione, si indicizza in memoria al valore dei contatori per poter estrarre il pixel da mostrare ed al colpo di pixel clock successivo il dato viene portato in ingresso allo schermo e mostrato in uscita. In base al valore dei contatori, si passa da una fase all’altra generando i sync pulse. 
+E’ necessario sincronizzare i dati video trasmessi allo schermo con la posizione alla quale vogliono essere visualizzati, ossia sincronizzare la consegna allo schermo dei valori dei pixel con i segnali di HS e VS. Ciò avviene tramite un pixel clock, che definisce la frequenza con la quale viene visualizzato un singolo pixel di informazione. Ad ogni colpo di pixel clock, si incrementano il contatore orizzontale e verticale (seguendo la scansione riga per riga) : in base al valore che si ottiene dai contatori si stabilisce se ci si trova nella regione di visualizzazione o in quella di blanking. Nel caso in cui ci si trova nella regione di visualizzazione, si indicizza in memoria al valore dei contatori per poter estrarre il pixel da mostrare ed al colpo di pixel clock successivo il dato viene portato in ingresso allo schermo e mostrato in uscita. In base al valore dei contatori, si passa da una fase all’altra generando i sync pulse.
 \\Per uno schermo 640x480 con frequenza di aggiornamento pari a 60Hz, le specifiche temporali sono:
 \begin{figure}[ht!]
     \centering
@@ -1882,7 +1913,7 @@ E’ necessario sincronizzare i dati video trasmessi allo schermo con la posizio
     \caption{Entity top module}
 \end{figure}
 \\Per la realizzazione del controller VGA è stata utilizzata un progetto demo della Digilent per l’utilizzo della VGA, relativo alle board Artyx. (https://digilent.com/reference/learn/programmable-logic/tutorials/arty-pmod-vga-demo/start)
-\\E’ stato rimodellato il top module, ossia quello che realizza il controller VGA, per farsi che venga prelevato dalla memoria il pixel da mostrare ad ogni colpo di pixel clock e vengano gestite le collisioni tra l’immagine ed i bordi. Il tutto utilizzando un approccio misto tra comportamentale e strutturale. 
+\\E’ stato rimodellato il top module, ossia quello che realizza il controller VGA, per farsi che venga prelevato dalla memoria il pixel da mostrare ad ogni colpo di pixel clock e vengano gestite le collisioni tra l’immagine ed i bordi. Il tutto utilizzando un approccio misto tra comportamentale e strutturale.
 \\Il sistema complessivo è formato dal controller VGA che comunica con una memoria che contiene l’immagine, il tutto sincronizzato tramite un pixel clock realizzato come divisore in frequenza tramite il Clock Wizard presente nell’Ip Catalog.
 \\Vengono dichiarate le costanti relative alla tempificazione:
 \begin{figure}[ht!]

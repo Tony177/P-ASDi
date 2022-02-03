@@ -1,68 +1,68 @@
-\contentsline {section}{\numberline {1}Esercizio 1 - Multiplexer}{4}{}%
-\contentsline {subsection}{\numberline {1.1}Parte 1}{4}{}%
-\contentsline {subsection}{\numberline {1.2}Parte 2}{9}{}%
-\contentsline {subsection}{\numberline {1.3}Parte 3}{12}{}%
-\contentsline {section}{\numberline {2}Esercizio 2 - Encoder BCD}{13}{}%
-\contentsline {subsection}{\numberline {2.1}Traccia}{13}{}%
-\contentsline {subsection}{\numberline {2.2}Soluzione}{13}{}%
-\contentsline {subsection}{\numberline {2.3}Codice}{15}{}%
-\contentsline {subsection}{\numberline {2.4}Simulazione}{21}{}%
-\contentsline {section}{\numberline {3}Esercizio 3 - Riconoscitore di Sequenze}{23}{}%
-\contentsline {subsection}{\numberline {3.1}Traccia}{23}{}%
-\contentsline {subsection}{\numberline {3.2}Soluzione}{23}{}%
-\contentsline {section}{\numberline {4}Esercizio 4 - Shift Register}{32}{}%
-\contentsline {subsection}{\numberline {4.1}Traccia}{32}{}%
-\contentsline {subsection}{\numberline {4.2}Approccio comportamentale}{32}{}%
-\contentsline {subsection}{\numberline {4.3}Approccio Strutturale}{34}{}%
-\contentsline {subsection}{\numberline {4.4}Simulazione}{39}{}%
-\contentsline {section}{\numberline {5}Esercizio 5 - Cronometro}{40}{}%
-\contentsline {subsection}{\numberline {5.1}Traccia}{40}{}%
-\contentsline {subsection}{\numberline {5.2}Sintesi su fpga}{46}{}%
-\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{52}{}%
-\contentsline {subsection}{\numberline {6.1}Traccia}{52}{}%
-\contentsline {subsection}{\numberline {6.2}Implementazione}{52}{}%
-\contentsline {subsection}{\numberline {6.3}Simulazione e Sintesi}{59}{}%
-\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione Handshaking}{61}{}%
-\contentsline {subsection}{\numberline {7.1}Introduzione all'handshaking}{61}{}%
-\contentsline {subsection}{\numberline {7.2}Sistema A}{64}{}%
-\contentsline {subsubsection}{\numberline {7.2.1}Unità Operativa A}{65}{}%
-\contentsline {subsubsection}{\numberline {7.2.2}Unità di Controllo A}{67}{}%
-\contentsline {subsection}{\numberline {7.3}Sistema B}{70}{}%
-\contentsline {subsubsection}{\numberline {7.3.1}Unita Operativa B}{71}{}%
-\contentsline {subsubsection}{\numberline {7.3.2}C B}{75}{}%
-\contentsline {subsection}{\numberline {7.4}Considerazioni Finali}{78}{}%
-\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{79}{}%
-\contentsline {subsection}{\numberline {8.1}Introduzione a IJVM}{79}{}%
-\contentsline {subsection}{\numberline {8.2}Unità Operativa}{82}{}%
-\contentsline {subsection}{\numberline {8.3}Unità di Controllo}{85}{}%
-\contentsline {subsection}{\numberline {8.4}Analisi delle istruzioni IADD e ISTORE}{90}{}%
-\contentsline {subsubsection}{\numberline {8.4.1}Istruzione IADD}{90}{}%
-\contentsline {subsubsection}{\numberline {8.4.2}Istruzione ISTORE}{93}{}%
-\contentsline {subsubsection}{\numberline {8.4.3}Modifica istruzione IADD}{97}{}%
-\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{98}{}%
-\contentsline {subsection}{\numberline {9.1}Introduzione all'UART}{98}{}%
-\contentsline {subsection}{\numberline {9.2}Parte 1}{101}{}%
-\contentsline {subsection}{\numberline {9.3}Parte 2}{104}{}%
-\contentsline {subsubsection}{\numberline {9.3.1}Sistema A}{104}{}%
-\contentsline {paragraph}{\numberline {9.3.1.1}Unità Operativa A}{106}{}%
-\contentsline {paragraph}{\numberline {9.3.1.2}Unità di Controllo A}{107}{}%
-\contentsline {subsubsection}{\numberline {9.3.2}Sistema B}{111}{}%
-\contentsline {paragraph}{\numberline {9.3.2.1}Unità Operativa B}{112}{}%
-\contentsline {paragraph}{\numberline {9.3.2.2}Unità di Controllo B}{113}{}%
-\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{117}{}%
-\contentsline {subsection}{\numberline {10.1}Approccio utilizzato}{117}{}%
-\contentsline {subsection}{\numberline {10.2}Parte Operativa}{118}{}%
-\contentsline {subsection}{\numberline {10.3}Parte di Controllo}{121}{}%
-\contentsline {subsection}{\numberline {10.4}Simulazione}{127}{}%
-\contentsline {subsection}{\numberline {10.5}Considerazioni finali}{129}{}%
-\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{130}{}%
-\contentsline {subsection}{\numberline {11.1}Introduzione}{130}{}%
-\contentsline {subsection}{\numberline {11.2}Unità Operativa}{132}{}%
-\contentsline {subsection}{\numberline {11.3}Unità di Controllo }{138}{}%
-\contentsline {subsection}{\numberline {11.4}Simulazione e Sintesi}{144}{}%
-\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{147}{}%
-\contentsline {subsection}{\numberline {12.1}Scelta progettuale}{148}{}%
-\contentsline {subsection}{\numberline {12.2}Realizzazione automatica della memoria}{148}{}%
-\contentsline {subsection}{\numberline {12.3}Protocollo VGA}{150}{}%
-\contentsline {subsection}{\numberline {12.4}Memoria}{163}{}%
-\contentsline {subsection}{\numberline {12.5}Esempi di risultati ottenuti}{164}{}%
+\contentsline {section}{\numberline {1}Esercizio 1 - Multiplexer}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Parte 1}{5}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Parte 2}{10}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Parte 3}{13}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Esercizio 2 - Encoder BCD}{14}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Traccia}{14}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Soluzione}{14}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Codice}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Simulazione}{22}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Esercizio 3 - Riconoscitore di Sequenze}{24}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Traccia}{24}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Soluzione}{24}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Esercizio 4 - Shift Register}{33}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Traccia}{33}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Approccio comportamentale}{33}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Approccio Strutturale}{35}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Simulazione}{40}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Esercizio 5 - Cronometro}{41}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Traccia}{41}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Sintesi su fpga}{47}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Esercizio 6 - Sistema di Testing}{53}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Traccia}{53}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Implementazione}{53}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Simulazione e Sintesi}{60}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Esercizio 7 - Comunicazione Handshaking}{62}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Introduzione all'handshaking}{62}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Sistema A}{65}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Unità Operativa A}{66}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Unità di Controllo A}{68}{subsubsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.3}Sistema B}{71}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Unita Operativa B}{72}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}C B}{76}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}Considerazioni Finali}{79}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Esercizio 8 - Processor}{80}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Introduzione a IJVM}{80}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Unità Operativa}{83}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Unità di Controllo}{86}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Analisi delle istruzioni IADD e ISTORE}{91}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}Istruzione IADD}{91}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}Istruzione ISTORE}{94}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}Modifica istruzione IADD}{98}{subsubsection.8.4.3}%
+\contentsline {section}{\numberline {9}Esercizio 9 - Interfaccia UART}{99}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Introduzione all'UART}{99}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Parte 1}{102}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Parte 2}{105}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}Sistema A}{105}{subsubsection.9.3.1}%
+\contentsline {paragraph}{\numberline {9.3.1.1}Unità Operativa A}{107}{paragraph.9.3.1.1}%
+\contentsline {paragraph}{\numberline {9.3.1.2}Unità di Controllo A}{108}{paragraph.9.3.1.2}%
+\contentsline {subsubsection}{\numberline {9.3.2}Sistema B}{112}{subsubsection.9.3.2}%
+\contentsline {paragraph}{\numberline {9.3.2.1}Unità Operativa B}{113}{paragraph.9.3.2.1}%
+\contentsline {paragraph}{\numberline {9.3.2.2}Unità di Controllo B}{114}{paragraph.9.3.2.2}%
+\contentsline {section}{\numberline {10}Esercizio 10 - Switch Multistadio}{118}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Approccio utilizzato}{118}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Parte Operativa}{119}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Parte di Controllo}{122}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Simulazione}{128}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Considerazioni finali}{130}{subsection.10.5}%
+\contentsline {section}{\numberline {11}Esercizio 11 - Divisore Restoring}{131}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Introduzione}{131}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Unità Operativa}{133}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Unità di Controllo }{139}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Simulazione e Sintesi}{145}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Esercizio 12 - Interfaccia VGA}{148}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Scelta progettuale}{149}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Realizzazione automatica della memoria}{149}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Protocollo VGA}{151}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Memoria}{164}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Esempi di risultati ottenuti}{165}{subsection.12.5}%
